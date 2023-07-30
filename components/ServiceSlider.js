@@ -1,3 +1,4 @@
+import React from 'react';
 
 import SwiperCore, { FreeMode, Pagination } from 'swiper';
 
