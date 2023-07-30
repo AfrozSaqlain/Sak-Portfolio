@@ -1,7 +1,7 @@
 // testimonial slider data
 export const testimonialSlider = [
   {
-    image: '/DR.APJAbdulKalam.png',
+    image: '/Dr.APJAbdulKalam.png',
     name: 'Dr. APJ Abdul Kalam',
     position: 'Customer',
     message:
