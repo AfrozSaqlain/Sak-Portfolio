@@ -8,6 +8,7 @@ import {
   FaReact,
   FaWordpress,
   FaFigma,
+  FaPython,
 } from 'react-icons/fa';
 
 import {
@@ -15,7 +16,12 @@ import {
   SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiArduino,
 } from 'react-icons/si';
+
+import{
+  BiLogoCPlusPlus,
+} from 'react-icons/bi'
 
 //about data
 export const aboutData = [
@@ -38,18 +44,22 @@ export const aboutData = [
         title: 'UI/UX Design',
         icons: [<FaFigma key={1}/>, <SiAdobexd key={2}/>, <SiAdobephotoshop key={3}/>],
       },
+      {
+        title: 'Programming Language',
+        icons: [<FaPython key={1}/>, <BiLogoCPlusPlus key={2}/>, <SiArduino key={3}/>],
+      },
     ],
   },
   {
     title: 'awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
+        title: 'UP Science Talent Search Examination',
+        stage: '2016 - 2017',
       },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        title: 'NCC Special Trophy',
+        stage: '2016 - 2017',
       },
     ],
   },
@@ -57,16 +67,16 @@ export const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Gravitational Wave Astronomy (CESSI)',
+        stage: '2022 - 2023',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Quantum Computation',
+        stage: '2022 - 2023',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'AI/ML Poject in Law',
+        stage: '2022 - 2023',
       },
     ],
   },
@@ -74,16 +84,12 @@ export const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'UP Sainik School, Lucknow, India',
+        stage: '2015 - 2019',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'IISER Kolkata, West Bengal, India',
+        stage: '2020 - ongoing',
       },
     ],
   },

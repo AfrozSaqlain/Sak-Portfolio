@@ -9,40 +9,48 @@ export const workSlider = {
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: 'General Relativity',
+          subtitle: 'and Cosmology',
+          path: '/blackhole.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: 'Electricity',
+          subtitle: 'and Magnetism',
+          path: '/lightning.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'Introductory',
+          subtitle: 'Astrophysics',
+          path: '/space.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Quantum',
+          subtitle: 'Field Theory',
+          path: '/quantum-mechanics.jpg',
         },
       ],
     },
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Condensed Matter',
+          subtitle: 'Physics',
+          path: '/condensed_matter.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: 'Non-Linear',
+          subtitle: 'Dynamics',
+          path: '/nld.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: 'Natural Language',
+          subtitle: 'Processing',
+          path: '/nlp.png',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'Gravitational',
+          subtitle: 'Waves',
+          path: '/GW_wave.png',
         },
       ],
     },
@@ -92,9 +100,9 @@ const WorkSlider = () => {
                         <div className='absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300'>
                           <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
                             {/* title part 1 */}
-                            <div className='delay-100'>LIVE</div>
+                            <div className='delay-100'>{image.title}</div>
                             {/* title part 2 */}
-                            <div className='tanslate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>Project</div>
+                            <div className='tanslate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>{image.subtitle}</div>
                             {/* icon */}
                             <div className='text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200'><BsArrowRight/></div>
                           </div>

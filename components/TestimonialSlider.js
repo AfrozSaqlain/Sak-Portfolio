@@ -1,25 +1,25 @@
 // testimonial slider data
 export const testimonialSlider = [
   {
-    image: '/t-avt-1.png',
-    name: 'Anne Smith',
+    image: '/DR.APJAbdulKalam.png',
+    name: 'Dr. APJ Abdul Kalam',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      ' A dream is not that which you see while sleeping it is something that does not let you sleep.',
   },
   {
-    image: '/t-avt-2.png',
-    name: 'Jane Doe',
+    image: '/RichardFeynman.png',
+    name: 'Richard Feynman',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Nobody ever figures out what life is all about, and it doesn\'t matter. Explore the world. Nearly everything is really interesting if you go into it deeply enough.',
   },
   {
-    image: '/t-avt-3.png',
-    name: 'Jhon Doe',
+    image: '/NikolaTesla.png',
+    name: 'Nikola Tesla',
     position: 'Customer',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.',
   },
 ];
 
@@ -68,7 +68,7 @@ const TestimonialSlider = () => {
                     {/* name */}
                     <div className='text-lg'>{person.name}</div>
                     {/* position */}
-                    <div className='text-[12px] uppercase font-extralight tracking-widest'>{person.position}</div>
+                    {/* <div className='text-[12px] uppercase font-extralight tracking-widest'>{person.position}</div> */}
                   </div>
                 </div>
                 {/* quote & message */}
