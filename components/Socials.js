@@ -6,31 +6,34 @@ import {
   RiYoutubeLine,
   RiInstagramLine,
   RiFacebookLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine
+  RiLinkedinBoxLine,
+  RiGithubLine,
 } from 'react-icons/ri';
+
+import {
+  CgShutterstock
+} from 'react-icons/cg'
 
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <Link href={''} className="hover:text-accent transition-all duration-300">
+      <Link href={'https://www.youtube.com/'} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiYoutubeLine/>
       </Link>
-      <Link href={''} className="hover:text-accent transition-all duration-300">
+      <Link href={'https://www.facebook.com/sqn3680'} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiFacebookLine/>
       </Link>
-      <Link href={''} className="hover:text-accent transition-all duration-300">
+      <Link href={'https://www.instagram.com/afroz_3680/'} target="_blank" className="hover:text-accent transition-all duration-300">
         <RiInstagramLine/>
       </Link>
-      <Link href={''} className="hover:text-accent transition-all duration-300">
-        <RiDribbbleLine/>
+      <Link href={'https://www.linkedin.com/in/saqlain-afroz-7a47961b8/'} target="_blank" className="hover:text-accent transition-all duration-300">
+        <RiLinkedinBoxLine/>
       </Link>
-      <Link href={''} className="hover:text-accent transition-all duration-300">
-        <RiBehanceLine/>
+      <Link href={'https://github.com/AfrozSaqlain'} target="_blank" className="hover:text-accent transition-all duration-300">
+        <RiGithubLine/>
       </Link>
-      <Link href={''} className="hover:text-accent transition-all duration-300">
-        <RiPinterestLine/>
+      <Link href={'https://www.shutterstock.com/g/Maverick3680/about'} target="_blank" className="hover:text-accent transition-all duration-300">
+        <CgShutterstock/>
       </Link>
     </div>
   );
