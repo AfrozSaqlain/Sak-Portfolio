@@ -20,6 +20,7 @@ const Header = () => {
             height={48}
             alt=''
             priority={true}
+            className="hidden lg:block"
           />
         </Link>
         {/* socials */}

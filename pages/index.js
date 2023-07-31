@@ -43,11 +43,11 @@ const Home = () => {
               animate='show'
               exit='hidden'
               className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-              In the vastness of space and time, Our love is like a quantum rhyme, Entangled forever, yours and mine.
-              <br /> <br />
-              As we journey through life&rsquo;s great expanse, Our love will grow with each quantum dance, A bond that nothing can ever chance.
-              <br /> <br />
-              From the smallest particles to the stars above, Our love is bound by quantum love, A force that nothing can ever shove.
+              <p className="mb-3"> In the vastness of space and time, Our love is like a quantum rhyme, Entangled forever, yours and mine.</p>
+              {/* <br /> <br /> */}
+              <p className="mb-3"> As we journey through life&rsquo;s great expanse, Our love will grow with each quantum dance, A bond that nothing can ever chance.</p>
+              {/* <br /> <br /> */}
+              <p className="mb-3"> From the smallest particles to the stars above, Our love is bound by quantum love, A force that nothing can ever shove.</p>
             </motion.p>
             {/* btn */}
             <div className="flex justify-center xl:hidden relative">
@@ -76,7 +76,7 @@ const Home = () => {
             animate='show'
             exit='hidden'
             transition={{ duration: 1, ease: 'easeInOut' }}
-            className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
+            className="w-full h-full max-w-[666px] max-h-[607px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
             <Avatar />
           </motion.div>
         </div>
