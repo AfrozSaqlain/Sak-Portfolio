@@ -120,10 +120,10 @@ const About = () => {
         {/* text */}
         <div className='flex-1 flex flex-col justify-center'>
           <motion.h2 variants={fadeIn('right', 0.2)} initial='hidden' animate='show' exit='hidden' className='h2'>
-            Captivating <span className='text-accent'>stories</span> birth magnificent designs.
+            Captivating <span className='text-accent'>stories</span>.
           </motion.h2>
           <motion.p variants={fadeIn('right', 0.4)} initial='hidden' animate='show' exit='hidden' className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-            18 years ago I began dreaming of stars and universes. I always had the curiosity to know the unknown and to venture on a quest of knowledge. I have been doing researchin the field of Astrophysics, I play guitar, write codes and I am also interested in financial markets. So, join me on this journey if you would like to.
+            I always had the curiosity to know the unknown and to venture on a quest of knowledge. I have been doing researchin the field of Astrophysics, I play guitar, write codes and I am also interested in financial markets. So, join me on this journey.
           </motion.p>
           {/* counters */}
           <motion.div variants={fadeIn('right', 0.6)} initial='hidden' animate='show' exit='hidden' className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
