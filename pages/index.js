@@ -37,7 +37,7 @@ const Home = () => {
               <span className='text-accent'>Reality</span>
             </motion.h2>
             {/* subtitle */}
-            <motion.p
+            <motion.div
               variants={fadeIn('down', 0.3)}
               initial='hidden'
               animate='show'
@@ -48,7 +48,7 @@ const Home = () => {
               <p className="mb-3"> As we journey through life&rsquo;s great expanse, Our love will grow with each quantum dance, A bond that nothing can ever chance.</p>
               {/* <br /> <br /> */}
               <p className="mb-3"> From the smallest particles to the stars above, Our love is bound by quantum love, A force that nothing can ever shove.</p>
-            </motion.p>
+            </motion.div>
             {/* btn */}
             <div className="flex justify-center xl:hidden relative">
               <ProjectsBtn />
