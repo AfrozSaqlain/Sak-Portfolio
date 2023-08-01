@@ -26,7 +26,7 @@ export const workSlider = {
         {
           title: 'Quantum',
           subtitle: 'Field Theory',
-          path: '/quantum-mechanics.jpg',
+          path: '/qft.jpg',
         },
       ],
     },
