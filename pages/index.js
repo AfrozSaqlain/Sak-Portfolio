@@ -21,6 +21,7 @@ const Home = () => {
       <Head>
         <title>Saqlain Afroz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="p:domain_verify" content="45d9f00dc549509d8c1964322f2fad87"/>
       </Head>
       <div className='bg-primary/60 h-full'>
         {/*text*/}
