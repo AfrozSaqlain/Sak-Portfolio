@@ -33,7 +33,7 @@ const serviceData = [
     icon: <RiStockLine />,
     title: 'Stock Market Analysis',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.google.com/',
+    url: 'https://my-blogposts.vercel.app/',
   },
   {
     icon: <RxPencil2 />,
@@ -45,19 +45,19 @@ const serviceData = [
     icon: <RxDesktop />,
     title: 'Web Development',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.google.com/',
+    url: 'https://my-blogposts.vercel.app/',
   },
   {
     icon: <RxReader />,
     title: 'AI/ML',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.google.com/',
+    url: 'https://my-blogposts.vercel.app/',
   },
   {
     icon: <RxRocket />,
     title: 'DIY',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.google.com/',
+    url: 'https://my-blogposts.vercel.app/',
   },
 ];
 
