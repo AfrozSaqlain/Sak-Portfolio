@@ -3,6 +3,8 @@ import Image from 'next/image';
 
 import React from 'react';
 
+import Link from 'next/link';
+
 // work slider data
 export const workSlider = {
   slides: [
@@ -12,6 +14,7 @@ export const workSlider = {
           title: 'General Relativity',
           subtitle: 'and Cosmology',
           path: '/blackhole.jpg',
+          url: 'notes/gr.pdf',
         },
         {
           title: 'Electricity',
@@ -27,6 +30,7 @@ export const workSlider = {
           title: 'Quantum',
           subtitle: 'Field Theory',
           path: '/qft.jpg',
+          url: 'notes/qft.pdf'
         },
       ],
     },
@@ -36,11 +40,13 @@ export const workSlider = {
           title: 'Condensed Matter',
           subtitle: 'Physics',
           path: '/condensed_matter.jpg',
+          url: 'notes/solidstate.pdf'
         },
         {
           title: 'Non-Linear',
           subtitle: 'Dynamics',
           path: '/nld.jpg',
+          url: 'notes/nld.pdf',
         },
         {
           title: 'Natural Language',
@@ -51,6 +57,7 @@ export const workSlider = {
           title: 'Gravitational',
           subtitle: 'Waves',
           path: '/GW_wave.png',
+          url: 'notes/GW_wave.pdf',
         },
       ],
     },
@@ -90,6 +97,7 @@ const WorkSlider = () => {
                 {slide.images.map((image, index) => {
                   return (
                     <div className='relative rounded-lg overflow-hidden flex items-center justify-center group' key={index}>
+                      <a href={image.url}>
                       <div className='flex items-center justify-center relative overflow-hidden group'>
                         {/* image */}
                         <Image src={image.path} width={500} height={300} alt=''/>
@@ -108,6 +116,7 @@ const WorkSlider = () => {
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                   );
                 })}
