@@ -38,8 +38,8 @@ const serviceData = [
   {
     icon: <RxPencil2 />,
     title: 'Technology',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.google.com/',
+    description: 'Click here to buy S223 Ultra. The King of Smartphones!',
+    url: 'https://www.amazon.in/Samsung-Galaxy-Ultra-Green-Storage/dp/B0BT9CXXXX?keywords=s23+ultra+samsung&qid=1690978769&sprefix=s23+ultr%2Caps%2C252&sr=8-3&linkCode=ll1&tag=universalm097-21&linkId=d4181843296f16f53c7a37429b382580&language=en_IN&ref_=as_li_ss_tl',
   },
   {
     icon: <RxDesktop />,
