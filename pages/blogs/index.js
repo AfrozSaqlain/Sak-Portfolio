@@ -49,7 +49,7 @@ import Circles from '../../components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
-const Services = () => {
+const Blogs = () => {
   return (
     <div className='h-full bg-primary/30 py-36 flex items-center'>
       <Circles />
@@ -71,4 +71,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Blogs;

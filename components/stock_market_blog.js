@@ -20,12 +20,13 @@ import {
 } from 'react-icons/rx';
 
 import {
-  RiStockLine
+  RiStockLine,
+  RiMoneyDollarCircleLine
 } from 'react-icons/ri'
 
-import {
-  GiClothes
-} from 'react-icons/gi'
+import{
+    AiOutlineStock
+} from 'react-icons/ai'
 
 //import required modules
 // import { FreeMode, Pagination } from 'swiper';
@@ -34,44 +35,38 @@ SwiperCore.use([FreeMode, Pagination]);
 // data
 const serviceData = [
   {
-    icon: <RiStockLine />,
-    title: 'Investment',
-    description: 'Guide to understanding of trading and investment.',
-    url: '../blogs/stock_market',
+    icon: <RiMoneyDollarCircleLine />,
+    title: 'Options Trading',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: 'https://sakblogpost.wordpress.com/2023/08/15/introduction-to-options-trading/',
   },
   {
     icon: <RxPencil2 />,
-    title: 'Technology',
-    description: 'A comprehensive review on latest and essential gadgets.',
-    url: '../blogs/technology',
+    title: 'Intraday Trading',
+    description: 'Click here to buy S223 Ultra. The King of Smartphones!',
+    url: 'https://www.amazon.in/Samsung-Galaxy-Ultra-Green-Storage/dp/B0BT9CXXXX?keywords=s23+ultra+samsung&qid=1690978769&sprefix=s23+ultr%2Caps%2C252&sr=8-3&linkCode=ll1&tag=universalm097-21&linkId=d4181843296f16f53c7a37429b382580&language=en_IN&ref_=as_li_ss_tl',
   },
   {
-    icon: <RxDesktop />,
-    title: 'Web Development',
-    description: 'A guide to web dev using best SEO practices.',
-    url: '../blogs/web_dev',
+    icon: <AiOutlineStock />,
+    title: 'Chart Patterns',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: 'https://my-blogposts.vercel.app/',
   },
   {
-    icon: <RxReader />,
-    title: 'AI/ML',
-    description: 'Learn to create AI models and LLM and have fun.',
-    url: '../blogs/aiml',
+    icon: <RiStockLine />,
+    title: 'Candlestick Patterns',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: 'https://my-blogposts.vercel.app/',
   },
   {
     icon: <RxRocket />,
-    title: 'DIY',
-    description: 'We will build stuffs like robots and creative art stuffs.',
-    url: '../blogs/diy',
-  },
-  {
-    icon: <GiClothes />,
-    title: 'Fashion',
-    description: 'What to wear and what not to wear.',
-    url: '../blogs/diy',
+    title: 'Delivery Trading',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: 'https://my-blogposts.vercel.app/',
   },
 ];
 
-const ServiceSlider = () => {
+const stock_market_blog = () => {
   return (
     <Swiper breakpoints={{
       320: {
@@ -129,4 +124,4 @@ const ServiceSlider = () => {
   );
 };
 
-export default ServiceSlider;
+export default stock_market_blog;

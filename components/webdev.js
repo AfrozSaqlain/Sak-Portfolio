@@ -23,10 +23,6 @@ import {
   RiStockLine
 } from 'react-icons/ri'
 
-import {
-  GiClothes
-} from 'react-icons/gi'
-
 //import required modules
 // import { FreeMode, Pagination } from 'swiper';
 SwiperCore.use([FreeMode, Pagination]);
@@ -35,43 +31,37 @@ SwiperCore.use([FreeMode, Pagination]);
 const serviceData = [
   {
     icon: <RiStockLine />,
-    title: 'Investment',
-    description: 'Guide to understanding of trading and investment.',
-    url: '../blogs/stock_market',
+    title: 'Basic HTML/ CSS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/stock_market',
   },
   {
     icon: <RxPencil2 />,
-    title: 'Technology',
-    description: 'A comprehensive review on latest and essential gadgets.',
-    url: '../blogs/technology',
+    title: 'JavaScript',
+    description: 'Click here to buy S223 Ultra. The King of Smartphones!',
+    url: '../services/technology/index.js',
   },
   {
     icon: <RxDesktop />,
-    title: 'Web Development',
-    description: 'A guide to web dev using best SEO practices.',
-    url: '../blogs/web_dev',
+    title: 'ReactJS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/web_dev/index.js',
   },
   {
     icon: <RxReader />,
-    title: 'AI/ML',
-    description: 'Learn to create AI models and LLM and have fun.',
-    url: '../blogs/aiml',
+    title: 'NextJS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/aiml/index.js',
   },
   {
     icon: <RxRocket />,
-    title: 'DIY',
-    description: 'We will build stuffs like robots and creative art stuffs.',
-    url: '../blogs/diy',
-  },
-  {
-    icon: <GiClothes />,
-    title: 'Fashion',
-    description: 'What to wear and what not to wear.',
-    url: '../blogs/diy',
+    title: 'CMS',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/diy/index.js',
   },
 ];
 
-const ServiceSlider = () => {
+const webdev = () => {
   return (
     <Swiper breakpoints={{
       320: {
@@ -129,4 +119,4 @@ const ServiceSlider = () => {
   );
 };
 
-export default ServiceSlider;
+export default webdev;

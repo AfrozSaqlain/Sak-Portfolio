@@ -11,21 +11,20 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
 //icons
-import {
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-  RxRocket,
-  RxArrowTopRight,
+import{
+    FaPython,
+    FaRobot
+} from 'react-icons/fa';
+
+import{
+    SiTensorflow,
+    SiPytorch,
+    SiFuturelearn
+} from 'react-icons/si';
+
+import{
+    RxArrowTopRight
 } from 'react-icons/rx';
-
-import {
-  RiStockLine
-} from 'react-icons/ri'
-
-import {
-  GiClothes
-} from 'react-icons/gi'
 
 //import required modules
 // import { FreeMode, Pagination } from 'swiper';
@@ -34,44 +33,38 @@ SwiperCore.use([FreeMode, Pagination]);
 // data
 const serviceData = [
   {
-    icon: <RiStockLine />,
-    title: 'Investment',
-    description: 'Guide to understanding of trading and investment.',
-    url: '../blogs/stock_market',
+    icon: <FaPython />,
+    title: 'Python for AI/ML',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/stock_market',
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Technology',
-    description: 'A comprehensive review on latest and essential gadgets.',
-    url: '../blogs/technology',
+    icon: <SiTensorflow />,
+    title: 'Tensorflow',
+    description: 'Click here to buy S223 Ultra. The King of Smartphones!',
+    url: '../services/technology/index.js',
   },
   {
-    icon: <RxDesktop />,
-    title: 'Web Development',
-    description: 'A guide to web dev using best SEO practices.',
-    url: '../blogs/web_dev',
+    icon: <SiPytorch />,
+    title: 'PyTorch',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/web_dev/index.js',
   },
   {
-    icon: <RxReader />,
-    title: 'AI/ML',
-    description: 'Learn to create AI models and LLM and have fun.',
-    url: '../blogs/aiml',
+    icon: <FaRobot />,
+    title: 'Large Language Models',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/aiml/index.js',
   },
   {
-    icon: <RxRocket />,
-    title: 'DIY',
-    description: 'We will build stuffs like robots and creative art stuffs.',
-    url: '../blogs/diy',
-  },
-  {
-    icon: <GiClothes />,
-    title: 'Fashion',
-    description: 'What to wear and what not to wear.',
-    url: '../blogs/diy',
+    icon: <SiFuturelearn />,
+    title: 'Future Prospects',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    url: '../services/diy/index.js',
   },
 ];
 
-const ServiceSlider = () => {
+const aiml = () => {
   return (
     <Swiper breakpoints={{
       320: {
@@ -129,4 +122,4 @@ const ServiceSlider = () => {
   );
 };
 
-export default ServiceSlider;
+export default aiml;
