@@ -8,6 +8,7 @@ import {
   RiFacebookLine,
   RiLinkedinBoxLine,
   RiGithubLine,
+  RiPinterestLine,
 } from 'react-icons/ri';
 
 import {
@@ -34,6 +35,9 @@ const Socials = () => {
       </Link>
       <Link href={'https://www.shutterstock.com/g/Maverick3680/about'} target="_blank" className="hover:text-accent transition-all duration-300">
         <CgShutterstock/>
+      </Link>
+      <Link href={'https://www.pinterest.com/sqn3680/'} target="_blank" className="hover:text-accent transition-all duration-300">
+        <RiPinterestLine/>
       </Link>
     </div>
   );
