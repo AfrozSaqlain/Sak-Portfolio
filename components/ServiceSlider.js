@@ -67,7 +67,7 @@ const serviceData = [
     icon: <GiClothes />,
     title: 'Fashion',
     description: 'What to wear and what not to wear.',
-    url: '../blogs/diy',
+    url: '../blogs/fashion',
   },
 ];
 
