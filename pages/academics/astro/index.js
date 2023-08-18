@@ -7,42 +7,44 @@ const astro = () => {
     \\[
     \\int_{a}^{b} f(x) dx
     \\]
-    Klein Gordon equation:
+    \\(ax^2+bx+c=0\\)
+    <br />
+    roots of quadratic equation:
     \\[
-    \\left(\\partial_{\\mu}\\partial^{\\mu}+\\frac{m^{2}c^{2}}{\\hbar^{2}}\\right)\\psi=0
+    x = {-q \\pm \\sqrt{q^2-4pr} \\over 2p}
     \\]
-    Dirac equation: Let's try some matrices: \\(\\gamma^{0}, \\gamma^{1}, \\gamma^{2}, \\gamma^{3}\\) and see if we can go on a vacation to Maldives on a rocketship.
     \\[
-    \\left(i\\gamma^{\\mu}\\partial_{\\mu}-\\frac{mc}{\\hbar}\\right)\\psi=0
+        \\begin{bmatrix}
+            1 & 2 & 3 \\\\
+            a & b & c
+        \\end{bmatrix}
     \\]
-    Schrodinger equation:
     \\[
-    i\\hbar\\frac{\\partial}{\\partial t}\\Psi=\\hat{H}\\Psi
+        \\begin{align}
+         \\int x^2 dx &= \\frac{1}{3} x^3 + C \\\\
+         \\int u^2 du &= \\frac13 u^3 + C \\\\
+        \\end{align}    
     \\]
-    Heisenberg equation:
+    <ul className='list-disc mr-24 text-left'>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    This
+    is 
+    good
+    <br />
+    <br />
+    Hey, this is a test of the MathJax component.  It should render the following equation:
     \\[
-    \\frac{d\\hat{A}}{dt}=\\frac{i}{\\hbar}\\left[\\hat{H},\\hat{A}\\right]+\\frac{\\partial\\hat{A}}{\\partial t}
-    \\]
-    Hamiltonian:
-    \\[
-    \\hat{H}=\\frac{\\hat{p}^{2}}{2m}+V(\\hat{x})
-    \\]
-    Lagrangian:
-    \\[
-    L=\\frac{1}{2}m\\dot{x}^{2}-V(x)
-    \\]
-    Lagrangian:
-    \\[
-    L=\\frac{1}{2}m\\dot{x}^{2}-V(x)
-    \\]
-    Lagrangian:
-    \\[
-    L=\\frac{1}{2}m\\dot{x}^{2}-V(x)
+        \\int_{a}^{b} f(x) dx\\\\
+        \\int_{a}^{b} f(x) dx\\\\
+        \\int_{a}^{b} f(x) dx\\\\
+        \\int_{a}^{b} f(x) dx\\\\
     \\]
   `;
 
     return (
-        <div className="h-full py-8 translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto">
+        <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
             <div className="max-w-3xl mx-auto p-4 shadow-2xl rounded-lg">
                 <h1 className="text-2xl font-semibold mb-4">MathJax Equations</h1>
                 <MathJaxWrapper content={content} />
