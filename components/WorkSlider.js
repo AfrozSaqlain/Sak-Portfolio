@@ -25,7 +25,7 @@ export const workSlider = {
           title: 'Introductory',
           subtitle: 'Astrophysics',
           path: '/space.jpg',
-          url: '../course/astro',
+          url: '../academics/astro',
         },
         {
           title: 'Quantum',
