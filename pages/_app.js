@@ -41,6 +41,21 @@ function MyApp({ Component, pageProps }) {
 
         <meta property="fb:app_id" content="140483455774395" />
 
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@sqn_3680" />
+        <meta name="twitter:title" content="Saqlain Afroz" />
+        <meta name="twitter:description" content="Discover a rich blend of financial investment tips, fashion inspiration, web development insights, and comprehensive academic course notes in our Next.js app. Elevate your knowledge across multiple domains with our curated content." />
+        <meta name="twitter:image" content="https://sak-portfolio.vercel.app/my-homepage.png" />
+
+        {/* Optional: Twitter Card Data */}
+        <meta name="twitter:creator" content="@sqn_3680" />
+        <meta name="twitter:domain" content="https://sak-portfolio.vercel.app/" />
+
+        {/* Optional: Other Twitter Tags */}
+        <meta name="twitter:label1" value="Written by" />
+        <meta name="twitter:data1" value="Saqlain Afroz" />
+
         <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
       </Head>
       <Layout>
