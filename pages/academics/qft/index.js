@@ -111,7 +111,7 @@ const qft = () => {
                 \\delta S' &= \\delta \\int \\mathcal{L} d^4x + \\delta \\int d^4 x \\partial_\\mu K^\\mu \\\\
                            &= \\delta \\int \\mathcal{L} d^4x + \\int d^4 x \\partial_\\mu (\\delta K^\\mu) \\\\
                            &= \\delta \\int \\mathcal{L} d^4x + \\delta K^\\mu|_{\\text{surface}} \\\\
-                           &= \\delta \\int \\mathcal{L} d^4x
+                           &= \\delta \\int \\mathcal{L} d^4x\\\\
                            &= 0
             \\end{align}    
         \\]
@@ -121,13 +121,44 @@ const qft = () => {
     </ul>
     <br/>
     Fields are continuous functions of space and time and they die asympotically. <br/>
+    <br/>
+    Let's take an example of a free scalar field:
+    \\[
+        \\mathcal{L} = \\frac{1}{2} \\partial_\\mu \\phi \\partial^\\mu \\phi - \\frac{1}{2} m^2 \\phi^2
+    \\]
+    Now, we can write Euler Lagrange Equation as:
+    \\[
+        \\frac{\\partial \\mathcal{L}}{\\partial \\phi} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) = 0 \\\\
+        \\frac{\\partial \\mathcal{L}}{\\partial \\phi} = -m^2 \\phi \\\\
+        \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) = \\partial_\\mu \\partial^\\mu \\phi
+    \\]
+    where \\( \\frac{\\partial \\mathcal{L}}{\\partial \\phi} = -m^2 \\phi \\) and for \\(\\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right)\\) let's first find out \\( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\) and for that we change the subscript \\(\\mu\\) to say \\(\\alpha\\) in \\(\\mathcal{L}\\) and let's solve now:
+    \\[
+        \\begin{align}
+            \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} &= \\frac{\\partial }{\\partial (\\partial_\\mu \\phi)} \\frac{1}{2} \\left(\\partial_\\alpha \\phi \\partial^\\alpha \\phi - m^2 \\phi^2 \\right) \\\\
+            &= \\frac{1}{2} \\frac{\\partial }{\\partial (\\partial_\\mu \\phi)} \\left(\\eta^{\\nu \\alpha} \\partial_\\alpha \\phi \\partial_\\nu \\phi \\right) - \\frac{1}{2} \\frac{\\partial }{\\partial (\\partial_\\mu \\phi)} \\left( m^2 \\phi^2 \\right) \\\\
+            &= \\frac{1}{2} \\eta^{\\nu \\alpha} \\left[\\partial_\\nu \\phi \\frac{\\partial \\partial_\\alpha \\phi}{\\partial (\\partial_\\mu \\phi)} + \\partial_\\alpha \\phi \\frac{\\partial \\partial_\\nu \\phi}{\\partial (\\partial_\\mu \\phi)} \\right] \\\\
+            &= \\frac{1}{2} \\eta^{\\nu \\alpha} \\left[\\partial_\\nu \\phi \\delta^\\mu_\\alpha + \\partial_\\alpha \\phi \\delta^\\mu_\\nu \\right] \\\\
+            &= \\frac{1}{2} \\eta^{\\nu \\mu} \\partial_\\nu \\phi + \\frac{1}{2} \\eta^{\\mu \\alpha} \\partial_\\alpha \\phi \\\\
+            &= \\frac{1}{2} \\partial^\\mu \\phi + \\frac{1}{2} \\partial^\\mu \\phi \\\\
+            &= \\partial^\\mu \\phi
+        \\end{align}
+    \\]
+    Thus, we have: \\(\\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right)\\) as \\(\\partial_\\mu \\partial^\\mu \\phi\\) and hence we have:
+    \\[
+        \\begin{align}
+            \\frac{\\partial \\mathcal{L}}{\\partial \\phi} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) &= 0\\\\ 
+            \\implies \\partial_\\mu \\partial^\\mu \\phi + m^2 \\phi &= 0 \\\\
+            \\implies (\\square + m^2) \\phi (x^\\mu) &= 0
+        \\end{align}
+    \\]
   `;
 
     return (
         <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
             <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-28 mb-10 pt-3">
                 <div className="max-w-4xl mx-auto p-4 shadow-2xl rounded-lg">
-                    <h1 className="text-2xl font-semibold mb-4 justify-center text-center">Quantum Field Theory</h1>
+                    <h1 className="text-2xl font-semibold text-accent mb-4 justify-center text-center">Quantum Field Theory</h1>
                     <MathJaxWrapper content={content} />
                 </div>
             </div>
