@@ -3,8 +3,6 @@ import Image from 'next/image';
 
 import React from 'react';
 
-import Link from 'next/link';
-
 // work slider data
 export const workSlider = {
   slides: [
@@ -20,6 +18,7 @@ export const workSlider = {
           title: 'Electricity',
           subtitle: 'and Magnetism',
           path: '/lightning.jpg',
+          url: '../blogs/fashion',
         },
         {
           title: 'Introductory',
@@ -31,7 +30,7 @@ export const workSlider = {
           title: 'Quantum',
           subtitle: 'Field Theory',
           path: '/qft.jpg',
-          url: 'notes/qft.pdf'
+          url: '../academics/qft',
         },
       ],
     },
