@@ -109,7 +109,7 @@ const qft = () => {
 
     return (
         <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-            <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-28 mb-6 pt-4">
+            <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-28 mb-10 pt-4">
                 <div className="max-w-4xl mx-auto p-4 shadow-2xl rounded-lg">
                     <h1 className="text-2xl font-semibold mb-4 justify-center text-center">Quantum Field Theory</h1>
                     <MathJaxWrapper content={content} />
