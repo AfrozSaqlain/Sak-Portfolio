@@ -67,6 +67,7 @@ const Home = () => {
               width={1200}
               height={607}
               className="hidden xl:flex"
+              loading="eager"
             />
           </div>
           {/* particles */}
