@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 //components
 import ParticlesContainer from '../components/ParticlesContainer';
@@ -59,7 +60,15 @@ const Home = () => {
         {/* Image */}
         <div className="w-[1200px] h-full absolute right-0 bottom-0">
           {/* bg img */}
-          <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
+          <div className="bg-none xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
+            <Image
+              src="/bg-explosion.png"
+              alt="Background Image"
+              width={1200}
+              height={607}
+              className="hidden xl:flex"
+            />
+          </div>
           {/* particles */}
           <ParticlesContainer />
           <motion.div
