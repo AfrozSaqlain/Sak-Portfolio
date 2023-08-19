@@ -64,8 +64,8 @@ const Home = () => {
             <Image
               src="/bg-explosion.png"
               alt="Background Image"
-              width={1200}
-              height={607}
+              fill="responsive"
+              sizes="(max-width: 768px) 100vw, 1200px"
               className="hidden xl:flex"
               loading="eager"
             />
