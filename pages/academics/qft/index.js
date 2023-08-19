@@ -9,15 +9,11 @@ const qft = () => {
     Field has \\(\\infty\\) degrees of freedom. <br/> <br/>
     Notation: \\(\\phi(\\vec{x}, t)\\) <br/> <br/>
     It may be:
-    <ul className='list-disc mr-24 text-left'>
-        <li>Fundamental Field</li>
-        <li>Component of an object \\( \\phi^A (t, \\vec{x}) \\)</li>
-        <li>Can be part of internal space:
-        \\[
-            \\phi^A (t, \\vec{x}) = \\int \\phi_k e^{ik \\cdot x} d^3k
-        \\]    
-        </li>
-    </ul>
+    <ul class="list-disc ml-8 my-4">
+        <li class="mb-2">Fundamental Field</li>
+        <li class="mb-2">Component of an object \\( \\phi^A (t, \\vec{x}) \\)</li>
+        <li class="mb-2">Can be part of internal space: \\[ \\phi^A (t, \\vec{x}) = \\int \\phi_k e^{ik \\cdot x} d^3k \\]</li>
+      </ul>
     <br/>
     In general:
     \\[
@@ -105,6 +101,26 @@ const qft = () => {
         \\mathcal{L} = -\\frac{1}{4} F_{\\mu \\nu} F^{\\mu \\nu}    
     \\]
     where \\(F_{\\mu \\nu} = \\partial_\\mu A_\\nu - \\partial_\\nu A_\\mu \\)
+    <br/>
+    <br/>
+    <p class='text-center text-xl text underline underline-offset-8 font-semibold text-white'>Gauge Invariance</p>
+    <ul class="list-disc ml-8 my-4">
+        <li class="mb-2">\\(A_\\mu \\to A_\\mu + \\partial_\\mu K^\\mu\\) remains invariant. We can write action for \\(\\mathcal{L}\\) as: \\(S = \\int \\mathcal{L} d^4x \\) and for \\(\\mathcal{L}'\\) as: \\(S' = \\int \\mathcal{L}' d^4x \\). Now,
+        \\[
+            \\begin{align}
+                \\delta S' &= \\delta \\int \\mathcal{L} d^4x + \\delta \\int d^4 x \\partial_\\mu K^\\mu \\\\
+                           &= \\delta \\int \\mathcal{L} d^4x + \\int d^4 x \\partial_\\mu (\\delta K^\\mu) \\\\
+                           &= \\delta \\int \\mathcal{L} d^4x + \\delta K^\\mu|_{\\text{surface}} \\\\
+                           &= \\delta \\int \\mathcal{L} d^4x
+                           &= 0
+            \\end{align}    
+        \\]
+            Hence E.O.M. remains invariant if two \\(\\mathcal{L}\\) are separated by a total derivative of any arbitrary field.
+        </li>
+        <li class="mb-2">Lorentz Invariance is not required</li>
+    </ul>
+    <br/>
+    Fields are continuous functions of space and time and they die asympotically. <br/>
   `;
 
     return (
