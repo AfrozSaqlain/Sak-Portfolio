@@ -100,6 +100,11 @@ const qft = () => {
     \\[
         \\frac{\\partial \\mathcal{L}}{\\partial \\phi} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) = 0
     \\]
+    Now, let us take an example of Maxwell's Equation: 
+    \\[
+        \\mathcal{L} = -\\frac{1}{4} F_{\\mu \\nu} F^{\\mu \\nu}    
+    \\]
+    where \\(F_{\\mu \\nu} = \\partial_\\mu A_\\nu - \\partial_\\nu A_\\mu \\)
   `;
 
     return (
