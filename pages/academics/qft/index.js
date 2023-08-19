@@ -23,7 +23,7 @@ const qft = () => {
     <br/>
     Action:
     \\[
-        S = \\int \\mathcal{L} d^4x \\to \\text{Lagrangian Density} \\mathcal{L}
+        S = \\int \\mathcal{L} d^4x \\to \\text{Lagrangian Density}
     \\]
     <br/>
     No we look into Notations:
@@ -31,10 +31,10 @@ const qft = () => {
         x^\\mu = (x^0, \\vec{x}) = (ct, \\vec{x}) , \\text{  } [c=\\hbar = 1 \\text{ in  natural units}]
     \\]
     \\[
-        \\eta_{\\mu \\nu} = \\text{Minkowski Metric} = \\text{Diagonal}(1, -1, -1, -1)
+        \\eta_{\\mu \\nu} = \\text{Diagonal}(1, -1, -1, -1)
     \\]
     \\[
-        \\eta^{\\mu \\nu} = \\text{Minkowski Metric} = \\text{Diagonal}(1, -1, -1, -1)
+        \\eta^{\\mu \\nu} = \\text{Diagonal}(1, -1, -1, -1)
     \\]
     \\[
         \\eta^{\\mu \\nu} \\eta_{\\nu \\mu} = \\mathbb{1}  
@@ -43,7 +43,7 @@ const qft = () => {
         x_\\mu = \\eta_{\\mu \\nu} x^\\nu = (t, -\\vec{x})  
     \\]
     \\[    
-        A \\cdot B = \\eta_{\\mu \\nu} A^\\mu B^\\nu = A^0 B^0 - A^1 B^1 - A^2 B^2 - A^3 B^3  
+        A \\cdot B = \\eta_{\\mu \\nu} A^\\mu B^\\nu = A^0 B^0 - A^i B^i 
     \\]    
     \\[    
         A^\\mu = (A^0, \\vec{A}) 
@@ -177,13 +177,60 @@ const qft = () => {
                 Statement: wrt. \\( \\alpha, \\beta \\): \\( S \\to \\text{symmetric}, A \\to \\text{anti-symmetric} \\). Thus,
                 \\[
                     \\begin{align}
-                        A_{\\alpha \\beta \\gamma} S^{\\alpha \\beta \\delta} &= - A_{\\beta \\alpha \\gamma} S^{\\alpha \\beta \\delta}\\\\
+                    A_{\\alpha \\beta \\gamma} S^{\\alpha \\beta \\delta} &= - A_{\\beta \\alpha \\gamma} S^{\\alpha \\beta \\delta}\\\\
                             &= - A_{\\beta \\alpha \\gamma} S^{\\beta \\alpha \\delta}\\\\
-                            &= - A_{\\alpha \\beta \\gamma} S^{\\beta \\alpha \\delta} \\tag{\\(\\alpha, \\beta\\) are running indices} \\\\
+                            &= - A_{\\alpha \\beta \\gamma} S^{\\beta \\alpha \\delta} \\\\
+                            &(\\ldots{} \\text{ } \\alpha, \\beta \\text{ are running indices}) \\\\
                             \\implies A_{\\alpha \\beta \\gamma} S^{\\alpha \\beta \\delta} &= 0    
                     \\end{align}
                 \\]
         </li>
+    </ul>
+    <br/>
+    <p class='text-center text-xl text underline underline-offset-8 font-semibold text-white'>Maxwell's Equation</p>
+    \\begin{align}
+        \\mathcal{L} &= -\\frac{1}{4} F_{\\mu \\nu} F^{\\mu \\nu} - j_\\mu A^\\mu \\\\
+    \\end{align}
+    where \\(j_\\mu\\) is the current density, \\(F_{\\mu \\nu} = \\partial_\\mu A_\\nu - \\partial_\\nu A_\\mu\\) and \\( A^\\mu = (\\phi, \\vec{A}) \\). Note that \\( F_{\\mu \\nu} \\) is anti-symmetric. <br/>
+    <ul class='list-disc ml-8 my-4'>
+        <li class="mb-2">
+            \\(A^\\mu (x^\\mu) \\stackrel{\\text{Lorentz}}{\\underset{\\text{Transformation}}{---->}} A'^\\mu (x^\\mu) = \\Lambda^\\mu_\\nu A^\\mu (x^\\mu)\\)
+        </li>
+    </ul>
+    <br/>
+    Now let's solve this equation:
+    \\begin{align}
+        \\mathcal{L} &= \\underbrace{-\\frac{1}{4} F_{\\alpha \\beta} F^{\\alpha \\beta}}_{\\text{Free Lagrangian}} - \\underbrace{j_\\alpha A^\\alpha}_{\\text{source term } \\equiv \\text{ qE}} \\\\
+        &= -\\frac{1}{4} \\eta^{\\alpha \\rho} \\eta^{\\beta \\sigma} F_{\\alpha \\beta} F_{\\rho \\sigma} - j_\\alpha A^\\alpha \\\\
+    \\end{align}
+    Euler - Lagrange Equation of motion is:
+    \\[
+        \\frac{\\partial \\mathcal{L}}{\\partial A_\\nu} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu A_\\nu)} \\right) = 0
+    \\]
+    Now,
+    \\begin{align}
+        \\frac{\\partial \\mathcal{L}}{\\partial A_\\nu} &= - \\frac{\\partial j_\\alpha A^\\alpha}{\\partial A_\\nu}\\\\
+        &= - j_\\alpha \\eta^{\\alpha \\gamma} \\frac{\\partial A_\\gamma}{\\partial A_\\nu}\\\\
+        &= -j_\\alpha \\eta^{\\alpha \\gamma} \\delta^\\nu_\\gamma\\\\
+        &= -j^\\nu
+    \\end{align}
+    and,
+    \\begin{align}
+    \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu A_\\nu)} &= -\\frac{1}{4} \\eta^{\\alpha \\rho} \\eta^{\\beta \\sigma} \\left[ \\frac{\\partial F_{\\alpha \\beta}}{\\partial (\\partial_\\mu A_\\nu)} F_{\\rho \\sigma} + \\frac{\\partial F_{\\rho \\sigma}}{\\partial (\\partial_\\mu A_\\nu)} F_{\\alpha \\beta} \\right] \\\\
+    &= -\\frac{1}{4} \\eta^{\\alpha \\rho} \\eta^{\\beta \\sigma} \\left[ \\frac{\\partial (\\partial_\\alpha A_\\beta - \\partial_\\beta A_\\alpha}{\\partial (\\partial_\\mu A_\\nu)} F_{\\rho \\sigma} + \\frac{\\partial (\\partial_\\rho A_\\sigma - \\partial_\\sigma A_\\rho)}{\\partial (\\partial_\\mu A_\\nu)} F_{\\alpha \\beta} \\right] \\\\
+    &= -\\frac{1}{4} \\eta^{\\alpha \\rho} \\eta^{\\beta \\sigma} \\left[ (\\delta^\\mu_\\alpha \\delta^\\nu_\\beta - \\delta^\\mu_\\beta \\delta^\\nu_\\alpha) F_{\\rho \\sigma} + (\\delta^\\mu_\\rho \\delta^\\nu_\\sigma - \\delta^\\mu_\\sigma \\delta^\\nu_\\rho) F_{\\alpha \\beta} \\right] \\\\
+    &= -\\frac{1}{4} \\left[ (\\delta^\\mu_\\rho \\delta^\\nu_\\sigma - \\delta^\\mu_\\sigma \\delta^\\nu_\\rho) F_{\\rho \\sigma} + (\\delta^\\mu_\\alpha \\delta^\\nu_\\beta - \\delta^\\mu_\\beta \\delta^\\nu_\\alpha) F_{\\alpha \\beta} \\right]\\\\
+    &= -\\frac{1}{4} \\left[ (F_{\\mu \\nu} - F_{\\nu \\mu}) + (F_{\\mu \\nu} - F_{\\nu \\mu}) \\right]\\\\
+    &= -\\frac{1}{4} \\left[ (F_{\\mu \\nu} + F_{\\mu \\nu}) + (F_{\\mu \\nu} + F_{\\mu \\nu}) \\right] *\\\\
+    &= - F_{\\mu \\nu}
+    \\end{align}
+    Thus, we have our Euler - Lagrange Equation of motion as:
+    <br/>
+    <div class='border-solid border-2 border-red-500/75 px-3 rounded mx-auto max-w-max'>
+        \\[
+            \\partial_\\mu F^{\\mu \\nu} = j^\\nu 
+        \\]
+    </div>
   `;
 
     return (
@@ -191,7 +238,9 @@ const qft = () => {
             <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-28 mb-10 pt-3">
                 <div className="max-w-4xl mx-auto p-4 shadow-2xl rounded-lg">
                     <h1 className="text-2xl font-semibold text-accent mb-4 justify-center text-center">Quantum Field Theory</h1>
-                    <MathJaxWrapper content={content} />
+                    <div className="overflow-auto">
+                        <MathJaxWrapper content={content} />
+                    </div>
                 </div>
             </div>
         </SimpleBar>
