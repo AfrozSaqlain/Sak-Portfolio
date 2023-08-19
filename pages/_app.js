@@ -38,6 +38,8 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://sak-portfolio.vercel.app/" />
         <meta property="og:type" content="website"></meta>
 
+        <meta property="fb:app_id" content="140483455774395" />
+
         <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
       </Head>
       <Layout>
