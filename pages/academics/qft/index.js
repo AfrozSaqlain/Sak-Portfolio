@@ -152,6 +152,38 @@ const qft = () => {
             \\implies (\\square + m^2) \\phi (x^\\mu) &= 0
         \\end{align}
     \\]
+    <br/>
+    <br/>
+    <p class='text-center text-xl text underline underline-offset-8 font-semibold text-white'>A Bit About: Tensor</p>
+    <br/>
+    <ul class='list-disc ml-8 my-4'>
+        <li class="mb-2">
+        Tensor = Symmetric + Anti-Symmetric
+            \\[
+                \\begin{align}
+                B_{\\mu \\nu} &= \\frac{1}{2} (B_{\\mu \\nu} + B_{\\nu \\mu} - B_{\\nu \\mu} + B_{\\mu \\nu}) \\\\
+                              &= \\frac{1}{2} (B_{\\mu \\nu} + B_{\\nu \\mu}) + \\frac{1}{2} (B_{\\mu \\nu} - B_{\\nu \\mu}) \\\\
+                              &= S_{\\mu \\nu} + A_{\\mu \\nu}
+                \\end{align}
+            \\]
+            where \\(S_{\\mu \\nu}\\) is Symmetric and \\(A_{\\mu \\nu}\\) is Anti-Symmetric
+        </li>
+        <li class="mb-2">
+                \\( \\underbrace{A_{\\alpha \\beta \\gamma} B^{\\alpha \\beta \\gamma}}_{\\text{sum over all indices}} \\to \\) a scalar number
+        </li>
+        <li class="mb-2">
+                \\( A_{\\alpha \\beta \\gamma} S^{\\alpha \\beta \\delta} = X^\\delta_\\gamma \\)
+                <br/>
+                Statement: wrt. \\( \\alpha, \\beta \\): \\( S \\to \\text{symmetric}, A \\to \\text{anti-symmetric} \\). Thus,
+                \\[
+                    \\begin{align}
+                        A_{\\alpha \\beta \\gamma} S^{\\alpha \\beta \\delta} &= - A_{\\beta \\alpha \\gamma} S^{\\alpha \\beta \\delta}\\\\
+                            &= - A_{\\beta \\alpha \\gamma} S^{\\beta \\alpha \\delta}\\\\
+                            &= - A_{\\alpha \\beta \\gamma} S^{\\beta \\alpha \\delta} \\tag{\\(\\alpha, \\beta\\) are running indices} \\\\
+                            \\implies A_{\\alpha \\beta \\gamma} S^{\\alpha \\beta \\delta} &= 0    
+                    \\end{align}
+                \\]
+        </li>
   `;
 
     return (
