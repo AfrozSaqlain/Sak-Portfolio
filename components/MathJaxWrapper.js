@@ -24,3 +24,33 @@ const MathJaxWrapper = ({ content }) => {
 };
 
 export default MathJaxWrapper;
+
+
+
+
+// // components/MathJaxWrapper.js
+// import React from 'react';
+// import renderMathInElement from 'katex/contrib/auto-render';
+
+// const cachedEquations = {};
+
+// const MathJaxWrapper = ({ content }) => {
+//   const containerRef = React.useRef(null);
+
+//   React.useEffect(() => {
+//     if (typeof window !== 'undefined') {
+//       renderMathInElement(containerRef.current, {
+//         delimiters: [
+//           { left: '$$', right: '$$', display: true },
+//           { left: '$', right: '$', display: false },
+//         ],
+//       });
+//     }
+//   }, []);
+
+//   return (
+//     <div ref={containerRef} dangerouslySetInnerHTML={{ __html: cachedEquations[content] || content }} />
+//   );
+// };
+
+// export default MathJaxWrapper;
