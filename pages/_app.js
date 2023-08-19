@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         {/* Open Graph Meta Tags (for sharing on social media) */}
         <meta property="og:title" content="Saqlain Afroz Portfolio Webapp" />
         <meta property="og:description" content="Discover a rich blend of financial investment tips, fashion inspiration, web development insights, and comprehensive academic course notes in our Next.js app. Elevate your knowledge across multiple domains with our curated content." />
-        <meta property="og:image" content="profile-pic.png" />
+        <meta property="og:image" content="../public/profile-pic.png" />
         <meta property="og:url" content="https://sak-portfolio.vercel.app/" />
         <meta property="og:type" content="website"></meta>
 
