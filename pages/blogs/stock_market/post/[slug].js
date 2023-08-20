@@ -6,6 +6,7 @@ import {PortableText} from '@portabletext/react'
 import client from '../../../../client'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+import { useRouter } from 'next/router'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -29,6 +30,11 @@ const ptComponents = {
 }
 
 const Post = ({post}) => {
+  const router = useRouter();
+
+  if (!router.isFallback && !post) {
+    return <ErrorPage statusCode={404} />;
+  }
   const {
     title = 'Missing title',
     name = 'Missing name',
