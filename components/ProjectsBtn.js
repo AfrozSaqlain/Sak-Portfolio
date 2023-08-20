@@ -30,6 +30,9 @@
 // Next.js Link component
 import Link from 'next/link';
 
+// Next.js Image component
+import Image from 'next/image';
+
 // React icon
 import { HiArrowRight } from 'react-icons/hi2';
 
@@ -38,8 +41,8 @@ const ProjectsBtn = () => {
     <div className='w-[135px] h-[135px] mx-auto xl:mx-0 -translate-y-10'>
       <Link href='/work'>
         <div className='relative w-full h-full flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group'>
-          <img
-            src='/rounded-text.png'
+          <Image
+            src={'/rounded-text.png'}
             width={101}
             height={108}
             alt='Project Button'

@@ -29,16 +29,13 @@ const ptComponents = {
 }
 
 const Post = ({post}) => {
-  // const {
-  //   title = 'Missing title',
-  //   name = 'Missing name',
-  //   categories,
-  //   authorImage,
-  //   body = []
-  // } = post
-  if (!post) {
-    return <p>Loading...</p>; // or some other error handling logic
-  }
+  const {
+    title = 'Missing title',
+    name = 'Missing name',
+    categories,
+    authorImage,
+    body = []
+  } = post
   return (
     <SimpleBar autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
     <article className="max-w-prose mx-auto p-4 mt-24 ">
