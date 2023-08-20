@@ -1,34 +1,40 @@
-//import react
-import React from 'react';
+import Link from 'next/link'
+import groq from 'groq'
+import client from '../../../client'
 
-// components
-import ServiceSlider from '../../../components/stock_market_blog';
-import Bulb from '../../../components/Bulb';
-import Circles from '../../../components/Circles';
-
-// framer motion
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../../variants';
-
-const stock_market = () => {
+const Index = ({ posts }) => {
   return (
-    <div className='h-full bg-primary/30 py-36 flex items-center'>
-      <Circles />
-      <div className="container mx-auto">
-        <div className='flex flex-col xl:flex-row gap-x-8'>
-          {/* text */}
-          <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
-            <motion.h2 variants={fadeIn('up', 0.3)} initial='hidden' animate='show' exit='hidden' className='h2 xl:mt-8'>Stock Market <span className='text-accent'>.</span></motion.h2>
-          </div>
-            {/* slider */}
-          <motion.div variants={fadeIn('down', 0.6)} initial='hidden' animate='show' exit='hidden' className='w-full xl:max-w-[65%]'>
-            <ServiceSlider />
-          </motion.div>
-        </div>
-      </div>
-      <Bulb />
+    <div className='relative mx-4 md:mx-24 lg:mx-96 mt-16 md:mt-24 lg:mt-40'>
+      <h1 className='text-3xl mb-6'>Welcome to a blog!</h1>
+      <ul>
+        {posts.length > 0 && posts.map(
+          ({ _id, title = '', slug = '', publishedAt = '' }) =>
+            slug && (
+              <Link key={_id} href={`/blogs/stock_market/post/${encodeURIComponent(slug.current)}`} legacyBehavior>
+                <a className='block border border-gray-300/20 p-4 mb-4 z-50 rounded-lg'>
+                  <span className='font-serif text-lg'>
+                    {title}
+                  </span>
+                  <br/>
+                  ({new Date(publishedAt).toDateString()})
+                </a>
+              </Link>
+            )
+        )}
+      </ul>
     </div>
-  );
-};
+  )
+}
 
-export default stock_market;
+export async function getStaticProps() {
+  const posts = await client.fetch(groq`
+    *[_type == "post" && publishedAt < now()] | order(publishedAt desc)
+  `)
+  return {
+    props: {
+      posts
+    }
+  }
+}
+
+export default Index
