@@ -1,14 +1,9 @@
-import PDFViewer from '../../../components/PDFViewer';
+import React from 'react'
 
 const fashion = () => {
-  const pdfUrl = '/qft.pdf';
-
   return (
-    <div>
-      <h1>PDF Viewer</h1>
-      <PDFViewer pdfUrl={pdfUrl} />
-    </div>
-  );
-};
+    <div>fashion</div>
+  )
+}
 
-export default fashion;
+export default fashion

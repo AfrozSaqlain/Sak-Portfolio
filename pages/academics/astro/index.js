@@ -1,62 +1,73 @@
+import React, { useState } from 'react';
 import MathJaxWrapper from '../../../components/MathJaxWrapper';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
-const astro = () => {
-    const content = `
-    This is an inline equation: \\(E=mc^2\\)
-    And here is a displayed equation:
-    \\[
-    \\int_{a}^{b} f(x) dx
-    \\]
-    \\(ax^2+bx+c=0\\)
-    <br />
-    roots of quadratic equation:
-    \\[
-    x = {-q \\pm \\sqrt{q^2-4pr} \\over 2p}
-    \\]
-    \\[
-        \\begin{bmatrix}
-            1 & 2 & 3 \\\\
-            a & b & c
-        \\end{bmatrix}
-    \\]
-    \\[
-        \\begin{align}
-         \\int x^2 dx &= \\frac{1}{3} x^3 + C \\\\
-         \\int u^2 du &= \\frac13 u^3 + C \\\\
-        \\end{align}    
-    \\]
-    <ul className='list-disc mr-24 text-left'>
-        <li>Item 1</li>
-        <li>Item 2</li>
-    </ul>
-    This
-    is 
-    good
-    <br />
-    <br />
-    Hey, this is a test of the MathJax component.  It should render the following equation:
-    \\[
-        \\int_{a}^{b} f(x) dx\\\\
-        \\int_{a}^{b} f(x) dx\\\\
-        \\int_{a}^{b} f(x) dx\\\\
-        \\int_{a}^{b} f(x) dx\\\\
-    \\]
-  `;
+const Astro = () => {
+    const sections = [
+        {
+            title: 'Specific Intensity',
+            content: 'The specific intensity is given as: \\(I_{\\nu} = B_{\\nu}(T)\\)',
+        },
+        {
+            title: 'Total Flux',
+            content: `Total flux is 
+            \\[\\begin{align}  
+                F &= \\int_{0}^{\\infty} I_{\\nu} d\\nu \\\\ 
+                &= \\sigma T^{4} \\end{align}
+           \\]`,
+        },
+        // Add more sections here
+    ];
 
     return (
         <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
             <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
                 <div className="max-w-4xl mx-auto p-4 shadow-2xl rounded-lg">
-                    <h1 className="text-2xl font-semibold mb-4">MathJax Equations</h1>
-                    <MathJaxWrapper content={content} />
+                    <h1 className="text-2xl font-semibold text-center font-mono justify-center text-accent mb-4">Astrophysics</h1>
+                    {sections.map((section, index) => (
+                        <ExpandableSection key={index} title={`${index + 1}. ${section.title}`}>
+                            <MathJaxWrapper content={section.content} />
+                        </ExpandableSection>
+                    ))}
                 </div>
             </div>
         </SimpleBar>
     );
 };
 
-export default astro;
+const ExpandableSection = ({ title, children }) => {
+    const [expanded, setExpanded] = useState(false);
 
+    return (
+        <div className="mb-4">
+            <div
+                className="flex items-center cursor-pointer"
+                onClick={() => setExpanded(!expanded)}
+            >
+                <h2 className="text-lg font-semibold">{title}</h2>
+                <div
+                    className={`ml-2 transition-transform transform ${
+                        expanded ? 'rotate-[90deg]' : 'rotate-0'
+                    }`}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-4 h-4"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                    >
+                        <path
+                            fillRule="evenodd"
+                            d="M4.293 5.293a1 1 0 011.414 0L10 9.586l4.293-4.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                        />
+                    </svg>
+                </div>
+            </div>
+            {expanded && <div className="mt-2">{children}</div>}
+        </div>
+    );
+};
 
+export default Astro;

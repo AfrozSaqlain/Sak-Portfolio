@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import Image from 'next/image';
 
 //icons
 import {
@@ -203,6 +204,9 @@ const About = () => {
               );
             })}
           </div>
+          {/* <div className='hidden xl:flex xl:max-w-none translate-x-16'>
+            <Image src='/profile-pic-2.png' alt='profile pic' width={200} height={200}/>
+          </div> */}
         </motion.div>
       </div>
     </div >
