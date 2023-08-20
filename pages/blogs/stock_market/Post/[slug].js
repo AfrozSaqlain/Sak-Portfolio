@@ -2,6 +2,7 @@ import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
 import client from '../../../../client'
+import { useRouter } from 'next/router'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -25,13 +26,23 @@ const ptComponents = {
 }
 
 const Post = ({post}) => {
-  const {
-    title = 'Missing title',
-    name = 'Missing name',
-    categories,
-    authorImage,
-    body = []
-  } = post
+    const router = useRouter(); // Initialize the useRouter hook
+    const { isFallback } = router; // Check if the data is still loading
+    const {
+      title = 'Missing title',
+      name = 'Missing name',
+      categories,
+      authorImage,
+      body = []
+    } = post;
+  
+    if (isFallback) {
+      return <p>Loading...</p>; // Display a loading state
+    }
+  
+    if (!post) {
+      return <p>Post not found</p>; // Display a not-found state
+    }
   return (
     <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl">
       <h1 className="text-3xl font-bold mb-2">{title}</h1>
@@ -79,13 +90,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  // It's important to default the slug so that it doesn't return "undefined"
-  const { slug = "" } = context.params
-  const post = await client.fetch(query, { slug })
-  return {
-    props: {
-      post
+    const { slug = "" } = context.params;
+    try {
+      const post = await client.fetch(query, { slug });
+      return {
+        props: {
+          post
+        }
+      };
+    } catch (error) {
+      return {
+        notFound: true // Return a 404 status if the post is not found
+      };
     }
   }
-}
 export default Post
