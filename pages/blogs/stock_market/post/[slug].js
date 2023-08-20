@@ -7,6 +7,7 @@ import client from '../../../../client'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import { useRouter } from 'next/router'
+import ErrorPage from 'next/error'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
