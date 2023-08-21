@@ -26,16 +26,16 @@ const ptComponents = {
 
 const post = ({post}) => {
   const {
-    title,
-    name,
+    // title,
+    // name,
     categories,
     authorImage,
     body = []
   } = post
   return (
     <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl">
-      <h1 className="text-3xl font-bold mb-2">{title}</h1>
-      <span className="text-gray-500">By {name}</span>
+      <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
+      <span className="text-gray-500">By {post.name}</span>
       {categories && (
         <ul className="mt-2 mb-4">
           Posted in 
