@@ -3,7 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
 // import client from '../../../client'
 import { createClient } from "next-sanity";
-import Image from 'next/image'
+// import Image from 'next/image'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -16,7 +16,7 @@ const ptComponents = {
         return null
       }
       return (
-        <Image
+        <img
           alt={value.alt || ' '}
           loading="lazy"
           src={urlFor(value).width(320).height(240).fit('max').auto('format')}
@@ -56,7 +56,7 @@ const Post = ({post}) => {
       )}
       {authorImage && (
         <div className="mb-4">
-          <Image
+          <img
             className="w-12 h-12 rounded-full"
             src={urlFor(authorImage).width(50).url()}
             alt={`${name}'s picture`}
