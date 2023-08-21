@@ -24,7 +24,7 @@ const ptComponents = {
   }
 }
 
-const Post = ({post}) => {
+const post = ({post}) => {
   const {
     title = 'Missing title',
     name = 'Missing name',
@@ -88,4 +88,4 @@ export async function getStaticProps(context) {
     }
   }
 }
-export default Post
+export default post
