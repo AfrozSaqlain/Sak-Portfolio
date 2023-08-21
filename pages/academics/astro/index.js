@@ -10,11 +10,11 @@ const Astro = () => {
             subsections: [
                 {
                     title: 'Introduction',
-                    content: 'This is the introduction to specific intensity...',
+                    content: 'This is the inline equation \\(\\alpha\\)',
                 },
                 {
                     title: 'Equations',
-                    content: 'Here are the equations related to specific intensity...',
+                    content: 'This is block equation \\[\\alpha\\]',
                 },
                 // Add more subsections
             ],
