@@ -25,37 +25,37 @@ const ptComponents = {
 }
 
 const post = ({post}) => {
-  const {
-    // title,
-    // name,
-    categories,
-    authorImage,
-    body = []
-  } = post
+  // const {
+  //   // title,
+  //   // name,
+  //   // categories,
+  //   // authorImage,
+  //   body = []
+  // } = post
   return (
     <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl">
       <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
       <span className="text-gray-500">By {post.name}</span>
-      {categories && (
+      {post.categories && (
         <ul className="mt-2 mb-4">
           Posted in 
-          {categories.map((category) => (
+          {post.categories.map((category) => (
             <li key={category} className="inline-block mr-2 text-blue-500">
               {category}
             </li>
           ))}
         </ul>
       )}
-      {authorImage && (
+      {post.authorImage && (
         <div className="mb-4">
           <img
             className="w-12 h-12 rounded-full"
-            src={urlFor(authorImage).width(50).url()}
-            alt={`${name}'s picture`}
+            src={urlFor(post.authorImage).width(50).url()}
+            alt={`${post.name}'s picture`}
           />
         </div>
       )}
-      <PortableText value={body} components={ptComponents} />
+      <PortableText value={post.body} components={ptComponents} />
     </article>
   );
 };
