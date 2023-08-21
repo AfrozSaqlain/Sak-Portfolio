@@ -25,37 +25,37 @@ const ptComponents = {
 }
 
 const post = ({post}) => {
-  // const {
-  //   // title,
-  //   // name,
-  //   // categories,
-  //   // authorImage,
-  //   body = []
-  // } = post
+  const {
+    title = 'Missing title',
+    name = 'Missing name',
+    categories,
+    authorImage,
+    body = []
+  } = post
   return (
     <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl">
-      <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
-      <span className="text-gray-500">By {post.name}</span>
-      {post.categories && (
+      <h1 className="text-3xl font-bold mb-2">{title}</h1>
+      <span className="text-gray-500">By {name}</span>
+      {categories && (
         <ul className="mt-2 mb-4">
           Posted in 
-          {post.categories.map((category) => (
+          {categories.map((category) => (
             <li key={category} className="inline-block mr-2 text-blue-500">
               {category}
             </li>
           ))}
         </ul>
       )}
-      {post.authorImage && (
+      {authorImage && (
         <div className="mb-4">
           <img
             className="w-12 h-12 rounded-full"
-            src={urlFor(post.authorImage).width(50).url()}
-            alt={`${post.name}'s picture`}
+            src={urlFor(authorImage).width(50).url()}
+            alt={`${name}'s picture`}
           />
         </div>
       )}
-      <PortableText value={post.body} components={ptComponents} />
+      <PortableText value={body} components={ptComponents} />
     </article>
   );
 };
@@ -82,6 +82,13 @@ export async function getStaticProps(context) {
   // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
   const post = await client.fetch(query, { slug })
+
+  if (!post) {
+    return {
+      notFound: true, // or handle the error in another way
+    }
+  }
+
   return {
     props: {
       post
