@@ -2,6 +2,7 @@ import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
 import client from '../../../../client'
+import Image from 'next/image'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -14,9 +15,8 @@ const ptComponents = {
         return null
       }
       return (
-        <img
+        <Image
           alt={value.alt || ' '}
-          loading="lazy"
           src={urlFor(value).width(320).height(240).fit('max').auto('format')}
         />
       )
