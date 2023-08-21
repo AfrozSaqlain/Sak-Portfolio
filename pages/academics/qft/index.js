@@ -253,14 +253,56 @@ const qft = () => {
                 {
                     title: 'Hamiltonian Formalism',
                     content: `
-        
-        
-                    `
-                }
+                        We know from Classical Mechanics that:
+                        \\[
+                            \\begin{align}
+                                p &= \\frac{\\partial }{\\partial \\dot{q}} L (q, \\dot{q})\\\\
+                                H(q,p) &= \\dot{q}_r p_r - L
+                            \\end{align}    
+                        \\]
+                        and we also know that:
+                        \\[
+                            \\begin{align}
+                                \\frac{\\partial H}{\\partial p} &= \\dot{q} \\\\
+                                \\frac{\\partial H}{\\partial q} &= -\\dot{p}
+                            \\end{align}    
+                        \\]
+                        Poisson bracket gives us:
+                        \\[
+                            \\begin{align}
+                                [f_1, f_2]_p &= \\frac{\\partial f_1}{\\partial q_r} \\frac{\\partial f_2}{\\partial p_r} - \\frac{\\partial f_1}{\\partial p_r} \\frac{\\partial f_2}{\\partial q_r} \\\\
+                                [q_r, p_s] &= \\delta_{rs} \\\\
+                                \\dot{q} &= [q,H]_p\\\\
+                                \\dot{p} &= [p,H]_p\\\\
+                                \\dot{f} &= \\frac{df}{dt} = \\frac{\\partial f}{\\partial t} + [f,H]_p
+                            \\end{align}    
+                        \\]
+                        Now, let's look into the Hamiltonian Formalism of Field Theory, where we define \\(\\Pi_A\\) which is the canonical momenta, as
+                        \\[
+                            \\Pi_A = \\frac{\\partial \\mathcal{L}}{\\partial \\dot{\\phi_A}}
+                        \\]
+                        and let's look at:
+                        \\[
+                            \\begin{align}
+                            \\frac{\\delta \\dot{\\phi^B} (t, \\vec{y})}{\\delta \\dot{\\phi^A} (t, \\vec{x})} &= \\delta_A^B \\delta^3 (\\vec{x} - \\vec{y})\\\\
+                            \\frac{\\delta \\phi^B (t, \\vec{y})}{\\delta \\dot{\\phi^A} (t, \\vec{x})} &= 0
+                            \\end{align}\\\\ 
+                        \\]
+                        \\[
+                            H = \\Pi_A \\dot{\\phi^A} - \\mathcal{L}    
+                        \\]
+                    `,
+                },
+                {
+                    title: 'Symmetries',
+                    content: `
+
+                    `,
+                },
             ]
         },
         {
-            title: 'Quantum Field Theory',
+            title: 'Free Fields',
             subsections: [
                 {
                     title: 'Introduction: Quantum Field Theory',
@@ -311,7 +353,7 @@ const ExpandableSection = ({ title, children }) => {
                 <h2 className="text-lg font-semibold">{title}</h2>
                 <div
                     className={`ml-2 transition-transform transform ${
-                        expanded ? 'rotate-[90deg]' : 'rotate-0'
+                        expanded ? 'rotate-[-90deg]' : 'rotate-0'
                     }`}
                 >
                     <svg
@@ -345,7 +387,7 @@ const Subsection = ({ title, children }) => {
                 <h3 className="text-md font-semibold">{title}</h3>
                 <div
                     className={`ml-6 transition-transform transform ${
-                        expanded ? 'rotate-[90deg]' : 'rotate-0'
+                        expanded ? 'rotate-[-90deg]' : 'rotate-0'
                     }`}
                 >
                     <svg

@@ -3,7 +3,7 @@ import MathJaxWrapper from '../../../components/MathJaxWrapper';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
-const Astro = () => {
+const electromag = () => {
     const sections = [
         {
             title: 'Specific Intensity',
@@ -41,7 +41,7 @@ const Astro = () => {
             <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
                 <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
                     <div className="max-w-4xl mx-auto p-4 shadow-2xl rounded-lg">
-                        <h1 className="text-2xl font-semibold text-center font-mono justify-center text-accent mb-4">Astrophysics</h1>
+                        <h1 className="text-2xl font-semibold text-center font-mono justify-center text-accent mb-4">Electricity and Magnetism</h1>
                         {sections.map((section, index) => (
                             <ExpandableSection key={index} title={`${index + 1}. ${section.title}`}>
                                 {section.subsections.map((subsection, subIndex) => (
@@ -129,4 +129,4 @@ const Subsection = ({ title, children }) => {
     );
 };
 
-export default Astro;
+export default electromag;

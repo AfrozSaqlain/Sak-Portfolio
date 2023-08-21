@@ -66,7 +66,7 @@ const Home = () => {
               alt="Background Image"
               fill="responsive"
               sizes="(max-width: 768px) 100vw, 1200px"
-              className="hidden xl:flex"
+              className="hidden xl:flex pointer"
               loading="eager"
             />
           </div>
