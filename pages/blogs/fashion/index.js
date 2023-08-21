@@ -2,7 +2,7 @@ import React from 'react'
 
 const fashion = () => {
   return (
-    <div>fashion</div>
+    <div className='ml-96 mt-96'>fashion</div>
   )
 }
 
