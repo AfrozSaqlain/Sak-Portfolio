@@ -56,7 +56,7 @@ const Post = ({post}) => {
       )}
       {authorImage && (
         <div className="mb-4">
-          <img
+          <Image
             className="w-12 h-12 rounded-full"
             src={urlFor(authorImage).width(50).url()}
             alt={`${name}'s picture`}
