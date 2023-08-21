@@ -3,7 +3,6 @@ import imageUrlBuilder from '@sanity/image-url'
 import {PortableText} from '@portabletext/react'
 import client from '../../../../client'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source)
@@ -27,18 +26,12 @@ const ptComponents = {
 
 const post = ({post}) => {
   const {
-    title = 'Missing title',
-    name = 'Missing name',
+    title,
+    name,
     categories,
     authorImage,
     body = []
   } = post
-  const router = useRouter()
-
-    // Display loading until `getStaticProps()` finishes running, and populates the props.
-    if (router.isFallback) {
-        return <div>Loading...</div>
-    }
   return (
     <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl">
       <h1 className="text-3xl font-bold mb-2">{title}</h1>
