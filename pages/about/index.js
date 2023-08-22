@@ -119,7 +119,7 @@ const About = () => {
       </motion.div>
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
         {/* text */}
-        <div className='flex-1 flex flex-col justify-center'>
+        <div className='flex-1 mt-[-50px] flex flex-col justify-center'>
           <motion.h2 variants={fadeIn('right', 0.2)} initial='hidden' animate='show' exit='hidden' className='h2'>
             Captivating <span className='text-accent'>stories</span>.
           </motion.h2>
@@ -169,8 +169,8 @@ const About = () => {
           </motion.div> 
         </div>
         {/* info */}
-        <motion.div variants={fadeIn('left', 0.4)} initial='hidden' animate='show' exit='hidden' className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
-          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
+        <motion.div variants={fadeIn('left', 0.4)} initial='hidden' animate='show' exit='hidden' className='flex flex-col w-full pb-20 xl:max-w-[48%] h-[480px]'>
+          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 xl:mt-11 mb-4'>
             {aboutData.map((item, itemIndex) => {
               return (
                 <div

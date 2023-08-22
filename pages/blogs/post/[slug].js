@@ -46,7 +46,7 @@ const Post = ({ post }) => {
   return (
     <div className="relative h-full">
       <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-        <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl pb-28 pt-4">
+        <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl mb-28 pt-4">
           <h1 className="text-3xl font-bold mb-2">{title}</h1>
           <span className="text-gray-500">By {name}</span>
           {categories && (
