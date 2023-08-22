@@ -22,6 +22,7 @@ const ptComponents = {
           alt={value.alt || ' '}
           loading="lazy"
           src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+          className='rounded-lg justify-center mx-auto items-center shadow-lg'
         />
       )
     },
@@ -77,7 +78,7 @@ const Post = ({ post }) => {
 };
 
 const client = createClient({
-  projectId: 'm25bacsw',
+  projectId: 'wvm2brko',
   dataset: 'production',// or the name you chose in step 1
   useCdn: true, // `false` if you want to ensure fresh data
   apiVersion: '2021-08-31',

@@ -35,7 +35,7 @@ const Index = ({ posts }) => {
 }
 
 const client = createClient({
-  projectId: 'm25bacsw',
+  projectId: 'wvm2brko',
   dataset: 'production',// or the name you chose in step 1
   useCdn: true, // `false` if you want to ensure fresh data
   apiVersion: '2021-08-31',
