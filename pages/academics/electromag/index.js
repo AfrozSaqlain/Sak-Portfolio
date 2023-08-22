@@ -98,7 +98,7 @@ const Subsection = ({ title, children }) => {
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <div className={`mb-2 pl-6`}>
+        <div className={`mb-2 pl-3`}>
             <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => setExpanded(!expanded)}

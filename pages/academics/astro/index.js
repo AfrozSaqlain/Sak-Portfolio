@@ -40,7 +40,7 @@ const Astro = () => {
         <div className="relative h-full">
             <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
                 <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-                    <div className="max-w-4xl mx-auto p-4 shadow-2xl rounded-lg">
+                    <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
                         <h1 className="text-2xl font-semibold text-center font-mono justify-center text-accent mb-4">Astrophysics</h1>
                         {sections.map((section, index) => (
                             <ExpandableSection key={index} title={`${index + 1}. ${section.title}`}>
@@ -98,7 +98,7 @@ const Subsection = ({ title, children }) => {
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <div className={`mb-2 pl-6`}>
+        <div className={`mb-2 pl-3`}>
             <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => setExpanded(!expanded)}
