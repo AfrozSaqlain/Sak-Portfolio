@@ -9,7 +9,7 @@ const Index = ({ posts }) => {
   return (
     <div className="relative h-full">
       <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-        <div className='relative mx-4 md:mx-24 lg:mx-96 mt-16 md:mt-24 lg:mt-40'>
+        <div className='relative mx-4 md:mx-24 lg:mx-96 mt-16 md:mt-24 pb-24 lg:mt-40'>
           <h1 className='text-3xl mb-6'>Welcome to a blog!</h1>
           <ul>
             {posts.length > 0 && posts.map(

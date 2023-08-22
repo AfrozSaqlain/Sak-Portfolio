@@ -45,7 +45,7 @@ const Post = ({ post }) => {
   return (
     <div className="relative h-full">
       <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-        <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl pb-24 pt-4">
+        <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl pb-28 pt-4">
           <h1 className="text-3xl font-bold mb-2">{title}</h1>
           <span className="text-gray-500">By {name}</span>
           {categories && (
@@ -67,7 +67,9 @@ const Post = ({ post }) => {
               />
             </div>
           )}
+          <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
           <PortableText value={body} components={ptComponents} />
+          </div>
         </article>
       </SimpleBar>
     </div>
