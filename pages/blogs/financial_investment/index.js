@@ -21,15 +21,15 @@ const Index = ({ posts }) => {
     <div className="relative h-full">
       <SimpleBar forceVisible="y" autoHide={true} className="overflow-visible overscroll-y-auto h-full">
         <div className="relative mx-4 md:mx-24 lg:mx-96 mt-16 md:mt-24 pb-24 lg:mt-40">
-          <h1 className="h2 mb-6 text-center">Welcome to Fashion blog!</h1>
+          <h1 className="h2 mb-6 text-center">Welcome to Finance blog!</h1>
           <ul className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {posts.length > 0 ? (
-  posts.map(({ _id, title = '', slug = '', publishedAt = '', mainImage }) =>
-    slug && <Card key={_id} post={{ title, slug, publishedAt, mainImage }} client={client} />
-  )
-) : (
-  <p>No posts to show</p>
-)}
+            {posts.length > 0 ? (
+              posts.map(({ _id, title = '', slug = '', publishedAt = '', mainImage }) =>
+                slug && <Card key={_id} post={{ title, slug, publishedAt, mainImage }} client={client} />
+              )
+            ) : (
+              <p>No posts to show</p>
+            )}
           </ul>
         </div>
       </SimpleBar>

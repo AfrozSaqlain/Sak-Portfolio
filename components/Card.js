@@ -18,8 +18,8 @@ const Card = ({ post, client }) => {
   return (
     <Link href={`/blogs/post/${encodeURIComponent(post.slug.current)}`} legacyBehavior>
       <a
-        className={`block border border-gray-300/20 p-2 z-50 rounded-lg hover:shadow-md transition duration-300 ${
-          isHovered ? 'hover:rotate-3' : ''
+        className={`block border border-gray-300/20 p-2 z-50 rounded-lg hover:shadow-lg hover:shadow-slate-300 transition duration-300 ${
+          isHovered ? 'hover:scale-105' : ''
         }`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
