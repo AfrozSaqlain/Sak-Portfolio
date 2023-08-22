@@ -45,34 +45,36 @@ const Post = ({ post }) => {
   } = post
   return (
     <div className="relative h-full">
-      <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-        <article className="max-w-prose mx-auto p-4 mt-24 shadow-2xl mb-28 pt-4">
-          <h1 className="text-3xl font-bold mb-2">{title}</h1>
-          <span className="text-gray-500">By {name}</span>
-          {categories && (
-            <ul className="mt-2 mb-4">
-              Posted in
-              {categories.map((category) => (
-                <li key={category} className="inline-block mr-2 text-blue-500">
-                  {category}
-                </li>
-              ))}
-            </ul>
-          )}
-          {authorImage && (
-            <div className="mb-4">
-              <img
-                className="w-12 h-12 rounded-full"
-                src={urlFor(authorImage).width(50).url()}
-                alt={`${name}'s picture`}
-              />
+      <div className='h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 mt-4 pt-4'>
+        <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
+          <article className="max-w-prose mx-auto p-4 mt-4 shadow-2xl mb-10 pt-4">
+            <h1 className="text-3xl font-bold mb-2">{title}</h1>
+            <span className="text-gray-500">By {name}</span>
+            {categories && (
+              <ul className="mt-2 mb-4">
+                Posted in
+                {categories.map((category) => (
+                  <li key={category} className="inline-block mr-2 text-blue-500">
+                    {category}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {authorImage && (
+              <div className="mb-4">
+                <img
+                  className="w-12 h-12 rounded-full"
+                  src={urlFor(authorImage).width(50).url()}
+                  alt={`${name}'s picture`}
+                />
+              </div>
+            )}
+            <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
+              <PortableText value={body} components={ptComponents} />
             </div>
-          )}
-          <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
-          <PortableText value={body} components={ptComponents} />
-          </div>
-        </article>
-      </SimpleBar>
+          </article>
+        </SimpleBar>
+      </div>
     </div>
   );
 };

@@ -114,7 +114,7 @@ const About = () => {
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left overflow-y-scroll md:overflow-y-auto'>
       <Circles />
       {/* avatar img */}
-      <motion.div variants={fadeIn('right', 0.2)} initial='hidden' animate='show' exit='hidden' className='hidden xl:flex absolute bottom-0 -left-[320px] max-w-[666px] max-h-[607px]'>
+      <motion.div variants={fadeIn('right', 0.2)} initial='hidden' animate='show' exit='hidden' className='hidden xl:flex absolute bottom-0 -left-[310px] max-w-[666px] max-h-[607px]'>
         <Avatar />
       </motion.div>
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>

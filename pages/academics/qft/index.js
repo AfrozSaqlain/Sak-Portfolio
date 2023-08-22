@@ -318,8 +318,8 @@ const qft = () => {
 
     return (
         <div className="relative h-full">
-            <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-                <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
+            <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
+                <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
                     <div className="max-w-4xl mx-auto p-4 shadow-2xl rounded-lg">
                         <h1 className="text-2xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
                         {sections.map((section, index) => (
@@ -334,9 +334,10 @@ const qft = () => {
                                 ))}
                             </ExpandableSection>
                         ))}
+                        {/* <ScrollToTopArrow /> */}
                     </div>
-                </div>
-            </SimpleBar>
+                </SimpleBar>
+            </div>
         </div>
     );
 };
@@ -352,9 +353,8 @@ const ExpandableSection = ({ title, children }) => {
             >
                 <h2 className="text-lg font-semibold">{title}</h2>
                 <div
-                    className={`ml-2 transition-transform transform ${
-                        expanded ? 'rotate-[-90deg]' : 'rotate-0'
-                    }`}
+                    className={`ml-2 transition-transform transform ${expanded ? 'rotate-[-90deg]' : 'rotate-0'
+                        }`}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -386,9 +386,8 @@ const Subsection = ({ title, children }) => {
             >
                 <h3 className="text-md font-semibold">{title}</h3>
                 <div
-                    className={`ml-6 transition-transform transform ${
-                        expanded ? 'rotate-[-90deg]' : 'rotate-0'
-                    }`}
+                    className={`ml-6 transition-transform transform ${expanded ? 'rotate-[-90deg]' : 'rotate-0'
+                        }`}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
