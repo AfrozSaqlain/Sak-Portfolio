@@ -71,7 +71,7 @@ const Home = () => {
           {/* bg img */}
           <div className="bg-none xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
             <Image
-              src="/bg-explosion.png"
+              src="/bg-explosion-tiny.png"
               alt="Background Image"
               fill="responsive"
               sizes="(max-width: 768px) 100vw, 1200px"
