@@ -1,10 +1,12 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Image from "next/image";
 
 //components
 import ParticlesContainer from '../components/ParticlesContainer';
-import ProjectsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
+// import ProjectsBtn from '../components/ProjectsBtn';
+// import Avatar from '../components/Avatar';
+const ProjectsBtn = lazy(() => import("../components/ProjectsBtn"));
+const Avatar = lazy(() => import("../components/Avatar"));
 
 //framer motion
 import { motion } from 'framer-motion'
@@ -21,15 +23,16 @@ const Home = () => {
           <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left md:text-sm h-full container mx-auto'>
             {/* title */}
             <div className="translate-y-2">
-            <motion.h2
-              variants={fadeIn('down', 0.2)}
-              initial='hidden'
-              animate='show'
-              exit='hidden'
-              className='h2'>
-              Transforming Ideas <br /> Into {' '}
-              <span className='text-accent'>Reality</span>
-            </motion.h2>
+              <motion.h2
+                variants={fadeIn('down', 0.2)}
+                initial='hidden'
+                animate='show'
+                exit='hidden'
+                className='h2'
+                style={{ willChange: 'transform, opacity' }}>
+                Transforming Ideas <br /> Into {' '}
+                <span className='text-accent'>Reality</span>
+              </motion.h2>
             </div>
             {/* subtitle */}
             <motion.div
@@ -46,7 +49,9 @@ const Home = () => {
             </motion.div>
             {/* btn */}
             <div className="flex justify-center xl:hidden relative">
-              <ProjectsBtn />
+              <Suspense fallback={<div className="animate-pulse">Loading...</div>}>
+                <ProjectsBtn />
+              </Suspense>
             </div>
             <motion.div
               variants={fadeIn('down', 0.4)}
@@ -55,7 +60,9 @@ const Home = () => {
               exit='hidden'
               className="hidden xl:flex"
             >
-              <ProjectsBtn />
+              <Suspense fallback={<div className="animate-pulse">Loading...</div>}>
+                <ProjectsBtn />
+              </Suspense>
             </motion.div>
           </div>
         </div>
@@ -69,7 +76,8 @@ const Home = () => {
               fill="responsive"
               sizes="(max-width: 768px) 100vw, 1200px"
               className="hidden xl:flex pointer"
-            // loading="eager"
+              // loading="eager"
+              loading="lazy"
             />
           </div>
           {/* particles */}
@@ -80,8 +88,11 @@ const Home = () => {
             animate='show'
             exit='hidden'
             transition={{ duration: 1, ease: 'easeInOut' }}
-            className="w-full h-full max-w-[666px] max-h-[607px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]">
-            <Avatar />
+            className="w-full h-full max-w-[666px] max-h-[607px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
+            style={{ willChange: 'transform, opacity' }}>
+            <Suspense fallback={<div className="animate-pulse">Loading...</div>}>
+              <Avatar />
+            </Suspense>
           </motion.div>
         </div>
       </div>

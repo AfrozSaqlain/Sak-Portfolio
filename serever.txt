@@ -1,0 +1,32 @@
+npm install express
+
+server.js
+    |
+    |
+    |
+    \/
+const express = require('express');
+const next = require('next');
+
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
+
+app.prepare().then(() => {
+  const server = express();
+
+  // Set Cache-Control headers for static assets (e.g., images, CSS, JS)
+  server.use('/_next/static', express.static('public/_next/static', {
+    maxAge: dev ? '0' : '365d', // Set cache duration (0 seconds in dev, 365 days in production)
+  }));
+
+  // Any other routes
+  server.get('*', (req, res) => {
+    return handle(req, res);
+  });
+
+  server.listen(3000, (err) => {
+    if (err) throw err;
+    console.log('> Ready on http://localhost:3000');
+  });
+});
