@@ -334,9 +334,9 @@ const qft = () => {
                                 ))}
                             </ExpandableSection>
                         ))}
-                        {/* <ScrollToTopArrow /> */}
                     </div>
                 </SimpleBar>
+                {/* <ScrollToTopArrow /> */}
             </div>
         </div>
     );

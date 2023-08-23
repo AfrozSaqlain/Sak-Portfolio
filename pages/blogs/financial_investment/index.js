@@ -2,12 +2,7 @@ import groq from 'groq';
 import { createClient } from 'next-sanity';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
-import Card from '../../../components/Card'; // Update this path
-// import imageUrlBuilder from '@sanity/image-url';
-
-// function urlFor(source) {
-//   return imageUrlBuilder(client).image(source);
-// }
+import Card from '../../../components/Card';
 
 const client = createClient({
   projectId: 'wvm2brko',
