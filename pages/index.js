@@ -77,7 +77,7 @@ const Home = () => {
               sizes="(max-width: 768px) 100vw, 1200px"
               className="hidden xl:flex pointer"
               // loading="eager"
-              loading="lazy"
+              // loading="lazy"
             />
           </div>
           {/* particles */}
