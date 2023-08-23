@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url';
+import Image from 'next/image';
 
 const Card = ({ post, client }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -25,8 +26,10 @@ const Card = ({ post, client }) => {
         onMouseLeave={handleMouseLeave}
       >
         <div className="relative overflow-hidden h-40 md:h-56 lg:h-64 mb-2">
-          <img
+          <Image
             src={urlFor(post.mainImage.asset).url()}
+            width={500}
+            height={500}
             alt={post.title}
             className="w-full rounded-lg h-full object-cover"
           />

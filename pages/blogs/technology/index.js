@@ -3,11 +3,11 @@ import { createClient } from 'next-sanity';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import Card from '../../../components/Card'; // Update this path
-import imageUrlBuilder from '@sanity/image-url';
+// import imageUrlBuilder from '@sanity/image-url';
 
-function urlFor(source) {
-  return imageUrlBuilder(client).image(source);
-}
+// function urlFor(source) {
+//   return imageUrlBuilder(client).image(source);
+// }
 
 const client = createClient({
   projectId: 'wvm2brko',

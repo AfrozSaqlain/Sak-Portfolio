@@ -3,7 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import { PortableText } from '@portabletext/react'
 // import client from '../../../client'
 import { createClient } from "next-sanity";
-// import Image from 'next/image'
+import Image from 'next/image'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
@@ -62,9 +62,11 @@ const Post = ({ post }) => {
             )}
             {authorImage && (
               <div className="mb-4">
-                <img
+                <Image
                   className="w-12 h-12 rounded-full"
                   src={urlFor(authorImage).width(50).url()}
+                  width={50}
+                  height={50}
                   alt={`${name}'s picture`}
                 />
               </div>
