@@ -15,19 +15,26 @@ const ptComponents = {
   types: {
     image: ({ value }) => {
       if (!value?.asset?._ref) {
-        return null
+        return null;
       }
+
+      // Generate the URL directly here
+      const imageUrl = urlFor(value).fit('max').auto('format').url();
+
       return (
-        <img
+        <Image
           alt={value.alt || ' '}
           loading="lazy"
-          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+          width={320}
+          height={240}
+          src={imageUrl} // Pass the generated URL here
           className='rounded-lg justify-center mx-auto items-center shadow-lg'
         />
-      )
+      );
     },
   }
-}
+};
+
 
 const Post = ({ post }) => {
 
@@ -47,7 +54,7 @@ const Post = ({ post }) => {
     <div className="relative h-full">
       <div className='h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 mt-4 pt-4'>
         <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-          <article className="max-w-prose mx-auto p-4 mt-4 shadow-2xl mb-10 pt-4">
+          <article className="max-w-prose mx-auto w-auto p-4 mt-4 shadow-2xl mb-10 pt-4">
             <h1 className="text-3xl font-bold mb-2">{title}</h1>
             <span className="text-gray-500">By {name}</span>
             {categories && (
