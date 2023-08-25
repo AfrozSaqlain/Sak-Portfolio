@@ -39,6 +39,7 @@
     "react-icons": "^4.8.0",
     "react-katex": "^3.0.1",
     "react-modal": "^3.16.1",
+    "react-parallax-tilt": "^1.7.162",
     "react-pdf": "^7.3.3",
     "react-router-dom": "^6.14.2",
     "react-three-fiber": "^6.0.13",

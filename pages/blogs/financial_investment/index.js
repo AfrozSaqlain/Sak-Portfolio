@@ -17,7 +17,7 @@ const Index = ({ posts }) => {
       <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 mt-4 pt-4">
         <SimpleBar forceVisible="y" autoHide={true} className="overflow-visible overscroll-y-auto h-full">
           <div className="relative mx-4 md:mx-24 lg:mx-96 mt-16 md:mt-24 pb-24 lg:mt-40">
-            <h1 className="h2 mb-6 text-center">Welcome to Finance blog!</h1>
+            <h1 className="h2 mb-6 text-center">Welcome to <span className='text-accent'>Finance blog!</span></h1>
             <ul className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {posts.length > 0 ? (
                 posts.map(({ _id, title = '', slug = '', publishedAt = '', mainImage }) =>
