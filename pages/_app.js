@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }) {
 
         <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
       </Head>
-        <Script
+        {/* <Script
           async
           type="text/javascript"
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
@@ -83,7 +83,7 @@ function MyApp({ Component, pageProps }) {
             'fast-preview': { disabled: true }
             });
           `}
-        </Script>
+        </Script> */}
       <Layout>
         <AnimatePresence mode='wait'>
           <motion.div key={router.route} className='h-full'>
