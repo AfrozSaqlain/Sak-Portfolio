@@ -60,6 +60,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:label1" value="Written by" />
         <meta name="twitter:data1" value="Saqlain Afroz" />
 
+
+        <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
+      </Head>
         <Script
           async
           type="text/javascript"
@@ -80,9 +83,6 @@ function MyApp({ Component, pageProps }) {
             });
           `}
         </Script>
-
-        <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
-      </Head>
       <Layout>
         <AnimatePresence mode='wait'>
           <motion.div key={router.route} className='h-full'>
