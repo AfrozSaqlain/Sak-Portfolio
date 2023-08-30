@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MathJaxWrapper from '../../../components/MathJaxWrapper';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
+// import ScrollToTop from 'react-scroll-to-top';
 
-const electromag = () => {
+const Electromag = () => {
     const sections = [
         {
             title: 'Specific Intensity',
@@ -29,7 +30,206 @@ const electromag = () => {
                 },
                 {
                     title: 'Calculation',
-                    content: 'How to calculate the total flux...',
+                    content: `How to calculate the total flux...
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    \\[
+                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                    \\]
+                    `,
                 },
                 // Add more subsections
             ],
@@ -39,6 +239,7 @@ const electromag = () => {
 
     return (
         <div className="relative h-full">
+            {/* <ScrollToTop smooth style={{ backgroundColor: 'transparent', color: '#fff', fontSize: '16px' }} /> */}
             <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
                 <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
                     <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
@@ -62,4 +263,4 @@ const electromag = () => {
     );
 };
 
-export default electromag;
+export default Electromag;

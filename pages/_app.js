@@ -14,6 +14,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 //vercel analytics
 import { Analytics } from '@vercel/analytics/react';
 
+//script
+import Script from 'next/script';
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
@@ -24,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Discover a rich blend of financial investment tips, fashion inspiration, web development insights, and comprehensive academic course notes." />
         <meta name="keywords" content="financial investment, fashion, web development, academic courses, tips, diy, ai/ml, trends, insights, notes, astrophysics, astronomy, maths, mathematics, quantum physics, blogging, blog, saqlain afroz, sak-portfolio, vercel, nextjs, portfolio, saqlain, saqlain afroz portfolio"></meta>
         <meta name="author" content="Saqlain Afroz"></meta>
-        
+
         <meta name="google-site-verification" content="ksLGxhQi_6VvPtGoOO_68ovimlXDkgSjkliANudNTO4" />
 
         <meta name="robots" content="index, follow"></meta>
@@ -56,6 +59,27 @@ function MyApp({ Component, pageProps }) {
         {/* Optional: Other Twitter Tags */}
         <meta name="twitter:label1" value="Written by" />
         <meta name="twitter:data1" value="Saqlain Afroz" />
+
+        <Script
+          async
+          type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
+        >
+          {`
+            MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']],
+              processEscapes: true,
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+              ignoreClass: 'tex2jax_ignore|dno',
+              processClass: 'tex2jax_process'
+            },
+            displayAlign: 'center',
+            CommonHTML: { matchFontHeight: false },
+            'fast-preview': { disabled: true }
+            });
+          `}
+        </Script>
 
         <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
       </Head>
