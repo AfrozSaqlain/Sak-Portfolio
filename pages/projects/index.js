@@ -196,8 +196,8 @@ const Projects = () => {
         },
         {
             title: 'Quantum Computation',
-            description: 'Description of Project 2',
-            imageUrl: '/qft.jpg',
+            description: 'This project aims to build powerful quantum computing algorithms capable of solving complex problems with unprecedented speed and efficiency.',
+            imageUrl: '/QM_Comp.jpg',
             url: '/',
             category: 'Computer',
         },
@@ -264,9 +264,9 @@ const Projects = () => {
                             <select
                                 onChange={(e) => setSelectedCategory(e.target.value)}
                                 value={selectedCategory}
-                                className='border border-black prose text-black/40 cursor-pointer rounded font-semibold z-40 bg-transparent p-2'>
+                                className='border border-slate-300/50 text-white prose cursor-pointer rounded font-semibold z-40 bg-transparent p-2'>
                                 {categories.map((category, index) => (
-                                    <option key={index} value={category}>
+                                    <option key={index} value={category} className='bg-[#281B4B]'>
                                         {category}
                                     </option>
                                 ))}
