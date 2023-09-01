@@ -229,7 +229,7 @@ const Projects = () => {
                             I always had the curiosity to know the unknown and to venture on a quest of knowledge. I have been doing research in the field of Astrophysics, I play guitar, write codes and I am also interested in financial markets. And here are some of my curated projects on all these domains.
                         </motion.p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-12">
                             {filteredProjects.map((project, index) => (
                                 <Link key={index} href={project.url} legacyBehavior>
                                     <a>
