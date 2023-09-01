@@ -58,4 +58,4 @@ const MathJaxWrapper = ({ content }) => {
     );
 };
 
-export default MathJaxWrapper;
+export default React.memo(MathJaxWrapper);
