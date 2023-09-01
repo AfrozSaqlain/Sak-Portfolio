@@ -124,7 +124,7 @@ const About = () => {
             Captivating <span className='text-accent'>stories</span>.
           </motion.h2>
           <motion.p variants={fadeIn('right', 0.4)} initial='hidden' animate='show' exit='hidden' className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-            I always had the curiosity to know the unknown and to venture on a quest of knowledge. I have been doing researchin the field of Astrophysics, I play guitar, write codes and I am also interested in financial markets. So, join me on this journey.
+            I always had the curiosity to know the unknown and to venture on a quest of knowledge. I have been doing research in the field of Astrophysics, I play guitar, write codes and I am also interested in financial markets. So, join me on this journey.
           </motion.p>
           {/* counters */}
           <motion.div variants={fadeIn('right', 0.6)} initial='hidden' animate='show' exit='hidden' className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
