@@ -15,7 +15,7 @@ module.exports = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com",
+            value: "script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com https://va.vercel-scripts.com",
           },
         ],
       },
