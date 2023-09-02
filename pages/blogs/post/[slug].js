@@ -59,12 +59,14 @@ const Post = ({ post }) => {
             <span className="text-gray-500">By {name}</span>
             {categories && (
               <ul className="mt-2 mb-4">
-                Posted in
-                {categories.map((category) => (
-                  <li key={category} className="inline-block mr-2 text-blue-500">
-                    {category}
-                  </li>
-                ))}
+                <div className="mt-2 mb-4 flex items-center">
+                  <span className="mr-2">Posted in</span>
+                  {categories.map((category) => (
+                    <li key={category} className="inline-block mr-2 text-blue-500">
+                      {category}
+                    </li>
+                  ))}
+                  </div>
               </ul>
             )}
             {authorImage && (
