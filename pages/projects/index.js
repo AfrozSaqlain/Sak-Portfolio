@@ -191,14 +191,14 @@ const Projects = () => {
             title: 'Gravitational Wave',
             description: 'I use gwpy, PyCBC and other libraries to analyze and process the signals received from LIGO. And I also am working on implementing AI/ ML in data processing.',
             imageUrl: '/GW_wave.png',
-            url: '/projects/GW_Analysis',
+            url: '/notes/GW_wave.pdf',
             category: 'Physics',
         },
         {
             title: 'Quantum Computation',
             description: 'This project aims to build powerful quantum computing algorithms capable of solving complex problems with unprecedented speed and efficiency.',
             imageUrl: '/QM_Comp.jpg',
-            url: '/',
+            url: '/notes/qft.pdf',
             category: 'Computer',
         },
         // Add more projects with categories as needed
