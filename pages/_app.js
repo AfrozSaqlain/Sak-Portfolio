@@ -61,29 +61,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:data1" value="Saqlain Afroz" />
 
 
-        <link rel="icon" href="/favicon.png" type="image/x-icon"></link>
+        <link rel="icon" href="/favicon.ico" sizes='any'/>
       </Head>
-        {/* <Script
-          async
-          type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
-          id="my-script"
-        >
-          {`
-            MathJax.Hub.Config({
-            tex2jax: {
-              inlineMath: [['$', '$'], ['\\(', '\\)']],
-              processEscapes: true,
-              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-              ignoreClass: 'tex2jax_ignore|dno',
-              processClass: 'tex2jax_process'
-            },
-            displayAlign: 'center',
-            CommonHTML: { matchFontHeight: false },
-            'fast-preview': { disabled: true }
-            });
-          `}
-        </Script> */}
       <Layout>
         <AnimatePresence mode='wait'>
           <motion.div key={router.route} className='h-full'>
