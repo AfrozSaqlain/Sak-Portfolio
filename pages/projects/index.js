@@ -201,6 +201,13 @@ const Projects = () => {
             url: '/notes/qft.pdf',
             category: 'Computer',
         },
+        {
+            title: 'Algorithm',
+            description: 'This project aims to build powerful quantum computing algorithms capable of solving complex problems with unprecedented speed and efficiency.',
+            imageUrl: '/QM_Comp.jpg',
+            url: '/',
+            category: 'Computer',
+        },
         // Add more projects with categories as needed
     ];
 
