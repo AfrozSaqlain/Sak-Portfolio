@@ -202,10 +202,10 @@ const Projects = () => {
             category: 'Computer',
         },
         {
-            title: 'Algorithm',
-            description: 'This project aims to build powerful quantum computing algorithms capable of solving complex problems with unprecedented speed and efficiency.',
-            imageUrl: '/QM_Comp.jpg',
-            url: '/',
+            title: 'CodeSandbox',
+            description: 'This project aims to let create projects online on my page using codeSandbox. Though this project is still under development stage for allowing python to run.',
+            imageUrl: '/Computing.jpg',
+            url: '/projects/QM_Comp',
             category: 'Computer',
         },
         // Add more projects with categories as needed
