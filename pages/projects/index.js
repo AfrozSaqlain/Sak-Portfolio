@@ -191,7 +191,7 @@ const Projects = () => {
             title: 'Gravitational Wave',
             description: 'I use gwpy, PyCBC and other libraries to analyze and process the signals received from LIGO. And I also am working on implementing AI/ ML in data processing.',
             imageUrl: '/GW_wave.png',
-            url: '/',
+            url: '/projects/GW_Analysis',
             category: 'Physics',
         },
         {
@@ -264,7 +264,7 @@ const Projects = () => {
                             <select
                                 onChange={(e) => setSelectedCategory(e.target.value)}
                                 value={selectedCategory}
-                                className='border border-slate-300/50 text-white prose cursor-pointer rounded font-semibold z-40 bg-transparent p-2'>
+                                className='border border-slate-300/50 focus:outline-none text-white prose cursor-pointer rounded font-semibold z-40 bg-transparent p-2'>
                                 {categories.map((category, index) => (
                                     <option key={index} value={category} className='bg-[#281B4B]'>
                                         {category}
