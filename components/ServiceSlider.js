@@ -30,7 +30,7 @@ const serviceData = [
   {
     icon: <RxPencil2 />,
     title: 'Technology',
-    description: 'A comprehensive review of the latest and essential gadgets.',
+    description: 'A comprehensive review of the latest gadgets.',
     url: '../blogs/technology',
   },
   {
