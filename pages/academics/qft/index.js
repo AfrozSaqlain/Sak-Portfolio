@@ -411,6 +411,89 @@ const qft = () => {
                         This equation is true only for Euler-Lagrange equation of motion. So, if we plug \\( (\\square + m^2)\\phi_a = 0 \\) then we get the above equation eqal to 0.
                     `,
                 },
+                {
+                    title: 'Space-Time Translation',
+                    content: `
+                        \\[
+                            \\begin{align}
+                                x^\\nu &\\to {x'}^\\nu = x^\\nu - \\epsilon^\\nu \\\\
+                                \\phi(x) &\\to \\phi'(x) = \\phi(x) + \\underbrace{\\epsilon^\\nu \\partial_\\nu \\phi}_{\\delta \\phi}
+                            \\end{align}
+                        \\]
+                        \\[
+                            \\begin{align}
+                                \\mathcal{L}(x) \\to \\mathcal{L}'(x) &= \\mathcal{L}(x) + \\epsilon^\\nu \\partial_\\nu \\mathcal{L}\\\\
+                                 &= \\mathcal{L}(x) + \\partial_\\nu ( \\epsilon^\\nu \\mathcal{L} )
+                            \\end{align}
+                        \\]
+                        Thus, we can now calculate Noether's current as:
+                        \\[
+                            \\begin{align}
+                                j^\\mu &= \\frac{\\partial}{\\partial(\\partial_\\mu \\phi)} \\epsilon^\\nu \\partial_\\nu \\phi - \\epsilon^\\mu \\mathcal{L}\\\\
+                                &= \\frac{\\partial}{\\partial(\\partial_\\mu \\phi)} (\\partial_\\nu \\phi) \\epsilon^\\nu - \\eta^\\mu_\\nu \\epsilon^\\nu \\mathcal{L}\\\\
+                                &= T^\\mu_\\nu \\epsilon^\\nu
+                            \\end{align}
+                        \\]
+                        where \\( T^\\mu_\\nu \\) is known as "Energy-Momentum Tensor" and 
+                        <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
+                        \\[ T^\\mu_\\nu = \\frac{\\partial}{\\partial(\\partial_\\mu \\phi)} (\\partial_\\nu \\phi)  - \\eta^\\mu_\\nu \\mathcal{L} \\]
+                        </div>
+                        as \\( \\mathcal{L}(x) \\to \\mathcal{L}'(x) = \\mathcal{L}(x) + \\partial_\\nu ( \\epsilon^\\nu \\mathcal{L} ) \\) and this is symmetry transformation. This implies that 
+                        \\[ 
+                            \\begin{align}
+                                \\partial_\\mu j^\\mu &= 0\\\\ 
+                                \\partial_\\mu (T^\\mu_\\nu \\epsilon^\\nu) &= 0\\\\
+                            \\end{align}
+                        \\]
+                        <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
+                            \\[
+                                \\partial_\\mu (T^\\mu_\\nu ) = 0\\\\ 
+                            \\]
+                        </div>
+
+                        This tells us that \\( T^\\mu_\\nu \\) is conserved.
+
+                        <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
+                        \\[ T_{\\mu \\nu} = \\frac{\\partial}{\\partial(\\partial^\\mu \\phi_a)} (\\partial_\\nu \\phi_a)  - \\eta_{\\mu \\nu} \\mathcal{L} \\]
+                        </div>
+
+                        This means that we have to sum over all fields \\( \\phi_a \\).
+                        
+                        <br/>
+
+                        <p class='text-md text underline underline-offset-1 font-semibold text-white'>Charge :</p>
+
+                        <br/>
+
+                        \\[
+                            \\underbrace{\\rho^0 = \\int d^3x T^{00}}_{\\text{energy of the system}} \\hspace{17pt} , \\hspace{7pt}   \\underbrace{\\rho^i = \\int d^3x T^{0i}}_{\\text{physical momentum of the system}}
+                        \\]
+                        <div class="border-t border-gray-300/20 my-4"></div>
+                        Question:
+                        \\[
+                            \\mathcal{L} = \\frac{1}{2}\\partial_\\mu \\phi \\partial^\\mu \\phi - \\frac{1}{2}m^2 \\phi^2    
+                        \\]
+                        We know the formula for Energy-Momentum Tensor and thus we can write as:
+                        \\[
+                            \\begin{align}
+                                T &= (\\partial_\\nu \\phi) \\frac{\\partial}{\\partial(\\partial^\\mu \\phi)} \\left( \\frac{1}{2}\\partial_\\alpha \\phi \\partial^\\alpha \\phi \\right) - \\eta_{\\mu \\nu} \\mathcal{L}\\\\
+                                &= \\partial_\\mu \\phi \\partial_\\nu \\phi - \\eta_{\\mu \\nu} \\mathcal{L}\\\\
+                                &= \\frac{1}{2} \\partial_\\mu \\phi \\partial_\\nu \\phi + \\frac{1}{2} m^2 \\phi^2
+                            \\end{align}
+                        \\]
+                        Now, 
+                        \\[
+                            \\begin{align}
+                                T^{00} &= \\frac{1}{2} \\dot{\\phi^2} + \\frac{1}{2} m^2 \\phi^2\\\\
+                                E &= \\int \\left( \\frac{1}{2} \\dot{\\phi^2} + \\frac{1}{2} m^2 \\phi^2 \\right) d^3 x
+                            \\end{align}
+                        \\]
+                        Similarly,
+                        \\[
+                            P^i = \\int d^3 x \\dot{\\phi} \\partial^i \\phi    
+                        \\]
+                    `,
+                },
             ]
         },
         {
