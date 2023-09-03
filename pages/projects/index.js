@@ -225,7 +225,7 @@ const Projects = () => {
     return (
         <div className='h-full bg-black/40 translate-y-0 overflow-y-auto overflow-visible overscroll-y-auto pt-10'>
             <SimpleBar forceVisible="y" autoHide={true} className="overflow-visible overscroll-y-auto h-full">
-                <div className='container mx-auto h-full overflow-y-auto mt-18 mb-4 p-4 pt-12 pb-28 sm:mt-20 sm:p-0 sm:pt-10 sm:pb-10 flex flex-col xl:flex-row gap-x-6'>
+                <div className='container mx-auto h-full overflow-y-auto mt-12 mb-4 p-4 pt-12 pb-28 sm:mt-20 sm:p-0 sm:pt-10 sm:pb-10 flex flex-col xl:flex-row gap-x-6'>
                     {/* Rest of your code */}
                     {/* text */}
                     <div className='flex-1 mt-[-50px] flex flex-col justify-center'>
@@ -266,7 +266,7 @@ const Projects = () => {
                         </div>
                     </div>
                     {/* Category dropdown */}
-                    <div className='absolute top-14 right-4 lg:right-20 xl:top-40 xl:right-40 mt-[-50px] mr-4 flex flex-col items-end'>
+                    <div className='absolute top-14 right-4 lg:right-20 xl:top-40 xl:right-40 mt-[-10px] xl:mt-[-50px] mr-4 flex flex-col items-end'>
                         <motion.div variants={fadeIn('left', 0.4)} initial='hidden' animate='show' exit='hidden'>
                             <select
                                 onChange={(e) => setSelectedCategory(e.target.value)}
