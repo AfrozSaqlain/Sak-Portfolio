@@ -105,6 +105,19 @@ const qft = () => {
                     \\[
                         \\frac{\\partial \\mathcal{L}}{\\partial \\phi} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) = 0
                     \\]
+                    At this point let's note down some properties of Lagrangian:
+                    
+                    <ul class="list-disc ml-8 my-4">
+                        <li class="mb-2">Quadratic in fields.</li>
+                        <li class="mb-2">Contains derivative of fields.</li>
+                        <li class="mb-2">S must be poincare invariant.</li>
+                        <li class="mb-2">\\( \\mathcal{L} \\) must be poincare invariant.</li>
+                        <li class="mb-2">\\( \\mathcal{L} \\) must be real.</li>
+                        <li class="mb-2">If observables show some symmetry, \\( \\mathcal{L} \\) should also show that. This is known as Noether's Theorem.</li>
+                        <li class="mb-2">If there is some redundancy in D.O.F., \\( \\mathcal{L} \\) should also show that.</li>
+                        <li class="mb-2">Gauge symmetry should exist.</li>
+                    </ul>  
+
                     Now, let us take an example of Maxwell's Equation: 
                     \\[
                         \\mathcal{L} = -\\frac{1}{4} F_{\\mu \\nu} F^{\\mu \\nu}    
@@ -292,12 +305,110 @@ const qft = () => {
                         \\[
                             H = \\Pi_A \\dot{\\phi^A} - \\mathcal{L}    
                         \\]
+                        Now let's write the Hamiltonian for Klein Gordon field:
+                        \\[
+                            \\begin{align}
+                            \\mathcal{L} &= \\frac{1}{2}\\partial_\\mu \\phi \\partial^\\mu \\phi - \\frac{1}{2}m^2 \\phi^2 \\\\
+                            &= \\frac{1}{2}\\dot{\\phi^2} - \\nabla^2 \\phi - \\frac{1}{2}m^2 \\phi^2 \\\\
+                            \\implies \\Pi &= \\frac{\\partial \\mathcal{L}}{\\partial \\dot{\\phi}} = \\dot{\\phi}\\\\
+                            \\therefore H &= \\Pi \\dot{\\phi} - \\mathcal{L}\\\\
+                            &= \\dot{\\phi^2} - \\frac{1}{2}\\dot{\\phi^2} + \\nabla^2 \\phi + \\frac{1}{2}m^2 \\phi^2 \\\\
+                            &= \\frac{1}{2}\\dot{\\phi^2} + \\nabla^2 \\phi + \\frac{1}{2}m^2 \\phi^2
+                            \\end{align}
+                        \\]
+                        In field theory we have two motions,
+                        <ul class="list-disc ml-8 my-4">
+                            <li class='mb-2'> <strong>Kinetic Term :</strong> Billinear in fields. Ex \\(\\partial_\\mu \\partial^\\mu, m^2 \\phi^2, F_{\\mu \\nu} F^{\\mu \\nu}\\) etc.</li>
+                            <li class='mb-2'><strong>Interaction Term :</strong> Ex. \\(V(\\phi) = \\lambda \\phi^3, \\alpha \\phi^4\\) </li>
+                        </ul>
                     `,
                 },
                 {
                     title: 'Symmetries',
                     content: `
-
+                        \\[\\phi(x) \\to \\phi'(x) = \\phi(x) + \\underbrace{\\delta \\phi(x)}_{\\text{continuous symmetry}}\\]
+                        \\[\\delta \\mathcal{L} = \\partial_\\mu F^\\mu \\to \\text{symmetry} \\]
+                        <p class='text-center text-md text font-semibold text-white'>E.O.M. remains same</p>
+                        Now we introduce a parameter \\(\\alpha\\) in the Lagrangian to add some perturbation. Thus, we have
+                        \\[
+                            \\begin{align}
+                                \\frac{\\delta \\mathcal{L}}{\\delta \\alpha} &= \\frac{\\delta \\mathcal{L}}{\\delta \\phi_a} \\frac{{\\delta \\phi_a}}{\\delta \\alpha} + \\frac{\\delta \\mathcal{L}}{\\delta (\\partial_\\mu \\phi_a)} \\frac{{\\delta (\\partial_\\mu \\phi_a)}}{\\delta \\alpha} \\\\
+                                &= \\frac{\\delta \\mathcal{L}}{\\delta \\phi_a} \\frac{{\\delta \\phi_a}}{\\delta \\alpha} + \\frac{\\delta \\mathcal{L}}{\\delta (\\partial_\\mu \\phi_a)} \\frac{{\\partial_\\mu (\\delta \\phi_a)}}{\\delta \\alpha} \\\\
+                                &= \\underbrace{ \\left[ \\frac{\\partial \\mathcal{L}}{\\partial \\phi_a} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi_a)} \\right) \\right]}_{\\text{= 0 by E.L Equation of motion}} \\frac{\\delta \\phi_a}{\\delta \\alpha} + \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi_a)}\\frac{\\delta \\phi_a}{\\delta \\alpha} \\right)
+                            \\end{align}
+                        \\]
+                        Now, \\[
+                                \\partial_\\mu F^\\mu = \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi_a)}\\frac{\\delta \\phi_a}{\\delta \\alpha} \\right) \\
+                            \\]
+                            \\[
+                                \\begin{align}
+                                    \\implies \\partial_\\mu \\left[ \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi_a)}\\frac{\\delta \\phi_a}{\\delta \\alpha} - F^\\mu \\right] &= 0\\\\
+                                    \\ \\partial_\\mu j^\\mu = 0\\\\
+                                \\end{align}
+                            \\]
+                        <ul class="list-disc ml-8 my-4">
+                            <li class='mb-2'>For every continuous symmetry of \\(\\mathcal{L}\\) there is a conserved 4-current \\(j^\\mu\\)
+                                <div class="flex flex-row items-center">
+                                <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
+                                    \\[
+                                        \\partial_\\mu j^\\mu = 0 
+                                    \\]
+                                </div>
+                                    <p class="text-md text left font-semibold xl:-translate-x-56 text-white"> ---> Noether's theorem</p>
+                                </div>
+                                Note: The reverse statement is not true
+                            </li>
+                        </ul>
+                        \\[
+                            \\therefore \\partial_\\mu j^\\mu = \\frac{\\partial \\vec{j}}{\\partial t} + \\vec{\\nabla} \\vec{j} = 0
+                        \\]
+                        Now, 
+                        \\[
+                            \\begin{align}
+                                Q &= \\int d^3x j \\to \\text{ function of time}\\\\
+                                \\frac{dQ}{dt} &= \\int_{\\mathbb{R}^3} d^3x \\frac{\\partial j^0}{\\partial t}\\\\
+                                &= - \\int_{\\mathbb{R}^3} \\vec{\\nabla} \\cdot \\vec{j} d^3x\\\\
+                                &= -\\vec{j}|_{_{\\text{surface of } \\mathbb{R}^3}} = 0 \\to \\text{ asymtotically}
+                            \\end{align}
+                        \\]
+                        <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
+                            \\[
+                                \\frac{dQ}{dt} = 0
+                            \\]
+                        </div>
+                        Q can be called 'charge', but do not restrict yourself to this terminology for Q.
+                        <div class="border-t border-gray-300/20 my-4"></div>
+                        Example:<span class='ml-4'></span> \\(\\mathcal{L} = \\partial_\\mu \\phi \\partial^\\mu \\phi^* - m^2 \\phi \\phi^*\\). Thus, our Lagrangian is a function of \\(\\mathcal{L}(\\phi, \\phi^*, \\partial_\\mu \\phi, \\partial_\\mu \\phi^*)\\) and we can see that there are two fields which compose this Lagrangian and thus this is where the subscript "a" comes from in \\(\\phi_a\\).
+                        <br/>
+                        <br/>
+                        Now, let's do: \\(\\phi \\to \\phi' = \\phi(x) e^{i \\alpha} \\). Note that this is global symmetry.
+                        <br/>
+                        <br/>
+                        <p class="text-md text left font-semibold text-pink-300">I go to point x and rotate the field by \\(\\alpha\\). This is called "Phase Rotation", and the Lagrangian remains constant.
+                        \\[\\implies \\mathcal{L} = \\mathcal{L}' \\implies \\delta \\mathcal{L} = 0 \\]
+                        \\[\\implies F^\\mu = 0 \\text{ or constant} \\]
+                        </p>
+                        <p class="text-md text left font-semibold text-pink-300">I go to point x and rotate the field by \\(\\alpha\\). Under a transformation if \\( \\delta \\mathcal{L} \\neq \\partial_\\mu F^\\mu \\implies \\) asymmetry.</p>
+                        <br/>
+                        \\[
+                            \\begin{align}
+                                j^\\mu &= \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi_a)}\\frac{\\delta \\phi_a}{\\delta \\alpha} - F^\\mu\\\\
+                                &= \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\underbrace{ \\frac{\\delta \\phi}{\\delta \\alpha} }_{ i\\phi } + \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi^*)} \\underbrace{ \\frac{\\delta \\phi^*}{\\delta \\alpha} }_{ i\\phi^* }
+                            \\end{align}
+                        \\]
+                        <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
+                            \\[
+                                j^\\mu = -i\\left( \\phi \\partial^\\mu \\phi^* - \\phi^* \\partial^\\mu \\phi \\right)
+                            \\]
+                        </div>
+                        As we know \\(\\partial_\\mu j^\\mu = 0\\). So, let's check that:
+                        \\[
+                            \\begin{align}
+                                \\partial_\\mu \\left( \\phi \\partial^\\mu \\phi^* - \\phi^* \\partial^\\mu \\phi \\right) &= (\\partial_\\mu \\phi) (\\partial^\\mu \\phi^*) + \\phi \\square \\phi^* - (\\partial_\\mu \\phi^*) (\\partial^\\mu \\phi) - \\phi^* \\square \\phi  \\\\
+                                &= 0
+                            \\end{align}
+                        \\]
+                        This equation is true only for Euler-Lagrange equation of motion. So, if we plug \\( (\\square + m^2)\\phi_a = 0 \\) then we get the above equation eqal to 0.
                     `,
                 },
             ]
@@ -319,8 +430,8 @@ const qft = () => {
 
     return (
         <div className="relative h-full bg-black/40">
-            <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
-                <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
+            <div className="h-full translate-y-10 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
+                <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible scroll-smooth overscroll-y-auto h-full'>
                     <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
                         <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
                         {sections.map((section, index) => (
