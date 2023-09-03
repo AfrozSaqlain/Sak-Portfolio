@@ -22,7 +22,7 @@ const qft = () => {
                         <li class="mb-2">Fundamental Field</li>
                         <li class="mb-2">Component of an object \\( \\phi^A (t, \\vec{x}) \\)</li>
                         <li class="mb-2">Can be part of internal space: \\[ \\phi^A (t, \\vec{x}) = \\int \\phi_k e^{ik \\cdot x} d^3k \\]</li>
-                      </ul>
+                    </ul>
                     <br/>
                     In general:
                     \\[
@@ -46,7 +46,7 @@ const qft = () => {
                         \\eta^{\\mu \\nu} = \\text{Diagonal}(1, -1, -1, -1)
                     \\]
                     \\[
-                        \\eta^{\\mu \\nu} \\eta_{\\nu \\mu} = \\mathbb{1}  
+                        \\eta^{\\mu \\nu} \\eta_{\\mu \\nu} = \\mathbb{1}  
                     \\]
                     \\[    
                         x_\\mu = \\eta_{\\mu \\nu} x^\\nu = (t, -\\vec{x})  
@@ -150,9 +150,14 @@ const qft = () => {
                     \\]
                     Now, we can write Euler Lagrange Equation as:
                     \\[
-                        \\frac{\\partial \\mathcal{L}}{\\partial \\phi} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) = 0 \\\\
-                        \\frac{\\partial \\mathcal{L}}{\\partial \\phi} = -m^2 \\phi \\\\
-                        \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) = \\partial_\\mu \\partial^\\mu \\phi
+                        \\frac{\\partial \\mathcal{L}}{\\partial \\phi} - \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) = 0
+                    \\]
+                    where,
+                    \\[
+                        \\begin{align}
+                        \\frac{\\partial \\mathcal{L}}{\\partial \\phi} &= -m^2 \\phi \\\\
+                        \\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right) &= \\partial_\\mu \\partial^\\mu \\phi
+                        \\end{align}
                     \\]
                     where \\( \\frac{\\partial \\mathcal{L}}{\\partial \\phi} = -m^2 \\phi \\) and for \\(\\partial_\\mu \\left( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\right)\\) let's first find out \\( \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} \\) and for that we change the subscript \\(\\mu\\) to say \\(\\alpha\\) in \\(\\mathcal{L}\\) and let's solve now:
                     \\[
@@ -492,6 +497,69 @@ const qft = () => {
                         \\[
                             P^i = \\int d^3 x \\dot{\\phi} \\partial^i \\phi    
                         \\]
+                        <div class="border-t border-gray-300/20 my-4"></div>
+                        In Klein Gordon Field: \\( T_{\\mu \\nu} = T_{\\nu \\mu} \\). But this is not true, in general.
+                        <br/>
+                        <br/>
+                        Now, let's learn how to make \\( T_{\\mu \\nu} \\) symmetric.
+                        \\[
+                            \\theta^{\\mu \\nu} = T^{\\mu \\nu} + \\partial_\\lambda f^{\\lambda \\mu \\nu} \\hspace{7pt}, \\hspace{7pt} \\text{where } f^{\\lambda \\mu \\nu} = - f^{\\mu \\lambda \\nu}
+                        \\]
+                        \\[
+                            \\begin{align}
+                                p_\\nu &= \\int T_\\nu^0 d^3 x
+                                = \\int \\theta^0_\\nu d^3 x - \\underbrace{\\int \\partial_\\lambda f^{\\lambda 0}_\\nu d^3 x}_{\\text{under certain conditions this goes to 0}}
+                            \\end{align}
+                        \\]
+                        <ul class="list-disc ml-8 my-4">
+                            <li class="mb-2">Charge for \\( T^{\\mu \\nu} \\) and \\( \\theta^{\\mu \\nu} \\). Energy and momentum is the 'charge' here. Use the arbitrariness to make \\( T^{\\mu \\nu} \\) symmetric.</li>
+                        </ul>
+                        <br/>
+                        For \\[
+                                \\begin{align}
+                                    \\mathcal{L}_{EM} = -\\frac{1}{4}F_{\\mu \\nu} F^{\\mu \\nu}\\\\
+                                    T^{\\mu \\nu}_{EM} = F^{\\mu \\alpha} F^\\nu_\\alpha - \\frac{1}{4} \\eta^{\\mu \\alpha} F_{\\alpha \\beta} F^{\\alpha \\beta}
+                                \\end{align}
+                            \\]
+
+                            <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
+                            \\[ 
+                                T_{00} = \\frac{\\partial \\mathcal{L}}{\\partial \\dot{\\phi}} \\dot{\\phi} - \\mathcal{L} = \\Pi \\dot{\\phi} - \\mathcal{L} = H
+                            \\]
+                            </div>
+                        <br/>
+                        <p class='text-md text-center text underline underline-offset-1 font-semibold text-white'>Conservation due to Space-Time translation</p>
+                        \\[
+                            \\begin{align}
+                                \\mathcal{L} &= \\frac{1}{2} \\eta^{ab} \\partial_a \\phi \\partial_b \\phi + \\frac{1}{2}m^2 \\phi^2\\\\
+                                H &= \\Pi \\dot{\\phi} - \\mathcal{L} \\hspace{7pt} , \\hspace{7pt} \\text{(where )} \\Pi = \\Pi^0 = \\frac{\\partial \\mathcal{L}}{\\partial \\dot{\\phi}}\\\\
+                                H_{KG} &= \\frac{1}{2}\\dot{\\phi^2} - \\frac{1}{2}(\\vec{\\nabla} \\phi)^2) + \\frac{1}{2}m^2 \\phi^2 
+                            \\end{align}
+                        \\]
+                        Now as we have \\(T^{\\mu \\nu}\\), we can write
+                        \\[
+                            T^{\\mu \\nu} = \\eta^{\\nu \\alpha} \\partial_\\alpha \\phi \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} - \\eta^{\\mu \\nu} \\mathcal{L}
+                        \\]
+                        Now,
+                        \\[
+                            \\begin{align}
+                                \\frac{\\partial \\mathcal{L}}{\\partial (\\partial_\\mu \\phi)} &= \\frac{1}{2}\\eta^{ab}\\left[ \\partial_a \\phi \\frac{\\partial (\\partial_b \\phi)}{\\partial (\\partial_\\mu \\phi)} + \\partial_b \\phi \\frac{\\partial (\\partial_a \\phi)}{\\partial (\\partial_\\mu \\phi)} \\right]\\\\
+                                &= \\frac{1}{2}\\eta^{ab} \\partial_a \\phi \\delta^\\mu_b + \\frac{1}{2}\\eta^{ab} \\partial_b \\phi \\delta^\\mu_a\\\\
+                                &= \\partial^\\mu \\phi
+                            \\end{align}
+                        \\]
+                        Now,
+                        \\[
+                            \\eta^{\\nu \\alpha} (\\partial_\\alpha \\phi) \\partial^\\mu \\phi = \\partial^\\nu \\phi \\partial^\\mu \\phi
+                        \\]
+                        Thus,
+                        \\[
+                            T^{\\mu \\nu} =  \\partial^\\nu \\phi \\partial^\\mu \\phi - \\eta^{\\mu \\nu}\\left[ \\frac{1}{2} \\partial_a \\phi \\partial^a \\phi - \\frac{1}{2}m^2 \\phi^2 \\right]
+                        \\]
+
+                        <div class="border-solid border-2 border-blue-500/75 p-3 rounded my-1 mx-auto max-w-max">
+                            Check: \\( \\frac{1}{2} \\partial_\\mu \\phi \\partial^\\mu \\phi - \\frac{1}{2}m^2 \\phi^2 - \\lambda x^2 \\) does not remain conserved. Find \\( T_{\\mu \\nu} \\) and \\( \\partial_\\mu T^{\\mu \\nu} \\propto \\lambda\\)
+                        </div>
                     `,
                 },
             ]
