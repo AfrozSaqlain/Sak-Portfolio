@@ -55,7 +55,7 @@ const Subsection = ({ title, children }) => {
   return (
     <div className={`mb-2 pl-3`}>
       <motion.div
-        className="flex justify-between items-center cursor-pointer"
+        className="flex justify-between items-center cursor-pointer bg-slate-50/10 px-3 pb-1 rounded-lg"
         onClick={() => setExpanded(!expanded)}
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
