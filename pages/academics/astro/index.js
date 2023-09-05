@@ -78,11 +78,24 @@ const Astro = () => {
                     \\[
                         P_\\nu = \\frac{4\\pi}{3}\\frac{I_\\nu}{c}    
                     \\]
+                    Note that we can write
+                    \\[
+                        P_\\nu = \\frac{1}{3} U_\\nu    
+                    \\]
                     `,
                 },
                 {
-                    title: 'Equations',
-                    content: 'This is block equation \\[\\alpha\\]',
+                    title: 'Radiative Transfer Equation',
+                    content: `
+                    If matter is present, then in general the specific intensity keeps changing as we move along a ray path. Before we consider the effect of matter, first let us find out what happens to the specific intensity in empty space as we move along a
+                    ray path.
+                    <br/>
+                    <br/>
+                    Let \\(dA_1\\) and \\(dA_2\\) be two area elements separated by a distance \\(R\\) and placed perpendicularly to a ray path.  Let \\(I_{\\nu 1}\\) and \\(I_{\\nu 2}\\) be the specific intensity of radiation in the direction of the ray path at \\(dA_1\\) and \\(dA_2\\). We want to find out the amount of radiation passing through both \\(dA_1\\) and \\(dA_2\\) in time \\(dt\\) in the frequency range  \\( \\nu \\) to \\( \\nu + d\\nu \\). If \\( d\\Omega_2\\) is the solid angle subtended by \\(dA_1\\) and \\(dA_2\\), the radiation falling on \\( dA_2 \\) in time \\(dt\\) after passing through \\( dA_1 \\) is
+                    \\[
+                        I_{\\nu_2} \\hspace{3pt} dA_2 \\hspace{3pt} dt \\hspace{3pt} d\\Omega_2 \\hspace{3pt} d\\nu
+                    \\]
+                    `,
                 },
                 // Add more subsections
             ],
