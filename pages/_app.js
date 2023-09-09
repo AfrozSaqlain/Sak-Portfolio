@@ -15,10 +15,36 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Analytics } from '@vercel/analytics/react';
 
 //script
-import Script from 'next/script';
+import ReactGA from 'react-ga';
+
+// Initialize Google Analytics with your tracking ID
+ReactGA.initialize('G-J4XZ7LX977');
+
+// Track page views
+const trackPageView = (page) => {
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
+};
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  useEffect(() => {
+    // Track initial page view
+    trackPageView(router.pathname);
+
+    // Track page view on route change
+    const handleRouteChange = (url) => {
+      trackPageView(url);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, []);
+  
   return (
     <>
       <Head>
