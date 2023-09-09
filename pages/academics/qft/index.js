@@ -5,7 +5,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
 // import ScrollToTopArrow from '../../../components/ScrollToTopArrow';
 
-const qft = () => {
+const QFT = () => {
     const sections = [
         {
             title: 'Classical Field Theory',
@@ -17,7 +17,7 @@ const qft = () => {
                     <br/>
                     Field has \\(\\infty\\) degrees of freedom. <br/> <br/>
                     Notation: \\(\\phi(\\vec{x}, t)\\) <br/> <br/>
-                    It may be:
+                    The field may be:
                     <ul class="list-disc ml-8 my-4">
                         <li class="mb-2">Fundamental Field</li>
                         <li class="mb-2">Component of an object \\( \\phi^A (t, \\vec{x}) \\)</li>
@@ -26,8 +26,10 @@ const qft = () => {
                     <br/>
                     In general:
                     \\[
-                        \\phi(\\vec{x}, t) : \\mathcal{L} = \\mathcal{L}(\\phi(x^\\mu), \\partial_\\mu \\phi(x^\\mu))\\\\
-                        x^\\mu = (x^0, \\vec{x}) = (t, \\vec{x})
+                        \\begin{align}
+                            \\text{For } \\hspace{3pt} \\phi(\\vec{x}, t) : \\hspace{15pt} \\mathcal{L} &= \\mathcal{L}(\\phi(x^\\mu), \\partial_\\mu \\phi(x^\\mu))\\\\
+                            x^\\mu &= (x^0, \\vec{x}) = (t, \\vec{x})
+                        \\end{align}
                     \\]
                     <br/>
                     Action:
@@ -605,4 +607,4 @@ const qft = () => {
     );
 };
 
-export default qft;
+export default QFT;
