@@ -129,6 +129,7 @@ import { createClient } from "next-sanity";
 import Image from 'next/image'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
+// import AdSense from 'react-adsense';
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
@@ -217,6 +218,13 @@ const Post = ({ post }) => {
             )}
             <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
               <PortableText value={body} components={ptComponents} />
+              {/* <AdSense.Google
+                client="ca-pub-3772097457340486"
+                slot="9763960986"
+                style={{ display: 'block' }}
+                format="auto"
+                responsive="true"
+              /> */}
             </div>
           </article>
         </SimpleBar>

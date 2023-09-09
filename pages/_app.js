@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 //components
 import Layout from '../components/Layout';
@@ -44,7 +45,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, []);
-  
+
   return (
     <>
       <Head>
