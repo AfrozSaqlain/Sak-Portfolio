@@ -61,7 +61,7 @@ export const workSlider = {
           title: 'Gravitational',
           subtitle: 'Waves',
           path: '/GW_wave.png',
-          url: 'notes/GW_wave.pdf',
+          url: '../academics/gravitational_waves',
         },
       ],
     },
