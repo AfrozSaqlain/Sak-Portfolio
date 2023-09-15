@@ -43,7 +43,7 @@ export const workSlider = {
           title: 'Condensed Matter',
           subtitle: 'Physics',
           path: '/condensed_matter.jpg',
-          url: 'notes/solidstate.pdf'
+          url: '../academics/Condensed_Matter'
         },
         {
           title: 'Non-Linear',
