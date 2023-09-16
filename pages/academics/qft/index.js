@@ -534,8 +534,8 @@ const QFT = () => {
                         \\[
                             \\begin{align}
                                 \\mathcal{L} &= \\frac{1}{2} \\eta^{ab} \\partial_a \\phi \\partial_b \\phi + \\frac{1}{2}m^2 \\phi^2\\\\
-                                H &= \\Pi \\dot{\\phi} - \\mathcal{L} \\hspace{7pt} , \\hspace{7pt} \\text{(where )} \\Pi = \\Pi^0 = \\frac{\\partial \\mathcal{L}}{\\partial \\dot{\\phi}}\\\\
-                                H_{KG} &= \\frac{1}{2}\\dot{\\phi^2} - \\frac{1}{2}(\\vec{\\nabla} \\phi)^2) + \\frac{1}{2}m^2 \\phi^2 
+                                H &= \\Pi \\dot{\\phi} - \\mathcal{L} \\hspace{7pt} , \\hspace{5pt} (\\text{where } \\Pi = \\Pi^0 = \\frac{\\partial \\mathcal{L}}{\\partial \\dot{\\phi}})\\\\
+                                H_{KG} &= \\frac{1}{2}\\dot{\\phi^2} - \\frac{1}{2}(\\vec{\\nabla} \\phi)^2 + \\frac{1}{2}m^2 \\phi^2 
                             \\end{align}
                         \\]
                         Now as we have \\(T^{\\mu \\nu}\\), we can write
@@ -602,7 +602,7 @@ const QFT = () => {
     };
 
     return (
-        <div className="relative h-full bg-black/40">
+        <div className="relative h-full bg-black/40 touch-auto">
             <div className="h-full translate-y-16 overflow-y-auto overflow-visible overscroll-y-auto scroll-smooth pb-24 pt-4">
                 {/* <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full scroll-smooth'> */}
                     <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
