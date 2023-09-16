@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import MathJaxWrapper from '../../../components/MathJaxWrapper';
-import SimpleBar from 'simplebar-react';
-import 'simplebar-react/dist/simplebar.min.css';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
+// import SimpleBar from 'simplebar-react';
+// import 'simplebar-react/dist/simplebar.min.css';
 // import ScrollToTopArrow from '../../../components/ScrollToTopArrow';
 
 const QFT = () => {
@@ -436,14 +436,14 @@ const QFT = () => {
                         Thus, we can now calculate Noether's current as:
                         \\[
                             \\begin{align}
-                                j^\\mu &= \\frac{\\partial}{\\partial(\\partial_\\mu \\phi)} \\epsilon^\\nu \\partial_\\nu \\phi - \\epsilon^\\mu \\mathcal{L}\\\\
-                                &= \\frac{\\partial}{\\partial(\\partial_\\mu \\phi)} (\\partial_\\nu \\phi) \\epsilon^\\nu - \\eta^\\mu_\\nu \\epsilon^\\nu \\mathcal{L}\\\\
+                                j^\\mu &= \\frac{\\partial \\mathcal{L}}{\\partial(\\partial_\\mu \\phi)} \\epsilon^\\nu \\partial_\\nu \\phi - \\epsilon^\\mu \\mathcal{L}\\\\
+                                &= \\frac{\\partial \\mathcal{L}}{\\partial(\\partial_\\mu \\phi)} (\\partial_\\nu \\phi) \\epsilon^\\nu - \\eta^\\mu_\\nu \\epsilon^\\nu \\mathcal{L}\\\\
                                 &= T^\\mu_\\nu \\epsilon^\\nu
                             \\end{align}
                         \\]
                         where \\( T^\\mu_\\nu \\) is known as "Energy-Momentum Tensor" and 
                         <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
-                        \\[ T^\\mu_\\nu = \\frac{\\partial}{\\partial(\\partial_\\mu \\phi)} (\\partial_\\nu \\phi)  - \\eta^\\mu_\\nu \\mathcal{L} \\]
+                        \\[ T^\\mu_\\nu = \\frac{\\partial \\mathcal{L}}{\\partial(\\partial_\\mu \\phi)} (\\partial_\\nu \\phi)  - \\eta^\\mu_\\nu \\mathcal{L} \\]
                         </div>
                         as \\( \\mathcal{L}(x) \\to \\mathcal{L}'(x) = \\mathcal{L}(x) + \\partial_\\nu ( \\epsilon^\\nu \\mathcal{L} ) \\) and this is symmetry transformation. This implies that 
                         \\[ 
@@ -461,7 +461,7 @@ const QFT = () => {
                         This tells us that \\( T^\\mu_\\nu \\) is conserved.
 
                         <div class="border-solid border-2 border-blue-500/75 px-3 rounded my-1 mx-auto max-w-max">
-                        \\[ T_{\\mu \\nu} = \\frac{\\partial}{\\partial(\\partial^\\mu \\phi_a)} (\\partial_\\nu \\phi_a)  - \\eta_{\\mu \\nu} \\mathcal{L} \\]
+                        \\[ T_{\\mu \\nu} = \\frac{\\partial \\mathcal{L}}{\\partial(\\partial^\\mu \\phi_a)} (\\partial_\\nu \\phi_a)  - \\eta_{\\mu \\nu} \\mathcal{L} \\]
                         </div>
 
                         This means that we have to sum over all fields \\( \\phi_a \\).
@@ -497,7 +497,7 @@ const QFT = () => {
                         \\]
                         Similarly,
                         \\[
-                            P^i = \\int d^3 x \\dot{\\phi} \\partial^i \\phi    
+                            P^i = \\int d^3 x \\hspace{5pt} \\dot{\\phi} \\partial^i \\phi    
                         \\]
                         <div class="border-t border-gray-300/20 my-4"></div>
                         In Klein Gordon Field: \\( T_{\\mu \\nu} = T_{\\nu \\mu} \\). But this is not true, in general.
@@ -601,7 +601,44 @@ const QFT = () => {
         }
     };
 
-    //     return (
+    return (
+        <div className="relative h-full bg-black/40">
+            <div className="h-full translate-y-16 overflow-y-auto overflow-visible overscroll-y-auto scroll-smooth pb-24 pt-4">
+                {/* <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full scroll-smooth'> */}
+                    <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
+                        <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
+                        {sections.map((section, index) => (
+                            <ExpandableSection
+                                key={index}
+                                title={`${index + 1}. ${section.title}`}
+                                isOpen={openSection === index}
+                                toggle={() => toggleSection(index)}
+                            >
+                                {section.subsections.map((subsection, subIndex) => (
+                                    <Subsection
+                                        key={subIndex}
+                                        title={`${index + 1}.${subIndex + 1} ${subsection.title}`}
+                                        isOpen={openSubsection === subIndex && openSection === index}
+                                        toggle={() => toggleSubsection(subIndex)}
+                                    >
+                                        <MathJaxWrapper content={subsection.content} />
+                                    </Subsection>
+                                ))}
+                            </ExpandableSection>
+                        ))}
+                    </div>
+                {/* </SimpleBar> */}
+                {/* <ScrollToTopArrow/> */}
+            </div>
+        </div>
+    );
+};
+
+export default QFT;
+
+
+
+//     return (
     //         <div className="relative h-full bg-black/40">
     //             <div className="h-full translate-y-10 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
     //                 <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible scroll-smooth overscroll-y-auto h-full'>
@@ -626,38 +663,3 @@ const QFT = () => {
     //         </div>
     //     );
     // };
-
-
-    return (
-        <div className="relative h-full bg-black/40">
-            <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
-                <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-                    <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
-                        <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
-                        {sections.map((section, index) => (
-                            <ExpandableSection
-                                key={index}
-                                title={`${index + 1}. ${section.title}`}
-                                isOpen={openSection === index}
-                                toggle={() => toggleSection(index)}
-                            >
-                                {section.subsections.map((subsection, subIndex) => (
-                                    <Subsection
-                                        key={subIndex}
-                                        title={`${index + 1}.${subIndex + 1} ${subsection.title}`}
-                                        isOpen={openSubsection === subIndex && openSection === index}
-                                        toggle={() => toggleSubsection(subIndex)}
-                                    >
-                                        <MathJaxWrapper content={subsection.content} />
-                                    </Subsection>
-                                ))}
-                            </ExpandableSection>
-                        ))}
-                    </div>
-                </SimpleBar>
-            </div>
-        </div>
-    );
-};
-
-export default QFT;

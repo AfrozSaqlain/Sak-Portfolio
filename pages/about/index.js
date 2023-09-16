@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 // import Image from 'next/image';
 
 //icons
@@ -10,6 +11,8 @@ import {
   FaWordpress,
   FaFigma,
   FaPython,
+  FaRProject,
+  FaGraduationCap,
 } from 'react-icons/fa';
 
 import {
@@ -42,12 +45,12 @@ export const aboutData = [
         ],
       },
       {
-        title: 'UI/UX Design',
-        icons: [<FaFigma key={1}/>, <SiAdobexd key={2}/>, <SiAdobephotoshop key={3}/>],
+        title: 'Programming Language',
+        icons: [<FaPython key={1}/>, <BiLogoCPlusPlus key={2}/>, <SiArduino key={3}/>, <FaRProject key={4}/>],
       },
       {
-        title: 'Programming Language',
-        icons: [<FaPython key={1}/>, <BiLogoCPlusPlus key={2}/>, <SiArduino key={3}/>],
+        title: 'UI/UX Design',
+        icons: [<FaFigma key={1}/>, <SiAdobexd key={2}/>, <SiAdobephotoshop key={3}/>],
       },
     ],
   },
@@ -207,6 +210,14 @@ const About = () => {
           {/* <div className='hidden xl:flex xl:max-w-none translate-x-16'>
             <Image src='/profile-pic-2.png' alt='profile pic' width={200} height={200}/>
           </div> */}
+          <div className='hidden scale-125 xl:flex xl:max-w-none translate-x-16 translate-y-12'>
+            <Link href={"/Saqlain_Afroz_CV.pdf"}>
+              <div className='flex flex-row '>
+              <span className='hover:text-accent'>Download my CV</span>
+              <FaGraduationCap className='scale-150 translate-x-4 translate-y-1'/>
+              </div>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </div >

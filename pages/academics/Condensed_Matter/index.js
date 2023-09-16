@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
 import MathJaxWrapper from '../../../components/MathJaxWrapper';
-import SimpleBar from 'simplebar-react';
-import 'simplebar-react/dist/simplebar.min.css';
+// import SimpleBar from 'simplebar-react';
+// import 'simplebar-react/dist/simplebar.min.css';
 
 const Condensed_Matter = () => {
   const sections = [
@@ -64,8 +64,8 @@ const Condensed_Matter = () => {
 
   return (
     <div className="relative h-full bg-black/40">
-      <div className="h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 pt-4">
-      <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
+      <div className="h-full translate-y-10 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
+      {/* <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'> */}
         <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
           <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Condensed Matter Physics</h1>
           {sections.map((section, index) => (
@@ -88,7 +88,7 @@ const Condensed_Matter = () => {
             </ExpandableSection>
           ))}
         </div>
-        </SimpleBar>
+        {/* </SimpleBar> */}
       </div>
     </div>
   );

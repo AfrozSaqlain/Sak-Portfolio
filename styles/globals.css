@@ -26,6 +26,16 @@
   text-overflow: ellipsis;
 }
 
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #55555572; /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners for the thumb */
+}
+
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
