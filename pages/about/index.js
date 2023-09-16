@@ -21,6 +21,7 @@ import {
   SiAdobexd,
   SiAdobephotoshop,
   SiArduino,
+  SiJulia,
 } from 'react-icons/si';
 
 import{
@@ -46,7 +47,7 @@ export const aboutData = [
       },
       {
         title: 'Programming Language',
-        icons: [<FaPython key={1}/>, <BiLogoCPlusPlus key={2}/>, <SiArduino key={3}/>, <FaRProject key={4}/>],
+        icons: [<FaPython key={1}/>, <BiLogoCPlusPlus key={2}/>, <SiArduino key={3}/>, <FaRProject key={4}/>, <SiJulia key={5}/>],
       },
       {
         title: 'UI/UX Design',
