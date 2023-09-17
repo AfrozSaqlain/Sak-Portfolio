@@ -176,10 +176,10 @@ const Post = ({ post }) => {
   } = post;
 
   return (
-    <div className="relative h-full bg-black/40 -translate-y-4">
+    <div className="relative h-full bg-black/50 -translate-y-4">
       <div className='h-full translate-y-10 overflow-y-auto overflow-visible overscroll-y-auto pb-24 mt-4 pt-7'>
         <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
-          <article className="mx-auto p-4 mb-10 max-w-screen-xl bg-black/20 rounded-lg">
+          <article className="mx-auto p-4 mb-10 max-w-screen-xl mt-5 bg-black/30 rounded-xl">
             <h1 className="text-4xl font-bold mb-2">{title}</h1>
             {authorImage && (
               <div className="mb-4">

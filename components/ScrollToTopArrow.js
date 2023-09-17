@@ -32,13 +32,13 @@ const ScrollToTopArrow = () => {
 
     return (
         <div
-            className={`fixed bottom-6 right-6 z-50 transition-opacity duration-300 ${
-                isVisible ? 'opacity-100' : 'opacity-0'
+            className={`fixed bottom-6 right-36 z-50 transition-opacity duration-300 ${
+                isVisible ? 'opacity-100' : 'opacity-50'
             }`}
         >
             <button
                 onClick={scrollToTop}
-                className="p-2 bg-gray-800 text-white rounded-full shadow-lg hover:bg-gray-700 focus:outline-none"
+                className="p-2 bg-gray-800 z-50 text-white rounded-full shadow-lg hover:bg-gray-700 focus:outline-none"
                 title="Go to top"
             >
                 <svg

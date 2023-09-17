@@ -119,7 +119,7 @@ const Card = ({ post, client }) => {
     <Tilt>
       <Link href={`/blogs/post/${encodeURIComponent(post.slug.current)}`} legacyBehavior>
         <a
-          className={`flex border border-slate-950 bg-black/40 rounded-md p-2 z-50 hover:shadow-lg transition duration-300 ${isHovered ? 'hover:scale-105' : ''
+          className={`flex border border-slate-950 bg-black/60 rounded-md p-2 z-50 hover:shadow-lg transition duration-300 ${isHovered ? 'hover:scale-110' : ''
             }`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -134,9 +134,9 @@ const Card = ({ post, client }) => {
             />
           </div>
           <div className="flex flex-col p-4 w-1/2 md:w-2/3 lg:w-3/4 xl:w-1/2">
-            <h2 className="font-serif text-lg mb-2">{post.title}</h2>
-            <p className="text-gray-500 text-sm mb-4 truncate-5-lines">{post.description}</p>
-            <p className="text-gray-500 text-sm">{new Date(post.publishedAt).toDateString()}</p>
+            <h2 className="font-serif h2 underline underline-offset-8 text-lg mb-2">{post.title}</h2>
+            <p className="text-gray-200 text-sm mb-4 xl:pt-8 truncate-5-lines">{post.description}</p>
+            <p className="text-gray-400 text-sm">{new Date(post.publishedAt).toDateString()}</p>
           </div>
         </a>
       </Link>
