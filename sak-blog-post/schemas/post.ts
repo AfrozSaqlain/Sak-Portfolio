@@ -49,6 +49,12 @@ export default defineType({
       title: 'Description',
       type: 'text',
     }),
+    // defineField({
+    //   name: 'likes',
+    //   title: 'Likes',
+    //   type: 'number',
+    //   initialValue: 0, // You can set an initial value of 0
+    // }),
     defineField({
       name: 'body',
       title: 'Body',
