@@ -181,21 +181,22 @@ const Post = ({ post }) => {
         <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full'>
           <article className="mx-auto p-4 mb-10 max-w-screen-xl mt-5 bg-black/30 rounded-xl">
             <h1 className="text-4xl font-bold mb-2">{title}</h1>
+            <div className='flex flex-row'>
             {authorImage && (
-              <div className="mb-4">
+              <div className="mb-4 flex">
                 <Image
                   className="w-16 h-16 rounded-full mt-5"
-                  src={urlFor(authorImage).width(50).url()}
-                  width={60}
-                  height={60}
+                  src={urlFor(authorImage).width(160).url()}
+                  width={90}
+                  height={90}
                   alt={`${name}'s picture`}
                 />
               </div>
             )}
-            <span className="text-gray-500">By {name}</span>
+            <span className="text-gray-300 translate-x-10 translate-y-6">By {name}</span>
             {categories && (
               <ul className="mt-2 mb-4">
-                <div className="mt-2 mb-4 flex items-center">
+                <div className="mt-2 mb-4 flex items-center translate-y-9 -translate-x-[74px]">
                   <span className="mr-2">Posted in</span>
                   {categories.map((category) => (
                     <li key={category} className="inline-block mr-2 text-blue-500">
@@ -205,6 +206,7 @@ const Post = ({ post }) => {
                 </div>
               </ul>
             )}
+            </div>
             {mainImage && (
               <div className="mb-4">
                 <Image

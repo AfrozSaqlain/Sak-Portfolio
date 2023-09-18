@@ -12,10 +12,10 @@ export const workSlider = {
     {
       images: [
         {
-          title: 'General Relativity',
-          subtitle: 'and Cosmology',
-          path: '/blackhole.jpg',
-          url: 'notes/gr.pdf',
+          title: 'Introductory',
+          subtitle: 'Astrophysics',
+          path: '/space.jpg',
+          url: '../academics/astro',
         },
         {
           title: 'Electricity',
@@ -24,10 +24,10 @@ export const workSlider = {
           url: '../academics/electromag',
         },
         {
-          title: 'Introductory',
-          subtitle: 'Astrophysics',
-          path: '/space.jpg',
-          url: '../academics/astro',
+          title: 'Non-Linear',
+          subtitle: 'Dynamics',
+          path: '/chaos.png',
+          url: 'notes/nld.pdf',
         },
         {
           title: 'Quantum',
@@ -46,10 +46,10 @@ export const workSlider = {
           url: '../academics/Condensed_Matter'
         },
         {
-          title: 'Non-Linear',
-          subtitle: 'Dynamics',
-          path: '/nld.jpg',
-          url: 'notes/nld.pdf',
+          title: 'General Relativity',
+          subtitle: 'and Cosmology',
+          path: '/blackhole.jpg',
+          url: 'notes/gr.pdf',
         },
         {
           title: 'Natural Language',
