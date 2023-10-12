@@ -213,8 +213,8 @@ const About = () => {
           </div> */}
           <div className='hidden scale-110 xl:flex xl:max-w-none translate-x-7 translate-y-12'>
             <Link href={"/Saqlain_Afroz_CV.pdf"}>
-              <div className='flex flex-row '>
-              <span className='hover:text-accent opacity-60'>Download my CV - </span>
+              <div className='flex flex-row hover:text-accent opacity-80 transition-all duration-500'>
+              <span className=''>Download my CV - </span>
               <FaGraduationCap className='scale-150 translate-x-4 translate-y-1'/>
               </div>
             </Link>
