@@ -33,18 +33,18 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     // Track initial page view
     trackPageView(router.pathname);
-
+  
     // Track page view on route change
     const handleRouteChange = (url) => {
       trackPageView(url);
     };
-
+  
     router.events.on('routeChangeComplete', handleRouteChange);
-
+  
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
-  }, []);
+  }, [router.events, router.pathname]);
 
   return (
     <>
