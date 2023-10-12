@@ -88,9 +88,9 @@ export default {
             alternative text is of great help for those 
             people that can rely on it to have a good idea of 
             what\'s on your page.`,
-          options: {
-            isHighlighted: true
-          }
+          // options: {
+          //   isHighlighted: true
+          // }
         }
       ]
     }
