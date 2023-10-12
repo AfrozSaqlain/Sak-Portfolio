@@ -6,9 +6,7 @@ import Image from 'next/image'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 // import AdSense from 'react-adsense';
-
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import { useState, useEffect } from 'react';
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
@@ -38,24 +36,51 @@ const ptComponents = {
   }
 };
 
+
+const client = createClient({
+  projectId: 'wvm2brko',
+  dataset: 'production',
+  useCdn: true,
+  apiVersion: '2021-08-31',
+})
+
+const query = groq`*[_type == "post" && slug.current == $slug][0]{
+  title,
+  "name": author->name,
+  "categories": categories[]->title,
+  "authorImage": author->image,
+  "mainImage": mainImage,
+  body,
+}`
+
+export async function getServerSideProps(context) {
+  const { slug = "" } = context.query;
+
+  const post = await client.fetch(query, { slug });
+
+  return {
+    props: {
+      post
+    }
+  };
+}
+
 const Post = ({ post }) => {
 
-  const [likes, setLikes] = useState(0);
+  // const [likes, setLikes] = useState(post.likes );
 
-  useEffect(() => {
-    axios.get('http://localhost:3001/likes')
-      .then(response => {
-        setLikes(response.data.likes);
-      });
-  }, []);
+  // async function likePost() {
+  //   const res = await fetch('/api/likePost', {
+  //     method: 'POST',
+  //     body: JSON.stringify({ _id: post._id }),
+  //   });
 
-  const incrementLikes = () => {
-    axios.post('http://localhost:3001/likes')
-      .then(response => {
-        setLikes(response.data.likes);
-      });
-  };
-
+  //   if (res.ok) {
+  //     // If the request was successful, update the likes count in the local state
+  //     setLikes(likes + 1);
+  //   }
+  // }
+  
   if (!post) {
     // Handle the case when post data is not available
     return <div>Loading...</div>; // You can render a loading state here
@@ -77,35 +102,32 @@ const Post = ({ post }) => {
           <article className="mx-auto p-4 mb-10 max-w-screen-xl mt-5 bg-black/30 rounded-xl">
             <h1 className="text-4xl font-bold mb-2">{title}</h1>
             <div className='flex flex-row'>
-            {authorImage && (
-              <div className="mb-4 flex">
-                <Image
-                  className="w-16 h-16 rounded-full mt-5"
-                  src={urlFor(authorImage).width(160).url()}
-                  width={90}
-                  height={90}
-                  alt={`${name}'s picture`}
-                />
-              </div>
-            )}
-            <span className="text-gray-300 translate-x-10 translate-y-6">By {name}</span>
-            {categories && (
-              <ul className="mt-2 mb-4">
-                <div className="mt-2 mb-4 flex items-center translate-y-9 -translate-x-[74px]">
-                  <span className="mr-2">Posted in</span>
-                  {categories.map((category) => (
-                    <li key={category} className="inline-block mr-2 text-blue-500">
-                      {category}
-                    </li>
-                  ))}
+              {authorImage && (
+                <div className="mb-4 flex">
+                  <Image
+                    className="w-16 h-16 rounded-full mt-5"
+                    src={urlFor(authorImage).width(160).url()}
+                    width={90}
+                    height={90}
+                    alt={`${name}'s picture`}
+                  />
                 </div>
-              </ul>
-            )}
+              )}
+              <span className="text-gray-300 translate-x-10 translate-y-6">By {name}</span>
+              {categories && (
+                <ul className="mt-2 mb-4">
+                  <div className="mt-2 mb-4 flex items-center translate-y-9 -translate-x-[74px]">
+                    <span className="mr-2">Posted in</span>
+                    {categories.map((category) => (
+                      <li key={category} className="inline-block mr-2 text-blue-500">
+                        {category}
+                      </li>
+                    ))}
+                  </div>
+                </ul>
+              )}
             </div>
-            <div>
-      <button onClick={incrementLikes}>Like</button>
-      <p>{likes} Likes</p>
-    </div>
+            {/* <button onClick={likePost}>Like {likes}</button> */}
             {mainImage && (
               <div className="mb-4">
                 <Image
@@ -114,6 +136,7 @@ const Post = ({ post }) => {
                   width={800} // Set the desired width
                   height={600} // Set the desired height
                   alt={`${name}'s picture`}
+                  priority={true}
                 />
               </div>
             )}
@@ -133,33 +156,5 @@ const Post = ({ post }) => {
     </div>
   );
 };
-
-const client = createClient({
-  projectId: 'wvm2brko',
-  dataset: 'production',
-  useCdn: true,
-  apiVersion: '2021-08-31',
-})
-
-const query = groq`*[_type == "post" && slug.current == $slug][0]{
-  title,
-  "name": author->name,
-  "categories": categories[]->title,
-  "authorImage": author->image,
-  "mainImage": mainImage,
-  body
-}`
-
-export async function getServerSideProps(context) {
-  const { slug = "" } = context.query;
-
-  const post = await client.fetch(query, { slug });
-
-  return {
-    props: {
-      post
-    }
-  };
-}
 
 export default Post;
