@@ -7,6 +7,9 @@ import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 // import AdSense from 'react-adsense';
 
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
 }
@@ -36,6 +39,22 @@ const ptComponents = {
 };
 
 const Post = ({ post }) => {
+
+  const [likes, setLikes] = useState(0);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/likes')
+      .then(response => {
+        setLikes(response.data.likes);
+      });
+  }, []);
+
+  const incrementLikes = () => {
+    axios.post('http://localhost:3001/likes')
+      .then(response => {
+        setLikes(response.data.likes);
+      });
+  };
 
   if (!post) {
     // Handle the case when post data is not available
@@ -83,6 +102,10 @@ const Post = ({ post }) => {
               </ul>
             )}
             </div>
+            <div>
+      <button onClick={incrementLikes}>Like</button>
+      <p>{likes} Likes</p>
+    </div>
             {mainImage && (
               <div className="mb-4">
                 <Image
