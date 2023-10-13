@@ -109,7 +109,46 @@ const Astro = () => {
                 },
                 {
                     title: 'Basic equations of stellar structure',
-                    content: 'How to calculate the total flux...',
+                    content: `
+                    We now establish the basic equations of stellar structure by assuming the star to be spherically symmetric. If the star is rotating sufficiently rapidly, then there will be some flattening in the direction of the rotation axis. Again, if the star has strong magnetic fields, that can be another cause of departure from spherical symmetry. Such complications are neglected in the first treatment of stellar structure.
+                    <br/>
+                    <br/>
+                    The rotational flattening of the Sun is negligible. Although the solar corona is highly non-spherical due to the presence of magnetic fields, the magnetic fields are not strong enough to cause departures from spherical symmetry below the surface of the Sun.
+                    <br/>
+                    <br/>
+                    <p class='text-center text-xl text underline underline-offset-8 font-semibold text-accent'>Hydrostatic equilibrium in stars</p>
+                    <br/>
+                    Let \\(M_r\\) be the mass inside the radius \\(r\\) of a star. Then the mass inside \\( r + dr \\) should be \\( M_r + dM_r \\), which means that \\(dM_r\\) is the mass of the spherical shell between radii \\( r \\) and \\( r + dr \\). If \\( \\rho \\) is the density inside radius \\( r \\), then
+                    \\[
+                        dM_r = 4 \\pi r^2 \\rho dr
+                    \\]
+                    from which
+                    \\[
+                        \\frac{dM_r}{dr} = 4 \\pi r^2 \\rho    
+                    \\]
+                    This is the first of our stellar structure equations.
+                    <br/>
+                    <br/>
+                    Let us now consider a small portion of the shell between \\(r\\) and \\(r + dr\\). If \\(dA\\) is the transverse area of this small element, the forces exerted by pressure acting on its inward and outward surfaces are \\(P dA\\) and \\(-(P + dP) dA\\), where \\(P\\) and \\(P + dP\\) are respectively the pressures at radii \\(r\\) and \\(r + dr\\). So the net force
+                    arising out of pressure is \\(-dP dA\\), which should be balanced by gravity under equilibrium conditions. The gravitational field at \\(r\\) is caused by the mass \\(M_r\\) inside \\(r\\) and is equal to \\(-GM_r /r^2\\). Since the mass of the small element under consideration is \\(\\rho dr dA\\), the force balance condition for it is
+
+                    \\[
+                        - dP dA - \\frac{GM_r}{r^2} \\hspace{3pt} \\rho \\hspace{3pt} dr \\hspace{3pt} dA = 0    
+                    \\]
+
+                    from which
+
+                    \\[
+                        \\frac{dP}{dr} = - \\frac{GM_r}{r^2} \\hspace{3pt} \\rho    
+                    \\]
+                    This is the second of the stellar structure equations.
+
+                    <br/>
+                    <br/>
+                    We need additional equations for temperature and energy generation to solve the stellar structure.
+                    <br/>
+                    <br/>
+                    `,
                 },
                 // Add more subsections
             ],
@@ -138,8 +177,8 @@ const Astro = () => {
     };
 
     return (
-        <div className="relative h-full bg-black/40">
-            <div className="h-full translate-y-10 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
+        <div className="relative h-full bg-black/10">
+            <div className="h-full translate-y-16 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
                     <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
                         <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Astrophysics</h1>
                         {sections.map((section, index) => (
