@@ -5,7 +5,7 @@ import { createClient } from "next-sanity";
 import Image from 'next/image'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
-// import AdSense from 'react-adsense';
+import AdSense from 'react-adsense';
 // import { useState, useEffect } from 'react';
 
 function urlFor(source) {
@@ -131,7 +131,7 @@ const Post = ({ post }) => {
             {mainImage && (
               <div className="mb-4">
                 <Image
-                  className="w-full h-auto max-w-xl mt-5" // Adjust max width as needed
+                  className="w-full h-auto max-w-xl mt-5 rounded-sm" // Adjust max width as needed
                   src={urlFor(mainImage).width(800).height(600).url()} // Adjust width and height as needed
                   width={800} // Set the desired width
                   height={600} // Set the desired height
@@ -140,15 +140,15 @@ const Post = ({ post }) => {
                 />
               </div>
             )}
-            <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
-              <PortableText value={body} components={ptComponents} />
-              {/* <AdSense.Google
+            <AdSense.Google
                 client="ca-pub-3772097457340486"
                 slot="9763960986"
                 style={{ display: 'block' }}
                 format="auto"
                 responsive="true"
-              /> */}
+              />
+            <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
+              <PortableText value={body} components={ptComponents} />
             </div>
           </article>
         </SimpleBar>

@@ -87,6 +87,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:label1" value="Written by" />
         <meta name="twitter:data1" value="Saqlain Afroz" />
 
+        <meta name="google-adsense-account" content="ca-pub-3772097457340486"></meta>
 
         <link rel="icon" href="/favicon.ico" sizes='any'/>
       </Head>
