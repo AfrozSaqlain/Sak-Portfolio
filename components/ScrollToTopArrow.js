@@ -8,11 +8,13 @@ const ScrollToTopArrow = () => {
             top: 0,
             behavior: 'smooth',
         });
+        console.log("Scrolled")
     };
 
     const handleScroll = () => {
         if (window.scrollY > 300) {
             setIsVisible(true);
+            console.log("Window scrolled")
         } else {
             setIsVisible(false);
         }
@@ -33,7 +35,7 @@ const ScrollToTopArrow = () => {
     return (
         <div
             className={`fixed bottom-6 right-36 z-50 transition-opacity duration-300 ${
-                isVisible ? 'opacity-100' : 'opacity-50'
+                isVisible ? 'opacity-100' : 'opacity-0'
             }`}
         >
             <button

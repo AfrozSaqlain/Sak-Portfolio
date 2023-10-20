@@ -153,6 +153,29 @@ const Astro = () => {
                 // Add more subsections
             ],
         },
+        {
+            title: "Elements of Stellar Dynamics",
+            subsections: [
+                {
+                    title: 'Introduction',
+                    content: `
+                    Since gravity is a long-range attractive force, any star in a galaxy attracts all the other stars in the galaxy all the time. For simplicity, we can regard the stars as point particles. Then a galaxy or a star cluster can be regarded as a collection of particles in which all the particles are attracting each other through an inverse square law of force. The aim of stellar dynamics is to study the dynamics of such a system of self-gravitating particles.
+                    <br/>
+                    <br/>
+                    The fundamental question of stellar dynamics is: why do collections of self-gravitating mass particles tend to take certain particular configurations in preference to many other possible configurations?
+                    <br/>
+                    <br/>
+                    We know that the gravitational attraction of the stars has to be balanced by their motions, to ensure that the stars do not all fall towards the centre of the stellar system together due to their mutual gravitational attraction. The considerations nvolved here are analogous to the considerations of why the gas particles in an atmosphere do not all settle at the bottom, even though they are pulled by gravity downwards. It is basically the random motions of the gas particles which prevent this from happening.
+                    <br/>
+                    <br/>
+                    The motions (they need not necessarily be random) of stars can 'balance' the gravity in such a way that the system remains in a steady state. We shall obtain a relation connecting the total kinetic energy with the total gravitational energy.
+                    <br/>
+                    <br/>
+                    If the mass and the chemical composition of a star are given, we saw that how the structure of the star can be theoretically calculated. We do not have to know the details of the initial conditions, such as the nature of the gas cloud from which the star formed. In the case of a galaxy, is it even in principle possible to calculate its structure from a knowledge of, say, the mass distribution of the stars which make up the galaxy and the total kinetic energy? Or do the details of the initial conditions in the formation stage of the galaxy determine what the galaxy is going to be like?
+                    `
+                }
+            ]
+        }
         // Add more sections
     ];
 
