@@ -599,7 +599,14 @@ const QFT = () => {
                         Thus, \\( n \\to p + e^- + \\bar{\\nu_e} \\) can be described by \\( \\mathcal{L} \\) which has term \\( \\phi_n(x^\\mu) \\hspace{2pt} \\phi_e(x^\\mu) \\hspace{2pt} \\phi_p(x^\\mu) \\hspace{2pt} \\phi_{\\bar{\\nu_e}}(x^\\mu) \\)
                         <br/>
                         <h1 class="text-accent">&#9679; Relativistic</h1>
-                        If we have a particle of mass 'm' and I confine the particle in space of compton wavelength, i.e. \\( \\lambda_c = \\frac{\\hbar}{mc} \\). Then \\( \\Delta p \\approx \\frac{\\hbar}{\\Delta x} = \\frac{\\hbar}{\\hbar / mc} = mc \\). Thus, \\( \\Delta E = mc^2 \\). Hence, one particle whose energy is \\(mc^2\\) has an uncertainity in energy of \\( mc^2 \\). Thus, one particle creates two particles. 
+                        If we have a particle of mass 'm' and I confine the particle in space of compton wavelength, i.e. \\( \\lambda_c = \\frac{\\hbar}{mc} \\). Then \\( \\Delta p \\approx \\frac{\\hbar}{\\Delta x} = \\frac{\\hbar}{\\hbar / mc} = mc \\). Thus, \\( \\Delta E = mc^2 \\). Hence, one particle whose energy is \\(mc^2\\) has an uncertainity in energy of \\( mc^2 \\). Thus, one particle creates two particles.
+                        <br/>
+                        <br/>
+                        Let's now recall few things. We say that 
+                        <ul class="list-disc ml-8 my-4">
+                            <li class="mb-2">\\( \\mathcal{L}_{KG} = \\partial_\\mu \\phi \\hspace{2pt} \\partial^\\mu \\phi^* - m^2 \\phi\\phi^* + V(|\\phi|^2) \\) has a Global symmetry where \\( \\phi(x) \\to \\phi'(x) = \\phi(x)e^{-iq\\theta} \\) where \\( \\theta \\) is space-time independent.</li>
+                            <li class="mb-2">\\( \\mathcal{L}_{EM} = -\\frac{1}{4}F_{\\mu \\nu} F^{\\mu \\nu} - \\frac{1}{2} m^2 A^\\mu A_\\mu \\) has a local symmetry as \\( A_\\mu \\to A_\\mu' = A_\\mu + \\partial_\\mu \\theta(x^\\mu) \\) </li>
+                        </ul>
                     `,
                 },
                 {
