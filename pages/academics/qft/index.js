@@ -591,7 +591,7 @@ const QFT = () => {
                         <h1 class="text-accent">&#9679; Beta Decay: \\( n \\to p + e^- + \\bar{\\nu_e} \\)</h1>
                         If we have
                         \\[
-                            \\mathcal{L}(x^\\mu) = \\frac{1}{2} \\partial_\\mu \\phi(x^\\mu) \\partial^\\mu \\phi(x^\\mu) - \\frac{1}{2}m^2 \\phi^2(x^\\mu) - \\frac{1}{4}F_{\\mu \\nu} F^{\\mu \\nu} + \\underbrace{{\\phi(x^\\mu)A_\\mu(x^\\mu) A^\\mu(x^\\mu)}_{\\text{Interaction term}}}
+                            \\mathcal{L}(x^\\mu) = \\frac{1}{2} \\partial_\\mu \\phi(x^\\mu) \\partial^\\mu \\phi(x^\\mu) - \\frac{1}{2}m^2 \\phi^2(x^\\mu) - \\frac{1}{4}F_{\\mu \\nu} F^{\\mu \\nu} + \\underbrace{\\phi(x^\\mu)A_\\mu(x^\\mu) A^\\mu(x^\\mu)}_{\\text{Interaction term}}
                             \\]
                         This "Interaction term" tells us how the \\(\\phi\\) field and \\(A_\\mu\\) field interact with each other at same space-time. So, \\(\\phi\\) can converge to \\(A_\\mu\\) and vice-versa.
                         <br/>
@@ -599,7 +599,7 @@ const QFT = () => {
                         Thus, \\( n \\to p + e^- + \\bar{\\nu_e} \\) can be described by \\( \\mathcal{L} \\) which has term \\( \\phi_n(x^\\mu) \\hspace{2pt} \\phi_e(x^\\mu) \\hspace{2pt} \\phi_p(x^\\mu) \\hspace{2pt} \\phi_{\\bar{\\nu_e}}(x^\\mu) \\)
                         <br/>
                         <h1 class="text-accent">&#9679; Relativistic</h1>
-                        If we have a particle of mass 'm' and I confine the particle in space of compton wavelength, i.e. \\( \\lambda_c = \\frac{\\hbar}{mc} \\). Then \\( \\Delta p \\approx \\frac{\\hbar}{\\Delta x} = \\frac{\\hbar}{\\hbar / mc} = mc \\). Thus, \\( \\Delta E = mc^2 \\). Hence, one particle whose energy is \\(mc^2\\) has an uncertainity in energy of \\( mc^2 \\). Thus, one particle creates two particles.
+                        If we have a particle of mass 'm' and I confine the particle in space of compton wavelength, i.e. \\( \\lambda_c = \\frac{\\hbar}{mc} \\). Then \\( \\Delta p \\approx \\frac{\\hbar}{\\Delta x} = \\frac{\\hbar}{\\hbar / mc} = mc \\). Thus, \\( \\Delta E = mc^2 \\). Hence, one particle whose energy is \\(mc^2\\) has an uncertainity in energy of \\( mc^2 \\). Thus, one particle creates two particles. 
                     `,
                 },
                 {
