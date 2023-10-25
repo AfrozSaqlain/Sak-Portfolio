@@ -610,8 +610,10 @@ const QFT = () => {
                     `,
                 },
                 {
-                    title: 'Quantum Mechanics',
-                    content: `1. Quantum Mechanics is a theory of particles. <br/>`,
+                    title: 'Canonical Quantization and Fourier Decomposition of field',
+                    content: `
+                        
+                    `,
                 }
             ]
         }
