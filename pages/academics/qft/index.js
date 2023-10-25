@@ -568,11 +568,34 @@ const QFT = () => {
             ]
         },
         {
-            title: 'Free Fields',
+            title: 'Quantization of Scalar Fields',
             subsections: [
                 {
-                    title: 'Introduction: Quantum Field Theory',
-                    content: `1. Quantum Field Theory is a theory of fields. <br/>`,
+                    title: 'Introduction',
+                    content: `
+                        We study about causality/ locality. Note that \\( \\mathcal{L}(x^\\mu) \\) does not interact with \\( \\mathcal{L}(y^\\mu) \\). \\( \\mathcal{L} \\) cannot be written as \\( \\mathcal{L}(x^\\mu, y^\\mu) \\). It can only be written as \\( \\mathcal{L}(x^\\mu) \\).
+                        <br/>
+                        <p class='text-center text-lg text underline underline-offset-8 font-semibold text-accent'>Wave Particle Duality</p>
+                        <br/>
+                        Fundamental description - Field associated with each particle. Example :-
+                        
+                        <ul class="list-disc ml-8 my-4">
+                            <li class="mb-2">\\( e \\to \\phi_e(x^\\mu) \\)</li>
+                            <li class="mb-2">\\( \\nu \\to \\phi_\\nu(x^\\mu) \\)</li>
+                            <li class="mb-2">\\( \\text{photon} \\to A_\\mu(x^\\mu) \\)</li>
+                        </ul>  
+                        What is the difference between \\( \\phi_e(x^\\mu) \\) and \\( \\psi_e(\\vec{x}, t) \\)?
+                        <br/>
+                        <span class="ml-5 text-green-200">Note:   \\( \\phi_e(x^\\mu) \\neq \\psi_e(\\vec{x}, t) \\)</span>
+                        <br/>
+                        <br/>
+                        <h1 class="text-accent">Beta Decay: \\( n \\to p + e^- + \\bar{\\nu_e} \\)</h1>
+                        If we have
+                        \\[
+                            \\mathcal{L}(x^\\mu) = \\frac{1}{2} \\partial_\\mu \\phi(x^\\mu) \\partial^\\mu \\phi(x^\\mu) - \\frac{1}{2}m^2 \\phi^2(x^\\mu) - \\frac{1}{4}F_{\\mu \\nu} F^{\\mu \\nu} + \\underbrace{{\\phi(x^\\mu)A_\\mu(x^\\mu) A^\\mu(x^\\mu)}_{\\text{Interaction term}}}
+                        \\]
+                        This "Interaction term" tells us how the \\(\\phi\\) field and \\(A_\\mu\\) field interact with each other at same space-time. So, \\(\\phi\\) can converge to \\(A_\\mu\\) and vice-versa.
+                    `,
                 },
                 {
                     title: 'Quantum Mechanics',
@@ -637,30 +660,3 @@ const QFT = () => {
 
 export default QFT;
 
-
-
-//     return (
-//         <div className="relative h-full bg-black/40">
-//             <div className="h-full translate-y-10 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
-//                 <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible scroll-smooth overscroll-y-auto h-full'>
-//                     <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
-//                         <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
-//                         {sections.map((section, index) => (
-//                             <ExpandableSection key={index} title={`${index + 1}. ${section.title}`}>
-//                                 {section.subsections.map((subsection, subIndex) => (
-//                                     <Subsection
-//                                         key={subIndex}
-//                                         title={`${index + 1}.${subIndex + 1} ${subsection.title}`}
-//                                     >
-//                                         <MathJaxWrapper content={subsection.content} />
-//                                     </Subsection>
-//                                 ))}
-//                             </ExpandableSection>
-//                         ))}
-//                     </div>
-//                 </SimpleBar>
-//                 {/* <ScrollToTopArrow /> */}
-//             </div>
-//         </div>
-//     );
-// };
