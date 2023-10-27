@@ -147,6 +147,7 @@ const Post = ({ post }) => {
                 format="auto"
                 responsive="true"
               />
+              <hr className='w-full border'/>
             <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
               <PortableText value={body} components={ptComponents} />
             </div>
