@@ -28,10 +28,10 @@ const Home = () => {
                 initial='hidden'
                 animate='show'
                 exit='hidden'
-                className='h2'
+                className='h2 z-20'
                 style={{ willChange: 'transform, opacity' }}>
                 Transforming Ideas <br /> Into {' '}
-                <span className='text-accent'>Reality</span>
+                <span className='text-accent z-20'>Reality</span>
               </motion.h2>
             </div>
             {/* subtitle */}
@@ -40,7 +40,7 @@ const Home = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
+              className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 z-20'>
               <p className="mb-3"> In the vastness of space and time, Our love is like a quantum rhyme, Entangled forever, yours and mine.</p>
               {/* <br /> <br /> */}
               <p className="mb-3"> As we journey through life&rsquo;s great expanse, Our love will grow with each quantum dance, A bond that nothing can ever chance.</p>
