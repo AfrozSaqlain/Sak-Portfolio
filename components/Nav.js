@@ -65,8 +65,6 @@
 // };
 
 // export default Nav;
-
-
 //icons
 import {
   HiHome,
@@ -114,6 +112,7 @@ const Nav = () => {
               className={`${link.path === pathname && 'text-accent'} relative flex items-center group hover:text-accent transition-all duration-300`}
               href={link.path}
               key={index}
+              aria-label={link.name} // Add aria-label to the Link element
             >
               {/* tooltip */}
               <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
@@ -126,7 +125,7 @@ const Nav = () => {
                 </div>
               </div>
               {/* icon */}
-              <div aria-label={link.name}>{link.icon}</div>
+              <div>{link.icon}</div>
             </Link>
           );
         })}
