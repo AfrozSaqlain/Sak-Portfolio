@@ -55,7 +55,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="keywords" content="Saqlain Afroz, Saqlain Afroz Portfolio, quantum field theory, financial investment, fashion, web development, academic courses, tips, diy, ai/ml, trends, insights, notes, astrophysics, astronomy, maths, mathematics, quantum physics, blogging, blog,, sak-portfolio, vercel, nextjs, portfolio, saqlain, saqlain afroz portfolio website"></meta>
         <meta name="author" content="Saqlain Afroz"></meta>
 
-        <meta name="google-site-verification" content="ksLGxhQi_6VvPtGoOO_68ovimlXDkgSjkliANudNTO4" />
+        {/* <meta name="google-site-verification" content="ksLGxhQi_6VvPtGoOO_68ovimlXDkgSjkliANudNTO4" /> */}
+        <meta name="google-site-verification" content="PNTiabtcL3wN-1NHZb9bY3k3AG3Xh_rJ7ppyBFgQ9MA" />
 
         <meta name="robots" content="index, follow"></meta>
         <meta name="googlebot" content="index, follow"></meta>

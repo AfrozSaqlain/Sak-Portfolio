@@ -31,7 +31,7 @@ const Home = () => {
                 className='h2 z-20'
                 style={{ willChange: 'transform, opacity' }}>
                 Transforming Ideas <br /> Into {' '}
-                <span className='text-accent z-20'>Reality</span>
+                <span className='text-accent z-20'>Reality.</span>
               </motion.h2>
             </div>
             {/* subtitle */}
