@@ -1,7 +1,6 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { Html } from 'next/document';
 
 //components
 import Layout from '../components/Layout';
@@ -49,7 +48,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    <Html lang="en">
       <Head>
         <title>Saqlain Afroz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -103,7 +101,6 @@ function MyApp({ Component, pageProps }) {
           </motion.div>
         </AnimatePresence>
       </Layout>
-      </Html>
     </>
   );
 }
