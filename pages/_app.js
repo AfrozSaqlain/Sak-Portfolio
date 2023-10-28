@@ -48,7 +48,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    <html lang="en">
       <Head>
         <title>Saqlain Afroz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -91,6 +90,8 @@ function MyApp({ Component, pageProps }) {
 
         <meta name="google-adsense-account" content="ca-pub-3772097457340486"></meta>
 
+        <html lang="en" />
+
         <link rel="icon" href="/favicon.ico" sizes='any'/>
       </Head>
       <Layout>
@@ -102,7 +103,6 @@ function MyApp({ Component, pageProps }) {
           </motion.div>
         </AnimatePresence>
       </Layout>
-      </html>
     </>
   );
 }
