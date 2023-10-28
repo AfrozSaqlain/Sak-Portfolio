@@ -90,6 +90,8 @@ function MyApp({ Component, pageProps }) {
 
         <meta name="google-adsense-account" content="ca-pub-3772097457340486"></meta>
 
+        <html lang={"en"} />
+
         <link rel="icon" href="/favicon.ico" sizes='any'/>
       </Head>
       <Layout>
