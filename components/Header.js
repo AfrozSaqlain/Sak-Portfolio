@@ -19,7 +19,7 @@ const Header = () => {
             width={220}
             height={48}
             alt='logo'
-            priority={true}
+            // priority={true}
             className="hidden lg:block"
           />
         </Link>
