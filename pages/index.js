@@ -76,7 +76,7 @@ const Home = () => {
               fill="responsive"
               sizes="(max-width: 768px) 100vw, 1200px"
               className="hidden xl:flex pointer"
-              priority={true}
+              // priority={true}
               // loading="eager"
               // loading="lazy"
             />
