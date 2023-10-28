@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { Html } from 'next/document';
 
 //components
 import Layout from '../components/Layout';
