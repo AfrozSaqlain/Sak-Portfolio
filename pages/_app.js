@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
         <title>Saqlain Afroz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Discover a rich blend of financial investment tips, fashion inspiration, web development insights, and comprehensive academic course notes." />
-        <meta name="keywords" content="financial investment, fashion, web development, academic courses, tips, diy, ai/ml, trends, insights, notes, astrophysics, astronomy, maths, mathematics, quantum physics, blogging, blog, saqlain afroz, sak-portfolio, vercel, nextjs, portfolio, saqlain, saqlain afroz portfolio"></meta>
+        <meta name="keywords" content="Saqlain Afroz, Saqlain Afroz Portfolio, quantum field theory, financial investment, fashion, web development, academic courses, tips, diy, ai/ml, trends, insights, notes, astrophysics, astronomy, maths, mathematics, quantum physics, blogging, blog,, sak-portfolio, vercel, nextjs, portfolio, saqlain, saqlain afroz portfolio website"></meta>
         <meta name="author" content="Saqlain Afroz"></meta>
 
         <meta name="google-site-verification" content="ksLGxhQi_6VvPtGoOO_68ovimlXDkgSjkliANudNTO4" />

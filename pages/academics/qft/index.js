@@ -5,6 +5,7 @@ import { ExpandableSection, Subsection } from '../../../components/ExpandableSec
 // import 'simplebar-react/dist/simplebar.min.css';
 // import ScrollToTopArrow from '../../../components/ScrollToTopArrow';
 // import ScrollToTop from "react-scroll-to-top";
+import Head from 'next/head';
 
 const QFT = () => {
     const sections = [
@@ -640,35 +641,44 @@ const QFT = () => {
     };
 
     return (
-        <div className="h-full bg-black/40 touch-auto">
-            <div className="h-full translate-y-16 overflow-y-auto overflow-visible overscroll-y-auto scroll-smooth pb-28 pt-4">
-                {/* <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full scroll-smooth'> */}
-                <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
-                    <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
-                    {sections.map((section, index) => (
-                        <ExpandableSection
-                            key={index}
-                            title={`${index + 1}. ${section.title}`}
-                            isOpen={openSection === index}
-                            toggle={() => toggleSection(index)}
-                        >
-                            {section.subsections.map((subsection, subIndex) => (
-                                <Subsection
-                                    key={subIndex}
-                                    title={`${index + 1}.${subIndex + 1} ${subsection.title}`}
-                                    isOpen={openSubsection === subIndex && openSection === index}
-                                    toggle={() => toggleSubsection(subIndex)}
-                                >
-                                    <MathJaxWrapper content={subsection.content} />
-                                </Subsection>
-                            ))}
-                        </ExpandableSection>
-                    ))}
+        <>
+            <Head>
+                <title>Saqlain Afroz | Quantum Field Theory</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="This is a Graduate level introduction to the world of quantum field theory. The notes are made from the lectures of IISER Kolkat" />
+                <meta name="keywords" content="Saqlain Afroz, Saqlain Afroz Portfolio, quantum field theory, field theory, classical field theory"></meta>
+                <meta name="author" content="Saqlain Afroz"></meta>
+            </Head>
+            <div className="h-full bg-black/40 touch-auto">
+                <div className="h-full translate-y-16 overflow-y-auto overflow-visible overscroll-y-auto scroll-smooth pb-28 pt-4">
+                    {/* <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full scroll-smooth'> */}
+                    <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
+                        <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
+                        {sections.map((section, index) => (
+                            <ExpandableSection
+                                key={index}
+                                title={`${index + 1}. ${section.title}`}
+                                isOpen={openSection === index}
+                                toggle={() => toggleSection(index)}
+                            >
+                                {section.subsections.map((subsection, subIndex) => (
+                                    <Subsection
+                                        key={subIndex}
+                                        title={`${index + 1}.${subIndex + 1} ${subsection.title}`}
+                                        isOpen={openSubsection === subIndex && openSection === index}
+                                        toggle={() => toggleSubsection(subIndex)}
+                                    >
+                                        <MathJaxWrapper content={subsection.content} />
+                                    </Subsection>
+                                ))}
+                            </ExpandableSection>
+                        ))}
+                    </div>
+                    {/* </SimpleBar> */}
                 </div>
-                {/* </SimpleBar> */}
+                {/* <ScrollToTopArrow /> */}
             </div>
-            {/* <ScrollToTopArrow /> */}
-        </div>
+        </>
     );
 };
 
