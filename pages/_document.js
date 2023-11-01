@@ -10,6 +10,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3772097457340486"
+     crossorigin="anonymous"></script>
         <body>
           <Main />
           <NextScript />
