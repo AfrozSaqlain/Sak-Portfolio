@@ -20,8 +20,8 @@ const Index = ({ posts }) => {
           <h1 className="h2 mb-6 text-center">Welcome to <span className='text-accent'>DIY blog!</span></h1>
           <ul className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
             {posts.length > 0 ? (
-              posts.map(({ _id, title = '', slug = '', publishedAt = '', mainImage }) =>
-                slug && <Card key={_id} post={{ title, slug, publishedAt, mainImage }} client={client} />
+              posts.map(({ _id, title = '', slug = '', publishedAt = '', mainImage, description }) =>
+                slug && <Card key={_id} post={{ title, slug, publishedAt, mainImage, description }} client={client} />
               )
             ) : (
               <p>No posts to show</p>

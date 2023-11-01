@@ -18,10 +18,10 @@ const Index = ({ posts }) => {
       <SimpleBar forceVisible="y" autoHide={true} className="overflow-visible overscroll-y-auto h-full">
       <div className="relative mx-4 md:mx-24 lg:mx-32 mt-8 md:mt-24 pb-24 lg:mt-5">
           <h1 className="h2 mb-6 text-center">Welcome to <span className='text-accent'>Web Development blog!</span></h1>
-          <ul className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+          <ul className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2, description">
             {posts.length > 0 ? (
-              posts.map(({ _id, title = '', slug = '', publishedAt = '', mainImage }) =>
-                slug && <Card key={_id} post={{ title, slug, publishedAt, mainImage }} client={client} />
+              posts.map(({ _id, title = '', slug = '', publishedAt = '', mainImage, description }) =>
+                slug && <Card key={_id} post={{ title, slug, publishedAt, mainImage, description }} client={client} />
               )
             ) : (
               <p>No posts to show</p>
