@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Head from 'next/head';
+import Script from 'next/script'
 import { useEffect } from 'react';
 
 //components
@@ -91,7 +92,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="google-adsense-account" content="ca-pub-3772097457340486"></meta>
 
         <link rel="icon" href="/favicon.ico" sizes='any'/>
+
       </Head>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <Layout>
         <AnimatePresence mode='wait'>
           <motion.div key={router.route} className='h-full'>

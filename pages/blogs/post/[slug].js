@@ -6,7 +6,6 @@ import Image from 'next/image'
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import AdSense from 'react-adsense';
-// import { useState, useEffect } from 'react';
 
 function urlFor(source) {
   return imageUrlBuilder(client).image(source)
@@ -80,7 +79,7 @@ const Post = ({ post }) => {
   //     setLikes(likes + 1);
   //   }
   // }
-  
+
   if (!post) {
     // Handle the case when post data is not available
     return <div>Loading...</div>; // You can render a loading state here
@@ -141,13 +140,13 @@ const Post = ({ post }) => {
               </div>
             )}
             <AdSense.Google
-                client="ca-pub-3772097457340486"
-                slot="9763960986"
-                style={{ display: 'block' }}
-                format="auto"
-                responsive="true"
-              />
-              <hr className='w-full border'/>
+              client='ca-pub-7292810486004926'
+              slot='7806394673'
+              style={{ display: 'block' }}
+              layout='in-article'
+              format='fluid'
+            />
+            <hr className='w-full border' />
             <div className='prose max-w-none pb-8 pt-10 dark:prose-invert prose-lg'>
               <PortableText value={body} components={ptComponents} />
             </div>
