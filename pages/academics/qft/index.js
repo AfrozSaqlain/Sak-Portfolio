@@ -617,6 +617,19 @@ const QFT = () => {
                     `,
                 }
             ]
+        },
+        {
+            title: 'Dirac Equation',
+            subsections: [
+                {
+                    title: 'Introduction',
+                    content: `
+                    \\[
+                        \\int_{-\\infty}^{+\\infty} \\frac{d^n x}{(2\\pi)^n} e^{i(p_{\\text{final}} - p_{\\text{initial}}).x} = \\delta^n (p_{\\text{final}} - p_{\\text{initial}})
+                    \\]
+                    `
+                }
+            ]
         }
     ];
 
