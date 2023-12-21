@@ -56,7 +56,6 @@ import 'katex/dist/katex.min.css';
 const MarkdownWithKaTeX = ({ content }) => {
   return (
     <ReactMarkdown
-      children={content}
       remarkPlugins={[remarkMath]}
       rehypePlugins={[rehypeKatex]}
       className="text-white font-bold"
@@ -69,7 +68,9 @@ const MarkdownWithKaTeX = ({ content }) => {
         code: ({ node, ...props }) => <code className="bg-gray-800 text-white p-1 rounded-md" {...props} />, // Customize inline code
         // Add more custom styles as needed for other elements
       }}
-    />
+    >
+      {content}
+    </ReactMarkdown>
   );
 };
 
