@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import MathJaxWrapper from '../../../components/MathJaxWrapper';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
-// import SimpleBar from 'simplebar-react';
-// import 'simplebar-react/dist/simplebar.min.css';
-// import ScrollToTopArrow from '../../../components/ScrollToTopArrow';
-// import ScrollToTop from "react-scroll-to-top";
 import Head from 'next/head';
 
 const QFT = () => {
@@ -664,7 +660,6 @@ const QFT = () => {
             </Head>
             <div className="h-full bg-black/40 touch-auto">
                 <div className="h-full translate-y-16 overflow-y-auto overflow-visible overscroll-y-auto scroll-smooth pb-28 pt-4">
-                    {/* <SimpleBar forceVisible="y" autoHide={true} className='overflow-visible overscroll-y-auto h-full scroll-smooth'> */}
                     <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
                         <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Quantum Field Theory</h1>
                         {sections.map((section, index) => (
@@ -673,6 +668,7 @@ const QFT = () => {
                                 title={`${index + 1}. ${section.title}`}
                                 isOpen={openSection === index}
                                 toggle={() => toggleSection(index)}
+                                hasSubsections={section.subsections && section.subsections.length > 0}
                             >
                                 {section.subsections.map((subsection, subIndex) => (
                                     <Subsection
@@ -687,7 +683,6 @@ const QFT = () => {
                             </ExpandableSection>
                         ))}
                     </div>
-                    {/* </SimpleBar> */}
                 </div>
                 {/* <ScrollToTopArrow /> */}
             </div>

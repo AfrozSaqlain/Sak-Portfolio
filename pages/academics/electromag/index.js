@@ -74,6 +74,7 @@ const Electromag = () => {
                                 title={`${index + 1}. ${section.title}`}
                                 isOpen={openSection === index}
                                 toggle={() => toggleSection(index)}
+                                hasSubsections={section.subsections && section.subsections.length > 0}
                             >
                                 {section.subsections.map((subsection, subIndex) => (
                                     <Subsection
