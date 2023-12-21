@@ -12,6 +12,34 @@ export const workSlider = {
     {
       images: [
         {
+          title: 'General Relativity',
+          subtitle: 'and Cosmology',
+          path: '/blackhole.jpg',
+          url: 'notes/gr.pdf',
+        },
+        {
+          title: 'Differential',
+          subtitle: 'Geometry',
+          path: '/differential_geometry.jpg',
+          url: '../academics/Differential_Geometry'
+        },
+        {
+          title: 'Symmetry Methods',
+          subtitle: 'in Physics',
+          path: '/symmetry.png',
+          url: '/',
+        },
+        {
+          title: 'Space',
+          subtitle: 'Astronomy',
+          path: '/GW_wave.png',
+          url: '../academics/gravitational_waves',
+        },
+      ],
+    },
+    {
+      images: [
+        {
           title: 'Introductory',
           subtitle: 'Astrophysics',
           path: '/space.jpg',
@@ -34,34 +62,6 @@ export const workSlider = {
           subtitle: 'Field Theory',
           path: '/qft.jpg',
           url: '../academics/qft',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'Differential',
-          subtitle: 'Geometry',
-          path: '/differential_geometry.jpg',
-          url: '../academics/Differential_Geometry'
-        },
-        {
-          title: 'General Relativity',
-          subtitle: 'and Cosmology',
-          path: '/blackhole.jpg',
-          url: 'notes/gr.pdf',
-        },
-        {
-          title: 'Symmetry Methods',
-          subtitle: 'in Physics',
-          path: '/symmetry.png',
-          url: '/',
-        },
-        {
-          title: 'Gravitational',
-          subtitle: 'Waves',
-          path: '/GW_wave.png',
-          url: '../academics/gravitational_waves',
         },
       ],
     },
