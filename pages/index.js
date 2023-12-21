@@ -176,6 +176,11 @@ const Home = () => {
                 <span className='text-accent z-20'>Reality.</span>
               </motion.h2>
             </div>
+            <div className="flex justify-center xl:hidden animate-pulse z-30 relative mb-4">
+              <button onClick={toggleParticles} className="z-50 text-white rounded">
+                {showParticles ? <FaEyeSlash /> : <FaEye />}
+              </button>
+            </div>
             {/* subtitle */}
             <motion.div
               variants={fadeIn('down', 0.3)}
@@ -197,11 +202,11 @@ const Home = () => {
             </div>
 
             {/* particle toggle button */}
-            <div className="flex justify-center xl:hidden animate-pulse -translate-y-[629px] translate-x-[160px] z-30 relative mb-4">
+            {/* <div className="flex justify-center xl:hidden animate-pulse -translate-y-[629px] translate-x-[160px] z-30 relative mb-4">
               <button onClick={toggleParticles} className="z-50 text-white rounded">
                 {showParticles ? <FaEyeSlash /> : <FaEye />}
               </button>
-            </div>
+            </div> */}
 
             <motion.div
               variants={fadeIn('down', 0.4)}
