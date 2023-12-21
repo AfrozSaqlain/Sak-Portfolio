@@ -176,11 +176,15 @@ const Home = () => {
                 <span className='text-accent z-20'>Reality.</span>
               </motion.h2>
             </div>
-            <div className="flex justify-center xl:hidden animate-pulse z-30 relative mb-4">
+            <motion.div
+              variants={fadeIn('down', 0.3)}
+              initial='hidden'
+              animate='show'
+              exit='hidden' className="flex justify-center xl:hidden animate-pulse z-30 relative">
               <button onClick={toggleParticles} className="z-50 text-white rounded">
                 {showParticles ? <FaEyeSlash /> : <FaEye />}
               </button>
-            </div>
+            </motion.div>
             {/* subtitle */}
             <motion.div
               variants={fadeIn('down', 0.3)}
