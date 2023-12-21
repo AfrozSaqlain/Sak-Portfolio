@@ -164,7 +164,7 @@ const Home = () => {
         <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
           <div className='text-center flex flex-col justify-center xl:pt-40 xl:text-left md:text-sm h-full container mx-auto'>
             {/* title */}
-            <div className="translate-y-0">
+            <div className="-translate-y-2">
               <motion.h2
                 variants={fadeIn('down', 0.2)}
                 initial='hidden'
