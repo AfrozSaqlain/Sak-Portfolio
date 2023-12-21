@@ -180,8 +180,8 @@ const Home = () => {
               variants={fadeIn('down', 0.3)}
               initial='hidden'
               animate='show'
-              exit='hidden' className="flex justify-center xl:hidden animate-pulse z-30 relative">
-              <button onClick={toggleParticles} className="z-50 text-white rounded">
+              exit='hidden' className="flex justify-center -translate-y-8 xl:hidden animate-pulse z-30 relative">
+              <button onClick={toggleParticles} className="z-50 -translate-y-4 text-white rounded">
                 {showParticles ? <FaEyeSlash /> : <FaEye />}
               </button>
             </motion.div>
@@ -192,14 +192,14 @@ const Home = () => {
               animate='show'
               exit='hidden'
               className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 z-20'>
-              <p className="mb-3"> In the vastness of space and time, Our love is like a quantum rhyme, Entangled forever, yours and mine.</p>
+              <p className="mb-3 -translate-y-4"> In the vastness of space and time, Our love is like a quantum rhyme, Entangled forever, yours and mine.</p>
               {/* <br /> <br /> */}
-              <p className="mb-3"> As we journey through life&rsquo;s great expanse, Our love will grow with each quantum dance, A bond that nothing can ever chance.</p>
+              <p className="mb-3 -translate-y-4"> As we journey through life&rsquo;s great expanse, Our love will grow with each quantum dance, A bond that nothing can ever chance.</p>
               {/* <br /> <br /> */}
-              <p className="mb-3"> From the smallest particles to the stars above, Our love is bound by quantum love, A force that nothing can ever shove.</p>
+              <p className="mb-3 -translate-y-4"> From the smallest particles to the stars above, Our love is bound by quantum love, A force that nothing can ever shove.</p>
             </motion.div>
             {/* btn */}
-            <div className="flex justify-center xl:hidden relative">
+            <div className="flex justify-center -translate-y-4 xl:hidden relative">
               <Suspense fallback={<div className="animate-pulse">Loading...</div>}>
                 <ProjectsBtn />
               </Suspense>
