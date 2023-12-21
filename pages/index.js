@@ -197,7 +197,7 @@ const Home = () => {
             </div>
 
             {/* particle toggle button */}
-            <div className="flex justify-center xl:hidden animate-pulse -translate-y-[610px] translate-x-[160px] z-30 relative mb-4">
+            <div className="flex justify-center xl:hidden animate-pulse -translate-y-[620px] translate-x-[160px] z-30 relative mb-4">
               <button onClick={toggleParticles} className="z-50 text-white rounded">
                 {showParticles ? <FaEyeSlash /> : <FaEye />}
               </button>
