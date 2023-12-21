@@ -9,7 +9,8 @@ const Condensed_Matter = () => {
       subsections: [
         {
           title: 'Definition',
-          content: `# Hello, world! \n\n This is a **markdown** string with some inline math: $x^2 + y^2 = z^2$. \n \n ## Computer \n $\\int_0^1 e^x dx$`,
+          content: `# Hello, world! \n\n This is a **markdown** string with some inline math: $x^2 + y^2 = z^2$. \n \n ## Computer \n $\\int_0^1 e^x dx$
+          `,
         },
         {
           title: 'Calculation',
@@ -73,41 +74,3 @@ const Condensed_Matter = () => {
 export default Condensed_Matter;
 
 
-
-
-
-
-
-
-
-// {
-//   title: 'X-Ray Diffraction',
-//   subsections: [
-//     {
-//       title: 'Introduction',
-//       content: `Here are the equations related to specific intensity...
-//                 $$
-//                   \\phi = \\int_0^1 x dx
-//                 $$
-//                 and now we do $\\sigma = x^2$
-
-//                 Field is a function of space and time. Example: Electric field $(\\vec{x}, t) \\to \\vec{E}(\\vec{x}, t)$ and Magnetic Field $(\\vec{x}, t) \\to \\vec{B}(\\vec{x}, t)$ 
-
-//                 Field has $\\infty$ degrees of freedom. <br/> <br/>
-//                 Notation: $\\phi(\\vec{x}, t)$ <br/> <br/>
-//                 The field may be:
-//                 <ul class="list-disc ml-8 my-4">
-//                     <li class="mb-2">Fundamental Field</li>
-//                     <li class="mb-2">Component of an object $ \\phi^A (t, \\vec{x}) $</li>
-//                     <li class="mb-2">Can be part of internal space: $$ \\phi^A (t, \\vec{x}) = \\int \\phi_k e^{ik \\cdot x} d^3k $$</li>
-//                 </ul>
-//                 <br/>
-
-//                 \\begin{itemize}
-//                   \\item Hello
-//                 \\end{itemize}
-//                 `,
-//     },
-//     // Add more subsections
-//   ],
-// },
