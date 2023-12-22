@@ -118,8 +118,6 @@ import Image from "next/image";
 
 //components
 import ParticlesContainer from '../components/ParticlesContainer';
-// import ProjectsBtn from '../components/ProjectsBtn';
-// import Avatar from '../components/Avatar';
 const ProjectsBtn = lazy(() => import("../components/ProjectsBtn"));
 const Avatar = lazy(() => import("../components/Avatar"));
 
@@ -205,13 +203,6 @@ const Home = () => {
               </Suspense>
             </div>
 
-            {/* particle toggle button */}
-            {/* <div className="flex justify-center xl:hidden animate-pulse -translate-y-[629px] translate-x-[160px] z-30 relative mb-4">
-              <button onClick={toggleParticles} className="z-50 text-white rounded">
-                {showParticles ? <FaEyeSlash /> : <FaEye />}
-              </button>
-            </div> */}
-
             <motion.div
               variants={fadeIn('down', 0.4)}
               initial='hidden'
@@ -255,16 +246,15 @@ const Home = () => {
           </motion.div>
         )}
           <motion.div
-            variants={fadeIn('up', 0.5)}
+            variants={fadeIn('left', 0.5)}
             initial='hidden'
             animate='show'
             exit='hidden'
             transition={{ duration: 1, ease: 'easeInOut' }}
             className="w-full h-full max-w-[666px] max-h-[607px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
-            style={{ willChange: 'transform, opacity' }}>
-            {/* <Suspense fallback={<div className="animate-pulse">Loading...</div>}> */}
+            style={{ willChange: 'transform, opacity' }}
+            >
               <Avatar />
-            {/* </Suspense> */}
           </motion.div>
         </div>
       </div>
