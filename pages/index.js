@@ -229,16 +229,13 @@ const Home = () => {
         <div className="w-[1200px] h-full absolute right-0 bottom-0">
           {/* bg img */}
           <div className="bg-none xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0">
-            <Image
+            {/* <Image
               src="/bg-explosion-tiny.png"
               alt="Background Image"
               fill="responsive"
               sizes="(max-width: 768px) 100vw, 1200px"
               className="hidden xl:flex pointer"
-              // priority={true}
-              // loading="eager"
-              // loading="lazy"
-            />
+            /> */}
           </div>
           {/* particles */}
         {/* ParticlesContainer */}
@@ -265,9 +262,9 @@ const Home = () => {
             transition={{ duration: 1, ease: 'easeInOut' }}
             className="w-full h-full max-w-[666px] max-h-[607px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
             style={{ willChange: 'transform, opacity' }}>
-            <Suspense fallback={<div className="animate-pulse">Loading...</div>}>
+            {/* <Suspense fallback={<div className="animate-pulse">Loading...</div>}> */}
               <Avatar />
-            </Suspense>
+            {/* </Suspense> */}
           </motion.div>
         </div>
       </div>
