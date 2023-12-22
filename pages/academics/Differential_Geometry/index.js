@@ -121,7 +121,53 @@ const Electromag = () => {
             subsections: [
                 {
                     title: 'Part 1',
-                    content: 'The definition of total flux...',
+                    content: `
+                    <Image
+                        src="/differential_geometry/2.png"
+                        alt="chart"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    A chart assigns coordinates \\( (x^1, x^2, \\ldots , x^n) \\) to every point \\( p \\in U \\subset M \\). 
+                    <br/>
+                    <br/>
+                    \\( \\phi(p) = (x^1(p), x^2(p), \\ldots , x^n(p)) : x^i : M \\to \\mathbb{R} \\) is the i-th coordinate funtion for the chart \\( (U, \\phi) \\).
+                    <br/>
+                    <br/>
+                    Since, \\( \\phi : U \\to \\mathbb{R}^n \\) is \\( 1 - 1 \\), it is invertible, if the range is restricted to \\( \\phi(U) \\), and we denote \\( \\phi^{-1} \\), the inverse map from \\( \\phi(U) \\) to \\( M \\).
+                    <br/>
+                    <br/>
+                    Given a function \\( f : M \\to \\mathbb{R} \\), we can seek answer to the question, "is \\(f\\) differentiable at \\(p\\)" by looking at whether \\( F = f \\hspace{1pt} o \\hspace{1pt} \\phi^{-1} : \\phi(U) \\to \\mathbb{R} \\) is differentiable .at \\( \\phi(p) \\in \\mathbb{R}^n \\). Of course this will make sense only if we take \\( p \\in U \\).
+                    <Image
+                        src="/differential_geometry/3.png"
+                        alt="chart"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    Note - \\(M\\) is not manifold yet. Manifold is the set \\(M\\) in addition to the differential structure on it.
+                    <br/>
+                    <br/>
+                    <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Some examples of charts</p>
+                    <ul class='list-disc ml-8 my-4'>
+                        <li class="mb-2"> 
+                            \\( M = \\mathbb{R}^n, \\hspace{4pt} U = M, \\hspace{4pt} \\phi = id \\)<br/>
+                            \\( \\mathbb{R}^n, id \\) is a chart on \\( \\mathbb{R}^n \\). The coordinate assigned to a point \\(p\\) here is trivially the components of \\(p\\). Two important points that tells how \\( \\mathbb{R}^n, id \\) satisfies as chart are:
+                            <ul class='list-disc ml-8 my-1'>
+                            <li class="mb-1"> 
+                                The map \\(id\\) is \\(1 - 1\\)
+                            </li>
+                            <li class="mb-1"> 
+                                \\( id(\\mathbb{R}^n) = \\mathbb{R}^n \\) is an open set in \\( \\mathbb{R}^n \\)
+                            </li>
+                        </ul>
+                        </li>
+                        <li class="mb-2"> 
+                        \\( M = \\mathbb{R}^2, \\hspace{4pt} (U,\\phi) \\implies \\) polar coordinates on \\( \\mathbb{R}^2 \\)<br/>
+                        </li>
+                    </ul>
+                    `,
                 },
                 {
                     title: 'Part 2',
