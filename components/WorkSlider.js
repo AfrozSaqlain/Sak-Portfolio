@@ -32,7 +32,7 @@ export const workSlider = {
         {
           title: 'Space',
           subtitle: 'Astronomy',
-          path: '/GW_wave.png',
+          path: '/comp_astro.jpg',
           url: '../academics/gravitational_waves',
         },
       ],
