@@ -165,6 +165,99 @@ const Electromag = () => {
                         </li>
                         <li class="mb-2"> 
                         \\( M = \\mathbb{R}^2, \\hspace{4pt} (U,\\phi) \\implies \\) polar coordinates on \\( \\mathbb{R}^2 \\)<br/>
+                        \\[ \\phi : (x,y) \\to (r,\\theta) \\text{ , where } \\begin{cases}
+                            x = r \\cos(\\theta) \\\\
+                            y = r \\sin(\\theta) \\\\
+                            \\end{cases} 
+                        \\]
+                        This function is not well defined at \\( (0,0) \\). We could try \\( U = \\mathbb{R}^2 \\hspace{2pt} \\backslash {(0,0)} \\), but then \\( \\phi(U) = (0, \\infty) \\times [0,2\\pi) \\to \\) not an open set (the points \\( (r, 0) \\) are boundary points). A possible choice is \\( U = \\mathbb{R}^2 \\hspace{2pt} \\backslash \\{(x,0) : x \\geq 0\\} \\) and in this case \\( \\phi(U) = (0,\\infty) \\times (0,2\\pi) \\to \\) open set.
+                        </li>
+                        <li class="mb-2"> 
+                            \\( M = \\text{Mat}(2, \\mathbb{R}) \\) = the set of all \\( 2 \\times 2 \\) real matrices, \\( U = M, \\phi : U \\to \\mathbb{R}^4 \\) such that \\[ \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\to (a, b, c, d) \\]
+                            This map is obviously \\(1 - 1 \\) and \\( \\phi(U) = \\mathbb{R}^4 \\) is an open set.
+                        </li>
+                        <li class="mb-2"> 
+                            \\( M = \\text{GL}(2, \\mathbb{R}) = \\{A \\in \\text{M}(2, \\mathbb{R}) : det A \\neq 0 \\} \\) \\[
+                                    = \\left\\{ \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} : (a, b, c, d) \\in \\mathbb{R}^4 \\hspace{2pt} \\text{ and } \\hspace{2pt} ad-bc \\neq 0 \\right\\}
+                                \\]
+                                \\( U = M \\text{GL}(2, \\mathbb{R}), \\phi : U \\to \\mathbb{R}^4 \\)
+                                <br/>
+                                <br/>
+                                This is obviously \\(1-1\\) map. Now, \\( \\phi(U) = \\mathbb{R}^4 \\hspace{2pt} \\backslash \\{ (a,b,c,d) \\in \\mathbb{R}^4 : ad - bc = 0 \\} \\). Using the resuls from differential geometry of surfaces, we know that \\( \\{ (a,b,c,d) \\in \\mathbb{R}^4 : ad - bc = 0 \\} \\) is a level-set (hyper surface in \\( \\mathbb{R}^4 \\)) and if we take out a hyper surface from \\( \\mathbb{R}^4 \\), we are left with an open set.
+                                <br/>
+                                <br/>
+                                <div class='bg-slate-50/10 p-1 rounded-md'>
+                                But what if we don't know this result? How to know if \\( \\phi(U) \\) is an open set?
+                                <br/>
+                                <br/>
+                                Let \\( x_0 \\in \\phi(U) \\). The distance of \\( x_0 \\) from \\( \\phi(U)^C = \\{ (a,b,c,d) \\subset \\mathbb{R}^4 : ad - bc = 0 \\} \\) is
+                                \\[
+                                    d = \\inf\\limits_{\\substack{x \\hspace{1pt} \\in \\hspace{1pt} \\phi(U)} } f(x)
+                                \\]
+                                where \\( d(x, x_0) \\to \\) euclidean distance between \\(x\\) amd \\(x_0\\) and inf \\(\\to\\) infimum of these bunch of distances as \\(x\\) ranges over the set.
+                                <br/>
+                                <br/>
+                                It is intuitively obvious that \\( d > 0 \\). Then, \\( B_{x_0}(d) \\cap \\phi(U)^C = \\{\\} \\), where \\( B_{x_0}(d) \\) is a ball of radius \\(d\\) surrounding \\(x_0\\), which implies \\( B_{x_0}(d) \\subset \\phi(U) \\). So, \\( \\phi(U) \\) is open set.
+                                </div>
+                                <br/>
+                                <div class='bg-slate-50/10 p-1 rounded-md'>
+                                Is \\(d\\) really \\( > 0\\)?
+                                <br/>
+                                <br/>
+                                Let's try to minimize \\( (x^1 - x^1_0)^2 + (x^2 - x^2_0)^2 + (x^3 - x^3_0)^2 + (x^4 - x^4_0)^2 \\) subject to \\( x^1x^4 - x^2x^3 = 0 \\). Use Lagrange multiplier:
+                                \\[
+                                    (x^1 - x^1_0)dx^1 + (x^2 - x^2_0)dx^2 + (x^3 - x^3_0)dx^3 + (x^4 - x^4_0)dx^4 + \\lambda (x^4dx^1 - x^3 dx^2 - x^2 dx^3 + x^1 dx^4) = 0
+                                \\]
+                                <br/>
+                                This gives us four sets of equations, which are:
+                                \\[
+                                    \\begin{align}
+                                        x^1 + \\lambda x^4 &= x^1_0\\\\
+                                        x^2 - \\lambda x^3 &= x^2_0\\\\
+                                        x^3 - \\lambda x^2 &= x^3_0\\\\
+                                        x^4 + \\lambda x^1 &= x^4_0\\\\
+                                    \\end{align}
+                                \\]
+                                Now,
+                                \\[
+                                    \\begin{align}
+                                \\begin{pmatrix}
+                                x^1 \\\\ x^4
+                                \\end{pmatrix} &= \\begin{pmatrix}
+                                1 & \\lambda \\\\ \\lambda & 1
+                                \\end{pmatrix}^{-1} \\begin{pmatrix}
+                                x^1_0 \\\\ x^4_0
+                                \\end{pmatrix} = (1 - \\lambda^2)^{-1} \\begin{pmatrix}
+                                x^1_0 - \\lambda x^4_0 \\\\ -\\lambda x^1_0 + x^4_0
+                                \\end{pmatrix} \\\\
+                                \\begin{pmatrix}
+                                x^2 \\\\ x^3
+                                \\end{pmatrix} &= \\begin{pmatrix}
+                                1 & \\lambda \\\\ \\lambda & 1
+                                \\end{pmatrix}^{-1} \\begin{pmatrix}
+                                x^2_0 \\\\ x^3_0
+                                \\end{pmatrix} = (1 - \\lambda^2)^{-1} \\begin{pmatrix}
+                                x^2_0 - \\lambda x^3_0 \\\\ -\\lambda x^2_0 + x^3_0
+                                \\end{pmatrix}
+                                \\end{align}
+                                \\]
+                                Now applying the constraint, i.e. \\( x^1x^4 = x^2x^3 \\) we get
+                                \\[
+                                    \\begin{align}    
+                                        &\\implies (x^1_0 - \\lambda x^4_0)(-\\lambda x^1_0 + x^4_0) = (x^2_0 + \\lambda x^3_0)(\\lambda x^2_0 + x^3_0) \\\\
+                                        &\\implies \\lambda^2 - \\lambda \\frac{(x^1_0)^2 + (x^2_0)^2 + (x^3_0)^2 + (x^4_0)^2}{x^1_0 x^4_0 - x^2_0 x^3_0} + 1 = 0 \\\\
+                                        &\\implies \\lambda \\neq 0
+                                    \\end{align}
+                                \\]
+                                Discriminant \\( \\geq 0 \\)
+                                \\[
+                                    \\begin{align}
+                                        &\\implies (x^1_0)^2 + (x^2_0)^2 + (x^3_0)^2 + (x^4_0)^2 \\geq 2[x^1_0 x^4_0 - x^2_0 x^3_0] \\\\
+                                        &\\implies (x^1_0 \\pm x^4_0)^2 + (x^2_0 \\mp x^3_0)^2 \\geq 0
+                                    \\end{align}
+                                \\]
+                                \\( \\lambda \\) has real roots! For every \\( x_0 \\) we can find a point \\( x \\neq x_0 \\) which is at a minimum distance from it.
+                                </div>
                         </li>
                     </ul>
                     `,
