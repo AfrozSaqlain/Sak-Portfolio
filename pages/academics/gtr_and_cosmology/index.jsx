@@ -50,8 +50,16 @@ const GtrAndCosmology = () => {
                     \\[
                         \\begin{align}
                             K.E. &= \\frac{1}{2} [\\dot{r}^2 + r^2(\\dot{\\theta}' + \\omega)^2]\\\\
-                            &= \\frac{1}{2} [\\dot{r}^2 + r^2\\dot{\\theta}'^2 + r^2 \\omega^2 + 2 \\omega \\dot{\\theta}' r^2]
+                            &= \\frac{1}{2} [\\underbrace{\\dot{r}^2 + r^2\\dot{\\theta}'^2}_{\\text{2nd order in geralized velocity}} + \\underbrace{r^2 \\omega^2}_{\\text{scalar}} + \\underbrace{2 \\omega \\dot{\\theta}' r^2}_{\\text{1st order in geralized velocity}}]
                         \\end{align} 
+                    \\]
+                    We are interested in coordinate system which allows only 2nd order in geralized velocity terms.
+                    <br/>
+                    <br/>
+                    We know that Lagrange's Equation of motion is given as
+                    \\[
+                        \\frac{d}{dt} \\underbrace{\\left( \\frac{\\partial \\mathcal{L}}{\\partial \\dot{x}^i} \\right)}_{\\text{generalized momenta}} = \\frac{\\partial \\mathcal{L}}{\\partial x^i}
+
                     \\]
                     `
                 },
@@ -142,7 +150,7 @@ const GtrAndCosmology = () => {
                         </ExpandableSection>
                     ))}
                     <div className="flex justify-center">
-                        <div className="lg:hidden pb-2">
+                        <div className="lg:hidden pb-2 mb-10">
                             <CardLeft link="/notes/gr.pdf" place="David Tong's Lecture" />
                         </div>
                     </div>
