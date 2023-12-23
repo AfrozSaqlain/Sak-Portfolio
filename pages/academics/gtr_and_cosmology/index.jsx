@@ -91,8 +91,10 @@ const GtrAndCosmology = () => {
                             {section.content && processContent(section.content)}
                         </ExpandableSection>
                     ))}
-                    <div className="lg:hidden pb-2  translate-x-24">
+                    <div className="flex justify-center">
+                    <div className="lg:hidden pb-2">
                         <CardLeft link="/notes/gr.pdf" place="David Tong's Lecture" />
+                    </div>
                     </div>
                 </div>
             </div>
