@@ -3,7 +3,7 @@ import MathJaxWrapper from '../../../components/MathJaxWrapper';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
 import Image from 'next/image';
 
-const computationalAstrophysics = () => {
+const ComputationalAstrophysics = () => {
     const sections = [
         {
             title: 'Python Codes',
@@ -74,4 +74,4 @@ const computationalAstrophysics = () => {
 };
 
 
-export default computationalAstrophysics;
+export default ComputationalAstrophysics;
