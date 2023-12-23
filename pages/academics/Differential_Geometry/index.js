@@ -301,7 +301,7 @@ const Electromag = () => {
     return (
         <div className="relative h-full bg-black/40">
             <div className="h-full translate-y-16 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
-                <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
+                <div className="max-w-4xl mx-auto mb-20 p-4 shadow-2xl rounded-lg">
                     <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">
                         {processContent('Differential Geometry')}
                     </h1>
