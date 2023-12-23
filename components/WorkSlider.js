@@ -26,14 +26,14 @@ export const workSlider = {
         {
           title: 'Symmetry Methods',
           subtitle: 'in Physics',
-          path: '/symmetry.png',
+          path: '/symmetry3.jpg',
           url: '/',
         },
         {
           title: 'Space',
           subtitle: 'Astronomy',
-          path: '/comp_astro.jpg',
-          url: '../academics/gravitational_waves',
+          path: '/comp_astro_4.jpg',
+          url: '../academics/space_astronomy',
         },
       ],
     },
