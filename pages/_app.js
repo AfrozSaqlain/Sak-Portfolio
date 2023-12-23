@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import Head from 'next/head';
 import Script from 'next/script'
 import { useEffect } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 //components
 import Layout from '../components/Layout';
@@ -100,6 +101,7 @@ function MyApp({ Component, pageProps }) {
           <motion.div key={router.route} className='h-full'>
             <Transition />
             <Component {...pageProps} />
+            <SpeedInsights />
             <Analytics />
           </motion.div>
         </AnimatePresence>
