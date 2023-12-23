@@ -4,7 +4,7 @@ import CardLeft from '../../../components/CardLeft';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
 import Image from 'next/image';
 
-const Electromag = () => {
+const gtr_and_cosmology = () => {
     const sections = [
         {
             title: 'Doing calculus on \\( \\mathbb{R}^n \\)',
@@ -105,4 +105,4 @@ const Electromag = () => {
 };
 
 
-export default Electromag;
+export default gtr_and_cosmology;
