@@ -15,7 +15,7 @@ export const workSlider = {
           title: 'General Relativity',
           subtitle: 'and Cosmology',
           path: '/blackhole.jpg',
-          url: 'notes/gr.pdf',
+          url: '../academics/gtr_and_cosmology',
         },
         {
           title: 'Differential',
