@@ -32,7 +32,7 @@ const ExpandableSection = ({ title, children, isOpen, toggle, hasSubsections }) 
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="mt-2"
+            className="mt-2 mb-8"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -76,7 +76,7 @@ const Subsection = ({ title, children, isOpen, toggle }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="mt-1"
+            className="mt-1 mb-8"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
