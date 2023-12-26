@@ -308,7 +308,14 @@ const Electromag = () => {
                     But this does not cover all of the sphere!
                     <br/>
                     <br/>
-                    Remedy : Use another chart \\( (V, \\chi) \\). This time we project from south pole, i.e \\( SP = (0,0, \\ldots, 0, -1) \\). Thus, \\( V = S^n \\backslash \\{SP\\} \\). Hence, \\( \\chi : (a_1, a_2, \\ldots , a_{n+1}) \\in S^n \\to \\frac{1}{1 + a_{n+1}} (a_1, \\ldots , a_n) \\in \\mathbb{R}^n \\), which then gives \\( \\chi(V) = \\mathbb{R}^n \\)
+                    Remedy : Use another chart \\( (V, \\chi) \\). This time we project from south pole, i.e \\( SP = (0,0, \\ldots, 0, -1) \\). Thus, \\( V = S^n \\backslash \\{SP\\} \\). Hence, \\( \\chi : (a_1, a_2, \\ldots , a_{n+1}) \\in S^n \\to \\frac{1}{1 + a_{n+1}} (a_1, \\ldots , a_n) \\in \\mathbb{R}^n \\), which then gives \\( \\chi(V) = \\mathbb{R}^n \\).
+                    \\[
+                        \\chi^{-1} : (c_1, c_2, \\ldots , c_n) \\to \\frac{1}{1 + \\sum\\limits_{i=1}^n  (c_i)^2} \\left( 2c_1, 2c_2, \\ldots , 1 - \\sum\\limits_{i=1}^n  (c_i)^2 \\right)
+                    \\]
+                    \\(U\\) and \\(V\\) together cover all of \\(S^n\\).
+                    \\[
+                        U \\cup V = S^n
+                    \\]
                     `,
                 },
                 // Add more subsections
