@@ -316,6 +316,58 @@ const Electromag = () => {
                     \\[
                         U \\cup V = S^n
                     \\]
+                    Having enough chart to cover the entire set is very very important in setting up the differential structure on any set, however we have to also consider about compatibility conditions.
+                    <br/>
+                    <br/>
+                    Let's look at one more example
+                    <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>\\( M = \\text{SL}(2, \\mathbb{R}) = \\{A \\in \\text{GL}(2, \\mathbb{R}) : det A = 1 \\} = \\left\\{ \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}  : ad - bc = 1 \\right\\} \\) </p>
+                    What can be a valid chart?
+                    <br/>
+                    <br/>
+                    \\(1^{\\text{st}}\\) attempt: \\( U = M , \\hspace{5pt} \\phi : \\text{SL}(2, \\mathbb{R}) \\to \\mathbb{R}^4 \\) such that \\( \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\to (a,b,c,d) \\). This is obviously 1-1, but \\( \\phi(U) = \\{ (a,b,c,d) \\in \\mathbb{R}^4 : ad - bc = 1 \\} \\) is not an open set. To show that, let's consider an arbitrary point \\( x = (a,b,c,d) \\in \\phi(U) \\). Consider \\( B_x(r) \\) for some \\( r > 0 \\). If \\( 0 < \\bar{r} < r \\), then \\( \\bar{x} = (a+\\bar{r}, b, c, d) \\in B_x(r) \\) and \\( (a+\\bar{r})d - bc = 1 = 1 + \\bar{r}d \\neq 1 \\) (unless \\(d=0\\)). This implies \\( \\bar{x} \\notin \\phi(U) \\implies B_x(r) \\nsubseteq \\phi(U) \\) for any \\( r > 0 \\). Hence, \\( \\phi(U) \\) is not open.
+                    <br/>
+                    <br/>
+                    \\( 2^{\\text{nd}} \\) attempt : \\( U = \\text{SL}(2, \\mathbb{R}) \\), \\( \\hspace{7pt} \\phi : \\text{SL}(2, \\mathbb{R}) \\to \\mathbb{R}^3 \\) such that \\( \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\to (a, b, c) \\), as \\(d\\) can be determined through \\(ad-bc = 1\\). \\( \\phi(U) = \\mathbb{R}^3 \\) is open. But \\( \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\) and \\( \\begin{pmatrix} a & b \\\\ c & \\bar{d} \\end{pmatrix} \\) both map to \\( (a,b,c) \\), and they are both in \\(\\text{SL}(2,\\mathbb{R})\\), if \\(ad-bc=1= a \\bar{d} - bc \\implies a(d-\\bar{d}) = 0 \\) and if \\(a=0\\), then \\( d \\) and \\( \\bar{d} \\) can be different.
+                    <br/>
+                    <br/>
+                    \\( \\begin{pmatrix} a & b \\\\ -b^{-1} & d \\end{pmatrix} \\in \\text{SL}(2, \\mathbb{R}) \\) and will map to \\( (0,b,-b^{-1}) \\) for any \\(d\\). Ths, \\( \\phi \\) is not 1-1. Hence what we can do is following:
+                    <br/>
+                    <br/>
+                    \\[ U = \\text{SL}(2, \\mathbb{R}) \\big\\backslash \\left\\{ A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\in \\text{SL}(2, \\mathbb{R}) : a = 0 \\right\\} \\hspace{7pt} \\text{ and } \\hspace{7pt} \\phi : U \\to \\mathbb{R}^3 \\hspace{7pt} \\text{ thus } \\hspace{7pt} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\to (a,b,c) \\]
+                    <ul class='list-disc ml-8 my-4'>
+                        <li class="mb-2"> \\( \\phi(U) = \\mathbb{R}^3 \\backslash \\{ (0,b,c) :b,c \\in \\mathbb{R} \\} \\) is an open set. \\( \\phi(U) \\) is a 3D space from which \\( x=0 \\) plane has been deleted.
+                        </li>
+                        <li class="mb-2"> \\( ad-bc=1 \\implies d = \\frac{1+bc}{a} \\) (valid, since \\( a \\neq 0 \\)). \\( (a,b,c) \\) can only be the image of \\( \\begin{pmatrix} a & b \\\\ c & \\frac{1+bc}{a} \\end{pmatrix} \\)
+                        </li>
+                    </ul>
+                    \\( \\phi \\) is a 1-1 map. Hence, this is a valid chart.
+                    <br/>
+                    <br/>
+                    However this does not cover all of \\(\\text{SL}(2,\\mathbb{R})\\). So, we need to consider another chart which is as following:
+                    \\[ V = \\text{SL}(2, \\mathbb{R}) \\big\\backslash \\left\\{ \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\in \\text{SL}(2, \\mathbb{R}) : b = 0 \\right\\} \\hspace{7pt} \\text{ and } \\hspace{7pt} \\chi : V \\to \\mathbb{R}^3 \\hspace{7pt} \\text{ thus } \\hspace{7pt} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\to (a,b,d) \\]
+                    And \\( (V, \\chi) \\) is a valid chart.
+                    <br/>
+                    <br/>
+                    For \\( \\text{SL}(2, \\mathbb{R}) \\) we have found two charts \\( (U, \\phi) \\) and \\( (V, \\chi) \\). Since, \\( U \\cup V = \\text{SL}(2, \\mathbb{R}) \\), together the two charts cover all of SL\\( (2, \\mathbb{R}) \\).
+                    <br/>
+                    <br/>
+                    <p class='text-lg text underline underline-offset-8 inline-block mt-5 mb-2 font-semibold text-blue-500'>Reminder </p> : A function  \\( f : M \\to \\mathbb{R} \\) is called differentiable of class \\( c^k \\) at \\( p \\in M \\), when given a chart \\( (U, \\phi) \\) of \\(M\\) with \\( p \\in U \\), the function \\( f \\hspace{2pt} o \\hspace{2pt} \\phi^{-1} : \\phi(U) \\subset \\mathbb{R}^n \\to \\mathbb{R} \\) is differentiable of class \\( c^k \\).
+                    <br/>
+                    <br/>
+                    We can answer questions on differentiability of \\( f : \\text{SL}(2, \\mathbb{R}) \\to \\mathbb{R} \\) using either \\( f \\hspace{2pt} o \\hspace{2pt} \\phi^{-1} \\) or \\( f \\hspace{2pt} o \\hspace{2pt} \\chi^{-1} \\), at least in the part \\( U \\cap V \\). The same goes for the two different charts on \\( S^n \\) provided by the two different stereographic projections.
+                    <br/>
+                    <br/>
+                    <div class='bg-slate-50/10 p-1 rounded-md'>
+                    How can we be sure that the two (or more) charts used will not give us different answers?
+                    <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'> Compatibility </p>
+                    \\[
+                        \\begin{align}    
+                            &\\text{On } \\phi(U \\cap V) : f \\hspace{2pt} o \\hspace{2pt} \\phi^{-1} = (f \\hspace{2pt} o \\hspace{2pt} \\chi^{-1}) \\hspace{2pt} o \\hspace{2pt} (\\chi \\hspace{2pt} o \\hspace{2pt} \\phi^{-1})\\\\
+                            &\\text{On } \\chi(U \\cap V) : f \\hspace{2pt} o \\hspace{2pt} \\chi^{-1} = (f \\hspace{2pt} o \\hspace{2pt} \\phi^{-1}) \\hspace{2pt} o \\hspace{2pt} (\\phi \\hspace{2pt} o \\hspace{2pt} \\chi^{-1})\\\\
+                        \\end{align}    
+                    \\]
+                    The functions \\( \\chi \\hspace{2pt} o \\hspace{2pt} \\phi^{-1} : \\phi(U \\cap V) \\to \\chi(U \\cap V) \\) and \\( \\phi \\hspace{2pt} o \\hspace{2pt} \\chi^{-1} : \\chi(U \\cap V) \\to \\phi(U \\cap V) \\) hold the key to compatibility.
+                    </div>
                     `,
                 },
                 // Add more subsections
