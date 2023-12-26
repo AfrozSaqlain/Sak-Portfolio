@@ -174,6 +174,36 @@ const GtrAndCosmology = () => {
                     </ul>
                     <p class='text-lg text underline text-center underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Curve</p>
                     A curve is a mapping  from \\( \\mathbb{R} \\) or \\( [a.b] \\in \\mathbb{R} \\) to the open space \\( \\mathscr{M} \\), say for example \\( \\mathbb{R}^N \\), i.e. if \\( \\lambda \\in [a,b] \\), then \\( X(\\lambda) \\in \\mathscr{M} \\).
+                    <br/>
+                    <br/>
+                    The tangent vector, sometimes we call velocity is given by \\( \\vec{v} = \\frac{d X(\\lambda) }{d \\lambda} \\). If \\( \\mathscr{M} \\) has norm defined, we have length of tangent vector \\( \\frac{d X^a(\\lambda) }{d \\lambda} \\cdot \\frac{d X_a(\\lambda) }{d \\lambda} \\). We assume that we can normalize the tangent vector \\( \\dot{X}^a \\cdot \\dot{X}_a = 1 \\), where \\( \\dot{X}^a = \\frac{d X^a(\\lambda)}{d \\lambda} \\). Otherwise we can parameterise the curve, such that the tangent vector is a unit vector. Now for the acceleration, \\( A^a = \\frac{d V^a}{d \\lambda} \\). Some interesting results if, \\( V^a \\cdot V_a = 1 \\), then \\( V^a \\cdot A_a = 0 \\).
+                    <p class='text-lg text underline text-center underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Motion of free particle</p>
+                    Let's say we want to move from a point (event with A coordinate, \\( \\{x^a_1\\} = \\{t_1, x_1, y_1, z_1\\} \\)) to another point (B with \\( \\{x^a_2\\} = \\{t_2, x_2, y_2, z_2\\} \\) ), in absence of any force.
+                    \\[\\overset{}{A\\{x^a_1\\}} \\xrightarrow{\\hspace{0.5em}\\hspace{8.5em}} \\overset{}{B{\\{x^a_1\\}}}\\]
+                    \\[ ds^2 = dt^2 - dx^2 - dy^2 -dz^2 \\]
+                    This is valid when distance is very very close to each other.
+                    <br/>
+                    <br/>
+                    Let's say this distance is not small and we have a trajectory of force free particle going from event A to event B
+                    <Image
+                        src="/gtr_and_cosmo/3_.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    Let \\( X^a(\\lambda) \\) be the trajectory taken by a free particle. Let the spacetime velocity \\( u^a \\) is given by
+                    \\[
+                        u^a = \\frac{d X^a}{d \\lambda} = \\dot{X}^a    
+                    \\]
+                    If the particle moves along the timelike curve, we may normalise the curve
+                    \\[
+                        u^a u_a = \\left( \\frac{dt}{d \\lambda} \\right)^2 - \\left( \\frac{dx}{d \\lambda} \\right)^2 - \\left( \\frac{dy}{d \\lambda} \\right)^2 - \\left( \\frac{dz}{d \\lambda} \\right)^2 = 1
+                    \\]
+                    \\[
+                        \\implies d \\lambda = ds    
+                    \\]
+                    So, if \\(ds\\) is same as parameter, then normalization is naturally satisfied.
                     `
                 },
         {
