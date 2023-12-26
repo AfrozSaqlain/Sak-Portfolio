@@ -264,10 +264,51 @@ const Electromag = () => {
                 },
                 {
                     title: 'Part 2',
-                    content: `How to calculate the total flux...
+                    content: `
+                    We will go on to see issues that arise when one chart cannot cover the entire set and we will need to talk about compatibility between charts. But first let's see a couple of examples:
+                    <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>The Sphere \\( S^n \\) </p>
+                    \\[ S^n = \\{ (a_1, a_2, \\ldots, a_{n+1}) \\in \\mathbb{R}^{n+1} : \\sum\\limits_{i=1}^{n+1} (a_i)^2 = 1 \\} \\]
+                    So, \\(S^2\\), which is a 2-dimensional sphere, sits in \\( \\mathbb{R}^3 \\). It turns out that sphere happens to be one of those sets where we cannot have a chart which covers the entire set. One possibility of a chart would be following:<br/>
+                    Take a point on north pole say \\( NP = (0,0, \\ldots , 0) \\in S^n \\), \\( U = S^n \\backslash \\{NP\\} \\) and \\( \\phi : \\to \\) stereographic projection from the north pole
+                    <Image
+                        src="/differential_geometry/4.png"
+                        alt="chart"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    From the figure we can easily see that \\( (b_1, b_2, \\ldots , b_n, 0) - (0,0, \\ldots , 0, 1) = \\lambda [(a_1, a_2, \\ldots, a_{n+1}) - (0,0, \\ldots , 0)]) \\).<br/><br/>
+                    For \\( i = 1, \\ldots, n \\) we have \\( b_i = \\lambda a_i \\). Also we get that
                     \\[
-                        \\Phi = \\int \\vec{E} \\cdot \\vec{dA}    
+                        0-1 = \\lambda (a_{n+1} - 1)    
                     \\]
+                    \\[
+                        \\implies b_i = \\frac{a_i}{1 - a_{n+1}}    
+                    \\]
+                    \\[ U = S^n \\backslash \\{NP\\} \\hspace{7pt}  , \\hspace{7pt} \\phi : U \\to \\mathbb{R}^n \\hspace{7pt} \\text{ and } \\hspace{7pt} \\phi(U) = \\mathbb{R}^n \\]
+                    So,
+                    \\[
+                        \\phi : (a_1, a_2, \\ldots, a_{n+1}) \\in S^n \\to \\frac{1}{1 - a^{n+1}} (a_1, a_2, \\ldots , a_n) \\in \\mathbb{R}^n
+                    \\]
+                    <div class='bg-slate-50/10 p-1 rounded-md mb-2'>
+                    What about \\( \\phi^{-1} \\)? (\\( \\phi \\) is a one-to-one and onto)
+                    \\[
+                        \\sum\\limits_{i=1}^{n} (b_i)^2 = \\sum\\limits_{i=1}^n \\frac{(a_i)^2}{(1-a_{n+1})^2} = \\frac{\\sum\\limits_{i=1}^n (a_i)^2}{(1-a_{n+1})^2} = \\frac{1 - (a_{n+1})^2}{(1 - a_{n+1})^2} = \\frac{1+a_{n+1}}{1-a_{n+1}}
+                    \\]
+                    \\[
+                        \\begin{align}
+                            1 + \\sum\\limits_{i=1}^n (b_i)^2 &= \\frac{2}{1 - a_{n+1}} \\\\
+                            a_{n+1} &= \\frac{\\sum\\limits_{i=1}^n (b_i)^2 - 1}{\\sum\\limits_{i=1}^n (b_i)^2 + 1}
+                        \\end{align}
+                    \\]
+                    \\[
+                        \\text{Thus, } \\hspace{7pt} \\phi^{-1} : (b_1, b_2, \\ldots, b_n) \\to \\frac{1}{1 + \\sum\\limits_{i=1}^n (b_i)^2} (2b_1, 2b_2, \\ldots, 2b_n, \\sum\\limits_{i=1}^n (b_i)^2 - 1)
+                    \\]
+                    </div>
+                    But this does not cover all of the sphere!
+                    <br/>
+                    <br/>
+                    Remedy : Use another chart \\( (V, \\chi) \\). This time we project from south pole, i.e \\( SP = (0,0, \\ldots, 0, -1) \\). Thus, \\( V = S^n \\backslash \\{SP\\} \\). Hence, \\( \\chi : (a_1, a_2, \\ldots , a_{n+1}) \\in S^n \\to \\frac{1}{1 + a_{n+1}} (a_1, \\ldots , a_n) \\in \\mathbb{R}^n \\), which then gives \\( \\chi(V) = \\mathbb{R}^n \\)
                     `,
                 },
                 // Add more subsections
