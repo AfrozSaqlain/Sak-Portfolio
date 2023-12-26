@@ -204,12 +204,50 @@ const GtrAndCosmology = () => {
                         \\implies d \\lambda = ds    
                     \\]
                     So, if \\(ds\\) is same as parameter, then normalization is naturally satisfied.
+                    <ul class='list-disc ml-8 my-4'>
+                        <li class="mb-2"> If the particle move along timelike curve, we may normalise the vector.
+                        \\[
+                            u^a u_a = \\left( \\frac{dt}{d \\lambda} \\right)^2 - \\left( \\frac{dx}{d \\lambda} \\right)^2 - \\left( \\frac{dy}{d \\lambda} \\right)^2 - \\left( \\frac{dz}{d \\lambda} \\right)^2 = 1
+                        \\]
+                        \\[
+                            \\implies d \\lambda = ds    
+                        \\]
+                        This is called "arc-length parameterization".
+                        </li>
+                        <li class="mb-2"> If the particle moves along lightlike or null curve, we cannot normalize, because
+                        \\[ds^2 = 0 \\text{ or } u^au_a = 0\\]
+                        </li>
+                        <li class="mb-2"> We are not interested in spacelike trajectories, which are not possible as per basic postulates of STR. </li>
+                    </ul>
+                    We could apply Newton's \\(2^{\\text{nd}}\\) law of motion in 4 dimensional spacetime \\( \\frac{dp^a}{dt} = 0 \\), or we can solve Lagrangian equation of motion. Since, now time is also a generalized coordinate, the kinetic energy is given by
+                    \\[
+                        T = \\frac{1}{2}[\\dot{t}^2 - \\dot{x}^2 - \\dot{y}^2 - \\dot{z}^2]    
+                    \\]
+                    For free particle, there's no potential and hence \\( \\mathcal{L} = T \\).
+                    <br/>
+                    <br/>
+                    From our construction itself, we have, \\( \\mathcal{L} = 1 \\), for timelike curve and \\( \\mathcal{L} = 0 \\), for lightlike curve.
+                    <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mx-auto max-w-max'>
+                        We get \\( \\ddot{x}^a = 0 \\) for \\( a=0,1,2,3 \\) or an equation like \\( \\ddot{x}^a + \\Gamma^a_{bc} \\dot{x}^b \\dot{x}^c = 0 \\) as we have seen previously.
+                    </div>
+                    <p class='text-lg text underline text-center underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Some remarks on notation</p>
+                    \\( u^a = \\gamma(1, \\vec{v}) \\) with normalization \\( \\gamma \\) such that \\( u^au_a = 1 \\). \\( u_a = \\gamma(1, -\\vec{v}) \\) and \\( 1 = \\gamma^2 (1-v^2) \\). And for light \\( u^a = (1, \\vec{k}) \\) and \\( 1-k^2 = 0 \\) (for lightlike curve). With the new notation, \\( u^a = (\\dot{t}, \\dot{x}, \\dot{y}, \\dot{z}) = \\left( \\frac{dt}{ds}, \\ldots, \\frac{dz}{ds} \\right) \\). Thus,
+                    \\[
+                        \\begin{align}
+                            u^a &= \\frac{dt}{ds} \\left( 1, \\frac{dx}{ds} \\frac{ds}{dt}, \\frac{dy}{ds} \\frac{ds}{dt}, \\frac{dz}{ds} \\frac{ds}{dt}, \\right) \\\\
+                            &= \\frac{dt}{ds} \\left( 1, \\frac{dx}{dt}, \\frac{dy}{dt}, \\frac{dz}{dt} \\right)
+                        \\end{align}
+                    \\]
+                    Now comparing with old notation,
+                    \\[
+                        \\gamma = \\frac{dt}{ds} \\hspace{5pt} \\text{ and } \\hspace{5pt} \\vec{v} = \\left( \\frac{dx}{dt}, \\frac{dy}{dt}, \\frac{dz}{dt} \\right)
+                    \\]
                     `
                 },
         {
             title: 'Introduction to the Tensors',
                     content: `
-                    
+                    Geometry of Newtonian mechanics is \\( \\mathbb{R}^N \\), basically \\( \\mathbb{R}^4 \\).
                     `
                 },
         {
