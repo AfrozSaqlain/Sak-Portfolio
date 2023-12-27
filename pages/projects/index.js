@@ -208,11 +208,18 @@ const Projects = () => {
             url: '/projects/QM_Comp',
             category: 'Computer',
         },
+        {
+            title: 'Chess',
+            description: 'You can practise your chess moves here. Find the best moves and hone your skills.',
+            imageUrl: '/chess.jpg',
+            url: '/projects/chess',
+            category: 'Games',
+        },
         // Add more projects with categories as needed
     ];
 
     // Define the categories
-    const categories = ['All', 'Physics', 'Computer'];
+    const categories = ['All', 'Physics', 'Computer', 'Games'];
 
     // State to keep track of the selected category
     const [selectedCategory, setSelectedCategory] = useState('All');
