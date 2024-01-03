@@ -31,7 +31,7 @@ const GtrAndCosmology = () => {
                            \\mathcal{L} &= \\frac{1}{2} g_{ij} \\hspace{1pt} \\dot{x}^i \\hspace{1pt} \\dot{x}^j
                         \\end{align}
                     \\]
-                    Note that \\( g_{ij} \\) is symmetric matrix \\( \\implies g{ij} = g_{ji} \\). Also, \\( \\dot{x}^i \\hspace{1pt} \\dot{x}^j \\) is symmetric, which we can see very easily as:
+                    Note that \\( g_{ij} \\) is symmetric matrix \\( \\implies g^{ij} = g_{ji} \\). Also, \\( \\dot{x}^i \\hspace{1pt} \\dot{x}^j \\) is symmetric, which we can see very easily as:
                     \\[
                         \\begin{pmatrix}
                         \\dot{x}^1 \\hspace{1pt} \\dot{x}^1 & \\dot{x}^1 \\hspace{1pt} \\dot{x}^2 & \\dot{x}^1 \\hspace{1pt} \\dot{x}^3\\\\
