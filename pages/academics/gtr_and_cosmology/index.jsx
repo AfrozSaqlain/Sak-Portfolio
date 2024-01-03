@@ -271,13 +271,13 @@ const GtrAndCosmology = () => {
                         height={50}
                         class="mx-auto scale-75 rounded-lg"
                     />
-                    \\( x^a(\\lambda) \\in \\mathbb{R}^N \\), the coordinate patch.
+                    \\( X^a(\\lambda) \\in \\mathbb{R}^N \\), the coordinate patch.
                     <br/>
                     <br/>
-                    Tangent vector, \\( v^a = \\frac{dx^a(\\lambda)}{d \\lambda} \\).
+                    Tangent vector, \\( v^a = \\frac{d X^a(\\lambda)}{d \\lambda} \\).
                     <br/>
                     <br/>
-                    Let's take a set of all smooth curves passing through point \\(P\\) and represent it as \\( \\{ x^a (\\lambda) \\} \\), class of all curves passing through \\(P\\) which are smooth. Let's take a look at \\( \\{v^a\\} \\) such that \\( v^a = \\frac{dx^a(\\lambda)}{d \\lambda} \\). We can easily see that \\( \\{v^a\\} \\) forms a vector space.
+                    Let's take a set of all smooth curves passing through point \\(P\\) and represent it as \\( \\{ X^a (\\lambda) \\} \\), class of all curves passing through \\(P\\) which are smooth. Let's take a look at \\( \\{v^a\\} \\) such that \\( v^a = \\frac{d X^a(\\lambda)}{d \\lambda} \\). We can easily see that \\( \\{v^a\\} \\) forms a vector space.
                     <br/>
                     <br/>
                     Our goal to define vector space is because we want to use different coordinate system to do our physics, as this may help in simplifying certain problems.
@@ -294,42 +294,42 @@ const GtrAndCosmology = () => {
                     So,
                     \\[
                         \\begin{align}
-                            x^a &:= x^a(x'^a) \\\\
-                            x'a &:= x'^a(x^ax)
+                            X^a &:= X^a(X'^a) \\\\
+                            X'a &:= X'^a(X^ax)
                         \\end{align}
                     \\]
                     Thus giving 
                     \\[
-                        v^a = \\frac{d x^a}{d \\lambda} \\hspace{12pt} \\text{ and } \\hspace{12pt} v'^a = \\frac{d x'^a}{d \\lambda}
+                        v^a = \\frac{d X^a}{d \\lambda} \\hspace{12pt} \\text{ and } \\hspace{12pt} v'^a = \\frac{d {X'}^a}{d \\lambda}
                     \\]
                     Thus we get our transformation equation like,
                     \\[
-                        v'^a = \\frac{d x'^a}{d \\lambda} = \\frac{\\partial x'^a}{\\partial x^b} \\frac{d x^b}{d \\lambda}    
+                        v'^a = \\frac{d X'^a}{d \\lambda} = \\frac{\\partial X'^a}{\\partial X^b} \\frac{d X^b}{d \\lambda}    
                     \\]
                     <div class='bg-blue-300/30 px-3 py-[0.01pt] rounded-md my-1 mx-auto max-w-max'>
                         \\[
-                            v'^a = \\frac{\\partial x'^a}{\\partial x^b} v^b
+                            v'^a = \\frac{\\partial X'^a}{\\partial X^b} v^b
                         \\]
                     </div>
-                    Vectors which transform using above transformation are called contra-variant vector, i.e. \\( {A'}^k = \\frac{\\partial {x'}^a}{\\partial x^b} A^i \\).
+                    Vectors which transform using above transformation are called contra-variant vector, i.e. \\( {A'}^k = \\frac{\\partial {X'}^a}{\\partial X^b} A^i \\).
                     <br/>
                     <br/>
-                    Let's say we have a function \\( f(x^a) : \\mathbb{R}^N \\to \\mathbb{R} \\). \\( f(x^a) \\) is fuction at point \\(P\\) and \\( f({x'}^a) \\) is same point \\(P\\), but in another coordinate patch.
+                    Let's say we have a function \\( f(X^a) : \\mathbb{R}^N \\to \\mathbb{R} \\). \\( f(X^a) \\) is fuction at point \\(P\\) and \\( f({X'}^a) \\) is same point \\(P\\), but in another coordinate patch.
                     <br/>
                     <br/>
-                    \\( f(x^a) = \\) constant is a set of hyper-surfaces.
+                    \\( f(X^a) = \\) constant, is a set of hyper-surfaces.
                     <br/>
                     <br/>
-                    The normal vector \\(n^a\\) to \\( f(x^a) = \\) constant at point \\(P\\) is given by
+                    The normal vector \\(n^a\\) to \\( f(X^a) = \\) constant, at point \\(P\\) is given by
                     \\[
-                        n_a = \\frac{\\partial f(x^a)}{\\partial x^a}    
+                        n_a = \\frac{\\partial f(X^a)}{\\partial X^a}    
                     \\]
-                    in coordinate patch \\(x^a\\) or \\(c^1\\)
+                    in coordinate patch \\(X^a\\) or \\(c^1\\)
                     and
                     \\[
                         n_a' = \\frac{\\partial f({x'}^a)}{\\partial {x'}^a}    
                         \\]
-                    in coordinate patch \\({x'}^a\\) or \\(c^2\\).
+                    in coordinate patch \\({X'}^a\\) or \\(c^2\\).
                     <br/>
                     <br/>
                     These form a vector space at \\(P\\).
@@ -337,11 +337,11 @@ const GtrAndCosmology = () => {
                     <br/>
                     Now again using the chain rule,we get
                     \\[
-                        {n'}_a = \\frac{\\partial f}{\\partial {x'}^a} = \\frac{\\partial f}{\\partial x^b} \\frac{\\partial x^b}{\\partial {x'}^a}   
+                        {n'}_a = \\frac{\\partial f}{\\partial {X'}^a} = \\frac{\\partial f}{\\partial X^b} \\frac{\\partial X^b}{\\partial {X'}^a}   
                     \\]
                     <div class='bg-blue-300/30 px-3 py-[0.01pt] rounded-md my-1 mx-auto max-w-max'>
                         \\[
-                            {n'}_a = \\frac{\\partial x^b}{\\partial {x'}^a} n_b
+                            {n'}_a = \\frac{\\partial X^b}{\\partial {X'}^a} n_b
                         \\]
                     </div>
                     The vectors which transform using above rule are called co-variant vector.
@@ -357,28 +357,28 @@ const GtrAndCosmology = () => {
                     \\[
                         (u \\otimes v)^{ab} = u^a \\cdot v^b    
                     \\]
-                    Under coordinate transformation \\( x \\to x' \\), we get
+                    Under coordinate transformation \\( X \\to X' \\), we get
                     \\[
                         (u \\otimes v)^{ab} \\to {(u \\otimes v)'}^{ab}
                     \\]
                     \\[
-                        {u'}^a{v'}^b = \\frac{ \\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} u^p v^q
+                        {u'}^a{v'}^b = \\frac{ \\partial {X'}^a}{\\partial X^p} \\frac{\\partial {X'}^b}{\\partial X^q} u^p v^q
                     \\]
                     So, \\( u \\otimes v \\) is a second-rand tensor, which transforms as given above.
                     <br/>
                     <br/>
                     The second rank contra-variant tensor is given as,
                     \\[
-                        {A'}^{ab} = \\frac{\\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} A^{pq}
+                        {A'}^{ab} = \\frac{\\partial {X'}^a}{\\partial X^p} \\frac{\\partial {X'}^b}{\\partial X^q} A^{pq}
                     \\]
                         
                     The second rank co-variant tensor is given as,
                     \\[
-                        {A'}_{ab} = \\frac{\\partial {x}^p}{\\partial {x'}^a} \\frac{\\partial x^q}{\\partial {x'}^b} A_{pq}
+                        {A'}_{ab} = \\frac{\\partial {X}^p}{\\partial {X'}^a} \\frac{\\partial X^q}{\\partial {X'}^b} A_{pq}
                     \\]
                     <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Mixed Tensor</p>
                     \\[
-                        {A'}^a_b = \\frac{\\partial {x'}^a}{\\partial x^q} \\frac{\\partial x^p}{\\partial {x'}^b} A^q_p    
+                        {A'}^a_b = \\frac{\\partial {X'}^a}{\\partial X^q} \\frac{\\partial X^p}{\\partial {X'}^b} A^q_p    
                     \\]
                     This is a mixed tensor of one co-variant and one contra-variant tensor.
                         
