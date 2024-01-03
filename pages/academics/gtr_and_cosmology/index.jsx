@@ -247,7 +247,74 @@ const GtrAndCosmology = () => {
         {
             title: 'Introduction to the Tensors',
                     content: `
-                    Geometry of Newtonian mechanics is \\( \\mathbb{R}^N \\), basically \\( \\mathbb{R}^4 \\).
+                    Geometry of Newtonian mechanics is \\( \\mathbb{R}^N \\), basically \\( \\mathbb{R}^4 \\). The geometry we want to talk about is not \\( \\mathbb{R}^N \\), which means that the entire space cannot be mapped to \\( \\mathbb{R}^N \\), or \\( \\nexists \\text{ ant transformation } \\mathscr{M} \\to \\mathbb{R}^N \\) as a whole. The geometry however is locally flat, which means, we take any point and then an open neighbourhood around that point, then that can be mapped to \\( \\mathbb{R}^N \\).
+                    <Image
+                        src="/gtr_and_cosmo/4_.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    Thus at each point \\(P\\), a neighbourhood can be mapped to \\( \\mathbb{R}^N \\). The \\( \\mathbb{R}^N \\) is called coordinate patch.
+                    <Image
+                        src="/gtr_and_cosmo/5.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    When we say coordinate transformation, it is the transformation between coordinate patch -1 and coordinate patch - 2. The law of physics lives on \\( \\mathscr{M} \\), so when we do coordinate transformation, the law of physics should remain invariant.
+                    <Image
+                        src="/gtr_and_cosmo/6.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    \\( x^a(\\lambda) \\in \\mathbb{R}^N \\), the coordinate patch.
+                    <br/>
+                    <br/>
+                    Tangent vector, \\( v^a = \\frac{dx^a(\\lambda)}{d \\lambda} \\).
+                    <br/>
+                    <br/>
+                    Let's take a set of all smooth curves passing through point \\(P\\) and represent it as \\( \\{ x^a (\\lambda) \\} \\), class of all curves passing through \\(P\\) which are smooth. Let's take a look at \\( \\{v^a\\} \\) such that \\( v^a = \\frac{dx^a(\\lambda)}{d \\lambda} \\). We can easily see that \\( \\{v^a\\} \\) forms a vector space.
+                    <br/>
+                    <br/>
+                    Our goal to define vector space is because we want to use different coordinate system to do our physics, as this may help in simplifying certain problems.
+                    <br/>
+                    <br/>
+                    Let's take 
+                    <Image
+                        src="/gtr_and_cosmo/7_.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    So,
+                    \\[
+                        \\begin{align}
+                            x^a &:= x^a(x'^a) \\\\
+                            x'a &:= x'^a(x^ax)
+                        \\end{align}
+                    \\]
+                    Thus giving 
+                    \\[
+                        v^a = \\frac{d x^a}{d \\lambda} \\hspace{12pt} \\text{ and } \\hspace{12pt} v'^a = \\frac{d x'^a}{d \\lambda}
+                    \\]
+                    Thus we get our transformation equation like,
+                    \\[
+                        v'^a = \\frac{d x'^a}{d \\lambda} = \\frac{\\partial x'^a}{\\partial x^b} \\frac{d x^b}{d \\lambda}    
+                    \\]
+                    <div class='bg-blue-300/30 px-3 py-[0.01pt] rounded-md my-1 mx-auto max-w-max'>
+                        \\[
+                            v'^a = \\frac{\\partial x'^a}{\\partial x^b} v^b
+                        \\]
+                    </div>
+                    Vectors which transform using above transformation are called contra-variant vector, i.e. \\( {A'}^k = \\frac{\\partial {x'}^a}{\\partial x^b} A^i \\).
+                    <br/>
+                    <br/>
+                    Let's say we have a function 
                     `
                 },
         {
