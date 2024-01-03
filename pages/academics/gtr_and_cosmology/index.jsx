@@ -314,7 +314,76 @@ const GtrAndCosmology = () => {
                     Vectors which transform using above transformation are called contra-variant vector, i.e. \\( {A'}^k = \\frac{\\partial {x'}^a}{\\partial x^b} A^i \\).
                     <br/>
                     <br/>
-                    Let's say we have a function 
+                    Let's say we have a function \\( f(x^a) : \\mathbb{R}^N \\to \\mathbb{R} \\). \\( f(x^a) \\) is fuction at point \\(P\\) and \\( f({x'}^a) \\) is same point \\(P\\), but in another coordinate patch.
+                    <br/>
+                    <br/>
+                    \\( f(x^a) = \\) constant is a set of hyper-surfaces.
+                    <br/>
+                    <br/>
+                    The normal vector \\(n^a\\) to \\( f(x^a) = \\) constant at point \\(P\\) is given by
+                    \\[
+                        n_a = \\frac{\\partial f(x^a)}{\\partial x^a}    
+                    \\]
+                    in coordinate patch \\(x^a\\) or \\(c^1\\)
+                    and
+                    \\[
+                        n_a' = \\frac{\\partial f({x'}^a)}{\\partial {x'}^a}    
+                        \\]
+                    in coordinate patch \\({x'}^a\\) or \\(c^2\\).
+                    <br/>
+                    <br/>
+                    These form a vector space at \\(P\\).
+                    <br/>
+                    <br/>
+                    Now again using the chain rule,we get
+                    \\[
+                        {n'}_a = \\frac{\\partial f}{\\partial {x'}^a} = \\frac{\\partial f}{\\partial x^b} \\frac{\\partial x^b}{\\partial {x'}^a}   
+                    \\]
+                    <div class='bg-blue-300/30 px-3 py-[0.01pt] rounded-md my-1 mx-auto max-w-max'>
+                        \\[
+                            {n'}_a = \\frac{\\partial x^b}{\\partial {x'}^a} n_b
+                        \\]
+                    </div>
+                    The vectors which transform using above rule are called co-variant vector.
+                    <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Outer Product</p>
+                    Let \\(u^a\\) and \\(v^a\\) be vectors, and their outer product is written as \\( u \\otimes v \\).
+                    \\[
+                        \\begin{align}
+                            u = u^a &= \\{ u^0, u^1, \\ldots, u^{n-1} \\} \\\\
+                            v = v^a &= \\{ v^0, v^1, \\ldots, v^{n-1} \\}
+                        \\end{align}
+                    \\]
+                    The outer product \\( u \\otimes v = u \\cdot v^T \\) is an \\( n \\times n \\) matrix.
+                    \\[
+                        (u \\otimes v)^{ab} = u^a \\cdot v^b    
+                    \\]
+                    Under coordinate transformation \\( x \\to x' \\), we get
+                    \\[
+                        (u \\otimes v)^{ab} \\to {(u \\otimes v)'}^{ab}
+                    \\]
+                    \\[
+                        {u'}^a{v'}^b = \\frac{ \\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} u^p v^q
+                    \\]
+                    So, \\( u \\otimes v \\) is a second-rand tensor, which transforms as given above.
+                    <br/>
+                    <br/>
+                    The second rank contra-variant tensor is given as,
+                    \\[
+                        {A'}^{ab} = \\frac{\\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} A^{pq}
+                    \\]
+                        
+                    The second rank co-variant tensor is given as,
+                    \\[
+                        {A'}_{ab} = \\frac{\\partial {x}^p}{\\partial {x'}^a} \\frac{\\partial x^q}{\\partial {x'}^b} A_{pq}
+                    \\]
+                    <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Mixed Tensor</p>
+                    \\[
+                        {A'}^a_b = \\frac{\\partial {x'}^a}{\\partial x^q} \\frac{\\partial x^p}{\\partial {x'}^b} A^q_p    
+                    \\]
+                    This is a mixed tensor of one co-variant and one contra-variant tensor.
+                        
+                    <p class='text-lg text underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Important Corollary</p>
+                    If a vector/ tensor is zero in one coordinate patch, then it is zero in all other coordinate patch.
                     `
                 },
         {
