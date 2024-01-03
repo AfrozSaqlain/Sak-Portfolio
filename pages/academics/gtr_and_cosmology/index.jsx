@@ -68,7 +68,7 @@ const GtrAndCosmology = () => {
                                 &= \\frac{1}{2} g_{jk} [\\hspace{2pt} \\dot{x}^k \\delta^j_i + \\dot{x}^j \\delta^k_j \\hspace{2pt}]\\\\
                                 &= \\frac{1}{2} g_{ik} \\hspace{2pt} \\dot{x}^k + \\frac{1}{2} g_{ji} \\hspace{2pt} \\dot{x}^j\\\\
                                 &= \\frac{1}{2} g_{il} \\hspace{2pt} \\dot{x}^l + \\frac{1}{2} g_{li} \\hspace{2pt} \\dot{x}^l\\\\
-                                &= g_{il} \\hspace{2pt} \\dot{x}\\\\
+                                &= g_{il} \\hspace{2pt} \\dot{x}^l\\\\
                             \\end{align}
                         \\]
                         So,
