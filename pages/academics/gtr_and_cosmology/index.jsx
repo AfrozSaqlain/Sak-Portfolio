@@ -27,7 +27,7 @@ const GtrAndCosmology = () => {
                     As generalized coordinates depend on degree of freedom. So, 1 particles will have 3 d.o.f and N-particles will have 3N d.o.f which implies \\( j \\to 1, \\hspace{2pt} 3N \\). We will use only single particles, thus we have \\( q_i = x^i \\implies \\dot{q}_i = \\dot{x}^i \\) and instead of \\( M_{jk} \\) we write \\( g_{jk} \\). Thus,
                     \\[
                         \\begin{align}
-                           \\mathcal{L} = T &= \\frac{1}{2} \\sum\\limits_{\\substack{jk}} g_{ij} \\hspace{1pt} \\dot{x}^i \\hspace{1pt} \\dot{x}^j\\\\
+                           \\mathcal{L} = T &= \\frac{1}{2} \\sum\\limits_{\\substack{ij}} g_{ij} \\hspace{1pt} \\dot{x}^i \\hspace{1pt} \\dot{x}^j\\\\
                            \\mathcal{L} &= \\frac{1}{2} g_{ij} \\hspace{1pt} \\dot{x}^i \\hspace{1pt} \\dot{x}^j
                         \\end{align}
                     \\]
@@ -389,6 +389,94 @@ const GtrAndCosmology = () => {
         {
             title: 'Invariance of Proper Time',
                     content: `
+                    <p class='text-lg text-center mt-5 mb-2 font-semibold text-green-500'>\\(ds^2\\) = Proper Time</p>
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Story so far</p>
+                    Now we are dealing with not just space and time seperately, but with spacetime. The 4 dimensional degree of freedom, given by \\( x^a = (t,x,y,z) \\) and 4 velocity is given by \\( u^a = \\dot{x}^a = (\\dot{t}, \\dot{x}, \\dot{y}, \\dot{z}) \\). If the particle is time-like, we can use arc-length parameterization to describe the motion of particle. For time-like case we know that \\( u^a \\cdot u_a = 1 \\). For light-like case, we have \\( u^a \\cdot u_a = 0 \\).
+                    <br/>
+                    <br/>
+                    Lagrangian for force free particle is \\[ \\mathcal{L} = \\frac{1}{2} [\\dot{t}^2 -\\dot{x}^2 - \\dot{y}^2 - \\dot{z}^2] = \\begin{cases} \\frac{1}{2} , \\text{ for time-like} \\\\ \\\\ 0 \\text{ , for light-like} \\end{cases} \\]
+                    We could even add potential to \\( \\mathcal{L} \\) and that would define relativistic dynamics.
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Invariance of \\(ds^2\\)</p>
+                    Let us have two events \\(A\\) and \\(B\\). Let these two events are observed by two different Lorentz observers \\(\\mathcal{O}_1\\) and \\(\\mathcal{O}_2\\).
+                    <Image
+                        src="/gtr_and_cosmo/8.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    Is there any relation between \\(ds^2\\) and \\( {ds'}^2 \\)?
+                    <br/>
+                    <br/>
+                    For better understanding, let us assume a null path or light-like path connects the events \\(A\\) and \\(B\\). From the basic postulates of relativity, the velocity of light is universal constant and same for all observers. So, the events \\(A\\) and \\(B\\) are light-like for both observers and hence \\( ds^2 = {ds'}^2 = 0 \\).
+                    <br/>
+                    <br/>
+                    With the same argument, we say that for time-like connected events too \\( ds^2 =  {ds'}^2 \\) for inertial frames (\\mathcal{O}_1\\) and \\(\\mathcal{O}_2\\).
+                    <br/>
+                    <br/>
+                    As we know that Lorentz transformation is written as a matrix, whose determinant is \\(1\\). This means that the length of a vector is preserved under Lorentz transformation. This is similar to rotation or similarity transformation. Length of spacetime interval between two events is invariant or same in all Lorentz frame.
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Rest and Moving Observer</p>
+                    The four velocity of an observer at rest in a Lorentz frame \\( \\mathcal{O} \\) is given by \\( u^a = (1,0,0,0) \\). Unline Newtonian rest observer, this four velocity can't be (0,0,0,0) because time has to flow. The spatial velocity is given by \\( \\vec{v} = (0,0,0) \\).
+                    <Image
+                        src="/gtr_and_cosmo/9.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    Spacetime interval after a time \\(dt\\) is \\(ds = dt\\), and that's why \\(ds\\) is sometimes called 'Proper Time'.
+                    <br/>
+                    <br/>
+                    The four velocity for observer moving at constant speed is given by \\( u^a = (\\dot{t}, \\dot{x}, \\dot{y}, \\dot{z}) = \\gamma (1, v_x, v_y, v_z) \\). Spacetime interval after a time \\(dt\\) is 
+                    \\[
+                        \\begin{align}
+                            ds^2 &= dt^2 - dx^2 \\\\
+                            &= dt^2 \\left( 1 - \\frac{{dx}^2}{{dt}^2} \\right)\\\\
+                            &= dt^2 (1 - v_x^2)\\\\
+                            &= \\frac{1}{\\gamma^2} dt^2 \\\\
+                            \\text{Or, } \\hspace{12pt} ds &= \\frac{1}{\\gamma} dt
+                        \\end{align}
+                    \\]
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Moving Lorentz Observer</p>
+                    Let \\( \\mathcal{O} \\) and \\( \\mathcal{O'} \\) be two Lorentz observers / frames, moving with relative velocity \\(v^a\\). We have seen that the 4-velocity can be written as \\( v^a = (\\dot{t}, \\dot{x}, \\dot{y}, \\dot{z}) = \\gamma(1, \\vec{v}) \\), where \\( \\gamma = \\frac{1}{\\sqrt{1 - v^2}} \\) and \\(\\vec{v}\\) is the spatial velocity of the frame.
+                    <br/>
+                    <br/>
+                    Without loss of generality we may assume the frame \\( \\mathcal{O} \\) is at rest and \\( \\mathcal{O'} \\) is moving with the velocity \\(v^a\\). Let \\( \\{ t,x,y,z \\} \\) be the coordinate in frame \\(\\mathcal{O}\\) and \\( \\{ t',x',y',z' \\} \\) be the coordinate in frame \\( \\mathcal{O'} \\) and they are related by Lorentz transformation.
+                    \\[
+                        t' = \\gamma(t-vx) \\hspace{10pt} \\text{ and } \\hspace{10pt} x' = \\gamma(x - vt)
+                    \\]
+                    (Basic idea here is to keep \\(ds^2 = {ds'}^2\\) )
+                    So now,
+                    \\[
+                        dt' = \\gamma(dt-vdx) \\hspace{10pt} \\text{ and } \\hspace{10pt} dx' = \\gamma(dx - vdt)
+                    \\]
+                    \\[
+                        \\begin{align}
+                            {dt'}^2 &= \\gamma^2 [dt^2 + v^2 dx^2 - 2v \\hspace{1pt} dx \\hspace{1pt} dt] \\\\
+                            {dx'}^2 &= \\gamma^2 [dx^2 + v^2 dt^2 - 2v \\hspace{1pt} dx \\hspace{1pt} dt]
+                        \\end{align}
+                    \\]
+                    Subtracting \\( {dx'}^2 \\text{ from } {dt'}^2 \\), we get
+                    \\[
+                        {dt'}^2 - {dx'}^2 = \\gamma^2 [dt^2 (1 - v^2) -dx^2 (1 - v^2)] = dt^2 - dx^2    
+                    \\]
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Time Dilation</p>
+                    Let us take two events \\(A\\) and \\(B\\), which are at same spatial location in Lorentz frame \\( \\mathcal{O'} \\).
+                    <Image
+                        src="/gtr_and_cosmo/10.png"
+                        alt="time dilation"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    The coordinates are \\( A = \\{ t_0', 0, 0, 0 \\} \\) and \\( B = \\{ t_1' , 0, 0, 0 \\} \\). The spacetime intervals for the event \\(A\\) and \\(B\\) is given by \\( ds^2 = {dt'}^2 = (t_1' - t_0')^2 \\). With \\(c=1\\), the spacetime interval \\(ds\\) has the same unit as time, that is why it is called 'proper time'.
+                    <Image
+                        src="/gtr_and_cosmo/11.png"
+                        alt="time dilation"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
                     
                     `
                 },
