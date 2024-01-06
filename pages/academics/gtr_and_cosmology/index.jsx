@@ -477,14 +477,142 @@ const GtrAndCosmology = () => {
                         height={50}
                         class="mx-auto scale-75 rounded-lg"
                     />
-                    
+                    Let's say our Lorentz frame \\( \\mathcal{O'} \\) is moving at a spatial speed \\( v^a = (1, v_x) \\) wrt. frame \\( \\mathcal{O} \\) or lab frame and observes the events \\(A\\) and \\(B\\). We may assume both the frames coincide at \\(t=t_0\\). THe coordinates of the events in frame \\( \\mathcal{O'} \\) are
+                    \\[ A = \\{ t_0', 0, 0, 0 \\} \\hspace{12pt} \\text{ and } \\hspace{12pt} B = \\{ t_1' , 0, 0, 0 \\} \\]
+                    The spacetime interval in frame \\( \\mathcal{O} \\) is given as
+                    \\[ A = \\{ t_0, 0, 0, 0 \\} \\hspace{12pt} \\text{ and } \\hspace{12pt} B = \\{ t_1 , dx, dy, dz \\} \\]
+                    Since, the proper time has to be invariant \\[ {ds}^2 = {dt'}^2 = {ds'}^2 \\] Since, the \\( dx', dy' \\text{ and } dz' \\) themselves are zero, we have
+                    \\[
+                        \\begin{align}
+                            ds^2 = {dt'}^2 = {ds'}^2 &= (dt^2 - dx^2 - dy^2 - dz^2) \\\\
+                            &= \\left( 1 - \\frac{dx^2}{dt^2} - \\frac{dy^2}{dt^2} - \\frac{dz^2}{dt^2} \\right) dt^2 \\\\
+                            &= (1 - v^2) {dt}^2\\\\
+                            \\text{Or, } \\hspace{5pt} {dt'} &= dt \\sqrt{1 - v^2}
+                        \\end{align}
+                    \\]
+                    This is called time dilation. It is coming from invariance of proper time or \\( {ds}^2 \\).
                     `
                 },
         {
             title: 'The Metric Tensor',
                     content: `
-                    
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Tangent Vector Space</p>
+                    We know that our space might not be able to be mapped to \\( \\mathbb{R}^N \\).
+                    <Image
+                        src="/gtr_and_cosmo/5.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    We know that transformation equations can be written as:
+                    \\[
+                        \\begin{align}
+                            x'^a &= x'^a (x^a)\\\\
+                            x^a &= x^a (x'^a)
+                        \\end{align}
+                    \\]
+                    <br/>
+                    Now we can consider all the smooth curves passing through \\(P\\). We know that, the set of all tangent to these curves \\( \\left\\{ v = \\frac{dx^a(\\lambda)}{d \\lambda} \\right\\} \\) form a vector space and is called tangent space.
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Metric Tensor</p>
+                    In order to do any meaningful physics, we need a dot product on tangent space. The element of tangent space, we called contra-variant vectors. The scalar product is the mapping from \\( \\{ V \\} \\to \\mathbb{R} \\), i.e. for any two vectors \\(v^a\\) and \\(u^a\\), we can write:
+                    \\[
+                        \\langle v \\vert u \\rangle = \\langle u \\vert v \\rangle = g_{ab} v^a u^b
+                    \\]
+                    Here the coefficient which is used to define the dot product between the two vectors is called the metric tensor. In general \\(g_{ab}\\) is a function of coordinates. Within the standard framework \\(g_{ab}\\) is symmetric, i.e. \\( g_{ab} = g_{ba} \\) because of the nature of dot product. Example: The spacetime metric for the Minkowski spacetime is given by \\( g_{ab} = \\eta_{ab} = \\text{diag}(1,-1,-1,-1) \\).
+                    <br/>
+                    <br/>
+                    <div class='bg-slate-50/10 p-1 rounded-md mb-3 pl-2'>
+                    <p class='text-lg mb-2 font-semibold text-red-400'>Show that the spacetime metric \\(g_{ab}\\) transforms like a co-variant tensor of rank 2.</p>
+                    Reminder: <br/>
+                    \\[
+                        \\begin{align}
+                            \\text{Contra-variant tensor transforms like:  } {v'}^a = \\frac{\\partial {x'}^a}{\\partial x^p} v^p \\\\
+                            \\text{Co-variant tensor transforms like:  } {v'}_a = \\frac{\\partial {x}^p}{\\partial {x'}^a} v_p \\\\
+                        \\end{align}
+                    \\]
+                    From our definition
+                    \\[
+                        \\begin{align}
+                            |v|^2 = g_{ab} v^a v^b &= g'_{ab} {v'}^a {v'}^b \\\\
+                            &= g'_{ab} \\frac{\\partial {x'}^a}{\\partial x^p} v^p \\frac{\\partial {x'}^b}{\\partial x^q} v^q \\\\
+                            &= \\frac{\\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} g'_{ab} v^p v^q
+                        \\end{align}
+                    \\]
+                    as \\(a,b,p \\text{ and } q\\) are dummy variables, we can equally write
+                    \\[
+                        g'_{ab} {v'}^a {v'}^b =  \\frac{\\partial {x'}^p}{\\partial x^a} \\frac{\\partial {x'}^q}{\\partial x^b} g'_{pq} v^a v^b
+                    \\]
+                    \\[
+                        \\implies g_{ab} = \\frac{\\partial {x'}^p}{\\partial x^a} \\frac{\\partial {x'}^q}{\\partial x^b} g'_{pq}
+                    \\]
+                    Hence, \\(g_{ab}\\) transforms like a co-variant tensor of rank 2.
+                    </div>
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-0 font-semibold text-center text-blue-500'>Elsewhere in parallel universe</p>
+                    <Image
+                        src="/gtr_and_cosmo/5.png"
+                        alt="trajectory"
+                        width={10}
+                        height={50}
+                        class="mx-auto scale-75 rounded-lg"
+                    />
+                    Now we consider all the smooth hyper-surfaces at \\(P\\). We know that the set of all normal to these surfaces \\( \\left\\{ v = \\frac{\\partial f(x^a)}{\\partial x^b} \\right\\} \\) forms a vector space, and is dual to tangent space.
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Elsewhere in parallel universe there is another metric tensor</p>
+                    In order to do any meaningful physics, we need a dot product on our co/ dual vector space. The element of co/ dual vector space, we called co-variant vectors. The scalar product is the mapping from \\( \\{ V \\} \\to \\mathbb{R} \\), i.e. for any two vectors \\(v_a\\) and \\(u_a\\), we can write:
+                    \\[
+                        \\langle v \\vert u \\rangle = \\langle u \\vert v \\rangle = g^{ab} v_a u_b
+                    \\]
+                    In general \\(g^{ab}\\) is a function of coordinates. Within the standard framework \\(g_{ab}\\) is symmetric, i.e. \\( g_{ab} = g_{ba} \\) because of the nature of dot product. Example: The spacetime metric for the Minkowski spacetime is given by \\( g^{ab} = \\eta^{ab} = \\text{diag}(1,-1,-1,-1) \\).
+                    <br/>
+                    <br/>
+                    <div class='bg-slate-50/10 p-1 rounded-md mb-3 pl-2'>
+                    <p class='text-lg mb-2 font-semibold text-red-400'>Show that the spacetime metric \\(g^{ab}\\) transforms like a contra-variant tensor of rank 2.</p>
+                    Reminder: <br/>
+                    \\[
+                        \\begin{align}
+                            \\text{Contra-variant tensor transforms like:  } {v'}^a = \\frac{\\partial {x'}^a}{\\partial x^p} v^p \\\\
+                            \\text{Co-variant tensor transforms like:  } {v'}_a = \\frac{\\partial {x}^p}{\\partial {x'}^a} v_p \\\\
+                        \\end{align}
+                    \\]
+                    From our definition
+                    \\[
+                        \\begin{align}
+                            |v|^2 = g^{ab} v_a v_b &= {g'}^{ab} {v'}_a {v'}_b \\\\
+                            &= {g'}^{ab} \\frac{\\partial x^p}{\\partial {x'}^a} v^p \\frac{\\partial x^q}{\\partial {x'}^b} v^q \\\\
+                            &= \\frac{\\partial {x}^p}{\\partial {x'}^a} \\frac{\\partial {x}^q}{\\partial {x'}^b} {g'}^{ab} v^p v^q
+                        \\end{align}
+                    \\]
+                    as \\(a,b,p \\text{ and } q\\) are dummy variables, we can equally write
+                    \\[
+                        {g'}^{ab} {v'}_a {v'}_b =  \\frac{\\partial {x}^a}{\\partial {x'}^p} \\frac{\\partial {x}^b}{\\partial {x'}^q} {g'}^{ab} v^p v^q
+                    \\]
+                    \\[
+                        \\implies g^{ab} = \\frac{\\partial {x}^a}{\\partial {x'}^p} \\frac{\\partial {x}^b}{\\partial {x'}^q} {g'}^{ab}
+                    \\]
+                    Hence, \\(g^{ab}\\) transforms like a co-variant tensor of rank 2.
+                    </div>
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Should the parallel universesbe connected</p>
+                    Should \\( g_{ab} \\) and \\( g^{ab} \\) be related?
+                    <br/>
+                    <br/>
+                    It is good to have a relation between \\( g_{ab} \\) and \\( g^{ab} \\). A sensible relation is:
+                    <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mx-auto max-w-max'>
+                        \\[ g_{ap}g^{\\hspace{1.5pt} pb} ==\\delta^b_a \\]
+                    </div>
+                    They can be inverse of each other!
+                    <br/>
+                    <br/>
+                    This allows us to establish a unique relation between a co-variant and contra-variant tensor as
+                    <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mx-auto max-w-max'>
+                        \\[ v^a = g^{ab} v_b \\hspace{12pt} \\text{ and } \\hspace{12pt} v_a = g_{ab} v^b \\]
+                    </div>
                     `
+                },
+                {
+                    title: 'Permutation Tensor',
+                            content: `
+
+                            `
                 },
     ];
 
