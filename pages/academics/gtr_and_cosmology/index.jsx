@@ -691,7 +691,126 @@ const GtrAndCosmology = () => {
                             Let's say we have a 2nd-rank tensor in \\( \\mathbb{R}^3 \\), \\(U_{ip}\\)
                             \\[ \\Delta = \\frac{1}{6} \\epsilon_{ijk} \\hspace{2pt} U_{ip} U_{jq} U_{kr} \\hspace{2pt} \\epsilon^{pqr} \\]
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Vector Calculus </p>
-                            
+                            <ul class='list-disc ml-8 my-4'>
+                                <li class="mb-2">
+                                    Gradient of a scalar
+                                    \\[\\nabla_i \\phi = \\frac{\\partial \\phi}{\\partial x^i} \\]
+                                    An important relation here is:
+                                    <div class='bg-blue-300/30 p-1 rounded-md mb-3 pl-2 mt-3'>
+                                        \\[ 
+                                            \\begin{align}
+                                                ( \\nabla_j \\nabla_k - \\nabla_k \\nabla_j ) \\phi &= 0 \\\\
+                                                \\text{Or, } \\hspace{6pt} \\epsilon^{ijk} \\nabla_j \\nabla_k \\phi &= 0
+                                            \\end{align}
+                                        \\]
+                                        This we can see clearly as
+                                        \\[
+                                            \\frac{\\partial^2 \\phi}{\\partial x_j \\partial x_k} - \\frac{\\partial^2 \\phi}{\\partial x_k \\partial x_j} = 0    
+                                        \\]
+                                        as \\( \\epsilon^{ijk} \\) is anti-symmetric and the differentiation operator \\( \\nabla_j, \\nabla_k \\) is symmetric.
+                                    </div>
+                                </li>
+                                <li class="mb-2">
+                                    Divergence of a vector
+                                    \\[
+                                        \\vec{\\nabla} \\cdot \\vec{v} = \\nabla^i v_i = \\nabla_i v^i
+                                    \\]
+                                </li>
+                                <li class="mb-2">
+                                    Curl of a vector
+                                    \\[
+                                        \\vec{\\nabla} \\times \\vec{v} = \\epsilon^{ijk} \\hspace{2pt} \\nabla_j v_k
+                                    \\]
+                                </li>
+                                <li class="mb-2">
+                                    Divergence of curl of a vector
+                                    \\[
+                                        \\vec{\\nabla} \\cdot (\\vec{\\nabla} \\times \\vec{v}) = \\nabla_i \\hspace{2pt} \\epsilon^{ijk} \\hspace{2pt} \\nabla_j v_k
+                                    \\]
+                                </li>
+                                <li class="mb-2">
+                                    Curl of a gradient of \\( \\phi \\)
+                                    \\[
+                                        \\vec{\\nabla} \\cdot (\\vec{\\nabla} \\phi) = \\epsilon^{ijk} \\hspace{2pt} \\nabla_j \\nabla_k \\phi
+                                    \\]
+                                </li>
+                                <li class="mb-2">
+                                    Curl of curl of a vector
+                                    \\[
+                                        \\begin{align}
+                                            \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{v}) &= \\epsilon^{ijk} \\hspace{2pt} \\nabla_j \\hspace{2pt} \\epsilon_{klm} \\hspace{2pt} \\nabla^l v^m \\\\
+                                            &= \\epsilon^{kij} \\hspace{2pt} \\epsilon_{klm} \\nabla_j ( \\nabla^l v^m ) \\\\
+                                            &= ( \\delta^i_l \\delta^j_m - \\delta^i_m \\delta^j_l ) [(\\nabla_j \\nabla^l) v^m] \\\\
+                                            &= \\nabla_m \\nabla^i v^m - \\nabla_l \\nabla^l v^i \\\\
+                                            &= \\nabla^i \\nabla_m v^m - \\nabla_l \\nabla^l v^i \\\\
+                                            &= \\vec{\\nabla} (\\vec{\\nabla} \\cdot \\vec{v}) - (\\vec{\\nabla} \\cdot \\vec{\\nabla}) \\vec{v}\\\\
+                                            &= \\vec{\\nabla} (\\vec{\\nabla} \\cdot \\vec{v}) - \\nabla^2 \\vec{v}\\\\
+                                        \\end{align}
+                                    \\]
+                                    Hence, instead of defining \\( \\nabla^2 \\) as \\( \\frac{\\partial^2}{\\partial x^2_i} \\), we define
+                                    <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                                    \\[
+                                        \\nabla^2 \\vec{v} = \\vec{\\nabla} (\\vec{\\nabla} \\cdot \\vec{v}) - \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{v})
+                                    \\]
+                                    </div>
+                                </li>
+                            </ul>
+                            This \\( \\epsilon - \\delta \\) tensor can be written in 4-dimension too
+                            \\[
+                                \\epsilon^{ijkl} = \\begin{cases}
+                                    1 , \\hspace{12pt} \\text{ if i, j, k and l do even permutation} \\\\
+                                    -1 , \\hspace{5pt} \\text{ if i, j, k and l do odd permutation} \\\\
+                                    0, \\hspace{15pt} \\text{if any two indices are the same}
+                                \\end{cases}
+                            \\]
+                            which then gives us
+                            \\[
+                                \\epsilon_{abcd} \\hspace{2pt} \\epsilon^{efgh} = \\begin{vmatrix}
+                                    \\delta^e_a & \\delta^f_a & \\delta^g_a & \\delta^h_a \\\\
+                                    \\delta^e_b & \\delta^f_b & \\delta^g_b & \\delta^h_b \\\\
+                                    \\delta^e_c & \\delta^f_c & \\delta^g_c & \\delta^h_c \\\\
+                                    \\delta^e_d & \\delta^f_d & \\delta^g_d & \\delta^h_d \\\\
+                                \\end{vmatrix}
+                            \\]
+                            On contracting one index we get
+                            \\[
+                                \\epsilon_{abcd} \\hspace{2pt} \\epsilon^{afgh} = \\begin{vmatrix}
+                                    \\delta^f_b & \\delta^g_b & \\delta^h_b \\\\
+                                    \\delta^f_c & \\delta^g_c & \\delta^h_c \\\\
+                                    \\delta^f_d & \\delta^g_d & \\delta^h_d \\\\
+                                \\end{vmatrix}
+                            \\]
+                            And when we contract 2 indices, we get
+                            \\[
+                                \\epsilon_{abcd} \\hspace{2pt} \\epsilon^{abgh} = \\text{factor} \\begin{vmatrix}
+                                    \\delta^g_c & \\delta^h_c \\\\
+                                    \\delta^g_d & \\delta^h_d \\\\
+                                \\end{vmatrix}
+                            \\]
+                            Note: In Minkowski Spacetime \\( \\epsilon^{0123} = - \\epsilon_{0123} \\)
+                            `
+                },
+                {
+                    title: 'Parallel Transport',
+                            content: `
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'>What is a tensor? How to test a given \\(T^a\\) or \\( T_a \\) is a tensor? </p>
+                            Idea is very simple. We make coordinate transformation \\( x^a \\to {x'}^a \\) and see how \\(T^a\\) or \\( T_a \\) behaves, where \\( {x'}^a = {x'}^a(x^a) \\).
+                            <br/>
+                            <br/>
+                            If \\(T^a\\) transforms like \\( {T'}^a = \\frac{\\partial {x'}^a}{\\partial x^b} T^b \\), then it is a contravariant tensor of rank 1.
+                            <br/>
+                            <br/>
+                            If \\(T_a\\) transforms like \\( {T'}_a = \\frac{\\partial {x}^b}{\\partial {x'}^a} T_b \\), then it is a covariant tensor of rank 1.
+                            <br/>
+                            <br/>
+                            If \\(T^a\\) or \\( T_a \\) does not transform as per above rules, they are not tensors.
+                            <br/>
+                            <br/>
+                            This we cn easily extend to tensors with more than rank 1 as in \\( T^{ab}_{cd} \\).
+                            \\[
+                                {T'}^{ab}_{cd} = \\frac{\\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} \\frac{\\partial x^r}{\\partial {x'}^c} \\frac{\\partial x^s}{\\partial {x'}^d} T^{pq}_{rs}    
+                            \\]
+                            In the back of our mind, we should have a tangent space with all curves and \\( T^a = \\frac{dx^a}{d \\lambda} \\) as well as normal vector to hyper-surfaces \\( f(x^a) = C \\), \\( T_a = \\frac{\\partial f(x^a)}{\\partial x^a} \\).
                             `
                 },
     ];
