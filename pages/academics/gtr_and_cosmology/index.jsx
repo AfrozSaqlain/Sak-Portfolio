@@ -811,6 +811,276 @@ const GtrAndCosmology = () => {
                                 {T'}^{ab}_{cd} = \\frac{\\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} \\frac{\\partial x^r}{\\partial {x'}^c} \\frac{\\partial x^s}{\\partial {x'}^d} T^{pq}_{rs}    
                             \\]
                             In the back of our mind, we should have a tangent space with all curves and \\( T^a = \\frac{dx^a}{d \\lambda} \\) as well as normal vector to hyper-surfaces \\( f(x^a) = C \\), \\( T_a = \\frac{\\partial f(x^a)}{\\partial x^a} \\).
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Some Thoughts </p>
+                            We have had functions \\( f(x^a) \\) which are scalars or tensor of rank 1. And we have seen that \\( T_a = \\frac{\\partial f(x)}{\\partial x^a} \\) becomes the covariant tensor of rank 1. So, can we do, say 
+                            \\[
+                                A_{ab} = \\frac{\\partial T_a}{\\partial x^b} \\hspace{9pt} \\text{ or } \\hspace{9pt} A^a_b = \\frac{\\partial T^a}{\\partial x^b}
+                            \\]
+                            to get higher rank tensor? Or in other words, can we differentiate a tensor to get higher rank tensor?
+                            <br/>
+                            <br/>
+                            Note that differentiation is important for studying physics, and if laws of physics have to be represented by tensors, then they better be differentiable.
+                            <br/>
+                            <br/>
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'>Let's first see if \\( A_{ab} = \\frac{\\partial T_a}{\\partial x^b} \\) forms a tensor.</p>
+                            Let's check with our rules! Under a coordinate transformation \\( {x'}^a = {x'}^a (x^a) \\).
+                            \\[
+                                \\begin{align}
+                                    \\frac{\\partial T'_k}{\\partial {x'}^m} &= \\frac{\\partial}{\\partial {x'}^m} \\left[ \\frac{\\partial x^p}{\\partial {x'}^k} T_p \\right]\\\\
+                                    &= \\frac{\\partial}{\\partial x^q} \\left[ \\frac{\\partial x^p}{\\partial {x'}^k} T_p \\right] \\frac{\\partial x^q}{\\partial {x'}^m}\\\\
+                                    &= \\left[ \\frac{\\partial^2 x^p}{\\partial x^q \\partial {x'}^k} T_p + \\frac{\\partial x^p}{\\partial {x'}^k} \\frac{\\partial T_p}{\\partial x^q} \\right] \\frac{\\partial x^q}{\\partial {x'}^m} \\\\
+                                    &= \\frac{\\partial x^p}{\\partial {x'}^k} \\frac{\\partial x^q}{\\partial {x'}^m} \\frac{\\partial T_p}{\\partial x^q} + \\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p
+                                \\end{align}
+                            \\]
+                            The first term on the RHS has transformation rule for a 2nd -rank covariant tensor, but there's second term on the RHS too, which need not be zero, in general. It is zero only for linear transformationor Lorentz transformation and is not zero for any general transformation.
+                            <br/>
+                            <br/>
+                            This means that \\( \\frac{\\partial T_k}{\\partial x^m} \\) is not a tensor because it does not transform like a tensor. Same could be said about \\( \\frac{\\partial T^k}{\\partial x^m} \\), which also does not transform like a tensor. All because of a term like
+                            \\[
+                                \\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p
+                            \\]
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Vector Field </p>
+                            A vector field is such that each point \\(x^a\\) in the manifold is assigned with a vector denoted with \\( T^p(x^a) \\).
+                            <Image
+                                src="/gtr_and_cosmo/12.png"
+                                alt="vector field"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            We have a point \\( P = x^a \\) and we have tangent or co-tangent space there, and we have another point \\( Q = y^a \\) and we have tangent or co-tangent space there as well. We form a complete vector space. Now at point \\(P\\), we pick a vector \\( T^p(P = x^a) \\) and similarly at another point Q we choose one member of a tangent vector space and together at all point in the manifold, we would form a smooth tensor.
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Differentition in flat spacetime </p>
+                            \\[
+                                \\begin{align}
+                                    \\frac{\\partial T^a}{\\partial x^b} &= \\lim\\limits_{\\delta x^b \\to 0} \\left[ \\frac{T^a(Q) - T^a(P)}{\\delta x^b} \\right] \\\\
+                                    &= \\lim\\limits_{\\delta x^b \\to 0} \\left[ \\frac{T^a(x^b + \\delta x^b) - T^a(x^b)}{\\delta x^b} \\right]
+                                \\end{align}
+                            \\]
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'>How do we subtract vector from two different points? </p>
+                            <Image
+                                src="/gtr_and_cosmo/13.png"
+                                alt="differentiation of vector field"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            In \\( \\mathbb{R}^N \\), we move the vector from \\(P\\) to \\(Q\\) without changing its direction and magnitude.
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'>How do we do that in curved spacetime? </p>
+                            We have to develop a simikar method, then we might be able to get rid of the terms like \\( \\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p \\).
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Parallel Transport </p>
+                            <Image
+                                src="/gtr_and_cosmo/14.png"
+                                alt="differentiation of vector field"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            In this scheme to move a vector \\( T_a \\) from point \\(P\\) to point \\( Q \\), without changing its magnitude or direction and this process is called parallel transport.
+                            <br/>
+                            <br/>
+                            It is important to note that while a vector is parallely trasnported from point \\(P\\) to point \\(Q\\), it is not necessary that componenets of the vector will remain the same. However, in the case of \\( \\mathbb{R}^N \\), the components will not change.
+                            <br/>
+                            <br/>
+                            In general, the change in component of a vector \\(T_a\\), \\( \\delta T_a \\) after parallel transport from \\(P\\) to \\(Q\\) could depend on \\(T^a\\) at point \\(P\\) and seperation between \\(P\\) and \\(Q\\), i.e. \\( \\delta x^a \\) as given
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\delta T_a = \\Gamma^p_{aq} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^q
+                            \\]
+                            </div>
+                            The coefficient \\(\\Gamma^p_{aq} \\) is called connection coefficient.
+                            `
+                },
+                {
+                    title: '2-Sphere \\( ( \\mathbb{S}^2 ) \\) : A Curved Space',
+                            content: `
+                            Sphere is an interesting but simple geometry. A sphere or \\( \\mathbb{S}^2 \\) can not be mapped \\( 1-1 \\) to \\( \\mathbb{R}^2 \\), hence it is a curved geometry. The distance element on the sphere is given by \\( ds^2 = d\\theta^2 + \\sin^2\\theta \\hspace{3pt} d\\phi^2 \\). This can be easily obtained from the length element in polar coordinates:
+                            \\[
+                                ds^2 = dr^2 + d\\theta^2 + \\sin^2\\theta \\hspace{3pt} d\\phi^2 
+                            \\]
+                            In this coordinate \\( \\mathbb{R}^3 \\) is considered as \\( \\mathbb{R} \\odot \\mathbb{S}^2 \\).
+                            <br/>
+                            <br/>
+                            We get the distance element of 2-sphere \\( \\mathbb{S}^2 \\), by setting \\(r = \\) constant \\( = 1\\) and \\( dr = 0 \\).
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Basis Vectors </p>
+                            The metric is given by
+                            \\[
+                                ds^2 = d\\theta^2 + \\sin^2\\theta \\hspace{3pt} d\\phi^2 \\implies g_{ab} = \\begin{pmatrix}
+                                1 & 0 \\\\ 0 & \\sin^2 \\hspace{3pt} \\theta 
+                                \\end{pmatrix} \\text{ and } g^{ab} =  \\begin{pmatrix}
+                                1 & 0 \\\\ 0 & \\frac{1}{\\sin^2 \\hspace{3pt} \\theta}
+                                \\end{pmatrix}
+                            \\]
+                            Let \\( \\hat{e}^a (\\theta) = (1,0) \\) thus \\( g_{ab} \\hspace{2pt} \\hat{e}^a (\\theta) \\hat{e}^b (\\theta) = 1 \\to \\) a unit vector thus its length does not depend on location.
+                            Let \\( \\vec{e}^a (\\phi) = (0,1) \\) thus \\( g_{ab} \\hspace{2pt} \\vec{e}^a (\\phi) \\vec{e}^b (\\phi) = \\sin^2\\theta \\to \\) its length depend on position, maximum on equator and zero at poles. There is a coordinate singularity at \\( \\theta = 0 \\).
+                            <br/>
+                            <br/>
+                            Let \\( \\hat{e}^a (\\phi) = \\frac{1}{\\sin \\theta} (0,1) = \\frac{1}{\\sin \\theta} \\vec{e}^a (\\phi) \\).
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'> Example: Let's do a prallel trasnport on a 2-D sphere. </p>
+                            <Image
+                                src="/gtr_and_cosmo/15.png"
+                                alt="parallel transport on a 2-D sphere"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            The distance element on a sphere is given by,
+                            \\[
+                                ds^2 = d\\theta^2 + \\sin^2\\theta \\hspace{3pt} d\\phi^2
+                            \\]
+                            Here, parallel trasnport between two points can be achieved by constructing a great circle passing through both the points, about which we move the vector. This is a geomteric understanding!
+                            `
+                },
+                {
+                    title: 'Covariant Differentiation',
+                            content: `
+                            We can now generalise the ordinary derivative in curved space using the diea of parallel trasnport. Let \\( T_a(x^b) \\) be a vector field , and let \\( P = x^a \\) and \\( Q = x^a + \\delta x^a \\) be two points infinitesimally close to each other. Let \\( T_p + \\delta T_p \\) be the vector when \\( T_a \\) is parallely transported from \\(P\\) to \\(Q\\).
+                            \\[
+                                \\nabla_a T_b = \\lim\\limits_{\\delta x^b \\to 0} \\frac{1}{\\delta x^b} [T_a(x^b + \\delta x^b) - {T_a + \\delta T_a}]
+                            \\]
+                            where 
+                            \\[
+                                \\begin{align}    
+                                    T_a(x^b + \\delta x^b) &\\to \\text{ vector at } Q \\\\
+                                    T_a + \\delta T_a &\\to \\text{ vector parallely trasnported from } P \\text{ to } Q
+                                \\end{align}    
+                            \\]
+                            <Image
+                                src="/gtr_and_cosmo/16.png"
+                                alt="parallel transport and differentiation"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            We have seen that \\( \\delta T_a = \\Gamma^p_{ab} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^b \\). 
+                            <br/>
+                            <br/>
+                            We can compute \\( T_a (x^b + \\delta x^b) \\) from Taylor expansion as
+                            \\[
+                                T_a (x^b + \\delta x^b) = T_a(x^b) + \\frac{\\partial T_a(x^p)}{\\partial x^b} \\delta x^b
+                            \\]
+                            Substituting \\( T_a (x^b + \\delta x^b) \\) and \\( \\delta T_a \\) in our expression of \\( \\nabla_a T_b \\), we get
+                            \\[
+                                \\begin{align}    
+                                    \\nabla_a T_b &= \\lim\\limits_{\\delta x^b \\to 0} \\frac{1}{\\delta x^b} \\left\\{ T_a + \\frac{\\partial T_a(x^p)}{\\partial x^b} \\delta x^b - T_a - \\Gamma^p_{ab} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^b \\right\\} \\\\
+                                    &= \\lim\\limits_{\\delta x^b \\to 0} \\frac{1}{\\delta x^b} \\left\\{ \\frac{\\partial T_a(x^p)}{\\partial x^b} \\delta x^b - \\Gamma^p_{ab} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^b \\right\\} \\\\
+                                    &= \\frac{\\partial T_a}{\\partial x^b} - \\Gamma^p_{ab} \\hspace{2pt} T_p
+                                \\end{align}    
+                            \\]
+                            This is called covariant derivative with connection \\( \\Gamma^p_{ab} \\).
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\nabla_a T_b = \\frac{\\partial T_a}{\\partial x^b} - \\Gamma^p_{ab} \\hspace{2pt} T_p
+                            \\]
+                            </div>
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> What is the connection! </p>
+                            Connection is a way of trasnporting a vector field from one place to another such that the derivative can be taken. Our goal is to make 
+                            \\[
+                                \\frac{\\partial T_a}{\\partial x^b} - \\Gamma^p_{ab} \\hspace{2pt} T_p
+                            \\]
+                            a tensor.
+                            <br/>
+                            <br/>
+                            We could determine the connection such that \\( \\nabla_a T_b \\) is a tensor. Here, we derive the transformation rule for \\( \\Gamma^a_{bc} \\) such that \\( \\nabla_a T_b \\) trasnform like a covariant tensor of rank 2.
+                            <br/>
+                            <br/>
+                            It is a bit of too long calculation, but it needs to be done.
+                            <br/>
+                            <br/>
+                            We do a coordinate trasnformation \\( x^a \\to {x'}^a \\). Let's start with
+                            \\[
+                                \\nabla'_a T'_b = \\frac{\\partial T'_b}{\\partial {x'}^a} - {\\Gamma'}^p_{ba} \\hspace{2pt} T'_p 
+                            \\]
+                            The transformation rule from vector \\( T'_p \\) is given by \\( T'_a = \\frac{\\partial x^b}{\\partial {x'}^a} T_b \\).
+                            <br/>
+                            <br/>
+                            Substituting this in above equation, we get
+                            \\[
+                                \\begin{align}    
+                                    \\frac{\\partial T'_b}{\\partial {x'}^a} - {\\Gamma'}^p_{ba} \\hspace{2pt} T'_p &= \\frac{\\partial}{\\partial {x'}^a} \\left[ \\frac{\\partial x^q}{\\partial {x'}^b} T_q \\right] - {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} T_q \\\\
+                                    &= \\frac{\\partial x^q}{\\partial {x'}^b} \\frac{\\partial T_q}{\\partial {x'}^a} + \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b}  - {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} T_q \\\\
+                                    &= \\frac{\\partial x^p}{\\partial {x'}^a}\\frac{\\partial x^q}{\\partial {x'}^b}\\frac{\\partial T_q}{\\partial x^p} + \\left[ \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} - {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} \\right] T_q
+                                \\end{align}    
+                            \\]
+                            If \\( \\nabla'_a T'_b \\) is a covariant tensor of rank-2, then it should trasnform like
+                            \\[
+                                \\nabla'_a T'_b = \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^q}{\\partial {x'}^b} \\nabla_p T_q
+                            \\]
+                            Again we use the definition of covariant derivative \\( \\nabla_p T_q \\) in terms of \\( \\Gamma^a_{bc} \\).
+                            \\[
+                                \\begin{align}
+                                    \\nabla'_a T'_b &= \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^q}{\\partial {x'}^b} \\left[ \\frac{\\partial T_q}{\\partial x^p} - {\\Gamma}^r_{pq} T_r \\right]
+                                \\end{align}
+                            \\]
+                            Equating the two expressions of \\( \\nabla'_a T'_b \\), we get
+                            \\[
+                                \\begin{align}    
+                                \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^q}{\\partial {x'}^b} \\left[ \\frac{\\partial T_q}{\\partial x^p} - {\\Gamma}^r_{pq} T_r \\right] = \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^q}{\\partial {x'}^b} \\frac{\\partial T_q}{\\partial x^p} + \\left[ \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} - {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} \\right] T_q
+                                \\end{align}    
+                            \\]
+                            Cancelling the common terms and \\( T_q \\) from both the sides we get
+                            \\[
+                                {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} = \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} + \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^r}{\\partial {x'}^b} \\Gamma^q_{pr}
+                            \\]
+                            Let us multiply both sides by \\( \\frac{\\partial {x'}^s}{\\partial x^q} \\),
+                            \\[
+                                {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} \\frac{\\partial {x'}^s}{\\partial x^q} = \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} + \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^r}{\\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} \\Gamma^q_{pr}
+                            \\]
+                            After some simplification, we get
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                {\\Gamma'}^s_{ba} = \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} + \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^r}{\\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} \\Gamma^q_{pr}
+                            \\]
+                            </div>
+                            This is how \\( \\Gamma \\) needs to trasnform, to make \\( \\nabla_a T_b \\) a tensor.
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Connection is not a tensor </p>
+                            The transformation rule for \\( \\Gamma^a_{bc} \\) is such that \\( \\nabla_a T_b \\) a tensor is:
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                {\\Gamma'}^s_{ba} = \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} + \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^r}{\\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} \\Gamma^q_{pr}
+                            \\]
+                            </div>
+                            This means \\( \\Gamma^a_{bc} \\) is not a tensor. It should not be a surprise.
+                            <Image
+                                src="/gtr_and_cosmo/17.png"
+                                alt="Connection coefficient"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            Here, subtraction of two non-tensor quantity gives a tensor. However, we yet don't know what \\( \\Gamma^a_{bc} \\) is.
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Covariant derivative of contravariant tensor </p>
+                            We have seen covariant derivative of covariant vector is a covariant tensor of rank-2 and is given by
+                            \\[
+                                \\nabla_a T_b = \\frac{\\partial T_a}{\\partial x^b} - \\Gamma^p_{ab}T_p    
+                            \\]
+                            For a scalar \\( \\nabla_a f = \\frac{\\partial f}{\\partial x^a} \\).
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'> What about contravariant vector \\(T^a\\)? Should we go through the same exercise, or should it be same as above? </p>
+                            Let us construct a scalar \\( f = g^{ab} T_a U_b = T^a U_a \\).
+                            <br/>
+                            <br/>
+                            Let us look at \\( \\nabla_a f = \\nabla_a (T^p U_q) \\). We sue the product rule
+                            \\[
+                                \\begin{align}
+                                    \\nabla_a (T^p U_q) &= U_q \\nabla_a T^q + T^q \\nabla_a U_q \\\\
+                                    &= U_q \\nabla_a T^q + T^q \\frac{\\partial U_q}{\\partial x^a} - \\Gamma^r_{aq} T^q U_r
+                                \\end{align}
+                            \\]
+                            As \\(f\\) is a scalar, we can also write it as
+                            \\[
+                                \\begin{align}
+                                    \\nabla_a f &= \\frac{\\partial f}{\\partial x^a}
+                                    = \\frac{\\partial (T^pU_q)}{\\partial x^a} 
+                                    = \\frac{\\partial T^p}{\\partial x^a} U_q + \\frac{\\partial U_q}{\\partial x^a} T^p
+                                \\end{align}  
+                            \\]
+                            Comparing two equations and assuming \\( U_q \\) is arbitrary, we get
+                            \\[
+                                \\nabla_a T^q = \\frac{\\partial T_q}{\\partial x^a} + \\Gamma^q_{ar} T^r    
+                            \\]
+                            It is easy to show that it is a second rank tensor, with one contravariant rank and one covariant rank. However, we yet don't know what \\( \\Gamma^a_{bc} \\) is.
+                            <div class='bg-slate-50/10 p-1 rounded-md mb-3 mt-3 pl-2'>
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'> Derive the transformation rule or connection \\(\\Gamma^a_{bc} \\) under an arbitrary coordinate transformation and show that it is not a tensor. </p>
+                            </div>
                             `
                 },
     ];
