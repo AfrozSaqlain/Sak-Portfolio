@@ -623,6 +623,75 @@ const GtrAndCosmology = () => {
                                 \\end{cases}    
                             \\]
                             Note: When metric is diag\\( (1,1,1) \\), there is no difference between covariant and contravariant.
+                            \\[
+                                \\begin{align}
+                                    &\\epsilon_{123} = \\epsilon_{231} = \\epsilon_{312} = 1\\\\    
+                                    &\\epsilon_{132} = \\epsilon_{213} = \\epsilon_{321} = -1\\\\
+                                \\end{align}
+                            \\]
+                            Thus, \\( \\epsilon_{ijk} \\) is a completely anti-symmetric tensor, i.e. if we change two indices keeping one fixed, then it reverses the sign. The diagonal component along any direction is \\(0\\) for an anti-symmteric tensor.
+                            \\[
+                                \\therefore \\hspace{9pt} \\epsilon_{113} = \\epsilon{223} = 0 \\text{ etc.}    
+                            \\]
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\epsilon_{iab} \\hspace{2pt} \\epsilon^{ipq} = \\delta^a_p \\delta^b_q - \\delta^a_q \\delta^b_p
+                            \\]
+                            We are contracting in \\(i\\). And this can also be written in the determinant form as
+                            \\[
+                                \\epsilon_{iab} \\hspace{2pt} \\epsilon^{ipq} = \\begin{vmatrix} 
+                                \\delta^a_p & \\delta^a_q \\\\ \\delta^b_p & \\delta^b_q 
+                                \\end{vmatrix}
+                            \\]
+                            </div>
+                            Let \\( \\vec{A} \\) and \\( \\vec{B} \\) be vectors in \\( \\mathbb{R}^3 \\), thus \\(A^i\\) and \\(B^i\\) are its component. Now the cross-product can be written as \\( \\vec{C} = \\vec{A} \\times \\vec{B} \\). We define,
+                            \\[
+                                C_i = \\epsilon_{ijk} A^j B^k \\hspace{12pt} (\\text{or } \\hspace{3pt} C^i = \\epsilon^{ijk} A_j B_k )
+                            \\]
+                            Also, \\( \\vec{A} \\cdot \\vec{A} = A^i A_i \\) is the dot product. We also know that \\( \\vec{A} \\times \\vec{A} = 0 \\).
+                            <ul class='list-disc ml-8 my-4'>
+                            <li class="mb-2">
+                                        Scalar Triple Product: \\( \\vec{A} \\cdot (\\vec{B} \\times \\vec{C}) = A^i \\epsilon_{ipq} \\hspace{2pt} B^p \\hspace{2pt} C^q \\)
+                                </li>
+                                <li class="mb-2"> Vector Triple Product
+                                    \\[
+                                        \\begin{align}
+                                            \\vec{A} \\times (\\vec{B} \\times \\vec{C}) &= \\epsilon^{lmi} \\hspace{2pt} A_m \\hspace{2pt} \\epsilon_{ijk} \\hspace{2pt} B^j \\hspace{2pt} C^k \\\\
+                                            &= \\epsilon^{lmi} \\hspace{2pt} \\epsilon_{ijk} \\hspace{2pt} A_m \\hspace{2pt} B^j \\hspace{2pt} C^k \\\\
+                                            &= \\epsilon^{ilm} \\hspace{2pt} \\epsilon_{ijk} \\hspace{2pt} A_m \\hspace{2pt} B^j \\hspace{2pt} C^k \\\\
+                                            &= ( \\delta^l_j \\delta^m_k - \\delta^l_k \\delta^m_j ) A_m \\hspace{2pt} B^j \\hspace{2pt} C^k \\\\
+                                            &= A_k \\hspace{2pt} C^k \\hspace{2pt} B^l \\hspace{2pt} - A_j \\hspace{2pt} B^j \\hspace{2pt} C^l \\\\
+                                            &= \\vec{B} ( \\vec{A} \\cdot \\vec{C} ) - \\vec{C} ( \\vec{A} \\cdot \\vec{B} )
+                                        \\end{align}
+                                    \\]
+                                </li>
+                            </ul>
+                            <div class='bg-slate-50/10 p-1 rounded-md mb-3 pl-2'>
+                            <p class='text-lg font-semibold text-red-400'>Exercise</p>
+                            \\[
+                                \\begin{align}
+                                    (\\vec{A} \\times \\vec{B} ) \\cdot ( \\vec{C} \\times \\vec{D} ) &= \\delta^i_l \\hspace{2pt} \\epsilon^{ijk} \\hspace{2pt} A_j \\hspace{2pt} B_k \\hspace{2pt} \\epsilon_{lmn} \\hspace{2pt} C^m \\hspace{2pt} D^n\\\\
+                                    &= \\delta^i_l \\hspace{2pt} ( \\epsilon^{ijk} \\hspace{2pt} \\epsilon_{lmn} ) A_j \\hspace{2pt} B_k \\hspace{2pt} C^m \\hspace{2pt} D^n \\\\
+                                    &= ( \\epsilon^{ijk} \\hspace{2pt} \\epsilon_{imn} ) A_j \\hspace{2pt} B_k \\hspace{2pt} C^m \\hspace{2pt} D^n \\\\
+                                    &= (\\delta^j_m \\delta^k_n - \\delta^j_n \\delta^k_m)  A_j \\hspace{2pt} B_k \\hspace{2pt} C^m \\hspace{2pt} D^n \\\\
+                                    &= A_m \\hspace{2pt} B_n \\hspace{2pt} C^m \\hspace{2pt} D^n - A_n \\hspace{2pt} B_m \\hspace{2pt} C^m \\hspace{2pt} D^n\\\\
+                                    &= (\\vec{A} \\cdot \\vec{C})(\\vec{B} \\cdot \\vec{D}) - (\\vec{A} \\cdot \\vec{D})(\\vec{B} \\cdot \\vec{C})
+                                \\end{align}
+                            \\]
+                            </div>
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                                \\[
+                                    \\text{More Genral Identity: } \\hspace{5pt} \\epsilon^{ijk} \\hspace{2pt} \\epsilon_{pqr} = \\begin{vmatrix}
+                                        \\delta^i_p & \\delta^i_q & \\delta^i_r \\\\
+                                        \\delta^j_p & \\delta^j_q & \\delta^j_r \\\\
+                                        \\delta^k_p & \\delta^k_q & \\delta^k_r \\\\
+                                    \\end{vmatrix}
+                                \\]
+                            </div>
+                            Let's say we have a 2nd-rank tensor in \\( \\mathbb{R}^3 \\), \\(U_{ip}\\)
+                            \\[ \\Delta = \\frac{1}{6} \\epsilon_{ijk} \\hspace{2pt} U_{ip} U_{jq} U_{kr} \\hspace{2pt} \\epsilon^{pqr} \\]
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Vector Calculus </p>
+                            
                             `
                 },
     ];
