@@ -611,7 +611,18 @@ const GtrAndCosmology = () => {
                 {
                     title: 'Permutation Tensor',
                             content: `
-
+                            We are working in \\( \\mathbb{R}^3 \\). So, \\( g_{ab} = \\delta_{ab} = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\)
+                            <br/>
+                            Define: Permutation tensor in \\( \\mathbb{R}^3 \\) or 3-D
+                            \\[
+                                \\epsilon^{ijk} = \\epsilon_{ijk} = 
+                                \\begin{cases} 
+                                    1 , \\hspace{12pt} \\text{ if i, j, k do even permutation} \\\\
+                                    -1 , \\hspace{5pt} \\text{ if i, j, k do odd permutation} \\\\
+                                    0, \\hspace{15pt} \\text{if any two indices are the same}
+                                \\end{cases}    
+                            \\]
+                            Note: When metric is diag\\( (1,1,1) \\), there is no difference between covariant and contravariant.
                             `
                 },
     ];
