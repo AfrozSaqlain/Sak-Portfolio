@@ -591,7 +591,7 @@ const GtrAndCosmology = () => {
                     \\]
                     Hence, \\(g^{ab}\\) transforms like a co-variant tensor of rank 2.
                     </div>
-                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Should the parallel universesbe connected</p>
+                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'>Should the parallel universes be connected</p>
                     Should \\( g_{ab} \\) and \\( g^{ab} \\) be related?
                     <br/>
                     <br/>
