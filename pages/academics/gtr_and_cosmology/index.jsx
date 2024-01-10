@@ -782,7 +782,7 @@ const GtrAndCosmology = () => {
                             \\]
                             And when we contract 2 indices, we get
                             \\[
-                                \\epsilon_{abcd} \\hspace{2pt} \\epsilon^{abgh} = \\text{factor} \\begin{vmatrix}
+                                \\epsilon_{abcd} \\hspace{2pt} \\epsilon^{abgh} = 2 \\begin{vmatrix}
                                     \\delta^g_c & \\delta^h_c \\\\
                                     \\delta^g_d & \\delta^h_d \\\\
                                 \\end{vmatrix}
