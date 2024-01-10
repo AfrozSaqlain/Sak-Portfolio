@@ -787,6 +787,10 @@ const GtrAndCosmology = () => {
                                     \\delta^g_d & \\delta^h_d \\\\
                                 \\end{vmatrix}
                             \\]
+                            And when we contract 3 indices, we get
+                            \\[
+                                \\epsilon_{abcd} \\hspace{2pt} \\epsilon^{abch} = 3! \\delta^h_d
+                            \\]
                             Note: In Minkowski Spacetime \\( \\epsilon^{0123} = - \\epsilon_{0123} \\)
                             `
                 },
