@@ -681,7 +681,7 @@ const GtrAndCosmology = () => {
                             </div>
                             <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
                                 \\[
-                                    \\text{More Genral Identity: } \\hspace{5pt} \\epsilon^{ijk} \\hspace{2pt} \\epsilon_{pqr} = \\begin{vmatrix}
+                                    \\text{More General Identity: } \\hspace{5pt} \\epsilon^{ijk} \\hspace{2pt} \\epsilon_{pqr} = \\begin{vmatrix}
                                         \\delta^i_p & \\delta^i_q & \\delta^i_r \\\\
                                         \\delta^j_p & \\delta^j_q & \\delta^j_r \\\\
                                         \\delta^k_p & \\delta^k_q & \\delta^k_r \\\\
