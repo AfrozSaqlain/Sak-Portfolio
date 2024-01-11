@@ -836,7 +836,7 @@ const GtrAndCosmology = () => {
                                     &= \\frac{\\partial x^p}{\\partial {x'}^k} \\frac{\\partial x^q}{\\partial {x'}^m} \\frac{\\partial T_p}{\\partial x^q} + \\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p
                                 \\end{align}
                             \\]
-                            The first term on the RHS has transformation rule for a 2nd -rank covariant tensor, but there's second term on the RHS too, which need not be zero, in general. It is zero only for linear transformationor Lorentz transformation and is not zero for any general transformation.
+                            The first term on the RHS has transformation rule for a 2nd -rank covariant tensor, but there's second term on the RHS too, which need not be zero, in general. It is zero only for linear transformation, like Lorentz transformation and is not zero for any general transformation.
                             <br/>
                             <br/>
                             This means that \\( \\frac{\\partial T_k}{\\partial x^m} \\) is not a tensor because it does not transform like a tensor. Same could be said about \\( \\frac{\\partial T^k}{\\partial x^m} \\), which also does not transform like a tensor. All because of a term like
