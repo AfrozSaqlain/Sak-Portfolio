@@ -1089,6 +1089,78 @@ const GtrAndCosmology = () => {
                             </div>
                             `
                 },
+                {
+                    title: 'Riemannian Geometry',
+                            content: `
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Recall Covariant derivative </p>
+                            First concrete step forward from flat space is the covariant derivative of a vector field, which is defined as
+                            \\[
+                                \\nabla_a T_b = \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} T_p    
+                            \\]
+                            \\[
+                                \\nabla_a T^b = \\frac{\\partial T^b}{\\partial x^a} - \\Gamma^b_{ar} T_r    
+                            \\]
+                            \\( \\Gamma^a_{bc} \\) is connection, a non-tensor quantity, which is not unique. Each \\( \\Gamma \\) in fact defines a covariant derivative, \\( \\nabla \\).
+                            <br/>
+                            <br/>
+                            The covariant derivative can easily be extended to higher rank tensors as,
+                            \\[
+                                \\nabla_a T_{bc} = \\frac{\\partial T_{bc}}{\\partial x^a} - \\Gamma^p_{ab} T_{pc} - \\Gamma^p_{ac} T_{bp}
+                            \\]
+                            \\[
+                                \\nabla_a T^{bc} = \\frac{\\partial T^{bc}}{\\partial x^a} + \\Gamma^b_{ap} T^{pc} - \\Gamma^c_{ap} T^{bp}
+                            \\]
+                            \\[
+                                \\nabla_a T^b_c = \\frac{\\partial T^b_c}{\\partial x^a} + \\Gamma^b_{ap} T^p_c - \\Gamma^p_{ac} T^b_p
+                            \\]
+                            In a similar way, we can extend this to tensor of arbitrary rank.
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Any connection with metric? </p>
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Can we relate \\( \\Gamma^a_{bc} \\) to metric by some means? Or can we make some extra constrain on \\( \\Gamma \\) so that we can make it more geometric than abstract? </p>
+                            One idea is to define covariant derivative such that
+                            \\[
+                                \\nabla_q g_{ab} = \\nabla_q g^{ab} = 0     
+                            \\]
+                            We can think of two sources of inspiration for this
+                            <ul class='list-disc ml-8 my-4'>
+                                <li class="mb-2"> In flat space we have
+                                \\[
+                                    \\frac{\\partial \\eta_{ab}}{\\partial x^p} = 0    
+                                \\]
+                                </li>
+                                <li class="mb-2"> By the property of metric tensor, we know that \\( g_{ab} g^{ab} = 1 \\). So, we can write:
+                                \\[
+                                    \\begin{align}
+                                        \\nabla_p T_a = \\nabla_a (g_{ab} T^b) = g_{ab} \\nabla_p T^b + T^b (\\nabla_p g_{ab})
+                                    \\end{align}
+                                \\]
+                                Thus we get an extra term by this manipulation which we shouldn't get. So, we define \\( \\nabla_p g_{ab} = 0 \\). Thus getting
+                                \\[
+                                    \\nabla_p T_a = g_{ab} \\nabla_p T^b
+                                \\]
+                                </li>
+                            </ul>
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Riemannian Geometry </p>
+                            <Image
+                                src="/gtr_and_cosmo/18.png"
+                                alt="Riemann"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            Riemannian geometry is based on the connection assuming the metric tensor \\( g_{ab} \\) is constant wrt covariant derivative operator, \\( \\nabla_a \\) and connection is symmetric in the lower two indices. So, we have
+                            \\[
+                                \\nabla_p g_{ab} = \\nabla_q g^{ab} = 0
+                            \\]
+                            \\[
+                                \\Gamma^a_{bc} = \\Gamma^a_{cb}
+                            \\]
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Connection in Riemannian Geometry </p>
+                            Let us assume two conditions (a) \\( \\nabla_p g_{ab} = \\nabla_q g^{ab} = 0 \\) and (b) \\( \\Gamma^a_{bc} = \\Gamma^a_{cb} \\). And see what kind of constraint we get on \\( \\Gamma \\).
+                            <br/>
+                            <br/>
+                            Let's start with \\( \\nabla_p g_{ab} = 0 \\)
+                            `
+                },
     ];
 
     const [openSection, setOpenSection] = useState(null);
