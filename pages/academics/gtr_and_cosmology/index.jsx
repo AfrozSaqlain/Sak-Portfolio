@@ -1158,7 +1158,34 @@ const GtrAndCosmology = () => {
                             Let us assume two conditions (a) \\( \\nabla_p g_{ab} = \\nabla_q g^{ab} = 0 \\) and (b) \\( \\Gamma^a_{bc} = \\Gamma^a_{cb} \\). And see what kind of constraint we get on \\( \\Gamma \\).
                             <br/>
                             <br/>
-                            Let's start with \\( \\nabla_p g_{ab} = 0 \\)
+                            Let's start with \\( \\nabla_p g_{ab} = 0 \\) and make cyclic permutation of indices \\( p, a \\) and \\(b\\) and see if simplification happens
+                            <Image
+                                src="/gtr_and_cosmo/19.png"
+                                alt="Manipulation"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            We do Eq\\( ^\\text{n } \\text{ : } 1 + 2 - 3 \\) and get
+                            \\[
+                                2\\Gamma^q_{pa} g_{qb} = \\frac{\\partial g_{ab}}{\\partial x^p} + \\frac{\\partial g_{bp}}{\\partial x^a} - \\frac{\\partial g_{pa}}{\\partial x^b}
+                            \\]
+                            Now multiply both sides by \\( g^{br} \\) and simplify to get:
+                            \\[
+                                \\Gamma^r_{pa} = \\frac{1}{2} g^{rb} \\left[ \\frac{\\partial g_{ab}}{\\partial x^p} + \\frac{\\partial g_{bp}}{\\partial x^a} - \\frac{\\partial g_{pa}}{\\partial x^b} \\right]
+                            \\]
+                            We rename some of the dummy variables to get
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right]
+                            \\]
+                            </div>
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Christoffel Symbols </p>
+                            In Riemann geometry, the connection coefficient can be expressed uniquely in terms of metric \\( g_{ab} \\) and its partial derivative \\( \\frac{\\partial g_{ab}}{\\partial x^c} \\) as
+                            \\[
+                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right]
+                            \\]
+                            And are called "Christoffel Symbols".
                             `
                 },
     ];
