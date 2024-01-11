@@ -1078,9 +1078,11 @@ const GtrAndCosmology = () => {
                                 \\end{align}  
                             \\]
                             Comparing two equations and assuming \\( U_q \\) is arbitrary, we get
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
                             \\[
-                                \\nabla_a T^q = \\frac{\\partial T_q}{\\partial x^a} + \\Gamma^q_{ar} T^r    
+                                \\nabla_a T^q = \\frac{\\partial T^q}{\\partial x^a} + \\Gamma^q_{ar} T^r    
                             \\]
+                            </div>
                             It is easy to show that it is a second rank tensor, with one contravariant rank and one covariant rank. However, we yet don't know what \\( \\Gamma^a_{bc} \\) is.
                             <div class='bg-slate-50/10 p-1 rounded-md mb-3 mt-3 pl-2'>
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-2'> Derive the transformation rule or connection \\(\\Gamma^a_{bc} \\) under an arbitrary coordinate transformation and show that it is not a tensor. </p>
