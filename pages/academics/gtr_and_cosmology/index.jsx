@@ -939,7 +939,7 @@ const GtrAndCosmology = () => {
                             content: `
                             We can now generalise the ordinary derivative in curved space using the idea of parallel trasnport. Let \\( T_a(x^b) \\) be a vector field , and let \\( P = x^a \\) and \\( Q = x^a + \\delta x^a \\) be two points infinitesimally close to each other. Let \\( T_p + \\delta T_p \\) be the vector when \\( T_a \\) is parallely transported from \\(P\\) to \\(Q\\).
                             \\[
-                                \\nabla_a T_b = \\lim\\limits_{\\delta x^b \\to 0} \\frac{1}{\\delta x^b} [T_a(x^b + \\delta x^b) - \\{T_a + \\delta T_a}\\]
+                                \\nabla_a T_b = \\lim\\limits_{\\delta x^b \\to 0} \\frac{1}{\\delta x^b} [T_a(x^b + \\delta x^b) - \\{T_a + \\delta T_a\\}]
                             \\]
                             where 
                             \\[
