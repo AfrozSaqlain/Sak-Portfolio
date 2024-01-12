@@ -1186,6 +1186,7 @@ const GtrAndCosmology = () => {
                                 \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right]
                             \\]
                             And are called "Christoffel Symbols".
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Example </p>
                             `
                 },
     ];
