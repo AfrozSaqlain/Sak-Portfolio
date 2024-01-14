@@ -1201,6 +1201,55 @@ const GtrAndCosmology = () => {
                             </div>
                             `
                 },
+                {
+                    title: 'Physics on Curved Geometry',
+                            content: `
+                            Now that we have defined derivative operator which transforms like tensor, lets do a bit physics on curved spacetime.
+                            <br/>
+                            <br/>
+                            Definition of covariant derivative
+                            \\[
+                                \\nabla_a T_b = \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} T_p    
+                            \\]
+                            \\[
+                                \\nabla_a T_q = \\frac{\\partial T^q}{\\partial x^a} - \\Gamma^q_{ar} T^r    
+                            \\]
+                            With connection defined as,
+                            \\[
+                                \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right] 
+                            \\]
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Can we simply replace \\( \\frac{\\partial}{\\partial x^a} \\) in our equations in flat space, with new derivative operator \\( \\nabla_a \\) and go ahead? </p>
+                            We need to little bit more careful, so let's go step by step:
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Directional Derivative </p>
+                            Let \\( T^a \\) or \\( T_a \\) be a vector field \\( \\mathscr{U} = U^{abc \\ldots}_{pqr \\ldots} \\), then the derivative of \\( \\mathscr{U} \\) wrt. \\( T^a \\) is given by
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                T^a \\nabla_a \\mathscr{U} = T^a \\nabla_a U^{abc \\ldots}_{pqr \\ldots}   
+                            \\]
+                            </div>
+                            If \\( T^a \\) is tangent to a curve \\( x^a(s)\\), i.e. \\( T^a = \\frac{d x^a(s)}{ds} \\), then derivative of \\( \\mathscr{U} \\) along the curve \\( x^a(s) \\) is given by
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                 \\frac{D \\mathscr{U}(s)}{Ds} = T^a \\nabla_a \\mathscr{U} = \\nabla_a \\mathscr{U} \\frac{d x^a(s)}{ds}
+                            \\]
+                            </div>
+                            <Image
+                                src="/gtr_and_cosmo/20.png"
+                                alt="Directional Derivative"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            With this notation, the directional derivative of tangent vector is known as acceleration. We know that
+                            \\[
+                                T^a = \\frac{dx^a(s)}{ds}    
+                            \\]
+                            Then we can write
+                            \\[
+                                A^a = \\frac{DT^a}{Ds} = T^b \\nabla_b T^a    
+                            \\]
+                            `
+                        },
     ];
 
     const [openSection, setOpenSection] = useState(null);
