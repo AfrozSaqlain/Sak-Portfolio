@@ -1246,8 +1246,98 @@ const GtrAndCosmology = () => {
                             \\]
                             Then we can write
                             \\[
-                                A^a = \\frac{DT^a}{Ds} = T^b \\nabla_b T^a    
+                                A^a = \\frac{DT^a}{Ds} = T^b \\nabla_b T^a = T^b \\left[ \\frac{\\partial T^a}{\\partial x^b} + \\Gamma^a_{bc} T^c \\right] = \\frac{dT^a}{ds} + \\Gamma^a_{bc} T^b T^c
                             \\]
+                            In this curve it is straightforward to see that we can take the acceleration, i.e the rate of change of tangent vector along the curve, is always orthogonal to tangent vector because the tangent vector is normalized because of the arc length parameter.
+                            <Image
+                                src="/gtr_and_cosmo/21.png"
+                                alt="Directional Derivative 2"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            For arc-length parameterisation: 
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                 T^a A_a = 0
+                            \\]
+                            </div>
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Geodesics </p>
+                            Let us consider two points in Riemannian space. And let's have a set of all curves starting from \\(P\\) and ending at \\(Q\\).
+                            <Image
+                                src="/gtr_and_cosmo/22.png"
+                                alt="Geodesics"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            We want to find the shortest distance between the points, where we know that the distance is given by
+                            \\[
+                                s = \\int_P^Q ds \\hspace{10pt} \\text{ along a curve } x^a(s)
+                            \\]
+                            which we have to optimize. We can see that
+                            \\[
+                                \\begin{align}
+                                    ds^2 &= g_{ab} dx^a(s) dx^b (s)\\\\
+                                    &= g_{ab} \\frac{dx^a(s)}{ds} \\frac{dx^b(s)}{ds} ds^2\\\\
+                                    &= g_{ab} T^aT^b ds^2\\\\
+                                    &= g_{ab} \\dot{x^a} \\dot{x^b} ds^2
+                                \\end{align}    
+                            \\]
+                            which we know is the kinetic energy of a free particle. 
+                            <br/>
+                            <br/>
+                            From the above process we see that we can write formula for \\(s\\) as:
+                            \\[
+                                s = \\int_P^Q \\sqrt{g_{ab}\\dot{x^a} \\dot{x^b}} ds 
+                            \\]
+                            But we might as well optimise \\(ds^2\\) instead of \\(ds\\), i.e. to say we want to optimize
+                            \\[
+                                \\mathcal{L} = \\int_P^Q g_{ab}\\dot{x^a} \\dot{x^b} ds 
+                            \\]
+                            However we have already done this in previous sections and we know that the curve that takes optimal distance is given by
+                            \\[
+                                \\frac{d^2 x^a}{ds^2} + \\Gamma^a_{bc} \\dot{x^b} \\dot{x^c} = 0    
+                            \\]
+                            \\[
+                                \\frac{dT^a}{ds} + \\Gamma^a_{bc} T^b T^c = 0    
+                            \\]
+                            We have also seen that:
+                            \\[
+                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{pb}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^p} \\right]    
+                            \\]
+                            We can see that
+                            \\[
+                                \\frac{dT^a}{ds} + \\Gamma^a_{bc} T^b T^c = T^b \\nabla_b T^a = \\frac{DT^a}{Ds} = A^a = 0    
+                            \\]
+                            Thus, the curve for which acceleration is zero, gives the optimal path between the point in Riemannian Geometry.
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Geometry and Force </p>
+                            Let \\(x^a(s)\\) be the world-line of a particle in a Riemannian Geometry. Then the velocity is given by the tangent to the curve \\( x^a(s),\\) \\( u^a(s) = \\frac{dx^a}{ds} \\) and the acceleration is given by \\( a^i = u^j \\nabla_j u^i \\), or the covariant derivative of velocity dot product with itself.
+                            \\[
+                                \\begin{align}
+                                    a^i = \\frac{D u^i}{Ds} &= \\frac{du^i}{ds} + \\Gamma^i_{jk} u^j u^k \\\\
+                                    &= \\frac{d^2 x^i}{ds^2} + \\Gamma^i_{jk} \\frac{dx^j}{ds} \\frac{dx^k}{ds}
+                                \\end{align}
+                            \\]
+                            <Image
+                                src="/gtr_and_cosmo/23__.png"
+                                alt="Geodesics 2"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            A free particle should follow a Geodesic motion described by
+                            \\[
+                                \\frac{d^2 x^i}{ds^2} + \\Gamma^i_{jk} \\frac{dx^j}{ds} \\frac{dx^k}{ds} = 0
+                            \\]
+                            <p class='text-lg mt-5 mb-2 font-semibold text-center text-green-500'>This looks like a generalisation of Newton's laws.</p>
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Does that mean \\( \\Gamma \\), \\( \\frac{d^2 x^i}{ds^2} = -\\Gamma^i_{jk} \\frac{dx^j}{ds} \\frac{dx^k}{ds} \\) are effectively forces introduced to make the Newton's laws covariant? </p>
+                            Later we will see that this corresponds to the acceleration of the frame or these are the inertial forces such as a coriolis and centrifugal force which appears in the accelerated frame which are nicely included in our system of equation so that one do not have to explicitly take care of them. The covariant derivative will take care of all such artifacts introduced by the accelerating frame.
+                            <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Local Inertial Frame </p>
+                            We are assuming that the Riemannian space is locally flat.
+                            <br/>
+                            <br/>
+                            It is possible to choose a coordinate system such that, \\( \\Gamma^a_{bc} = 0 \\).
                             `
                         },
     ];
@@ -1277,7 +1367,7 @@ const GtrAndCosmology = () => {
     return (
         <div className="relative h-full bg-black/40">
             <div className="h-full translate-y-16 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
-                <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
+                <div className="max-w-7xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
                     <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">
                         {processContent('General Relativity and Cosmology')}
                     </h1>
