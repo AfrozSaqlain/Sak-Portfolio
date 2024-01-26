@@ -1375,8 +1375,18 @@ const GtrAndCosmology = () => {
                             />
                             Upon doing (1) + (2) - (3), we get
                             \\[
-                                \\frac{\\partial g'_{ab}}{\\partial x'^c} =     
+                                \\begin{align}
+                                    \\frac{\\partial g'_{ab}}{\\partial x'^c} + \\frac{\\partial g'_{bc}}{\\partial x'^a} - \\frac{\\partial g'_{ca}}{\\partial x'^b} = 2 \\frac{\\partial^2 x^p}{\\partial x'^a \\partial x'^c} \\frac{\\partial x^q}{\\partial x'^b} g_{pq} + \\frac{\\partial x^p}{\\partial x'^a} \\frac{\\partial x^q}{\\partial x'^b} \\frac{\\partial x^r}{\\partial x'^c} \\left[ \\frac{\\partial g_{pq}}{\\partial x^r} + \\frac{\\partial g_{qr}}{\\partial x^p} - \\frac{\\partial g_{pr}}{\\partial x^q} \\right]
+                                \\end{align}
                             \\]
+                            Let's multiply the above equation by \\( \\large{\\frac{1}{2}g'^{bd}} \\), and we get
+                            \\[
+                                \\Gamma'^s_{ba} = \\frac{\\partial^2 x^q}{\\partial x'^a \\partial x'^b} \\frac{\\partial x'^s}{\\partial x^q} + \\frac{\\partial x^p}{\\partial x'^a} \\frac{\\partial x^r}{\\partial x'^b} \\frac{\\partial x'^s}{\\partial x^q} \\Gamma^q_{pr}    
+                            \\]
+                            We wanted partial derivative of metric tensor to be zero in one coordinate system, locally, while keeping it non-zero in other coordinate system.
+                            <br/>
+                            <br/>
+                            However, we derived the transformation rule for \\(\\Gamma\\) again. It turns out that we don't have to set \\( \\large{\\frac{\\partial g'_{ab}}{\\partial x'^c} = 0} \\), to get \\( \\Gamma'^a_{bc} = 0 \\). We can simply set \\( \\Gamma'^a_{bc} = 0 \\) since it is not a tensor, we can make it zero in one coordinate system and non-zero in other (if a tensor is zero in one coordinate system, then it has to be zero in the other).
                             `
                         },
     ];
