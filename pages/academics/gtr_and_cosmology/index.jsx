@@ -1387,6 +1387,18 @@ const GtrAndCosmology = () => {
                             <br/>
                             <br/>
                             However, we derived the transformation rule for \\(\\Gamma\\) again. It turns out that we don't have to set \\( \\large{\\frac{\\partial g'_{ab}}{\\partial x'^c} = 0} \\), to get \\( \\Gamma'^a_{bc} = 0 \\). We can simply set \\( \\Gamma'^a_{bc} = 0 \\) since it is not a tensor, we can make it zero in one coordinate system and non-zero in other (if a tensor is zero in one coordinate system, then it has to be zero in the other).
+                            <br/>
+                            <br/>
+                            We require definition
+                            \\[
+                            \\Gamma^{\\prime d}{ }_{a c}=\\frac{1}{2} g^{\\prime b d}\\left[\\frac{\\partial g^{\\prime}{ }_{a b}}{\\partial x^{\\prime}}+\\frac{\\partial g^{\\prime}{ }_{b c}}{\\partial x^{\\prime} a}-\\frac{\\partial g^{\\prime}{ }_{c a}}{\\partial x^{\\prime b}}\\right]
+                            \\]
+                            \\[
+                            \\Gamma^{\\prime s}{ }_{b a}=\\frac{\\partial^2 x^q}{\\partial x^{\\prime a} \\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q}+\\frac{\\partial x^p}{\\partial x^{\\prime a}} \\frac{\\partial x^r}{\\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q} \\Gamma^q{ }_{p r}=0
+                            \\]
+                            \\[
+                            \\frac{\\partial^2 x^q}{\\partial x^{\\prime a} \\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q}=-\\frac{\\partial x^p}{\\partial x^{\\prime a}} \\frac{\\partial x^r}{\\partial x^{\\prime} b} \\frac{\\partial x^{\\prime s}}{\\partial x^q} \\Gamma^q{ }_{p r}
+                            \\]
                             `
                         },
     ];
