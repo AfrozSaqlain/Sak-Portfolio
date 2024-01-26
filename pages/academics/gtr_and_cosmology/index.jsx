@@ -176,7 +176,7 @@ const GtrAndCosmology = () => {
                     A curve is a mapping  from \\( \\mathbb{R} \\) or \\( [a.b] \\in \\mathbb{R} \\) to the open space \\( \\mathscr{M} \\), say for example \\( \\mathbb{R}^N \\), i.e. if \\( \\lambda \\in [a,b] \\), then \\( X(\\lambda) \\in \\mathscr{M} \\).
                     <br/>
                     <br/>
-                    The tangent vector, sometimes we call velocity is given by \\( \\vec{v} = \\frac{d X(\\lambda) }{d \\lambda} \\). If \\( \\mathscr{M} \\) has norm defined, we have length of tangent vector \\( \\frac{d X^a(\\lambda) }{d \\lambda} \\cdot \\frac{d X_a(\\lambda) }{d \\lambda} \\). We assume that we can normalize the tangent vector \\( \\dot{X}^a \\cdot \\dot{X}_a = 1 \\), where \\( \\dot{X}^a = \\frac{d X^a(\\lambda)}{d \\lambda} \\). Otherwise we can parameterise the curve, such that the tangent vector is a unit vector. Now for the acceleration, \\( A^a = \\frac{d V^a}{d \\lambda} \\). Some interesting results if, \\( V^a \\cdot V_a = 1 \\), then \\( V^a \\cdot A_a = 0 \\).
+                    The tangent vector, sometimes we call velocity is given by \\( \\vec{v} = \\frac{d X(\\lambda) }{d \\lambda} \\). If \\( \\mathscr{M} \\) has norm defined, we have length of tangent vector \\( \\large{\\frac{d X^a(\\lambda) }{d \\lambda} \\cdot \\frac{d X_a(\\lambda) }{d \\lambda}} \\). We assume that we can normalize the tangent vector \\( \\dot{X}^a \\cdot \\dot{X}_a = 1 \\), where \\( \\dot{X}^a = \\frac{d X^a(\\lambda)}{d \\lambda} \\). Otherwise we can parameterise the curve, such that the tangent vector is a unit vector. Now for the acceleration, \\( A^a = \\frac{d V^a}{d \\lambda} \\). Some interesting results if, \\( V^a \\cdot V_a = 1 \\), then \\( V^a \\cdot A_a = 0 \\).
                     <p class='text-lg text underline text-center underline-offset-8 mt-5 mb-2 font-semibold text-blue-500'>Motion of free particle</p>
                     Let's say we want to move from a point (event with A coordinate, \\( \\{x^a_1\\} = \\{t_1, x_1, y_1, z_1\\} \\)) to another point (B with \\( \\{x^a_2\\} = \\{t_2, x_2, y_2, z_2\\} \\) ), in absence of any force.
                     \\[\\overset{}{A\\{x^a_1\\}} \\xrightarrow{\\hspace{0.5em}\\hspace{8.5em}} \\overset{}{B{\\{x^a_1\\}}}\\]
@@ -219,7 +219,7 @@ const GtrAndCosmology = () => {
                         </li>
                         <li class="mb-2"> We are not interested in spacelike trajectories, which are not possible as per basic postulates of STR. </li>
                     </ul>
-                    We could apply Newton's \\(2^{\\text{nd}}\\) law of motion in 4 dimensional spacetime \\( \\frac{dp^a}{dt} = 0 \\), or we can solve Lagrangian equation of motion. Since, now time is also a generalized coordinate, the kinetic energy is given by
+                    We could apply Newton's \\(2^{\\text{nd}}\\) law of motion in 4 dimensional spacetime \\( \\Large{\\frac{dp^a}{dt} = 0} \\), or we can solve Lagrangian equation of motion. Since, now time is also a generalized coordinate, the kinetic energy is given by
                     \\[
                         T = \\frac{1}{2}[\\dot{t}^2 - \\dot{x}^2 - \\dot{y}^2 - \\dot{z}^2]    
                     \\]
@@ -747,7 +747,7 @@ const GtrAndCosmology = () => {
                                             &= \\vec{\\nabla} (\\vec{\\nabla} \\cdot \\vec{v}) - \\nabla^2 \\vec{v}\\\\
                                         \\end{align}
                                     \\]
-                                    Hence, instead of defining \\( \\nabla^2 \\) as \\( \\frac{\\partial^2}{\\partial x^2_i} \\), we define
+                                    Hence, instead of defining \\( \\nabla^2 \\) as \\( \\Large{\\frac{\\partial^2}{\\partial x^2_i}} \\), we define
                                     <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
                                     \\[
                                         \\nabla^2 \\vec{v} = \\vec{\\nabla} (\\vec{\\nabla} \\cdot \\vec{v}) - \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{v})
@@ -839,7 +839,7 @@ const GtrAndCosmology = () => {
                             The first term on the RHS has transformation rule for a 2nd -rank covariant tensor, but there's second term on the RHS too, which need not be zero, in general. It is zero only for linear transformation, like Lorentz transformation and is not zero for any general transformation.
                             <br/>
                             <br/>
-                            This means that \\( \\frac{\\partial T_k}{\\partial x^m} \\) is not a tensor because it does not transform like a tensor. Same could be said about \\( \\frac{\\partial T^k}{\\partial x^m} \\), which also does not transform like a tensor. All because of a term like
+                            This means that \\( \\Large{\\frac{\\partial T_k}{\\partial x^m}} \\) is not a tensor because it does not transform like a tensor. Same could be said about \\( \\Large{\\frac{\\partial T^k}{\\partial x^m}} \\), which also does not transform like a tensor. All because of a term like
                             \\[
                                 \\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p
                             \\]
@@ -870,7 +870,7 @@ const GtrAndCosmology = () => {
                             />
                             In \\( \\mathbb{R}^N \\), we move the vector from \\(P\\) to \\(Q\\) without changing its direction and magnitude.
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-2'>How do we do that in curved spacetime? </p>
-                            We have to develop a simikar method, then we might be able to get rid of the terms like \\( \\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p \\).
+                            We have to develop a simikar method, then we might be able to get rid of the terms like \\( \\Large\\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p} \\).
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Parallel Transport </p>
                             <Image
                                 src="/gtr_and_cosmo/14.png"
@@ -1025,7 +1025,7 @@ const GtrAndCosmology = () => {
                             \\[
                                 {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} = \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} + \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^r}{\\partial {x'}^b} \\Gamma^q_{pr}
                             \\]
-                            Let us multiply both sides by \\( \\frac{\\partial {x'}^s}{\\partial x^q} \\),
+                            Let us multiply both sides by \\( \\Large{\\frac{\\partial {x'}^s}{\\partial x^q}} \\),
                             \\[
                                 {\\Gamma'}^p_{ba} \\frac{\\partial x^q}{\\partial {x'}^p} \\frac{\\partial {x'}^s}{\\partial x^q} = \\frac{\\partial^2 x^q}{\\partial {x'}^a \\hspace{2pt} \\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} + \\frac{\\partial x^p}{\\partial {x'}^a} \\frac{\\partial x^r}{\\partial {x'}^b} \\frac{\\partial {x'}^s}{\\partial x^q} \\Gamma^q_{pr}
                             \\]
@@ -1181,7 +1181,7 @@ const GtrAndCosmology = () => {
                             \\]
                             </div>
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Christoffel Symbols </p>
-                            In Riemann geometry, the connection coefficient can be expressed uniquely in terms of metric \\( g_{ab} \\) and its partial derivative \\( \\frac{\\partial g_{ab}}{\\partial x^c} \\) as
+                            In Riemann geometry, the connection coefficient can be expressed uniquely in terms of metric \\( g_{ab} \\) and its partial derivative \\( \\Large{\\frac{\\partial g_{ab}}{\\partial x^c}} \\) as
                             \\[
                                 \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right]
                             \\]
@@ -1218,7 +1218,7 @@ const GtrAndCosmology = () => {
                             \\[
                                 \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right] 
                             \\]
-                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Can we simply replace \\( \\frac{\\partial}{\\partial x^a} \\) in our equations in flat space, with new derivative operator \\( \\nabla_a \\) and go ahead? </p>
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Can we simply replace \\( \\Large{\\frac{\\partial}{\\partial x^a}} \\) in our equations in flat space, with new derivative operator \\( \\nabla_a \\) and go ahead? </p>
                             We need to little bit more careful, so let's go step by step:
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Directional Derivative </p>
                             Let \\( T^a \\) or \\( T_a \\) be a vector field \\( \\mathscr{U} = U^{abc \\ldots}_{pqr \\ldots} \\), then the derivative of \\( \\mathscr{U} \\) wrt. \\( T^a \\) is given by
@@ -1331,13 +1331,52 @@ const GtrAndCosmology = () => {
                                 \\frac{d^2 x^i}{ds^2} + \\Gamma^i_{jk} \\frac{dx^j}{ds} \\frac{dx^k}{ds} = 0
                             \\]
                             <p class='text-lg mt-5 mb-2 font-semibold text-center text-green-500'>This looks like a generalisation of Newton's laws.</p>
-                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Does that mean \\( \\Gamma \\), \\( \\frac{d^2 x^i}{ds^2} = -\\Gamma^i_{jk} \\frac{dx^j}{ds} \\frac{dx^k}{ds} \\) are effectively forces introduced to make the Newton's laws covariant? </p>
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Does that mean \\( \\Gamma \\), \\( \\Large{\\frac{d^2 x^i}{ds^2} = -\\Gamma^i_{jk} \\frac{dx^j}{ds} \\frac{dx^k}{ds}} \\) are effectively forces introduced to make the Newton's laws covariant? </p>
                             Later we will see that this corresponds to the acceleration of the frame or these are the inertial forces such as a coriolis and centrifugal force which appears in the accelerated frame which are nicely included in our system of equation so that one do not have to explicitly take care of them. The covariant derivative will take care of all such artifacts introduced by the accelerating frame.
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Local Inertial Frame </p>
-                            We are assuming that the Riemannian space is locally flat.
+
+
+                            Let's delve into an important concept known as the local inertial frame. We observe that the dynamics can be generalized to curved spacetime. However, in flat spacetime, our entire set of physics is expressed in terms of ordinary derivatives. It is crucial to ensure that these expressions hold true locally, implying that in a small region of spacetime, the behavior should mimic that of flat space. This concept is termed the local inertial frame. If this is not the case, our laws of physics would require complete modification. On a small scale, where spacetime curvature is negligible, the behavior aligns with the principles of special relativity, a well-tested theory.
+                            <br/>
+                            <br/>
+                            The idea of a local inertial frame can be mathematically formulated within the framework of Riemannian geometry. The problematic term we encounter is the connection, responsible for the transformation of partial differentials that do not behave like tensors. In flat spacetime, the connection is zero in Euclidean space, indicating that in a small region, if we can set \\(\\Gamma^{a}_{bc}\\) to be zero, we can construct a locally inertial frame. In such a frame, ordinary differentials would transform like tensors. However, it's important to note that this condition holds only in a small region and cannot be extended throughout the entire space.
+                            <br/>
+                            <br/>
+                            We assume that our Riemann space is locally Euclidean. To achieve coordinate transformation and attain local flatness in geometry, the space needs to be Riemannian, and the connection must be symmetric. A local inertial frame implies setting \\(\\Gamma^{a}_{bc}\\) to zero. However, since \\(\\Gamma^{a}_{bc}\\) can be expressed in terms of the partial derivatives of \\(g_{ab}\\), locally, we require a coordinate system where the partial derivatives of the metric become zero. This ensures \\(\\Gamma^{a}_{bc}\\) is zero, allowing us to establish a local coordinate system in a small neighborhood.
                             <br/>
                             <br/>
                             It is possible to choose a coordinate system such that, \\( \\Gamma^a_{bc} = 0 \\).
+                            <br/>
+                            <br/>
+                            Let us consider a Riemann space with coordinate system \\( x^a \\) and metric \\( g_{ab} \\) with \\( \\Large{\\frac{\\partial g_{ab}}{\\partial x^c} \\neq 0} \\). We then do a coordinate transformation \\( x^a \\longrightarrow x'^a \\) such that \\( \\Large{\\frac{\\partial g'_{ab}}{\\partial x'^c} \\neq 0} \\).
+                            <br/>
+                            <br/>
+                            Under the coordinate transformation, the metric transforms as
+                            \\[
+                                g'_{ab} = \\frac{\\partial x^p}{\\partial x'^a} \\frac{\\partial x^q}{\\partial x'^b} g_{pq}
+                            \\]
+                            and the we compute \\( \\Large{\\frac{\\partial g'_{ab}}{\\partial x'^c}} \\) (and we want this to be zero)
+                            \\[
+                                \\begin{align}
+                                    \\frac{\\partial g'_{ab}}{\\partial x'^c} &= \\frac{\\partial}{\\partial x'^c} \\left[ \\frac{\\partial x^p}{\\partial x'^a} \\frac{\\partial x^q}{\\partial x'^b} g_{pq} \\right] \\\\
+                                    &= \\frac{\\partial^2 x^p}{\\partial x'^c \\partial x'^a} \\frac{\\partial x^q}{\\partial x'^b} g_{pq} + \\frac{\\partial x^p}{\\partial x'^a} \\frac{\\partial^2 x^q}{\\partial x'^b \\partial x'^c} g_{pq} + \\underbrace{\\frac{\\partial x^p}{\\partial x'^a} \\frac{\\partial x^q}{\\partial x'^b} \\frac{\\partial g_{pq}}{\\partial x'^c}}_{\\Large{\\frac{\\partial x^p}{\\partial x'^a} \\frac{\\partial x^q}{\\partial x'^b} \\frac{\\partial x^r}{\\partial x'^c} \\frac{\\partial g_{pq}}{\\partial x^r}}}
+                                \\end{align}
+                            \\]
+                            The last term is not zero, because that is the assumption, we started with.
+                            <br/>
+                            <br/>
+                            We now take cyclic permutation of indices \\( \\{ a,b,c \\} \\)
+                            <Image
+                                src="/gtr_and_cosmo/24.png"
+                                alt="Geodesics 2"
+                                width={10}
+                                height={50}
+                                class="mx-auto scale-75 rounded-lg"
+                            />
+                            Upon doing (1) + (2) - (3), we get
+                            \\[
+                                \\frac{\\partial g'_{ab}}{\\partial x'^c} =     
+                            \\]
                             `
                         },
     ];
