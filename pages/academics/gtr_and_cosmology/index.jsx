@@ -840,7 +840,7 @@ const GtrAndCosmology = () => {
                             \\]
                             In the back of our mind, we should have a tangent space with all curves and \\( T^a = \\frac{dx^a}{d \\lambda} \\) as well as normal vector to hyper-surfaces \\( f(x^a) = C \\), \\( T_a = \\frac{\\partial f(x^a)}{\\partial x^a} \\).
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Some Thoughts </p>
-                            We have had functions \\( f(x^a) \\) which are scalars or tensor of rank 1. And we have seen that \\( T_a = \\frac{\\partial f(x)}{\\partial x^a} \\) becomes the covariant tensor of rank 1. So, can we do, say 
+                            We have had functions \\( f(x^a) \\) which are scalars or tensor of rank 0. And we have seen that \\( T_a = \\frac{\\partial f(x)}{\\partial x^a} \\) becomes the covariant tensor of rank 1. So, can we do, say 
                             \\[
                                 A_{ab} = \\frac{\\partial T_a}{\\partial x^b} \\hspace{9pt} \\text{ or } \\hspace{9pt} A^a_b = \\frac{\\partial T^a}{\\partial x^b}
                             \\]
