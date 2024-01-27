@@ -989,21 +989,21 @@ const GtrAndCosmology = () => {
                             Substituting \\( T_a (x^b + \\delta x^b) \\) and \\( \\delta T_a \\) in our expression of \\( \\nabla_a T_b \\), we get
                             \\[
                                 \\begin{align}    
-                                    \\nabla_a T_b &= \\lim\\limits_{\\delta x^b \\to 0} \\frac{1}{\\delta x^b} \\left\\{ T_a + \\frac{\\partial T_a(x^p)}{\\partial x^b} \\delta x^b - T_a - \\Gamma^p_{ab} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^b \\right\\} \\\\
-                                    &= \\lim\\limits_{\\delta x^b \\to 0} \\frac{1}{\\delta x^b} \\left\\{ \\frac{\\partial T_a(x^p)}{\\partial x^b} \\delta x^b - \\Gamma^p_{ab} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^b \\right\\} \\\\
-                                    &= \\frac{\\partial T_a}{\\partial x^b} - \\Gamma^p_{ab} \\hspace{2pt} T_p
+                                    \\nabla_a T_b &= \\lim\\limits_{\\delta x^a \\to 0} \\frac{1}{\\delta x^a} \\left\\{ T_b + \\frac{\\partial T_b(x^p)}{\\partial x^a} \\delta x^a - T_b - \\Gamma^p_{ab} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^a \\right\\} \\\\
+                                    &= \\lim\\limits_{\\delta x^a \\to 0} \\frac{1}{\\delta x^a} \\left\\{ \\frac{\\partial T_b(x^p)}{\\partial x^a} \\delta x^a - \\Gamma^p_{ab} \\hspace{2pt} T_p \\hspace{2pt} \\delta x^a \\right\\} \\\\
+                                    &= \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} \\hspace{2pt} T_p
                                 \\end{align}    
                             \\]
                             This is called covariant derivative with connection \\( \\Gamma^p_{ab} \\).
                             <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
                             \\[
-                                \\nabla_a T_b = \\frac{\\partial T_a}{\\partial x^b} - \\Gamma^p_{ab} \\hspace{2pt} T_p
+                                \\nabla_a T_b = \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} \\hspace{2pt} T_p
                             \\]
                             </div>
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> What is the connection! </p>
                             Connection is a way of trasnporting a vector field from one place to another such that the derivative can be taken. Our goal is to make 
                             \\[
-                                \\frac{\\partial T_a}{\\partial x^b} - \\Gamma^p_{ab} \\hspace{2pt} T_p
+                                \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} \\hspace{2pt} T_p
                             \\]
                             a tensor.
                             <br/>
@@ -1018,7 +1018,7 @@ const GtrAndCosmology = () => {
                             \\[
                                 \\nabla'_a T'_b = \\frac{\\partial T'_b}{\\partial {x'}^a} - {\\Gamma'}^p_{ba} \\hspace{2pt} T'_p 
                             \\]
-                            The transformation rule from vector \\( T'_p \\) is given by \\( T'_a = \\frac{\\partial x^b}{\\partial {x'}^a} T_b \\).
+                            The transformation rule from vector \\( T'_p \\) is given by \\( T'_a = \\large{\\frac{\\partial x^b}{\\partial {x'}^a}} T_b \\).
                             <br/>
                             <br/>
                             Substituting this in above equation, we get
@@ -1109,7 +1109,7 @@ const GtrAndCosmology = () => {
                             </div>
                             It is easy to show that it is a second rank tensor, with one contravariant rank and one covariant rank. However, we yet don't know what \\( \\Gamma^a_{bc} \\) is.
                             <div class='bg-slate-50/10 p-1 rounded-md mb-3 mt-3 pl-2'>
-                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'> Derive the transformation rule or connection \\(\\Gamma^a_{bc} \\) under an arbitrary coordinate transformation and show that it is not a tensor. </p>
+                            <p class='text-lg font-semibold text-red-400 mb-2 mt-2'> Derive the transformation rule for connection \\(\\Gamma^a_{bc} \\) under an arbitrary coordinate transformation and show that it is not a tensor. </p>
                             </div>
                             `
                 },
