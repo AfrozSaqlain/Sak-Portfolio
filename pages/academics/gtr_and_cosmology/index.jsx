@@ -894,7 +894,7 @@ const GtrAndCosmology = () => {
                             />
                             In \\( \\mathbb{R}^N \\), we move the vector from \\(P\\) to \\(Q\\) without changing its direction and magnitude.
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-2'>How do we do that in curved spacetime? </p>
-                            We have to develop a simikar method, then we might be able to get rid of the terms like \\( \\Large\\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p} \\).
+                            We have to develop a similar method, then we might be able to get rid of the terms like \\( \\Large{\\frac{\\partial^2 x^p}{\\partial {x'}^m \\partial {x'}^k} T_p} \\).
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Parallel Transport </p>
                             <Image
                                 src="/gtr_and_cosmo/14.png"
