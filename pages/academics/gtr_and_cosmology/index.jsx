@@ -1533,6 +1533,22 @@ const GtrAndCosmology = () => {
                                     \\]
                                     </div>
                                     This is called <p class='text-lg font-semibold inline-block text-blue-500'> Riemann Curvature Tensor </p>. It comes because of the non-commutativity of covariant derivative. Hence, \\( [\\nabla_a \\nabla_b - \\nabla_b \\nabla_a] V_d = R^d_{abc} V_d \\).
+                                    <br/>
+                                    <br/>
+                                    Space is flat if covariant derivative commute, which is same as saying that Riemannian Curvature Tensor is zero. It means \\( \\Gamma^a_{bc} = 0 \\) and \\( \\partial_b \\Gamma^a_{bc} \\) = 0. In a local inertial frame, we can set up a coordinate system, such that \\( \\Gamma \\) itself is zero, but its partial differential is not zero. Hence, Riemannian curvature tensor is not zero. This gives us the idea that Riemannian Curavture Tensor can be used to distinguish between truly inertial frame and local inertial frame.
+                                    <br/>
+                                    <br/>
+                                    The Riemannian tensor, \\( R^d_{abc} \\) is a 4-th rank tensor, with lots of symmetry.
+                                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Symmetries of Riemannian Curvature Tensor </p>
+                                    The Riemannian Tensor, being a 4-th rank tensor, should have \\( N \\times N \\times N \\times N \\) independent components. However, there are many symmetries.
+                                    <ol class='list-decimal ml-8 my-4'>
+                                        <li class="mb-2"> \\( R^d_{abc} = - R^d_{bac} \\) or \\(R^d_{abc} = R^d_{[ab]c}\\) or \\( R^d_{(ab)c} \\) <br/> <br/> where \\( T_{[ab]} = \\frac{1}{2}[T_{ab} - T_{ba}] \\hspace{10pt} \\) and \\( \\hspace{10pt} T_{(ab)} = \\frac{1}{2} [T_{ab} + T_{ba}] \\) </li>
+                                        <li class="mb-2"> Upon lowering the upper index as \\( R_{abcd} = g_{dq}R^q_{abc} \\) we have relation \\( R_{abcd} = - R_{badc} \\) </li>
+                                        <li class="mb-2"> \\( R_{abcd} = R_{cdab} \\) </li>
+                                        <li class="mb-2"> We fix \\(a\\) and do a cyclic permutation of \\(b,c\\) and \\(d\\) to get \\( R_{abcd} + R_{adbc} + R_{acdb} = 0 \\) </li>
+                                    </ol>
+                                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Back on Sphere </p>
+
                             `
                         },
     ];
