@@ -1548,7 +1548,29 @@ const GtrAndCosmology = () => {
                                         <li class="mb-2"> We fix \\(a\\) and do a cyclic permutation of \\(b,c\\) and \\(d\\) to get \\( R_{abcd} + R_{adbc} + R_{acdb} = 0 \\) </li>
                                     </ol>
                                     <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Back on Sphere </p>
-
+                                    Let's compute Riemann Tensor on sphere.
+                                    <br/>
+                                    <br/>
+                                    The metric tensor is given by \\( ds^2 = d\\theta^2 + \\sin^2{\\theta} d\\phi^2 \\). We have already computed \\(\\Gamma^a_{bc} \\), so let's use them
+                                    \\[
+                                        \\Gamma^1_{ab} = \\begin{pmatrix}  0 & 0 \\\\ 0 & -\\sin{\\theta} \\cos{\\theta} \\end{pmatrix} \\hspace{15pt} \\Gamma^2_{ab} = \\begin{pmatrix} 0 & \\cot{\\theta} \\\\ \\cot{\\theta} & 0 \\end{pmatrix}
+                                    \\]
+                                    Computing Riemann Tensor is a messy job! In the case of a sphere, only one non-zero component remains.
+                                    We know that Riemann Tensor is given as:
+                                    \\[
+                                        R^d_{abc} = \\partial_b \\Gamma^d_{ac} - \\partial_a \\Gamma^d_{bc} + \\Gamma^p_{ac} \\Gamma^d_{bp} - \\Gamma^p_{bc} \\Gamma^d_{ap}    
+                                    \\]
+                                    So using this and the fact that \\( x^1 = \\theta \\) and \\( x^2 = \\phi \\) we can write :
+                                    \\[
+                                        \\begin{align}
+                                            R^1_{212} &= \\partial_1(\\Gamma^1_{22}) - \\partial_2 (\\Gamma^1_{12}) + \\Gamma^p_{22} \\Gamma^1_{1p} - \\Gamma^p_{12} \\Gamma^1_{2p} \\\\
+                                            &= \\partial_1 (\\Gamma^1_{22}) - \\Gamma^p_{12} \\Gamma^1_{2p} \\\\
+                                            &= \\partial_1 (\\Gamma^1_{22}) - \\Gamma^2_{12} \\Gamma^1_{22} \\\\
+                                            \\implies R^1_{212} &= \\partial_{\\theta} (-\\sin{\\theta} \\cos{\\theta}) + \\cot{\\theta} (\\sin{\\theta} \\cos{\\theta}) \\\\
+                                            &= \\sin^2{\\theta}
+                                        \\end{align}
+                                     \\]
+                                    It seems like curvature of sphere is not same everywhere, i.e. it's \\(1\\) on equator and \\(0\\) on the poles. However, the Riemann Tensor has upper and lower indices which leads to lots of confusion. So, if we raise the index such that we have \\(  R^{21}_{21} = \\large{\\frac{1}{\\sin^2{\\theta}}} \\times \\sin^2{\\theta} = 1 \\), thus implying that curvature on a sphere is constant.
                             `
                         },
     ];
