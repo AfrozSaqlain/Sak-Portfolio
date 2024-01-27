@@ -834,7 +834,7 @@ const GtrAndCosmology = () => {
                             If \\(T^a\\) or \\( T_a \\) does not transform as per above rules, they are not tensors.
                             <br/>
                             <br/>
-                            This we cn easily extend to tensors with more than rank 1 as in \\( T^{ab}_{cd} \\).
+                            This we can easily extend to tensors with more than rank 1 as in \\( T^{ab}_{cd} \\).
                             \\[
                                 {T'}^{ab}_{cd} = \\frac{\\partial {x'}^a}{\\partial x^p} \\frac{\\partial {x'}^b}{\\partial x^q} \\frac{\\partial x^r}{\\partial {x'}^c} \\frac{\\partial x^s}{\\partial {x'}^d} T^{pq}_{rs}    
                             \\]
