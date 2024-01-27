@@ -609,6 +609,30 @@ const GtrAndCosmology = () => {
                     `
                 },
                 {
+                    title: 'Variation of Metric Tensor',
+                            content: `
+                            We know that
+                            \\[
+                                \\Gamma^\\delta_{\\beta \\gamma} = \\frac{1}{2} g^{\\alpha \\delta} (g_{\\alpha \\beta, \\delta} + g_{\\gamma \\alpha , \\beta} - g_{\\beta \\gamma , \\alpha})    
+                            \\]
+                            We want to show that :
+                            <ol class='list-decimal ml-8 my-4'>
+                                <li class="mb-3">
+                                    \\( \\large{\\delta{\\sqrt{|g|}} = -\\frac{1}{2} \\sqrt{|g|} \\hspace{4pt} g_{\\alpha \\beta} \\delta g^{\\alpha \\beta} }\\)
+                                </li>
+                                <li class="mb-3"> 
+                                    \\(\\large{ \\Gamma^\\delta_{\\delta \\gamma} = \\frac{1}{\\sqrt{|g|}} \\partial_\\gamma \\sqrt{|g|} }\\)
+                                </li>
+                                <li class="mb-3"> 
+                                    \\(\\large{ (\\nabla \\times \\vec{A})^i = \\frac{1}{\\sqrt{|g|}} \\epsilon^{ijk} \\nabla_j A_k }\\)
+                                </li>
+                                <li class="mb-3"> 
+                                    \\(\\large{ (\\nabla \\cdot A) = \\frac{1}{\\sqrt{|g|}} \\partial_\\mu (\\sqrt{|g|} A^\\mu) }\\)
+                                </li>
+                            </ol>
+                    `
+                },
+                {
                     title: 'Permutation Tensor',
                             content: `
                             We are working in \\( \\mathbb{R}^3 \\). So, \\( g_{ab} = \\delta_{ab} = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} \\)
@@ -1334,8 +1358,6 @@ const GtrAndCosmology = () => {
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Does that mean \\( \\Gamma \\), \\( \\Large{\\frac{d^2 x^i}{ds^2} = -\\Gamma^i_{jk} \\frac{dx^j}{ds} \\frac{dx^k}{ds}} \\) are effectively forces introduced to make the Newton's laws covariant? </p>
                             Later we will see that this corresponds to the acceleration of the frame or these are the inertial forces such as a coriolis and centrifugal force which appears in the accelerated frame which are nicely included in our system of equation so that one do not have to explicitly take care of them. The covariant derivative will take care of all such artifacts introduced by the accelerating frame.
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Local Inertial Frame </p>
-
-
                             Let's delve into an important concept known as the local inertial frame. We observe that the dynamics can be generalized to curved spacetime. However, in flat spacetime, our entire set of physics is expressed in terms of ordinary derivatives. It is crucial to ensure that these expressions hold true locally, implying that in a small region of spacetime, the behavior should mimic that of flat space. This concept is termed the local inertial frame. If this is not the case, our laws of physics would require complete modification. On a small scale, where spacetime curvature is negligible, the behavior aligns with the principles of special relativity, a well-tested theory.
                             <br/>
                             <br/>
@@ -1399,6 +1421,118 @@ const GtrAndCosmology = () => {
                             \\[
                             \\frac{\\partial^2 x^q}{\\partial x^{\\prime a} \\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q}=-\\frac{\\partial x^p}{\\partial x^{\\prime a}} \\frac{\\partial x^r}{\\partial x^{\\prime} b} \\frac{\\partial x^{\\prime s}}{\\partial x^q} \\Gamma^q{ }_{p r}
                             \\]
+                            `
+                        },
+                        {
+                            title: 'Equivalence Principle',
+                                    content: `
+                                    There are 2 important principles in General Theory of Relativity:
+                                    <ul class='list-disc ml-8 my-4'>
+                                        <li class="mb-2"> <p class='font-semibold inline-block text-white'> Principle of General Covariance : </p> laws of physics should be invariant in any given coordinate system. </li>
+                                        <li class="mb-2"> <p class='font-semibold inline-block text-white'> Principle of Equivalence </p> </li>
+                                    </ul>
+                                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Galilean Equivalence Principle </p>
+                                    From Newton's law we have:
+                                    <ul class='list-disc ml-8 my-4'>
+                                        <li class="mb-2"> \\( F = m_I a \\), \\( m_I \\) is called inertial mass. </li>
+                                        <li class="mb-2"> \\( F = m_G a \\), \\( m_G \\) is called gravitational mass. </li>
+                                    </ul>
+                                    For a free fall \\( m_I a = m_G g \\). Now, let's make an assumption: \\( m_I = m_G \\).
+                                    <p class='text-lg mt-5 mb-2 font-semibold text-center text-green-500'> "Two masses accelerate the same way under gravity." </p>
+                                    Galileo used mainly two techniques to verify this:
+                                    <ul class='list-disc ml-8 my-4'>
+                                        <li class="mb-2"> Inclined plane </li>
+                                        <li class="mb-2"> Pendulum </li>
+                                    </ul>
+                                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Einstein's Equivalence Principle </p>
+                                    It is not just gravitation, but inertial acceleration also does not depend on mass or the ingredient of test particle. Inertial acceleration appears when one transforms to non-inertial frame such as rotating frames.
+                                    <br/>
+                                    <br/>
+                                    <Image
+                                        src="/gtr_and_cosmo/25.png"
+                                        alt="Centrifugal"
+                                        width={10}
+                                        height={50}
+                                        class="mx-auto scale-75 rounded-lg"
+                                    />
+                                    For example: Centrifugal acceleration is given by \\( a_c = \\omega^2 r \\) and gravitational acceleration is \\( \\large{a_g = \\frac{M}{r^2}} \\). Hence, on a circular orbit, we have : \\( \\large{a_c = \\omega^2 r = a_g = \\frac{M}{r^2} \\implies \\omega^2 = \\frac{M}{r^3}} \\). This is Kepler's 3rd law of motion.
+                                    <p class='text-lg mt-5 mb-2 font-semibold text-center text-green-500'> "In a small region of space, it should not be possible to distinguish between an acceleration of frame and gravity"  </p>
+                                    Or, in a small region of space, gravity can be replaced by a uniform acceleration.
+                                    <br/>
+                                    <br/>
+                                    This implies that a freely falling observer will not experience gravity.
+                                    <br/>
+                                    <br/>
+                                    Freely falling frame under the influence of gravity is locaaly inertial frame and we have connection coefficient equal to zero. It behaves exactly like Minkowskian space, but it is true, only locally.
+                            `
+                        },
+                        {
+                            title: 'Riemman Tensor',
+                                    content: `
+                                    Suppose we have twoelevators in space, one is freely falling under the influence of gravity, while the other one is in a true inertial frame. First one is locally inertial, while the second one is truly inertial. <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> How can we distinguish between them? </p>
+                                    <Image
+                                        src="/gtr_and_cosmo/26.png"
+                                        alt="Free fall"
+                                        width={10}
+                                        height={50}
+                                        class="mx-auto scale-75 rounded-lg"
+                                    />
+                                    In the frame which is freely falling under gravity, the seperation between the two men will change over time, even when they themselves do no movement, while the truly inertial frame will keep the distance between them preserved.
+                                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Commutativity of Covariant Derivative </p>
+                                    The partial derivative commute, i.e. \\( \\large{ \\frac{\\partial^2 T_c}{\\partial x^a \\partial x^b} = \\frac{\\partial^2 T_c}{\\partial x^b \\partial x^a} } \\). In flat space, the partial diferrential is a tensor, however in curved spacetime (Riemannian geometry), they need not be.
+                                    <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> What about \\( \\nabla_a \\nabla_b V_c - \\nabla_b \\nabla_a V_c = ? \\) </p>
+                                    We will be using the following notation: \\( \\large{ \\partial_a = \\frac{\\partial}{\\partial x^a} } \\).
+                                    <Image
+                                        src="/gtr_and_cosmo/27.png"
+                                        alt="Free fall"
+                                        width={10}
+                                        height={50}
+                                        class="mx-auto scale-75 rounded-lg"
+                                    />
+                                    Let's simplify each term:
+                                    <ol class='list-decimal ml-8 my-4'>
+                                        <li class="mb-2"> We get the first term as: <br/>
+                                            \\(
+                                                \\begin{align}
+                                                    \\partial_a (\\nabla_b V_c) &= \\partial_a \\partial_b V_c - \\partial_a (\\Gamma^d_{bc} V_d)\\\\
+                                                    &= \\partial_a \\partial_b V_c - \\partial_a (\\Gamma^d_{bc}) V_d - \\Gamma^d_{bc} \\partial_a V_d
+                                                \\end{align}
+                                            \\)
+                                        </li>
+                                        <li class="mb-2"> We can get the second term just by interchanging as follows: <br/>
+                                            \\(
+                                                \\begin{align}
+                                                    \\partial_b (\\nabla_a V_c) &= \\partial_b \\partial_a V_c - \\partial_b (\\Gamma^d_{ac} V_d)\\\\
+                                                    &= \\partial_b \\partial_a V_c - \\partial_b (\\Gamma^d_{ac}) V_d - \\Gamma^d_{ac} \\partial_b V_d
+                                                \\end{align}
+                                            \\)
+                                        </li>
+                                        <li class="mb-2"> Third term is given as follows: <br/>
+                                            \\(
+                                                \\begin{align}
+                                                    \\Gamma^p_{ac} \\nabla_b V_p = \\Gamma^p_{ac} (\\partial_b V_p) - \\Gamma^p_{ac} \\Gamma^d_[bp] V_d
+                                                \\end{align}
+                                            \\)
+                                        </li>
+                                        <li class="mb-2"> We can get the fourth term just by interchanging as follows: <br/>
+                                            \\(
+                                                \\begin{align}
+                                                    \\Gamma^p_{bc} \\nabla_a V_p = \\Gamma^p_{bc} (\\partial_a V_p) - \\Gamma^p_{bc} \\Gamma^d_[ap] V_d
+                                                \\end{align}
+                                            \\)
+                                        </li>
+                                    </ol>
+                                    So finally we get:
+                                    \\[
+                                        [\\nabla_a \\nabla_b - \\nabla_b \\nabla_a] V_d = [\\partial_b \\Gamma^d_{ac} - \\partial_a \\Gamma^d_{bc} + \\Gamma^p_{ac} \\Gamma^d_{bp} - \\Gamma^p_{bc} \\Gamma^d_{ap}] V_d     
+                                    \\]
+                                    Let's define:
+                                    <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                                    \\[
+                                        R^d_{abc} = \\partial_b \\Gamma^d_{ac} - \\partial_a \\Gamma^d_{bc} + \\Gamma^p_{ac} \\Gamma^d_{bp} - \\Gamma^p_{bc} \\Gamma^d_{ap}
+                                    \\]
+                                    </div>
+                                    This is called <p class='text-lg font-semibold inline-block text-blue-500'> Riemann Curvature Tensor </p>. It comes because of the non-commutativity of covariant derivative. Hence, \\( [\\nabla_a \\nabla_b - \\nabla_b \\nabla_a] V_d = R^d_{abc} V_d \\).
                             `
                         },
     ];
