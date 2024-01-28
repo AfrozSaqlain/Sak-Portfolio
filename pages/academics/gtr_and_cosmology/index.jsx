@@ -1238,7 +1238,7 @@ const GtrAndCosmology = () => {
                                 \\nabla_a T_b = \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} T_p    
                             \\]
                             \\[
-                                \\nabla_a T_q = \\frac{\\partial T^q}{\\partial x^a} + \\Gamma^q_{ar} T^r    
+                                \\nabla_a T^q = \\frac{\\partial T^q}{\\partial x^a} + \\Gamma^q_{ar} T^r    
                             \\]
                             With connection defined as,
                             \\[
@@ -1274,7 +1274,7 @@ const GtrAndCosmology = () => {
                             \\[
                                 A^a = \\frac{DT^a}{Ds} = T^b \\nabla_b T^a = T^b \\left[ \\frac{\\partial T^a}{\\partial x^b} + \\Gamma^a_{bc} T^c \\right] = \\frac{dT^a}{ds} + \\Gamma^a_{bc} T^b T^c
                             \\]
-                            In this curve it is straightforward to see that we can take the acceleration, i.e the rate of change of tangent vector along the curve, is always orthogonal to tangent vector because the tangent vector is normalized because of the arc length parameter.
+                            In this curve it is straightforward to see that we can take the acceleration, i.e the rate of change of tangent vector along the curve, and it is always orthogonal to tangent vector because the tangent vector is normalized because of the arc length parameter.
                             <Image
                                 src="/gtr_and_cosmo/21.png"
                                 alt="Directional Derivative 2"
