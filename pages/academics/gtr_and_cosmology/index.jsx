@@ -1547,7 +1547,7 @@ const GtrAndCosmology = () => {
                                     <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Symmetries of Riemannian Curvature Tensor </p>
                                     The Riemannian Tensor, being a 4-th rank tensor, should have \\( N \\times N \\times N \\times N \\) independent components. However, there are many symmetries.
                                     <ol class='list-decimal ml-8 my-4'>
-                                        <li class="mb-2"> \\( R^d_{abc} = - R^d_{bac} \\) or \\(R^d_{abc} = R^d_{[ab]c}\\) or \\( R^d_{(ab)c} \\) <br/> <br/> where \\( T_{[ab]} = \\frac{1}{2}[T_{ab} - T_{ba}] \\hspace{10pt} \\) and \\( \\hspace{10pt} T_{(ab)} = \\frac{1}{2} [T_{ab} + T_{ba}] \\) </li>
+                                        <li class="mb-2"> \\( R^d_{abc} = - R^d_{bac} \\) or \\(R^d_{abc} = R^d_{[ab]c}\\) or \\( R^d_{(ab)c} = 0 \\) <br/> <br/> where \\( T_{[ab]} = \\frac{1}{2}[T_{ab} - T_{ba}] \\hspace{10pt} \\) and \\( \\hspace{10pt} T_{(ab)} = \\frac{1}{2} [T_{ab} + T_{ba}] \\) </li>
                                         <li class="mb-2"> Upon lowering the upper index as \\( R_{abcd} = g_{dq}R^q_{abc} \\) we have relation \\( R_{abcd} = - R_{badc} \\) </li>
                                         <li class="mb-2"> \\( R_{abcd} = R_{cdab} \\) </li>
                                         <li class="mb-2"> We fix \\(a\\) and do a cyclic permutation of \\(b,c\\) and \\(d\\) to get \\( R_{abcd} + R_{adbc} + R_{acdb} = 0 \\) </li>
