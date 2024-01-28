@@ -1122,7 +1122,7 @@ const GtrAndCosmology = () => {
                                 \\nabla_a T_b = \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} T_p    
                             \\]
                             \\[
-                                \\nabla_a T^b = \\frac{\\partial T^b}{\\partial x^a} - \\Gamma^b_{ar} T_r    
+                                \\nabla_a T^b = \\frac{\\partial T^b}{\\partial x^a} + \\Gamma^b_{ar} T^r    
                             \\]
                             \\( \\Gamma^a_{bc} \\) is connection, a non-tensor quantity, which is not unique. Each \\( \\Gamma \\) in fact defines a covariant derivative, \\( \\nabla \\).
                             <br/>
