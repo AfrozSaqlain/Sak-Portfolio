@@ -1321,7 +1321,7 @@ const GtrAndCosmology = () => {
                             \\[
                                 \\mathcal{L} = \\int_P^Q g_{ab}\\dot{x^a} \\dot{x^b} ds 
                             \\]
-                            We can do this because we know that if \\(\\mathcal{L}\\) is a Lagrangian and \\( \\large{\\frac{d \\(\\mathcal{L}\\) }{dt} = 0 \\implies} \\) \\(\\mathcal{L}^2\\) , \\(\\mathcal{L}^3\\), \\( e^{\\alpha \\mathcal{L}}\\) are also a nice Lagrangian.
+                            We can do this because we know that if \\(\\mathcal{L}\\) is a Lagrangian and \\( \\large{\\frac{d \\mathcal{L}}{dt} = 0 \\implies} \\) \\(\\mathcal{L}^2\\) , \\(\\mathcal{L}^3\\), \\( e^{\\alpha \\mathcal{L}}\\) are also a nice Lagrangian.
                             <br/>
                             <br/>
                             However we have already done this in previous sections and we know that the curve that takes optimal distance is given by
@@ -1335,7 +1335,7 @@ const GtrAndCosmology = () => {
                             \\[
                                 \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{pb}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^p} \\right]    
                             \\]
-                            We can see that
+                            Thus we find:
                             \\[
                                 \\frac{dT^a}{ds} + \\Gamma^a_{bc} T^b T^c = T^b \\nabla_b T^a = \\frac{DT^a}{Ds} = A^a = 0    
                             \\]
