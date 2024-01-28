@@ -1203,13 +1203,13 @@ const GtrAndCosmology = () => {
                             We rename some of the dummy variables to get
                             <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
                             \\[
-                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right]
+                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^p} \\right]
                             \\]
                             </div>
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Christoffel Symbols </p>
                             In Riemann geometry, the connection coefficient can be expressed uniquely in terms of metric \\( g_{ab} \\) and its partial derivative \\( \\Large{\\frac{\\partial g_{ab}}{\\partial x^c}} \\) as
                             \\[
-                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right]
+                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^p} \\right]
                             \\]
                             And are called "Christoffel Symbols".
                             <div class='bg-slate-50/10 p-1 rounded-md mb-3 pl-2 mt-2'>
