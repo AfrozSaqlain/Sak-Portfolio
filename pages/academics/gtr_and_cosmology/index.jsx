@@ -1132,7 +1132,7 @@ const GtrAndCosmology = () => {
                                 \\nabla_a T_{bc} = \\frac{\\partial T_{bc}}{\\partial x^a} - \\Gamma^p_{ab} T_{pc} - \\Gamma^p_{ac} T_{bp}
                             \\]
                             \\[
-                                \\nabla_a T^{bc} = \\frac{\\partial T^{bc}}{\\partial x^a} + \\Gamma^b_{ap} T^{pc} - \\Gamma^c_{ap} T^{bp}
+                                \\nabla_a T^{bc} = \\frac{\\partial T^{bc}}{\\partial x^a} + \\Gamma^b_{ap} T^{pc} + \\Gamma^c_{ap} T^{bp}
                             \\]
                             \\[
                                 \\nabla_a T^b_c = \\frac{\\partial T^b_c}{\\partial x^a} + \\Gamma^b_{ap} T^p_c - \\Gamma^p_{ac} T^b_p
