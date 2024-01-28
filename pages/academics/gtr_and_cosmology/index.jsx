@@ -1172,12 +1172,14 @@ const GtrAndCosmology = () => {
                                 class="mx-auto scale-75 rounded-lg"
                             />
                             Riemannian geometry is based on the connection assuming the metric tensor \\( g_{ab} \\) is constant wrt covariant derivative operator, \\( \\nabla_a \\) and connection is symmetric in the lower two indices. So, we have
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
                             \\[
                                 \\nabla_p g_{ab} = \\nabla_q g^{ab} = 0
                             \\]
                             \\[
                                 \\Gamma^a_{bc} = \\Gamma^a_{cb}
                             \\]
+                            </div>
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Connection in Riemannian Geometry </p>
                             Let us assume two conditions (a) \\( \\nabla_p g_{ab} = \\nabla_q g^{ab} = 0 \\) and (b) \\( \\Gamma^a_{bc} = \\Gamma^a_{cb} \\). And see what kind of constraint we get on \\( \\Gamma \\).
                             <br/>
