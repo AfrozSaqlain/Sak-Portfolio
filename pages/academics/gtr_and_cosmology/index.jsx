@@ -1341,7 +1341,7 @@ const GtrAndCosmology = () => {
                             \\]
                             Thus, the curve for which acceleration is zero, gives the optimal path between the point in Riemannian Geometry.
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Geometry and Force </p>
-                            Let \\(x^a(s)\\) be the world-line of a particle in a Riemannian Geometry. Then the velocity is given by the tangent to the curve \\( x^a(s),\\) \\( u^a(s) = \\frac{dx^a}{ds} \\) and the acceleration is given by \\( a^i = u^j \\nabla_j u^i \\), or the covariant derivative of velocity dot product with itself.
+                            Let \\(x^a(s)\\) be the world-line of a particle in a Riemannian Geometry. Then the velocity is given by the tangent to the curve \\( x^a(s),\\) \\( u^a(s) = \\large{\\frac{dx^a}{ds}} \\) and the acceleration is given by \\( a^i = u^j \\nabla_j u^i \\), or the covariant derivative of velocity dot product with itself.
                             \\[
                                 \\begin{align}
                                     a^i = \\frac{D u^i}{Ds} &= \\frac{du^i}{ds} + \\Gamma^i_{jk} u^j u^k \\\\
@@ -1418,10 +1418,10 @@ const GtrAndCosmology = () => {
                             <br/>
                             We require definition
                             \\[
-                            \\Gamma^{\\prime d}{ }_{a c}=\\frac{1}{2} g^{\\prime b d}\\left[\\frac{\\partial g^{\\prime}{ }_{a b}}{\\partial x^{\\prime}}+\\frac{\\partial g^{\\prime}{ }_{b c}}{\\partial x^{\\prime} a}-\\frac{\\partial g^{\\prime}{ }_{c a}}{\\partial x^{\\prime b}}\\right]
+                            \\Gamma^{\\prime d}_{a c}=\\frac{1}{2} g^{\\prime b d}\\left[\\frac{\\partial g^{\\prime}{ }_{a b}}{\\partial x^{\\prime}}+\\frac{\\partial g^{\\prime}{ }_{b c}}{\\partial x^{\\prime} a}-\\frac{\\partial g^{\\prime}{ }_{c a}}{\\partial x^{\\prime b}}\\right]
                             \\]
                             \\[
-                            \\Gamma^{\\prime s}{ }_{b a}=\\frac{\\partial^2 x^q}{\\partial x^{\\prime a} \\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q}+\\frac{\\partial x^p}{\\partial x^{\\prime a}} \\frac{\\partial x^r}{\\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q} \\Gamma^q{ }_{p r}=0
+                            \\Gamma^{\\prime s}_{b a}=\\frac{\\partial^2 x^q}{\\partial x^{\\prime a} \\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q}+\\frac{\\partial x^p}{\\partial x^{\\prime a}} \\frac{\\partial x^r}{\\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q} \\Gamma^q{ }_{p r}=0
                             \\]
                             \\[
                             \\frac{\\partial^2 x^q}{\\partial x^{\\prime a} \\partial x^{\\prime b}} \\frac{\\partial x^{\\prime s}}{\\partial x^q}=-\\frac{\\partial x^p}{\\partial x^{\\prime a}} \\frac{\\partial x^r}{\\partial x^{\\prime} b} \\frac{\\partial x^{\\prime s}}{\\partial x^q} \\Gamma^q{ }_{p r}
