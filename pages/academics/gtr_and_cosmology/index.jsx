@@ -1238,7 +1238,7 @@ const GtrAndCosmology = () => {
                                 \\nabla_a T_b = \\frac{\\partial T_b}{\\partial x^a} - \\Gamma^p_{ab} T_p    
                             \\]
                             \\[
-                                \\nabla_a T_q = \\frac{\\partial T^q}{\\partial x^a} - \\Gamma^q_{ar} T^r    
+                                \\nabla_a T_q = \\frac{\\partial T^q}{\\partial x^a} + \\Gamma^q_{ar} T^r    
                             \\]
                             With connection defined as,
                             \\[
