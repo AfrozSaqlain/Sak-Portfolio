@@ -1474,7 +1474,7 @@ const GtrAndCosmology = () => {
                         {
                             title: 'Riemman Tensor',
                                     content: `
-                                    Suppose we have twoelevators in space, one is freely falling under the influence of gravity, while the other one is in a true inertial frame. First one is locally inertial, while the second one is truly inertial. <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> How can we distinguish between them? </p>
+                                    Suppose we have two elevators in space, one is freely falling under the influence of gravity, while the other one is in a true inertial frame. First one is locally inertial, while the second one is truly inertial. <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> How can we distinguish between them? </p>
                                     <Image
                                         src="/gtr_and_cosmo/26.png"
                                         alt="Free fall"
@@ -1515,21 +1515,21 @@ const GtrAndCosmology = () => {
                                         <li class="mb-2"> Third term is given as follows: <br/>
                                             \\(
                                                 \\begin{align}
-                                                    \\Gamma^p_{ac} \\nabla_b V_p = \\Gamma^p_{ac} (\\partial_b V_p) - \\Gamma^p_{ac} \\Gamma^d_[bp] V_d
+                                                    \\Gamma^p_{ac} \\nabla_b V_p = \\Gamma^p_{ac} (\\partial_b V_p) - \\Gamma^p_{ac} \\Gamma^d_{[bp]} V_d
                                                 \\end{align}
                                             \\)
                                         </li>
                                         <li class="mb-2"> We can get the fourth term just by interchanging as follows: <br/>
                                             \\(
                                                 \\begin{align}
-                                                    \\Gamma^p_{bc} \\nabla_a V_p = \\Gamma^p_{bc} (\\partial_a V_p) - \\Gamma^p_{bc} \\Gamma^d_[ap] V_d
+                                                    \\Gamma^p_{bc} \\nabla_a V_p = \\Gamma^p_{bc} (\\partial_a V_p) - \\Gamma^p_{bc} \\Gamma^d_{[ap]} V_d
                                                 \\end{align}
                                             \\)
                                         </li>
                                     </ol>
                                     So finally we get:
                                     \\[
-                                        [\\nabla_a \\nabla_b - \\nabla_b \\nabla_a] V_d = [\\partial_b \\Gamma^d_{ac} - \\partial_a \\Gamma^d_{bc} + \\Gamma^p_{ac} \\Gamma^d_{bp} - \\Gamma^p_{bc} \\Gamma^d_{ap}] V_d     
+                                        [\\nabla_a \\nabla_b - \\nabla_b \\nabla_a] V_d = \\left[\\partial_b \\Gamma^d_{ac} - \\partial_a \\Gamma^d_{bc} + \\Gamma^p_{ac} \\Gamma^d_{bp} - \\Gamma^p_{bc} \\Gamma^d_{ap} \\right] V_d     
                                     \\]
                                     Let's define:
                                     <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
