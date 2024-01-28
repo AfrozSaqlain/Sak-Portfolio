@@ -630,7 +630,91 @@ const GtrAndCosmology = () => {
                                     \\(\\large{ (\\nabla \\cdot A) = \\frac{1}{\\sqrt{|g|}} \\partial_\\mu (\\sqrt{|g|} A^\\mu) }\\)
                                 </li>
                             </ol>
-                    `
+                            <hr class="opacity-70 p-1" />
+                            For an arbitrary diagonal matrix : \\( \\large{ e^A = \\mathbb{1} + A + \\frac{1}{2 !} A^2 + \\frac{1}{3!} A^3 + \\ldots = \\sum\\limits_{n=0}^\\infty \\frac{1}{n!}A^n = B} \\).
+                            <br/>
+                            <br/>
+                            The determinant and trace of matrix \\(A = \\begin{pmatrix} \\alpha_1 & 0 \\\\ 0 & \\alpha_2 \\end{pmatrix} \\) :
+                            \\[
+                                \\begin{align}
+                                    tr(A) &= \\alpha_1 + \\alpha_2 \\\\
+                                    e^{tr(A)} &= e^{\\alpha_1 + \\alpha_2} \\\\
+                                    \\det{(e^A)} &= e^{\\alpha_1 + \\alpha_2} = e^{tr{A}} \\\\
+                                    \\implies \\det{(B)} &= e^{tr(\\ln{B})} \\hspace{10pt} \\ldots (\\text{as } A = \\ln{B}) \\\\
+                                    \\implies \\ln{(\\det{B})} &= \\ln{(e^{tr{(\\ln{B})}})} \\\\
+                                    \\implies \\ln{(\\det{B})} &= tr(\\ln{B})
+                                \\end{align}
+                            \\]
+                            Thus we get
+                            \\[
+                                \\frac{\\delta \\det{B}}{\\det{B}} = tr(B^{-1} \\times \\delta B)
+                            \\]
+                            Now let \\( B = g_{\\alpha \\beta} \\), \\( B^{-1} = g^{\\alpha \\beta} \\) and \\( \\det{B} = g \\). Thus we get
+                            \\[
+                                \\begin{align}    
+                                    \\frac{\\delta g}{g} &= g^{\\alpha \\beta} \\delta g_{\\alpha \\beta} \\\\
+                                    \\delta g &= g g^{\\alpha \\beta} \\delta g_{\\alpha \\beta} \\tag{1}
+                                \\end{align}    
+                            \\]
+                            By using simple differential we see that \\[ \\delta \\sqrt{|g|} = \\frac{1}{2\\sqrt{|g|}} \\delta g \\tag{2} \\]
+                            Using (1) and (2), we get
+                            \\[
+                                \\begin{align}
+                                    \\delta \\sqrt{|g|} &= \\frac{1}{2\\sqrt{|g|}} g g^{\\alpha \\beta} \\delta g_{\\alpha \\beta} \\\\
+                                    &= \\frac{1}{2 \\sqrt{|g|}} (\\sqrt{|g|})^2 g^{\\alpha \\beta} \\delta g_{\\alpha \\beta} \\\\
+                                \\end{align}
+                            \\]
+                            Thus finally giving us
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\delta \\sqrt{|g|} = \\frac{1}{2} \\sqrt{|g|} \\hspace{4pt} g^{\\alpha \\beta} \\delta g_{\\alpha \\beta}
+                            \\]
+                            </div>
+                            Now,
+                            \\[
+                                \\begin{align}    
+                                    \\delta(g_{\\alpha \\beta} g^{\\alpha \\beta}) = \\delta (\\delta^\\alpha_\\alpha) &= 0 \\\\
+                                    \\delta (g_{\\alpha \\beta}) g^{\\alpha \\beta} + g_{\\alpha \\beta} \\hspace{3pt} \\delta (g^{\\alpha \\beta}) &= 0 \\\\
+                                    \\delta (g_{\\alpha \\beta}) g^{\\alpha \\beta} = - g_{\\alpha \\beta} \\hspace{3pt} \\delta &(g^{\\alpha \\beta}) \\\\
+                                \\end{align}    
+                            \\]
+                            Thus giving us
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\delta \\sqrt{|g|} = - \\frac{1}{2} \\sqrt{|g|} \\hspace{4pt} g_{\\alpha \\beta} \\delta g^{\\alpha \\beta}
+                            \\]
+                            </div>
+                            <hr class="opacity-70 p-1" />
+                            From \\( \\large{\\delta g = g g^{\\alpha \\beta} \\delta g_{\\alpha \\beta}} \\), we can also get \\( \\large{\\partial_{\\gamma} g = g g^{\\alpha \\beta} \\partial_\\gamma g_{\\alpha \\beta} }\\)
+                            <br/>
+                            <br/>
+                            Now,
+                            \\[
+                                \\begin{align}
+                                    g_{\\alpha \\delta} \\Gamma^{\\delta}_{\\beta \\gamma} &= \\Gamma_{\\alpha \\beta \\gamma} = \\frac{1}{2} \\left( \\partial_{\\gamma} g_{\\alpha \\beta} + \\partial_{\\beta} g_{\\alpha \\gamma} - \\partial_{\\alpha} g_{\\beta \\gamma} \\right) \\\\
+                                    g_{\\delta \\beta} \\Gamma^{\\delta}_{\\alpha \\gamma} &= \\Gamma_{\\beta \\alpha \\gamma} = \\frac{1}{2} \\left( \\partial_{\\gamma} g_{\\beta \\alpha} + \\partial_{\\alpha} g_{\\beta \\gamma} - \\partial_{\\beta} g_{\\alpha \\gamma} \\right) \\\\
+                                \\end{align}    
+                            \\]
+                            \\[
+                                \\begin{align}
+                                    &\\implies \\large{g_{\\alpha \\delta} \\Gamma^{\\delta}_{\\beta \\gamma} + g_{\\delta \\beta} \\Gamma^{\\delta}_{\\alpha \\gamma} = \\partial_\\gamma g_{\\alpha \\beta}} \\\\
+                                    &\\implies \\large{\\partial_\\gamma g = g \\hspace{2pt} g^{\\alpha \\beta} \\left( g_{\\alpha \\delta} \\Gamma^\\delta_{\\beta \\gamma} + g_{\\delta \\beta} \\Gamma^{\\delta}_{\\alpha \\gamma} \\right)} \\\\
+                                    &\\implies \\large{\\partial_\\gamma g = g \\left(g^{\\alpha \\beta} g_{\\alpha \\beta} \\Gamma^\\delta_{\\beta \\gamma} + g^{\\alpha \\beta} g_{\\alpha \\beta} \\Gamma^\\delta_{\\alpha \\gamma} \\right)} \\\\
+                                    &\\implies \\large{\\partial_\\gamma g = g \\left( \\delta^\\beta_\\delta \\Gamma^\\delta_{\\beta \\gamma} + \\delta^\\alpha_\\delta \\Gamma^\\delta_{\\alpha \\gamma} \\right)} \\\\
+                                    &\\implies \\large{\\partial_\\gamma g = g \\left( \\Gamma^\\delta_{\\delta \\gamma} + \\Gamma^\\delta_{\\delta \\gamma} \\right) = 2 g \\Gamma^\\delta_{\\delta \\gamma}} \\\\
+                                \\end{align}
+                            \\]
+                            Thus we have
+                            \\[
+                                \\Gamma^\\delta_{\\delta \\gamma} = \\frac{1}{\\sqrt{|g|}} \\partial_\\gamma \\sqrt{|g|} = \\frac{1}{2} \\partial_\\gamma \\left[ \\ln{|g|} \\right] = \\partial_\\gamma \\left( \\ln{(\\sqrt{|g|})} \\right) 
+                            \\]
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\Gamma^\\delta_{\\delta \\gamma} = \\frac{1}{\\sqrt{|g|}} \\partial_\\gamma \\sqrt{|g|}
+                            \\]
+                            </div>
+                            <hr class="opacity-70 p-1" />
+                            `
                 },
                 {
                     title: 'Permutation Tensor',
