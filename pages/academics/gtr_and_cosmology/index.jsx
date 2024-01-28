@@ -1220,7 +1220,7 @@ const GtrAndCosmology = () => {
                             IN a N-dimenisonal space, if there are no symmetry \\( \\Gamma^a_{bc} \\) should have \\( N \\times N \\times N \\) elements. However, \\( \\Gamma^a_{bc} = \\Gamma^a_{cb} \\) in Riemann space makes the number of independent elements become \\( N (N+1) / 2 \\).
                             <div class='bg-slate-50/10 p-1 rounded-md mb-3 pl-2 mt-2'>
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Exercise </p>
-                            Compute the Christoffel SYmbols for the Riemannian space given by the distance element
+                            Compute the Christoffel Symbols for the Riemannian space given by the distance element
                             \\[
                                 ds^2 = d\\chi^2 + \\sinh^2 \\chi d\\phi^2    
                             \\]
@@ -1242,12 +1242,12 @@ const GtrAndCosmology = () => {
                             \\]
                             With connection defined as,
                             \\[
-                                \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right] 
+                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right] 
                             \\]
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Can we simply replace \\( \\Large{\\frac{\\partial}{\\partial x^a}} \\) in our equations in flat space, with new derivative operator \\( \\nabla_a \\) and go ahead? </p>
-                            We need to little bit more careful, so let's go step by step:
+                            We need to be a little bit more careful, so let's go step by step:
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Directional Derivative </p>
-                            Let \\( T^a \\) or \\( T_a \\) be a vector field \\( \\mathscr{U} = U^{abc \\ldots}_{pqr \\ldots} \\), then the derivative of \\( \\mathscr{U} \\) wrt. \\( T^a \\) is given by
+                            Let \\( T^a \\) or \\( T_a \\) be a vector field and \\( \\mathscr{U} = U^{abc \\ldots}_{pqr \\ldots} \\), then the derivative of \\( \\mathscr{U} \\) wrt. \\( T^a \\) is given by
                             <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
                             \\[
                                 T^a \\nabla_a \\mathscr{U} = T^a \\nabla_a U^{abc \\ldots}_{pqr \\ldots}   
