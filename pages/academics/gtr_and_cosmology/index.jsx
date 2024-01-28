@@ -1321,6 +1321,9 @@ const GtrAndCosmology = () => {
                             \\[
                                 \\mathcal{L} = \\int_P^Q g_{ab}\\dot{x^a} \\dot{x^b} ds 
                             \\]
+                            We can do this because we know that if \\(\\mathcal{L}\\) is a Lagrangian and \\( \\large{\\frac{d \\(\\mathcal{L}\\) }{dt} = 0 \\implies} \\) \\(\\mathcal{L}^2\\) , \\(\\mathcal{L}^3\\), \\( e^{\\alpha \\mathcal{L}}\\) are also a nice Lagrangian.
+                            <br/>
+                            <br/>
                             However we have already done this in previous sections and we know that the curve that takes optimal distance is given by
                             \\[
                                 \\frac{d^2 x^a}{ds^2} + \\Gamma^a_{bc} \\dot{x^b} \\dot{x^c} = 0    
