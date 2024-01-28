@@ -1217,7 +1217,7 @@ const GtrAndCosmology = () => {
                             </div>
 
                             <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> Counting Christoffel Symbols </p>
-                            IN a N-dimenisonal space, if there are no symmetry \\( \\Gamma^a_{bc} \\) should have \\( N \\times N \\times N \\) elements. However, \\( \\Gamma^a_{bc} = \\Gamma^a_{cb} \\) in Riemann space makes the noumber of independent elements becomes \\( N (N+1) / 2 \\).
+                            IN a N-dimenisonal space, if there are no symmetry \\( \\Gamma^a_{bc} \\) should have \\( N \\times N \\times N \\) elements. However, \\( \\Gamma^a_{bc} = \\Gamma^a_{cb} \\) in Riemann space makes the number of independent elements become \\( N (N+1) / 2 \\).
                             <div class='bg-slate-50/10 p-1 rounded-md mb-3 pl-2 mt-2'>
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Exercise </p>
                             Compute the Christoffel SYmbols for the Riemannian space given by the distance element
