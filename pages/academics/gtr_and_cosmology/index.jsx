@@ -714,6 +714,23 @@ const GtrAndCosmology = () => {
                             \\]
                             </div>
                             <hr class="opacity-70 p-1" />
+                            <hr class="opacity-70 p-1 pb-3" />
+                            Recall: \\( \\nabla_\\mu A^\\mu = \\partial_\\mu A^\\mu + \\Gamma^\\mu_{\\mu \\lambda} A^\\lambda \\).
+                            <br/>
+                            <br/>
+                            Now, we get that \\[ \\Gamma^\\mu_{\\mu \\lambda} = \\frac{1}{\\sqrt|g|} \\partial_\\lambda \\sqrt{|g|} \\]
+                            So we have
+                            \\[
+                            \\begin{align}
+                                \\nabla_\\mu A^\\mu &= \\partial_\\mu A^\\mu + \\frac{1}{\\sqrt{|g|}} \\partial_\\lambda \\left(\\sqrt{|g|}\\right) A^\\lambda \\\\
+                                &= \\frac{1}{\\sqrt{|g|}} \\left[ \\sqrt{|g|} \\partial_\\mu A^\\mu + \\partial_\\mu \\left(\\sqrt{|g|}\\right) A^\\mu \\right]
+                            \\end{align}
+                            \\]
+                            <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                            \\[
+                                \\nabla_\\mu A^\\mu = \\frac{1}{\\sqrt{|g|}} \\partial_\\mu \\left(\\sqrt{|g|} A^\\mu\\right)
+                            \\]
+                            </div>
                             `
                 },
                 {
