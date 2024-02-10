@@ -1343,7 +1343,7 @@ const GtrAndCosmology = () => {
                             \\]
                             With connection defined as,
                             \\[
-                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^b} \\right] 
+                                \\Gamma^a_{bc} = \\frac{1}{2} g^{ap} \\left[ \\frac{\\partial g_{pc}}{\\partial x^b} + \\frac{\\partial g_{bp}}{\\partial x^c} - \\frac{\\partial g_{bc}}{\\partial x^p} \\right] 
                             \\]
                             <p class='text-lg font-semibold text-red-400 mb-2 mt-1'> Can we simply replace \\( \\Large{\\frac{\\partial}{\\partial x^a}} \\) in our equations in flat space, with new derivative operator \\( \\nabla_a \\) and go ahead? </p>
                             We need to be a little bit more careful, so let's go step by step:
