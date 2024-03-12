@@ -1735,7 +1735,7 @@ const GtrAndCosmology = () => {
                                     \\[
                                         \\frac{\\partial^2 x^a(s, \\rho)}{\\partial s^2} + \\Gamma^a_{bc} \\hspace{2pt} x(s, \\rho) \\frac{\\partial x^b}{\\partial s} \\frac{\\partial x^c}{\\partial s} = 0    
                                     \\]
-                                    Let
+                                    Let \\( \\gamma_1 \\) and \\( \\gamma_2 \\) be two neighbouring geodesics, specified by slightly different value of \\( \\rho \\).
                                     `
                         },
     ];
