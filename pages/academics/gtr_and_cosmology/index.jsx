@@ -1679,6 +1679,43 @@ const GtrAndCosmology = () => {
                                     It seems like curvature of sphere is not same everywhere, i.e. it's \\(1\\) on equator and \\(0\\) on the poles. However, the Riemann Tensor has upper and lower indices which leads to lots of confusion. So, if we raise the index such that we have \\(  R^{21}_{21} = \\large{\\frac{1}{\\sin^2{\\theta}}} \\times \\sin^2{\\theta} = 1 \\), thus implying that curvature on a sphere is constant.
                             `
                         },
+                        {
+                            title: 'Geodesic Deviation',
+                                    content: `
+                                    The Riemann Tensor \\( R_{abc}^d \\) can be contracted in the indices \\(b\\) and \\(d\\) (and of course we cannot contract between indices \\(a\\) and \\(b\\) or \\(c\\) and \\(d\\) because of the anti-symmetry nature of them, and if we tried to do so, we would get 0), or we can write \\( R^{bd}_{abcd} \\neq 0 \\). This part of Riemann Tensor is called Ricci Tensor, which is a second rank symmetric tensor.
+                                    <br/>
+                                    <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                                        \\[
+                                            \\text{Ricci : } R_{ac} = g^{bd} R_{abcd}    
+                                        \\]
+                                    </div>
+                                    Symmetry of Ricci Tensor should be clear from the properties of Riemann Tensor. We can further contract Ricci Tensor to construct Ricci scalar, which is given by
+                                    <div class='bg-blue-300/30 px-3 py-[0.1pt] rounded-md my-1 mb-3 mx-auto max-w-max'>
+                                    \\[
+                                        R = g^{ab}R_{ab}    
+                                    \\]
+                                    </div>
+                                    This is also called "Sacalar Curvature".
+                                    <p class='text-lg underline underline-offset-8 mt-5 mb-2 font-semibold text-center text-blue-500'> The Geodesic Deviation Equation </p>
+                                    Let us consider a curve \\( \\gamma(s) \\), which is parameterized by arc-length parameter "\\(s\\)", then \\( x^a = x^a(s) \\)  is the coordinate of curve along "\\(s\\)". Let \\( u^a(s) \\) be the tangent vector to the curve \\( \\gamma \\), then \\( \\Large{ u^a = \\frac{dx^a(s)}{ds} } \\).
+                                    <Image
+                                        src="/gtr_and_cosmo/28_1.jpeg"
+                                        alt="Line"
+                                        width={10}
+                                        height={50}
+                                        class="mx-auto scale-75 rounded-lg"
+                                    />
+                                    If \\( \\gamma \\) is Geodesic, then
+                                    \\[
+                                        \\begin{align}
+                                            a^p &\\equiv \\frac{Du^p}{Ds} \\\\
+                                            &\\implies \\frac{d u^p}{ds} + \\Gamma^p_{qr} u^q u^r = 0 \\\\
+                                            &\\implies \\frac{d^2 x^p}{ds^2} + \\Gamma^p_{qr} \\frac{dx^q}{ds}\\frac{dx^r}{ds} = 0
+                                        \\end{align}
+                                    \\]
+                                    The curve satisfies the Geodesic equation.
+                                    `
+                        },
     ];
 
     const [openSection, setOpenSection] = useState(null);
