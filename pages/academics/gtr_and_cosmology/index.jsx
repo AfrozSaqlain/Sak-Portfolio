@@ -1714,6 +1714,28 @@ const GtrAndCosmology = () => {
                                         \\end{align}
                                     \\]
                                     The curve satisfies the Geodesic equation.
+                                    <br/>
+                                    <br/>
+                                    Now, let's consider a family of geodesics. We consider a set of all geodesics around this rederence geodesic and parameterize them and see how they are moving wrt. each other. This is called "Geodesic Deviation".
+                                    <br/>
+                                    <br/>
+                                    We consider a one-parameter family of geodesics \\( x^a(s, \\rho) \\).
+                                    <ul class='list-disc ml-8 my-4'>
+                                        <li class="mb-2"> \\( \\rho \\) labels different geodesics. </li>
+                                        <li class="mb-2"> \\( s \\) is arc-length parameter family along a geodesic. </li>
+                                    </ul>
+                                    <Image
+                                        src="/gtr_and_cosmo/29.png"
+                                        alt="Line"
+                                        width={10}
+                                        height={50}
+                                        class="mx-auto scale-75 rounded-lg"
+                                    />
+                                    The geodesic equation for entire family \\( x^a(s, \\rho) \\) is given by 
+                                    \\[
+                                        \\frac{\\partial^2 x^a(s, \\rho)}{\\partial s^2} + \\Gamma^a_{bc} \\hspace{2pt} x(s, \\rho) \\frac{\\partial x^b}{\\partial s} \\frac{\\partial x^c}{\\partial s} = 0    
+                                    \\]
+                                    Let
                                     `
                         },
     ];
