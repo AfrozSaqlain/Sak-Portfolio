@@ -411,7 +411,7 @@ const GtrAndCosmology = () => {
                     For better understanding, let us assume a null path or light-like path connects the events \\(A\\) and \\(B\\). From the basic postulates of relativity, the velocity of light is universal constant and same for all observers. So, the events \\(A\\) and \\(B\\) are light-like for both observers and hence \\( ds^2 = {ds'}^2 = 0 \\).
                     <br/>
                     <br/>
-                    With the same argument, we say that for time-like connected events too \\( ds^2 =  {ds'}^2 \\) for inertial frames (\\mathcal{O}_1\\) and \\(\\mathcal{O}_2\\).
+                    With the same argument, we say that for time-like connected events too \\( ds^2 =  {ds'}^2 \\) for inertial frames \\(\\mathcal{O}_1\\) and \\(\\mathcal{O}_2\\).
                     <br/>
                     <br/>
                     As we know that Lorentz transformation is written as a matrix, whose determinant is \\(1\\). This means that the length of a vector is preserved under Lorentz transformation. This is similar to rotation or similarity transformation. Length of spacetime interval between two events is invariant or same in all Lorentz frame.
