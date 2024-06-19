@@ -197,7 +197,7 @@ const Home = () => {
               <p className="mb-3 -translate-y-4"> From the smallest particles to the stars above, Our love is bound by quantum love, A force that nothing can ever shove.</p>
             </motion.div>
             {/* btn */}
-            <div className="flex justify-center -translate-y-4 xl:hidden relative">
+            <div className="flex justify-center z-30 -translate-y-4 xl:hidden relative">
               <Suspense fallback={<div className="animate-pulse">Loading...</div>}>
                 <ProjectsBtn />
               </Suspense>
