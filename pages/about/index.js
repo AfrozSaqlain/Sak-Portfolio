@@ -157,7 +157,7 @@ const About = () => {
                   <CountUp start={0} end={40} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Satisfied clients
+                  Students Taught
                 </div>
               </div>
               {/* awards */}

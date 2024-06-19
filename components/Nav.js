@@ -16,8 +16,8 @@ export const navData = [
   { name: 'blogs', path: '/blogs', icon: <HiRectangleGroup /> },
   { name: 'academics', path: '/academics', icon: <HiViewColumns /> },
   {
-    name: 'testimonials',
-    path: '/testimonials',
+    name: 'Great Minds',
+    path: '/great_minds',
     icon: <HiChatBubbleBottomCenterText />,
   },
   {
