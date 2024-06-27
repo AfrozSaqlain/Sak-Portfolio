@@ -83,6 +83,10 @@ export const aboutData = [
         title: 'AI/ML Poject in Law',
         stage: '2022 - 2023',
       },
+      {
+      title: 'Maintenance of IISER Kolkata DPS Website',
+      stage: '2024 - ongoing',
+      },
     ],
   },
   {
@@ -157,7 +161,7 @@ const About = () => {
                   <CountUp start={0} end={40} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Students Taught
+                  Seminars Attended
                 </div>
               </div>
               {/* awards */}

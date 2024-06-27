@@ -192,7 +192,7 @@ const Home = () => {
               className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 z-20'>
               <p className="mb-3 -translate-y-4"> In the vastness of space and time. Our love is like a quantum rhyme. Entangled forever, yours and mine.</p>
               {/* <br /> <br /> */}
-              <p className="mb-3 -translate-y-4"> As we journey through life&rsquo;s great expans., Our love will grow with each quantum dance. A bond that nothing can not be left to chance.</p>
+              <p className="mb-3 -translate-y-4"> As we journey through life&rsquo;s great expans. Our love will grow with each quantum dance. A bond that cannot be left to chance.</p>
               {/* <br /> <br /> */}
               <p className="mb-3 -translate-y-4"> From the smallest particles to the stars above. Our love is bound by quantum love. A force that nothing can ever shove.</p>
             </motion.div>
