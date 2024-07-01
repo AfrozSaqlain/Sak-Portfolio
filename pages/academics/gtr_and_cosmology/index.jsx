@@ -3,6 +3,7 @@ import MathJaxWrapper from '../../../components/MathJaxWrapper';
 import CardLeft from '../../../components/CardLeft';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
 import Image from 'next/image';
+import ScrollToTopArrow from '../../../components/ScrollToTopArrow'
 
 const GtrAndCosmology = () => {
     const sections = [
@@ -1805,6 +1806,7 @@ const GtrAndCosmology = () => {
             <div className="hidden lg:flex fixed bottom-0 left-0 p-4">
                 <CardLeft link="/notes/gr.pdf" place="David Tong's Lecture" />
             </div>
+            <ScrollToTopArrow/>
         </div>
     );
 };
