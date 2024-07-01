@@ -79,7 +79,7 @@ const Electromag = () => {
     <div className="relative h-full flex">
       <SectionListSidebar sections={sections} onSectionClick={toggleSection} />
       <div className="flex-1 h-full overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4" ref={contentRef}>
-        <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl rounded-lg">
+        <div className="max-w-4xl mx-auto mb-12 p-4 shadow-2xl md:w-[70rem] md:-translate-x-10 rounded-lg">
           <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">Electricity and Magnetism</h1>
           {sections.map((section, index) => (
             <div id={`section-${index}`} key={index}>

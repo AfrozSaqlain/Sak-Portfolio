@@ -9,10 +9,10 @@ const Electromag = () => {
             title: 'Doing calculus on \\( \\mathbb{R}^n \\)',
             
                     content: `
-                    Elementary calculus works best for functions like \\( f : \\mathbb{R} \\to \\mathbb{R} \\), and with some tweaks we can make clculus work for functions like \\( g : \\mathbb{R}^m \\to \\mathbb{R}^n \\). Howver, in physics we need much more general functions like \\( h : U \\to V \\). Elementary calculus cannot be used in this sense, unless we have some help and that help is provided by Differentiable Manifolds.
+                    Elementary calculus works best for functions like \\( f : \\mathbb{R} \\to \\mathbb{R} \\), and with some tweaks we can make clculus work for functions like \\( g : \\mathbb{R}^m \\to \\mathbb{R}^n \\). However, in physics we need much more general functions like \\( h : U \\to V \\). Elementary calculus cannot be used in this sense, unless we have some help and that help is provided by Differentiable Manifolds.
                     <br/>
                     <br/>
-                    Lets' recallthe definition of derivative from our elementary calculus 
+                    Lets' recall the definition of derivative from our elementary calculus 
                     \\[
                         f'(x) = \\lim_{h \\to 0} \\frac{f(x_0 + h) - f(x_0)}{h}    
                     \\]
