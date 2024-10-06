@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.5.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/mdx": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
@@ -35,12 +36,14 @@
     "gray-matter": "^4.0.3",
     "groq": "^3.15.1",
     "katex": "^0.16.9",
+    "lqip": "^2.1.0",
     "mathjax": "^3.2.2",
     "mathjax-full": "^3.2.2",
     "mathjax-react": "^2.0.1",
     "mathjax3": "^3.0.0-beta.4",
     "micromark-extension-gfm-autolink-literal": "^2.0.0",
     "next": "^14.2.4",
+    "next-auth": "^4.24.7",
     "next-compose-plugins": "^2.2.1",
     "next-mdx-remote": "^4.4.1",
     "next-sanity": "^5.4.4",

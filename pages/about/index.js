@@ -59,8 +59,20 @@ export const aboutData = [
     title: 'awards',
     info: [
       {
+        title: 'Silver Medal in 100 m race',
+        stage: '2014',
+      },
+      {
         title: 'UP Science Talent Search Examination',
         stage: '2016 - 2017',
+      },
+      {
+      title: 'Glod Medal in English Essay Writing Competition',
+      stage: '2015 - 2016',
+      },
+      {
+        title: 'Silver Medal in Hindi Essay Writing Competition',
+        stage: '2015 - 2016',
       },
       {
         title: 'NCC Special Trophy',
@@ -77,7 +89,7 @@ export const aboutData = [
       },
       {
         title: 'Quantum Computation',
-        stage: '2022 - 2023',
+        stage: '2021 - 2024',
       },
       {
         title: 'AI/ML Poject in Law',
@@ -99,6 +111,10 @@ export const aboutData = [
       {
         title: 'IISER Kolkata, West Bengal, India',
         stage: '2020 - ongoing',
+      },
+      {
+        title: 'IUCAA, Pune, India',
+        stage: '(Master\'s Thesis) 2024 - ongoing',
       },
     ],
   },
@@ -132,7 +148,7 @@ const About = () => {
             Captivating <span className='text-accent'>stories</span>.
           </motion.h2>
           <motion.p variants={fadeIn('right', 0.4)} initial='hidden' animate='show' exit='hidden' className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-            I always had the curiosity to know the unknown and to venture on a quest of knowledge. I have been doing research in the field of Astrophysics, I play guitar, write codes and I am also interested in financial markets. So, join me on this journey.
+            I always had the curiosity to know the unknown and to venture on a quest of knowledge. I have been doing research in the field of Astrophysics, I play guitar, write codes and I am also interested in financial markets.
           </motion.p>
           {/* counters */}
           <motion.div variants={fadeIn('right', 0.6)} initial='hidden' animate='show' exit='hidden' className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
@@ -167,10 +183,10 @@ const About = () => {
               {/* awards */}
               <div className='relative flex-1'>
                 <div className='text2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={5} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Winning awards
+                  Awards
                 </div>
               </div>
             </div>
@@ -218,7 +234,7 @@ const About = () => {
           <div className='hidden scale-110 xl:flex xl:max-w-none translate-x-7 translate-y-12'>
             <Link href={"/Saqlain_Afroz_CV.pdf"}>
               <div className='flex flex-row hover:text-accent opacity-80 transition-all duration-500'>
-              <span className=''>Download my CV - </span>
+              <span className=''>Click here for my CV - </span>
               <FaGraduationCap className='scale-150 translate-x-4 translate-y-1'/>
               </div>
             </Link>

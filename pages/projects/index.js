@@ -196,9 +196,9 @@ const Projects = () => {
         },
         {
             title: 'Quantum Computation',
-            description: 'This project aims to build powerful quantum computing algorithms capable of solving complex problems with unprecedented speed and efficiency.',
+            description: 'I have done Quantum Simulation of Hawking Radiation Using VQE Algorithm on IBM Quantum Computer, as a part of my Winter Project.',
             imageUrl: '/QM_Comp.jpg',
-            url: '/notes/qft.pdf',
+            url: '/notes/Quantum_Computation_Project.pdf',
             category: 'Computer',
         },
         {
@@ -259,7 +259,7 @@ const Projects = () => {
                                                 height={340}
                                                 width={640}
                                                 alt={project.title}
-                                                placeholder=''
+                                                // placeholder='blur'
                                                 className="w-full h-36 object-cover"
                                             />
                                             <div className="p-4">

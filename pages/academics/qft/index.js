@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MathJaxWrapper from '../../../components/MathJaxWrapper';
 import { ExpandableSection, Subsection } from '../../../components/ExpandableSection';
+import CardLeft from '../../../components/CardLeft';
 import Head from 'next/head';
 
 const QFT = () => {
@@ -682,10 +683,18 @@ const QFT = () => {
                                 ))}
                             </ExpandableSection>
                         ))}
+                    <div className="flex justify-center">
+                        <div className="lg:hidden pb-2 mb-10">
+                            <CardLeft link="/notes/qft.pdf" place="David Tong's Lecture" />
+                        </div>
                     </div>
                 </div>
-                {/* <ScrollToTopArrow /> */}
             </div>
+             
+            <div className="hidden lg:flex fixed bottom-0 left-0 p-4">
+                <CardLeft link="/notes/qft.pdf" place="David Tong's Lecture" />
+            </div>
+        </div>
         </>
     );
 };

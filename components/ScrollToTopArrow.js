@@ -8,27 +8,27 @@ const ScrollToTopArrow = () => {
             top: 0,
             behavior: 'smooth',
         });
-        console.log("Scrolled")
+        console.log("Scrolled to top");
     };
 
     const handleScroll = () => {
+        console.log("Scroll position:", window.scrollY); // Debugging statement
         if (window.scrollY > 300) {
             setIsVisible(true);
-            console.log("Window scrolled")
+            console.log("Button should be visible");
         } else {
             setIsVisible(false);
+            console.log("Button should be hidden");
         }
     };
 
     useEffect(() => {
-        const scrollListener = () => {
-            handleScroll();
-        };
-
-        window.addEventListener('scroll', scrollListener);
+        console.log("Adding scroll event listener"); // Debugging statement
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            window.removeEventListener('scroll', scrollListener);
+            console.log("Removing scroll event listener"); // Debugging statement
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 

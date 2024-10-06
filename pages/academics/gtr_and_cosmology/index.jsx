@@ -1765,6 +1765,7 @@ const GtrAndCosmology = () => {
 
     return (
         <div className="relative h-full bg-black/40">
+            <ScrollToTopArrow/>
             <div className="h-full translate-y-16 overflow-y-auto scroll-smooth overflow-visible overscroll-y-auto pb-24 pt-4">
                 <div className="max-w-7xl mx-auto mb-12 p-4 shadow-2xl md:w-[70rem] md:-translate-x-10 rounded-lg">
                     <h1 className="text-3xl font-semibold text-center font-mono justify-center text-accent mb-4">
@@ -1802,11 +1803,10 @@ const GtrAndCosmology = () => {
                     </div>
                 </div>
             </div>
-            
+             
             <div className="hidden lg:flex fixed bottom-0 left-0 p-4">
                 <CardLeft link="/notes/gr.pdf" place="David Tong's Lecture" />
             </div>
-            <ScrollToTopArrow/>
         </div>
     );
 };
