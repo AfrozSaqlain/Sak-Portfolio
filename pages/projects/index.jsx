@@ -202,6 +202,20 @@ const Projects = () => {
             category: 'Computer',
         },
         {
+            title: 'Machine Learning',
+            description: 'This is a collection of projects that I did in Machine Learning, ranging from Convolutional Neural Network, Neural Posterior Estimation to Physics Informed Neural Network.',
+            imageUrl: '/dl.jpg',
+            url: '/projects/ml_dl',
+            category: 'Computer',
+        },
+        {
+            title: 'Astronomy',
+            description: 'My curiosity in astronomy in general has motivated me to explore other areas of astronomy and astrophysics, such as AGNs, Quasars, Blazars, etc.',
+            imageUrl: '/blazars.jpg',
+            url: 'https://github.com/AfrozSaqlain/Light-Curve-of-Blazars',
+            category: 'Computer',
+        },
+        {
             title: 'CodeSandbox',
             description: 'This project aims to let create projects online on my page using codeSandbox. Though this project is still under development stage for allowing python to run.',
             imageUrl: '/Computing.jpg',
@@ -215,13 +229,6 @@ const Projects = () => {
             url: '/projects/chess',
             category: 'Games',
         },
-        {
-            title: 'Machine Learning',
-            description: 'This is a collection of projects that I did in Machine Learning, ranging from Convolutional Neural Network, Neural Posterior Estimation to Physics Informed Neural Network.',
-            imageUrl: '/dl.jpg',
-            url: '/projects/ml_dl',
-            category: 'Computer',
-        }, 
         // Add more projects with categories as needed
     ];
 
