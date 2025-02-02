@@ -215,6 +215,13 @@ const Projects = () => {
             url: '/projects/chess',
             category: 'Games',
         },
+        {
+            title: 'Machine Learning',
+            description: 'This is a collection of projects that I did in Machine Learning, ranging from Convolutional Neural Network, Neural Posterior Estimation to Physics Informed Neural Network.',
+            imageUrl: '/dl.jpg',
+            url: '/projects/ml_dl',
+            category: 'Computer',
+        }, 
         // Add more projects with categories as needed
     ];
 

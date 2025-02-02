@@ -9,12 +9,6 @@ import 'simplebar-react/dist/simplebar.min.css';
 const GW = () => {
     const allProjects = [
         {
-            title: 'Basics of Gravitational Wave Astronomy',
-            description: 'I use gwpy, PyCBC and other libraries to analyze and process the signals received from LIGO.',
-            imageUrl: '/GW_wave.png',
-            url: '/notes/GW_basics.pdf',
-        },
-        {
             title: 'Normalizing Flows in Parameter Estimation of Gravitational Waves',
             description: 'I have used Normalizing Flows and Neural Posterior Estimation to train my model to do parameter estimation of gravitationally lensed gravitational waves.',
             imageUrl: '/ligo.png',
@@ -25,6 +19,18 @@ const GW = () => {
             description: 'I have used Normalizing Flows and Neural Posterior Estimation to train my model to do parameter estimation of gravitationally lensed gravitational waves.',
             imageUrl: '/bnn.jpg',
             url: 'https://github.com/AfrozSaqlain/Bayesian-Neural-Network',
+        },
+        {
+            title: 'Physics Informed Neural Network',
+            description: 'Physics Informed Neural Networks or PINNs work on the concept of minimizing the loss function on the basis of information that we get from the  physics behind our system, and we try to optimize our model on the basis of that.',
+            imageUrl: '/pinn.jpg',
+            url: 'https://github.com/AfrozSaqlain/Physics-Informed-Neural-Network',
+        },
+        {
+            title: 'Convolutional Neural Network',
+            description: 'Convolutional Neural Network or CNN is used for computer vision, or in simple terms, to allow the machine to look and identify objects and classify them.',
+            imageUrl: '/cnn.jpg',
+            url: 'https://github.com/AfrozSaqlain/Convolutional-Neural-Network',
         },
     ];
 
