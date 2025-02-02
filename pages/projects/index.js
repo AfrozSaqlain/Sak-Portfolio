@@ -191,7 +191,7 @@ const Projects = () => {
             title: 'Gravitational Wave',
             description: 'I use gwpy, PyCBC and other libraries to analyze and process the signals received from LIGO. And I also am working on implementing AI/ ML in data processing.',
             imageUrl: '/GW_wave.png',
-            url: '/notes/GW_wave.pdf',
+            url: '/projects/gw',
             category: 'Physics',
         },
         {
