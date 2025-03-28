@@ -42,14 +42,6 @@ const GW = () => {
                         >
                             Gravitational Wave <span className='text-accent'>Astronomy</span>.
                         </motion.h2>
-                        {/* <motion.p
-                            variants={fadeIn('right', 0.4)}
-                            initial='hidden'
-                            animate='show'
-                            exit='hidden'
-                            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
-                        >
-                        </motion.p> */}
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-12">
                             {allProjects.map((project, index) => (

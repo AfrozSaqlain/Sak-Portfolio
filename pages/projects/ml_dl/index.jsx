@@ -22,7 +22,7 @@ const GW = () => {
         },
         {
             title: 'Physics Informed Neural Network',
-            description: 'Physics Informed Neural Networks or PINNs work on the concept of minimizing the loss function on the basis of information that we get from the  physics behind our system, and we try to optimize our model on the basis of that.',
+            description: 'Physics Informed Neural Networks find the solution of Differential Equations by reducing the residual loss. In this project I have tried to solve Damped Harmonic Oscillarot, Quantum Harmonic Oscillator, and finding Quasi Normal Modes of Kerr Black Hole.',
             imageUrl: '/pinn.jpg',
             url: 'https://github.com/AfrozSaqlain/Physics-Informed-Neural-Network',
         },
