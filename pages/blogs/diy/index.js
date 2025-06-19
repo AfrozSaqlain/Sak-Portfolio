@@ -24,7 +24,12 @@ const Index = ({ posts }) => {
                 slug && <Card key={_id} post={{ title, slug, publishedAt, mainImage, description }} client={client} />
               )
             ) : (
-              <p>No posts to show</p>
+              // <p>No posts to show</p>
+              <ol className="list-disc">
+                <li className="text-lg text-gray-600"> <a href='/MS_Thesis/Revised_PhD_Thesis_Anuj_Mishra.pdf'>Revised_PhD_Thesis_Anuj_Mishra</a> </li>
+                <li className="text-lg text-gray-600"> <a href='/MS_Thesis/Parameter Estimation/Intro-to-bayesian-inference-in-gravitational-wave-astronomy-parameter-estimation-model-selection-and-hierarchical-models.pdf'>Intro-to-bayesian-inference-in-gravitational-wave-astronomy-parameter-estimation-model-selection-and-hierarchical-models</a></li>
+                <li className="text-lg text-gray-600"><a href='/MS_Thesis/Matched Filtering/Quantum Algorithm for GW Matched Filtering.pdf'>Quantum Algorithm for GW Matched Filtering</a></li>
+              </ol>
             )}
           </ul>
         </div>
